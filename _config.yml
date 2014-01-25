@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://josephbulger.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Joseph Bulger
+subtitle: God, Family, Church, Engineering
+author: Joseph Bulger
 simple_search: http://google.com/search
 description:
 
@@ -62,14 +62,17 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 #   3rd Party Settings    #
 # ----------------------- #
 
+# Gravatar
+email_md5: 5db37e04905df77ec0c90dc7faebadfc
+
 # Github repositories
-github_user:
+github_user: josephbulger
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: josephbulger
 twitter_tweet_button: true
 
 # Google +1
