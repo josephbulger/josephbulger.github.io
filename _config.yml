@@ -4,7 +4,7 @@
 
 url: http://josephbulger.github.io
 title: Joseph Bulger
-subtitle: ... whatever
+subtitle: ... stuff I care about
 author: Joseph Bulger
 simple_search: http://google.com/search
 description:
@@ -94,7 +94,7 @@ delicious_count: 3
 
 # Disqus Comments
 disqus_short_name: jbulg
-disqus_show_comment_count: true
+disqus_show_comment_count: false
 
 # Google Analytics
 google_analytics_tracking_id:
