@@ -6,13 +6,25 @@
     </url>
     <url>
         <loc>
+            http://josephbulger.github.io/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax/
+        </loc>
+        <lastmod>2014-01-25T23:21:41-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://josephbulger.github.io/blog/2010/09/07/when-windows-tells-you-that-its-not-geniune/
+        </loc>
+        <lastmod>2014-01-25T23:01:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/
         </loc>
         <lastmod>2014-01-25T22:53:34-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/blog/archives/</loc>
-        <lastmod>2014-01-25T22:53:34-05:00</lastmod>
+        <lastmod>2014-01-25T23:21:41-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/blog/categories/</loc>
@@ -20,7 +32,7 @@
     </url>
     <url>
         <loc>http://josephbulger.github.io/</loc>
-        <lastmod>2014-01-25T22:53:34-05:00</lastmod>
+        <lastmod>2014-01-25T23:21:41-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/robots.txt</loc>

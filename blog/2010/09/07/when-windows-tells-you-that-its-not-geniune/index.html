@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Category: about - Joseph Bulger</title>
+	<title>When Windows tells you that it's not geniune... - Joseph Bulger</title>
 	<meta name="author" content="Joseph Bulger">
 
 	
-	<meta name="description" content="Category: about">
+	<meta name="description" content="When Windows Tells You That It's Not Geniune... I recently had to go through this because my windows installation started telling me it was not &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://josephbulger.github.ioblog/categories/about/">
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2010/09/07/when-windows-tells-you-that-its-not-geniune/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -88,29 +88,41 @@
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-	
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">When Windows Tells You That It's Not Geniune...</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I recently had to go through this because my windows installation started telling me it was not genuine and I needed to activate it.  This was completely false, being that the key I was using to activate the product was completely legit.</p>
+
+<p>So if you find yourself in the same boat as me, and you are wondering what you should do, follow these steps.<!-- more --></p>
+
+<p>Once you have a valid Key it remains valid and it is that way that MS designed it. However, corrupted licensing files may occur once there is an infection or it could be more reasons around there. Nonetheless try this entering these command on an &ldquo;elevated DOS prompt&rdquo; (click start> type CMD> right click CMD icon and run as admin)</p>
+
+<ol>
+<li><p>type slmgr /upk and press enter ( a notification should pop up that the PK has been uninstalled)</p></li>
+<li><p>type slmgr /cpky and press enter (this clears out the PK from registry)</p></li>
+<li><p>type slmgr /rilc and press enter ( this will reinstall licensing files)</p></li>
+<li><p>restart your computer twice, (if it would ask you to enter the product key on the 1st restart click ask me later and restart once more)</p></li>
+<li><p>After the 2nd restart, it will ask you to enter the PK, Yes enter it. It will automatically validate but maybe if you&rsquo;re lucky it would take it. If not,.. step 6.</p></li>
+<li><p>click start  and type &ldquo;slui 4&rdquo; (without the quotes) and press enter. This will open the phone activation option. Choose your country correctly and phone in the activation server. At this point, the installation ID should be valid (unless you are using pirated copy or product key) and the phone activation server will give you the confirmation ID. It will ask you how many times you have installed your copy&mdash; of course just say once.</p></li>
+</ol>
 
 
-	
-	
-	<section class="archives"><h1 class="year">2009</h1>
+<p><a href="http://social.technet.microsoft.com/Forums/en-US/w7itproinstall/thread/f0ec949f-4865-4a63-849c-af386de1b1fa">The original article I found this from was here.</a></p>
+</div>
 
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<span class="date"><time datetime="2009-03-06T08:43:15-05:00" itemprop="datePublished">Mar  6</time></span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/blog/categories/about/'>about</a>
-
-
-</span>
-	    
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2009/03/06/hello-world/">And so it begins</a></h1>
 </article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
 
 </div>
 			</div>
@@ -121,19 +133,6 @@
 
 Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
 			
-
-<script type="text/javascript">
-      var disqus_shortname = 'jbulg';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
 
 
 
