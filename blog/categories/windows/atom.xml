@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Technology | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/technology/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Windows | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-01-25T23:21:44-05:00</updated>
+  <updated>2014-01-25T23:26:45-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
