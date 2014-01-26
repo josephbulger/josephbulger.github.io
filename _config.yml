@@ -4,7 +4,7 @@
 
 url: http://josephbulger.github.io
 title: Joseph Bulger
-subtitle: God, Family, Church, Engineering
+subtitle: ... whatever
 author: Joseph Bulger
 simple_search: http://google.com/search
 description:
@@ -93,8 +93,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: jbulg
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
