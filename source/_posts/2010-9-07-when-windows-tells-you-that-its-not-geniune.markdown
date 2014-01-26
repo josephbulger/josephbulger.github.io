@@ -4,7 +4,7 @@ comments: false
 date: 2010-9-07 11:16:52
 layout: post
 title: When Windows tells you that it's not geniune...
-categories: [Technology]
+categories: [windows]
 ---
 
 I recently had to go through this because my windows installation started telling me it was not genuine and I needed to activate it.  This was completely false, being that the key I was using to activate the product was completely legit.
