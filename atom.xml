@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-01-25T22:20:21-05:00</updated>
+  <updated>2014-01-25T22:37:16-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -14,11 +14,52 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Datastructures, Objects, and why Hybrids are evil]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/"/>
+    <updated>2011-09-10T08:31:50-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil</id>
+    <content type="html"><![CDATA[<p>I was writing this code that let&rsquo;s interviewees code problems for me, and it verifies that the interviewee actually writes something that works. I got to a point in my printer classes that I wasn&rsquo;t liking, and I thought I&rsquo;d share it.</p>
+
+<!-- more -->
+
+
+<p>I have a printer that allows the candidate to print something, which actually verifies that they&rsquo;re code up to that point is correct. It looks something like this</p>
+
+<p>[gist id=1208486 file=Hybrid.cs]</p>
+
+<p>It works exactly as I expected it to, but there was something I didn&rsquo;t like about it. I didn&rsquo;t like the Counter. I didn&rsquo;t want the candidates messing with it. My first inclination was to change the setter to private, but it got me to thinking.</p>
+
+<p>The Console was definitely intended to be an Object. The whole point was to let the candidate use the Print method. What I had done, however, was create a Hybrid. It&rsquo;s a Hybrid because having the Counter property also makes Console a Data Structure. That&rsquo;s why I wasn&rsquo;t liking it. To the outside world, this class was a Hybrid, and I wanted it to be an Object. I needed my testing framework to know what the Counter was to test that the candidate had actually called Print enough times, though. So how do I fix it? Another problem was that even if I made Counter with a private setter, it would still look like a Data Structure. You might argue that a property is just a fancy kind of method, but it still <em><strong>feels</strong></em> like a Data Structure.</p>
+
+<p>Ultimately, I decided on this</p>
+
+<p>[gist id=1208486 file=Object.cs]</p>
+
+<p>which I think looks a <em><strong>lot</strong></em> better from the outside, since you only have the ability to use the Console as an Object.</p>
+
+<p>You may ask</p>
+
+<blockquote><p>Why are Hybrids evil in the first place?</p></blockquote>
+
+<p>Well, I think it was best framed by Robert C. Martin in <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&amp;qid=1315672495&amp;sr=8-1">Clean Code</a></p>
+
+<blockquote><p>This issue would be a lot less confusing if data structures had public variables and no functions, whereas objects had private variables and public functions. However there are frameworks and standards (ie beans) that demand even simple data structures have accessors and mutators. &hellip;</p></blockquote>
+
+<p>This confusion leads to unfortunate hybrid structures that are half object and half data structure. They have functions that do significant things, and they also have either public variables, or public accessors and mutators, that for all intents and purposes, make the private variables public, tempting other external functions to use those variables the way a procedural program would use a data structure.</p>
+
+<p>Such hybrids make it hard to add a new function but also make it hard to add new data structures. They are the worst of both worlds. Avoid creating them. They are indicative of a muddled design whose authors are unsure of &ndash; or worse, ignorant of &ndash; whether they need protection from functions or types.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[And so it begins]]></title>
     <link href="http://josephbulger.github.io/blog/2009/03/06/hello-world/"/>
     <updated>2009-03-06T08:43:15-05:00</updated>
     <id>http://josephbulger.github.io/blog/2009/03/06/hello-world</id>
     <content type="html"><![CDATA[<p>Welcome to <strong>JosephBulger.com</strong>!  This is hopefully going to be the first of many blogs that I write!  This blog will focus on things that I take interest of mostly: my family, programming, various technologies, etc.</p>
+
+<!-- more -->
+
 
 <h2>My Family</h2>
 
