@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Objects | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/objects/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
   <updated>2014-01-25T22:53:50-05:00</updated>
   <id>http://josephbulger.github.io/</id>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Datastructures, Objects, and why Hybrids are evil]]></title>
+    <title type="html"><![CDATA[Datastructures, Objects, and Why Hybrids Are Evil]]></title>
     <link href="http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/"/>
     <updated>2011-09-10T08:31:50-04:00</updated>
     <id>http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil</id>
@@ -25,7 +25,7 @@
 
 <p>I have a printer that allows the candidate to print something, which actually verifies that they&rsquo;re code up to that point is correct. It looks something like this</p>
 
-<div><script src='https://gist.github.com/1208486.js?file=Hybrid.cs'></script>
+<p><div><script src='https://gist.github.com/1208486.js?file=Hybrid.cs'></script>
 <noscript><pre><code>public class Console
 {
   public int Counter { get; set; }
@@ -37,7 +37,7 @@
   }
 }
     </code></pre></noscript></div>
-
+</p>
 
 <p>It works exactly as I expected it to, but there was something I didn&rsquo;t like about it. I didn&rsquo;t like the Counter. I didn&rsquo;t want the candidates messing with it. My first inclination was to change the setter to private, but it got me to thinking.</p>
 
@@ -45,7 +45,7 @@
 
 <p>Ultimately, I decided on this</p>
 
-<div><script src='https://gist.github.com/1208486.js?file=Object.cs'></script>
+<p><div><script src='https://gist.github.com/1208486.js?file=Object.cs'></script>
 <noscript><pre><code>public class Console
 {
   private int Counter { get; set; }
@@ -62,7 +62,7 @@
   }
 }
     </code></pre></noscript></div>
-
+</p>
 
 <p>which I think looks a <em><strong>lot</strong></em> better from the outside, since you only have the ability to use the Console as an Object.</p>
 
@@ -77,40 +77,6 @@
 <p>This confusion leads to unfortunate hybrid structures that are half object and half data structure. They have functions that do significant things, and they also have either public variables, or public accessors and mutators, that for all intents and purposes, make the private variables public, tempting other external functions to use those variables the way a procedural program would use a data structure.</p>
 
 <p>Such hybrids make it hard to add a new function but also make it hard to add new data structures. They are the worst of both worlds. Avoid creating them. They are indicative of a muddled design whose authors are unsure of &ndash; or worse, ignorant of &ndash; whether they need protection from functions or types.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[And so it begins]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/03/06/hello-world/"/>
-    <updated>2009-03-06T08:43:15-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/03/06/hello-world</id>
-    <content type="html"><![CDATA[<p>Welcome to <strong>JosephBulger.com</strong>!  This is hopefully going to be the first of many blogs that I write!  This blog will focus on things that I take interest of mostly: my family, programming, various technologies, etc.</p>
-
-<!-- more -->
-
-
-<h2>My Family</h2>
-
-<p>Needless to say, this is where the majority of my time and effort are spent!  So naturally, I&rsquo;ll be blogging a great deal about my family.</p>
-
-<p>My wonderful wife, Michelle, takes care of our entire family, which is completely unbelievable.  She&rsquo;s also running  a <a href="http://www.cookingwithmichelle.com">blog.</a></p>
-
-<p>Sarah is just finishing up 4rth grade! </p>
-
-<p>Joseph is talking/walking/running/anything like crazy and Isaac has nearly mastered the art of walking and is moving onto the science of speaking.</p>
-
-<h2>Programming</h2>
-
-<p>I&rsquo;ll be writing a lot of blogs about programming concepts and their applications that I come across in my work.</p>
-
-<h2><a href="http://www.rockdigitalconsulting.com">RockDigital Consulting</a> </h2>
-
-<p>I work full time as a Senior Software Engineer, but I also run a consulting company on the side that I might write about preiodically as well.  Sound like a plug?  You bet it is =P  Sorry, have to get my advertising in when I can!  Anything cool and exciting that happens to my company I&rsquo;ll most likely blog about so people can see what&rsquo;s happening there.</p>
-
-<h2>Technologies</h2>
-
-<p>This could really be about anything, but its most likely going to be cool gadgets, ideas, frameworks I&rsquo;m looking into or using.</p>
 ]]></content>
   </entry>
   
