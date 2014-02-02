@@ -1,11 +1,9 @@
 ---
-author: jbulger
+layout: post
+author: joseph
 date: 2013-5-27 10:20:00
 title: The New Build
-categories:
-- Technology
-tags:
-- new computer
+categories: [new computer]
 ---
 
 I just recently built a new computer. I decided to go middle of the road on this one, and build something that I anticipate will last me around 2 to 3 years. So far I am completely **loving** this build.

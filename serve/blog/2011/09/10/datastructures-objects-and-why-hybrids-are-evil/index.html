@@ -1,0 +1,215 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Datastructures, Objects, and why Hybrids are evil - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="Datastructures, Objects, and Why Hybrids Are Evil I was writing this code that let&rsquo;s interviewees code problems for me, and it verifies that &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Datastructures, Objects, and Why Hybrids Are Evil</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I was writing this code that let&rsquo;s interviewees code problems for me, and it verifies that the interviewee actually writes something that works. I got to a point in my printer classes that I wasn&rsquo;t liking, and I thought I&rsquo;d share it.</p>
+
+<!-- more -->
+
+
+<p>I have a printer that allows the candidate to print something, which actually verifies that they&rsquo;re code up to that point is correct. It looks something like this</p>
+
+<div><script src='https://gist.github.com/1208486.js?file=Hybrid.cs'></script>
+<noscript><pre><code>public class Console
+{
+  public int Counter { get; set; }
+
+  public void Print(string message)
+  {
+    CheckThatMessageIsCorrectForInterviewQuestion();
+    Counter++;
+  }
+}
+    </code></pre></noscript></div>
+
+
+<p>It works exactly as I expected it to, but there was something I didn&rsquo;t like about it. I didn&rsquo;t like the Counter. I didn&rsquo;t want the candidates messing with it. My first inclination was to change the setter to private, but it got me to thinking.</p>
+
+<p>The Console was definitely intended to be an Object. The whole point was to let the candidate use the Print method. What I had done, however, was create a Hybrid. It&rsquo;s a Hybrid because having the Counter property also makes Console a Data Structure. That&rsquo;s why I wasn&rsquo;t liking it. To the outside world, this class was a Hybrid, and I wanted it to be an Object. I needed my testing framework to know what the Counter was to test that the candidate had actually called Print enough times, though. So how do I fix it? Another problem was that even if I made Counter with a private setter, it would still look like a Data Structure. You might argue that a property is just a fancy kind of method, but it still <em><strong>feels</strong></em> like a Data Structure.</p>
+
+<p>Ultimately, I decided on this</p>
+
+<div><script src='https://gist.github.com/1208486.js?file=Object.cs'></script>
+<noscript><pre><code>public class Console
+{
+  private int Counter { get; set; }
+
+  public void Print(string message)
+  {
+    CheckThatMessageIsCorrectForInterviewQuestion();
+    Counter++;
+  }
+
+  public int GetCount()
+  {
+    return Counter;
+  }
+}
+    </code></pre></noscript></div>
+
+
+<p>which I think looks a <em><strong>lot</strong></em> better from the outside, since you only have the ability to use the Console as an Object.</p>
+
+<p>You may ask</p>
+
+<blockquote><p>Why are Hybrids evil in the first place?</p></blockquote>
+
+<p>Well, I think it was best framed by Robert C. Martin in <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?ie=UTF8&amp;qid=1315672495&amp;sr=8-1">Clean Code</a></p>
+
+<blockquote><p>This issue would be a lot less confusing if data structures had public variables and no functions, whereas objects had private variables and public functions. However there are frameworks and standards (ie beans) that demand even simple data structures have accessors and mutators. &hellip;</p></blockquote>
+
+<p>This confusion leads to unfortunate hybrid structures that are half object and half data structure. They have functions that do significant things, and they also have either public variables, or public accessors and mutators, that for all intents and purposes, make the private variables public, tempting other external functions to use those variables the way a procedural program would use a data structure.</p>
+
+<p>Such hybrids make it hard to add a new function but also make it hard to add new data structures. They are the worst of both worlds. Avoid creating them. They are indicative of a muddled design whose authors are unsure of &ndash; or worse, ignorant of &ndash; whether they need protection from functions or types.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+<script type="text/javascript">
+      var disqus_shortname = 'jbulg';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>
