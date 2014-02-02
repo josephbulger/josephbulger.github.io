@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: New Computer | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/new-computer/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-02T16:53:33-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The New Build]]></title>
+    <link href="http://josephbulger.github.io/blog/2013/05/27/the-new-build/"/>
+    <updated>2013-05-27T06:20:00-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2013/05/27/the-new-build</id>
+    <content type="html"><![CDATA[<p>I just recently built a new computer. I decided to go middle of the road on this one, and build something that I anticipate will last me around 2 to 3 years. So far I am completely <strong>loving</strong> this build.</p>
+
+<p>Let&rsquo;s get into the nuts and bolts. <!-- more --></p>
+
+<h3>The Case</h3>
+
+<p>First things first, what is this new build going to sit inside of. This go around I decided to get a Cooler Master HAF X case. Specifically <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16811119225">this one</a>.</p>
+
+<h3>AMD Build</h3>
+
+<p>I went with an AMD build for a couple of reasons. First and foremost, because AMD recently received a set of processors that go up to 8 core, and are prepackaged overclocked, all for around $200. Getting an Intel 8 core is guaranteed to run you more than that. Price is a major factor here. I know that each AMD core is not nearly as powerful as an Intel core, but I&rsquo;m banking on the idea that it&rsquo;s powerful enough for what I&rsquo;m trying to accomplish, and that running a multi-core architecture is more in line with how I use my computer. The processor I ended up choosing was a <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16819113284">FX-8350 Vishera</a>.</p>
+
+<h3>Board</h3>
+
+<p>I got an <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16813131969">ASUS SABERTOOTH 990FX/GEN3</a>. Key factors on this one was the fact that it runs the Vishera smoothly. The fact that it has PCI-E 3 lanes was an added bonus, even if it&rsquo;s not <strong>true</strong> PCI-E 3 because it&rsquo;s stealing the lanes from the other slots. That&rsquo;s fine for me because I&rsquo;m only going to use 2 slots on those lanes anyway.</p>
+
+<h3>Graphics</h3>
+
+<p>I have two cross fired <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16814150605">Radeon HD 7870</a>. They are un.. fricking&hellip; believable. These two things crossfired together make all the games I currently own <strong>scream</strong>. They should keep me entertained for a really long time.</p>
+
+<h3>RAM</h3>
+
+<p>I went with 32 GB of <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820231610">GSkill RAM</a>. Timings on them were 9-9-9-24. An interesting thing about the RAM. When I first booted my computer, the RAM LED was giving me errors on boot. Turns out that I didn&rsquo;t put the RAM all the way into the slot because the motherboard had only one latch on each slot (on the top) and not on the on the bottom. I had to put each RAM into the slot at the bottom first, then put it in the top, put the latch down, and then go back to the bottom and push it back on the bottom again.</p>
+
+<h3>Hard Drives</h3>
+
+<p>Only other things of note I think is how I set up my hard drives.</p>
+
+<p>I have a <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820147193">256 GB SSD</a> boot drive. On top of that I have a <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136555">VelociRaptor drive</a> for all my programs. I followed all of that up with 2 <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822148844">3 TB drives</a> in a RAID 1 configuration. I set up the RAID via hardware controllers through BIOS. Only tricky thing about that was I had to install windows on the SSD with the RAID drivers loaded so I could boot the SSD via RAID setup even though it wasn&rsquo;t configured for it.</p>
+]]></content>
+  </entry>
+  
+</feed>
