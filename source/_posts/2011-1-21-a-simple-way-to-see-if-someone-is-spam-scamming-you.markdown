@@ -1,6 +1,6 @@
 ---
 author: joseph
-comments: true
+comments: false
 date: 2011-1-21 08:19:14
 layout: post
 slug: a-simple-way-to-see-if-someone-is-spam-scamming-you
