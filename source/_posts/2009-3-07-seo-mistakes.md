@@ -1,22 +1,19 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2009-3-07 08:02:47
 layout: post
 slug: five-common-seo-mistakes
 title: Five Common SEO Mistakes
 wordpress_id: 12
-category:
-- Technology
-tags:
-- linkedIn
-- SEO
-- overview
+categories: [linkedIn, SEO, overview]
 ---
 
-I've come across this many times when building sites for clients.  ASP.NET is really great for building dynamic content pages, but not so great when you're trying to expose those dynamic pages to a crawler or bot used by search engines.  Usually I've found myself having to index the crawler or bot to go find specific pages if I wanted something to show up explicitly.  For instance, you might have a product that you really want to showcase and have searchable.  The product's URL, however might be parameter based, something like _http://www.yourstore.com/productdetails.aspx?productid=5_.
+I've come across this many times when building sites for clients.  ASP.NET is really great for building dynamic content pages, but not so great when you're trying to expose those dynamic pages to a crawler or bot used by search engines.  Usually I've found myself having to index the crawler or bot to go find specific pages if I wanted something to show up explicitly.  For instance, you might have a product that you really want to showcase and have searchable.  The product's URL, however might be parameter based, something like http://www.yourstore.com/productdetails.aspx?productid=5.
 
- Here are 5 common mistakes you should avoid when building sites that need to be Search Engine Optimized (SEO).
+<!-- more -->
+
+Here are 5 common mistakes you should avoid when building sites that need to be Search Engine Optimized (SEO).
 
 
 ## **1. Overuse of Button Controls**
