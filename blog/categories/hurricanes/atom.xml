@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Hurricanes | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/hurricanes/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-04T20:52:19-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hurricanes Among Us]]></title>
+    <link href="http://josephbulger.github.io/blog/2009/03/07/hurricanes/"/>
+    <updated>2009-03-07T03:05:33-05:00</updated>
+    <id>http://josephbulger.github.io/blog/2009/03/07/hurricanes</id>
+    <content type="html"><![CDATA[<p>In case you weren&rsquo;t aware of this already, I&rsquo;m located at the tip end of Florida in a city called Homestead.  So needless to say I&rsquo;m very concerned about Hurricane forecasts!  I usually use the <a href="http://www.nhc.noaa.gov/">National Hurricane Center</a>&rsquo;s information when tracking hurricanes, but I recently came across this other tool that does a really good job of visually presenting you the data.  The tool is called <a href="http://www.stormpulse.com/">Storm Pulse</a> and it gives a Flash representation of the Atlantic Basin.  You can look at historical tracks, weather models, wind models, etc. </p>
+
+<p> Really cool Stuff.  Check it out if you get some time.</p>
+]]></content>
+  </entry>
+  
+</feed>

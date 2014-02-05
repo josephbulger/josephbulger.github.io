@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linkedIn | Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/blog/categories/linkedin/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-04T20:23:25-05:00</updated>
+  <updated>2014-02-04T20:52:19-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -230,6 +230,22 @@ return PartialView("AjaxResults", model);
 <p>The ToPagedList performs the functionality that is included with the PagedList classes which you can find <a href="http://pagedlist.codeplex.com/">here</a>.</p>
 
 <p>Let me know what you think, and if you’d like some demo source to see this in action I can happily provide, just let me know.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Visual Studio Tip: Jump Between Braces]]></title>
+    <link href="http://josephbulger.github.io/blog/2009/03/07/visual-studio-jump-tip/"/>
+    <updated>2009-03-07T03:01:32-05:00</updated>
+    <id>http://josephbulger.github.io/blog/2009/03/07/visual-studio-jump-tip</id>
+    <content type="html"><![CDATA[<p>Have you ever found yourself lost inside some sort of block statement, wondering when the beginning of the block began or ended?  I just found this awesome feature in Visual Studio that allows me to jump to the beginning or ending of a block. </p>
+
+<!-- more -->
+
+
+<p>To do this, put your cursor before or after the brace (your choice) and then press <strong>Ctrl+]</strong>. It works with either curly or round braces.</p>
+
+<p>I originally found this nifty little feature from another <a href="http://vkreynin.wordpress.com/2008/07/09/jump-between-braces-in-visual-studio/">blog</a></p>
 ]]></content>
   </entry>
   
