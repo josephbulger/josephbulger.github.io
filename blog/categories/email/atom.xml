@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Email | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/email/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-04T20:21:10-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Simple Way to See if Someone Is Spam Scamming You]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you/"/>
+    <updated>2011-01-21T03:19:14-05:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you</id>
+    <content type="html"><![CDATA[<p>I hate having to sign up for anything on the internet. If I can avoid it I will, but nevertheless at some point you’re going to have to sign up for something.</p>
+
+<!-- more -->
+
+
+<p>Now, with signing up comes the distinct possibility that the site you’re signing up on will give your email away to someone, either intentionally or not.  Well, I use gmail as my email server, and one of the really cool features that they recognize is Address Tags.</p>
+
+<p>What are Address Tags?  I’ll show you.  Let’s say you sign up for some site, but you want to know if they pass your email on to someone else.  When they ask for you email address, you can tag your email with something specific to that site.  Say, for example, that my email is <a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a>.  When I sign up on a site and give my email, I could instead give them <a href="mailto:john.doe+youreascumbag@gmail.com">john.doe+youreascumbag@gmail.com</a> and it would still go to <strong>my </strong>email.  This is pretty cool, because now whenever they send you an email, you’ll have that tag in your address, so you’ll know it was definitely from them, but also, if they give out that email to anyone else and <strong>they contact you</strong> it will be the same email, so you’ll at least <strong>know </strong>who’s spam scamming you.</p>
+]]></content>
+  </entry>
+  
+</feed>
