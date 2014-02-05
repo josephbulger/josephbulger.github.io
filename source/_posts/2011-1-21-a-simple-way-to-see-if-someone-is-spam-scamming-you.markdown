@@ -1,16 +1,12 @@
 ---
-author: jbulger
+author: joseph
 comments: true
 date: 2011-1-21 08:19:14
 layout: post
 slug: a-simple-way-to-see-if-someone-is-spam-scamming-you
 title: A simple way to see if someone is spam scamming you
 wordpress_id: 386
-categories:
-- Technology
-tags:
-- email
-- scam
+categories: [email, scam]
 ---
 
 I hate having to sign up for anything on the internet. If I can avoid it I will, but nevertheless at some point you’re going to have to sign up for something.
