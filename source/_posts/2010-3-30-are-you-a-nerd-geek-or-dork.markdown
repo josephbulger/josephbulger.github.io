@@ -15,6 +15,4 @@ I just got an email from a friend of mine with this and I couldn’t pass up thr
 
 {% img /images/posts/2010/03/Nerd_Dork_Geek_Venn_Diagram_thumb.jpg %}
 
-Here’s the [original article](http://www.greatwhitesnark.com/2010/03/25/difference-between-nerd-dork-and-geek-explained-in-a-venn-diagram/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+greatwhitesnark/yqzr+(Great+White+Snark)) that this came from.
-
 Enjoy!
