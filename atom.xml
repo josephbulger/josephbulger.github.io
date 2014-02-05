@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-04T20:21:10-05:00</updated>
+  <updated>2014-02-04T20:23:25-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -47,6 +47,22 @@
 <p>Only other things of note I think is how I set up my hard drives.</p>
 
 <p>I have a <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820147193">256 GB SSD</a> boot drive. On top of that I have a <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822136555">VelociRaptor drive</a> for all my programs. I followed all of that up with 2 <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16822148844">3 TB drives</a> in a RAID 1 configuration. I set up the RAID via hardware controllers through BIOS. Only tricky thing about that was I had to install windows on the SSD with the RAID drivers loaded so I could boot the SSD via RAID setup even though it wasn&rsquo;t configured for it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gist @ GitHub and why it's awesome]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome/"/>
+    <updated>2011-10-18T04:00:08-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome</id>
+    <content type="html"><![CDATA[<p>In case you haven&rsquo;t noticed, a lot of my posts recently have been using <a href="https://gist.github.com/">gist</a>. It&rsquo;s an awesome tool that&rsquo;s freely available which allows you to write snippets of code in a variety of languages.</p>
+
+<!-- more -->
+
+
+<p>Not only does it do that, but the actual gist that you create is a full fledged Git repository, which means you have the ability to clone it , pull and push from it.</p>
+
+<p>I also use a <a href="http://wordpress.org/extend/plugins/embed-github-gist/">plug in</a> for my blog that let&rsquo;s me show individual files on any of my gists.</p>
 ]]></content>
   </entry>
   

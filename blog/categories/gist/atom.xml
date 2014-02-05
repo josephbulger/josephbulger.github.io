@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gist | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/gist/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-04T20:23:25-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Gist @ GitHub and Why It's Awesome]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome/"/>
+    <updated>2011-10-18T04:00:08-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome</id>
+    <content type="html"><![CDATA[<p>In case you haven&rsquo;t noticed, a lot of my posts recently have been using <a href="https://gist.github.com/">gist</a>. It&rsquo;s an awesome tool that&rsquo;s freely available which allows you to write snippets of code in a variety of languages.</p>
+
+<!-- more -->
+
+
+<p>Not only does it do that, but the actual gist that you create is a full fledged Git repository, which means you have the ability to clone it , pull and push from it.</p>
+
+<p>I also use a <a href="http://wordpress.org/extend/plugins/embed-github-gist/">plug in</a> for my blog that let&rsquo;s me show individual files on any of my gists.</p>
+]]></content>
+  </entry>
+  
+</feed>
