@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Learning | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/learning/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-05T21:40:48-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Team Maturity: Self-Organizing]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing/"/>
+    <updated>2011-10-14T04:00:24-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing</id>
+    <content type="html"><![CDATA[<p>Your team has been in the <a href="/blog/2011/09/15/team-maturity-learning/">Learning stage</a> and it&rsquo;s heading into the Self-Organizing stage. Team members have learned the skills necessary to become self-organizing now, and everything gets done whether you&rsquo;re there or not. This is where a lot of people get scared. What good am I as a lead if I&rsquo;m not needed anymore? Couldn&rsquo;t my higher ups just fire me and let the team do it&rsquo;s thing?<!-- more --></p>
+
+<p>Not to worry. In the Self-Organizing stage your role turns to more of a Coach. You need to <em>grow</em> your team into learning new things, technologies or tools to help them in what they do. Inspire them to be passionate about their job. This is also the perfect stage to take those team members that you identified earlier as your potential leaders and really coach them into<em><strong> becoming</strong></em> leaders. If you do your job well enough, then they can do your job <em>for</em> you. <strong>This is not a bad thing. </strong>If they can do your job for you, that frees you up to help with other projects, or start new ones.</p>
+
+<p>In reality, a team will never be able to sustain being in the Self-Organizing stage, though. Teams will cycle through stages. Usually it&rsquo;s a circular pattern. It almost always happens because the scope of the project changes in some way. Maybe they need to learn a whole new technology stack. Maybe the project has taken a whole new direction and you need to develop completely new projects. If this happens don&rsquo;t think it&rsquo;s a sign that you or your team has done something wrong. It&rsquo;s just a natural part of the team cycle. It should be <em><strong>easier</strong></em> for subsequent cycles. The more your team has experience going through the cycles, and gain experience with how they work inside each cycle, the easier it will be to ramp back up to Self-Organizing.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Team Maturity: Learning]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning/"/>
+    <updated>2011-09-15T14:00:55-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning</id>
+    <content type="html"><![CDATA[<p>So you&rsquo;re team now has time to learn, and some of them (if not all), are taking advantage of that. How do you get them to be self-organizing? That&rsquo;s where you start pushing responsibilities onto your team.</p>
+
+<!-- more -->
+
+
+<p>The problem with teams that are not self-organizing is that they don&rsquo;t have the skills <em><strong>to be</strong></em> self-organizing. Your job is to identify what skills are lacking, and give them the opportunities to grow those skills.</p>
+
+<p>This usually involves a couple of different areas. Your team won&rsquo;t need help in technical areas, mostly, because they focus on that themselves. There are exceptions, but to get them to self-organizing, you want them to focus on other areas too.</p>
+
+<p>When a team member comes to you with a problem, don&rsquo;t solve it for them. Give them the tools they need to solve it for themselves. Let them grow. They may hate you for it at first, but in the end it will be very rewarding for them, and the good ones will recognize and appreciate what you&rsquo;ve done for them.</p>
+
+<p>Find your leaders. They will be the ones who will lead when you get to self-organizing. Give them the tools they need to learn how to do your job. No, they&rsquo;re not going to replace you, and you won&rsquo;t lose your job. If you can grow one leader to do your job so well that they <em><strong>can</strong></em> replace you, and a team to be self-organizing, then you&rsquo;ve just shown that you have the ability to grow teams. Any company will see that and capitalize on your abilities to produce good teams.</p>
+
+<p>When your in the chaos stage, you spend a lot of time putting up barriers between your team and the outside world. This is to protect them so you can give them room to learn and grow. You&rsquo;re not in chaos anymore, though, and it&rsquo;s time to start taking down some of those barriers. Your team needs to grow in the areas that are <em><strong>outside</strong></em> of the barriers you put up. Lower your barriers, and let your team learn to handle what&rsquo;s in the outside world. Clients, business analysts, project managers, etc. They need to learn how to deal with different actors, people besides QA and their team lead.</p>
+
+<p>Eventually they&rsquo;ll grow to the final stage, Self-Organizing.</p>
+]]></content>
+  </entry>
+  
+</feed>

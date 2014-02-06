@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Series | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/series/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-05T21:40:48-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Team Maturity]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/07/team-maturity/"/>
+    <updated>2011-09-07T08:00:06-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/07/team-maturity</id>
+    <content type="html"><![CDATA[<p>This isn&rsquo;t an original idea of mine. It actually comes straight from <a href="http://5whys.com/blog/the-3-maturity-stages-of-a-software-team-and-how-scrum-fails.html">5whys.com</a>. I spend a lot of time as a leader researching how others lead their teams, and <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>&rsquo;s writings are worth your time.</p>
+
+<!-- more -->
+
+
+<p>There are 3 maturity stages of a software team. This may be true for other industries as well, but for my purposes we&rsquo;ll be focusing on software. Roy defines these stages as:</p>
+
+<ol>
+<li><p> Chaos</p></li>
+<li><p> Mid-Life</p></li>
+<li><p> Mature</p></li>
+</ol>
+
+
+<p>but I actually like to describe them as</p>
+
+<ol>
+<li><p> Chaos</p></li>
+<li><p> Learning</p></li>
+<li><p> Self-Organizing</p></li>
+</ol>
+
+
+<p>This is only semantics, but when I talk to others about the different stages, people tend to understand the stages more inherently when I talk about the focal point of that stage.</p>
+
+<p>There are some critically important things that as a lead you need to understand about these stages.</p>
+
+<p>The most important thing a lead needs to understand is your role as a leader is completely different depending on what stage your team is in. We&rsquo;ll get into how your role changes based on each stage is later posts, but keep this in mind.</p>
+
+<p>Secondly, from my experience, a team can go in and out of these stages. It can be cyclic, or they can jump around. It tends to be more of the former rather than the latter, but I have seen it happen both ways. As a leader, you need to keep an eye on your team and be able to identify when this change happens so that you can change your role within the team to get them back on track.</p>
+
+<p>The goal is to grow mature, self-organizing teams. We&rsquo;ll cover more on this later, but if you can&rsquo;t wait you can always jump over to 5 whys. Roy has some great content that goes into great detail about each of these stages and how to manage them.</p>
+]]></content>
+  </entry>
+  
+</feed>

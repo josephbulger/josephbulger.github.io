@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Leading | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/leading/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-05T21:40:48-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Team Maturity: Self-Organizing]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing/"/>
+    <updated>2011-10-14T04:00:24-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing</id>
+    <content type="html"><![CDATA[<p>Your team has been in the <a href="/blog/2011/09/15/team-maturity-learning/">Learning stage</a> and it&rsquo;s heading into the Self-Organizing stage. Team members have learned the skills necessary to become self-organizing now, and everything gets done whether you&rsquo;re there or not. This is where a lot of people get scared. What good am I as a lead if I&rsquo;m not needed anymore? Couldn&rsquo;t my higher ups just fire me and let the team do it&rsquo;s thing?<!-- more --></p>
+
+<p>Not to worry. In the Self-Organizing stage your role turns to more of a Coach. You need to <em>grow</em> your team into learning new things, technologies or tools to help them in what they do. Inspire them to be passionate about their job. This is also the perfect stage to take those team members that you identified earlier as your potential leaders and really coach them into<em><strong> becoming</strong></em> leaders. If you do your job well enough, then they can do your job <em>for</em> you. <strong>This is not a bad thing. </strong>If they can do your job for you, that frees you up to help with other projects, or start new ones.</p>
+
+<p>In reality, a team will never be able to sustain being in the Self-Organizing stage, though. Teams will cycle through stages. Usually it&rsquo;s a circular pattern. It almost always happens because the scope of the project changes in some way. Maybe they need to learn a whole new technology stack. Maybe the project has taken a whole new direction and you need to develop completely new projects. If this happens don&rsquo;t think it&rsquo;s a sign that you or your team has done something wrong. It&rsquo;s just a natural part of the team cycle. It should be <em><strong>easier</strong></em> for subsequent cycles. The more your team has experience going through the cycles, and gain experience with how they work inside each cycle, the easier it will be to ramp back up to Self-Organizing.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Team Maturity: Learning]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning/"/>
+    <updated>2011-09-15T14:00:55-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning</id>
+    <content type="html"><![CDATA[<p>So you&rsquo;re team now has time to learn, and some of them (if not all), are taking advantage of that. How do you get them to be self-organizing? That&rsquo;s where you start pushing responsibilities onto your team.</p>
+
+<!-- more -->
+
+
+<p>The problem with teams that are not self-organizing is that they don&rsquo;t have the skills <em><strong>to be</strong></em> self-organizing. Your job is to identify what skills are lacking, and give them the opportunities to grow those skills.</p>
+
+<p>This usually involves a couple of different areas. Your team won&rsquo;t need help in technical areas, mostly, because they focus on that themselves. There are exceptions, but to get them to self-organizing, you want them to focus on other areas too.</p>
+
+<p>When a team member comes to you with a problem, don&rsquo;t solve it for them. Give them the tools they need to solve it for themselves. Let them grow. They may hate you for it at first, but in the end it will be very rewarding for them, and the good ones will recognize and appreciate what you&rsquo;ve done for them.</p>
+
+<p>Find your leaders. They will be the ones who will lead when you get to self-organizing. Give them the tools they need to learn how to do your job. No, they&rsquo;re not going to replace you, and you won&rsquo;t lose your job. If you can grow one leader to do your job so well that they <em><strong>can</strong></em> replace you, and a team to be self-organizing, then you&rsquo;ve just shown that you have the ability to grow teams. Any company will see that and capitalize on your abilities to produce good teams.</p>
+
+<p>When your in the chaos stage, you spend a lot of time putting up barriers between your team and the outside world. This is to protect them so you can give them room to learn and grow. You&rsquo;re not in chaos anymore, though, and it&rsquo;s time to start taking down some of those barriers. Your team needs to grow in the areas that are <em><strong>outside</strong></em> of the barriers you put up. Lower your barriers, and let your team learn to handle what&rsquo;s in the outside world. Clients, business analysts, project managers, etc. They need to learn how to deal with different actors, people besides QA and their team lead.</p>
+
+<p>Eventually they&rsquo;ll grow to the final stage, Self-Organizing.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Team Maturity: Chaos]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos/"/>
+    <updated>2011-09-13T14:00:10-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos</id>
+    <content type="html"><![CDATA[<p>So how do you know if your team is in choas? Actually, most teams are in the chaos stage. Learning to identify when a team has gotten into chaos isn&rsquo;t really that hard if you follow some simple guidelines, though.</p>
+
+<!-- more -->
+
+
+<p>Ask yourself a simple question.</p>
+
+<blockquote><p>Does my team have enough time to learn new things?</p></blockquote>
+
+<p>If the answer is no, then you&rsquo;re in chaos. I&rsquo;ll go one step further. If the answer was &ldquo;no, why does my team need to learn anything?&rdquo;, then you&rsquo;re in chaos, and if you want to fix it you need to look at yourself.</p>
+
+<p>All teams need time to learn. This is important so that they can become more productive, and to move towards being self-organizing. If they can&rsquo;t learn then they&rsquo;ll never get the self-organizing stage.</p>
+
+<p>If you&rsquo;re with me so far, then you&rsquo;re probably asking</p>
+
+<blockquote><p>How do I make time for my team to learn?</p></blockquote>
+
+<p>It starts by identifying why you&rsquo;re team doesn&rsquo;t have time. Sometimes it can be as simple as giving them some extra time in the week to learn something new. Tell your team they can have 4 hours on Friday to learn whatever they want. This will let you see which people on your team are self-motivated. This is vitally important. It identifies your <strong><em>leaders</em></strong>. For those who choose not to learn anything, make it a requirement. The best way to go about doing this is to just ask people how they&rsquo;re learning is going. Maybe every Monday you ask each team member individually what thing they learned on Friday. This is great because it sets up an expectation for them that they not only have the opportunity to learn, but that you&rsquo;re <em><strong>expecting</strong></em> them to learn.</p>
+
+<p>Not all teams will have time for this. Your release cycle swamps you with work, for various reasons, and prevents you from being able to give this critical time to your team. So what then? That&rsquo;s when you&rsquo;re role become a fire fighter of sorts. You have to put out the fires. The point here, though, is to extinguish the fire, permanently. If you&rsquo;re putting out one fire, and two fires pop up in it&rsquo;s place, then you have another issue which needs to be addressed. You&rsquo;re the team leader, and it&rsquo;s your job to control the fire. You have to shield your team, that&rsquo;s your job during this stage. That means putting out fires, but it also means <em><strong>not allowing other fires to start in the first place</strong></em>.</p>
+
+<p>This is usually a good indication that you&rsquo;re lacking tools that help your team be more productive. For example, maybe your &ldquo;fire&rdquo; is releases. They take too long to do, because they&rsquo;re manual. You release often, so it&rsquo;s something you spend a lot of time on. Why isn&rsquo;t your release process automated? Take a step back, is your build process automated? No? That&rsquo;s the beginning of your problem. You can&rsquo;t have an automated release process if you don&rsquo;t have an automated build process. Another example, is it hard for your team to share projects? Do you find yourself in situations where two people are working on the same thing and stepping on each other&rsquo;s toes a lot? Does this require you to put people on separate projects so you don&rsquo;t get into a tangled web of conflicts? Yes?</p>
+
+<p>Are you using source control?</p>
+
+<p>No? Get it.</p>
+
+<p>Yes? Are you using a <em><strong>good</strong></em> source control system? Your team needs to be able to work together, and if your source control doesn&rsquo;t accommodate that it&rsquo;s probably because it&rsquo;s not so great. Try a new one. Maybe Git, or Mercurial, or if you&rsquo;re not into <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">DVCS</a>, try SVN.</p>
+
+<p>There are a lot of things that can hinder your team&rsquo;s productivity. Most of them have been solved by other teams already using automation. You&rsquo;re team probably isn&rsquo;t special, and their problems have probably been solved by other (bigger and more productive) teams. See what they&rsquo;ve done. Copy them, mimic them, learn from them.</p>
+
+<p>Get your team out of chaos, so they can learn, and make your job easier.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Team Maturity]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/07/team-maturity/"/>
+    <updated>2011-09-07T08:00:06-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/07/team-maturity</id>
+    <content type="html"><![CDATA[<p>This isn&rsquo;t an original idea of mine. It actually comes straight from <a href="http://5whys.com/blog/the-3-maturity-stages-of-a-software-team-and-how-scrum-fails.html">5whys.com</a>. I spend a lot of time as a leader researching how others lead their teams, and <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>&rsquo;s writings are worth your time.</p>
+
+<!-- more -->
+
+
+<p>There are 3 maturity stages of a software team. This may be true for other industries as well, but for my purposes we&rsquo;ll be focusing on software. Roy defines these stages as:</p>
+
+<ol>
+<li><p> Chaos</p></li>
+<li><p> Mid-Life</p></li>
+<li><p> Mature</p></li>
+</ol>
+
+
+<p>but I actually like to describe them as</p>
+
+<ol>
+<li><p> Chaos</p></li>
+<li><p> Learning</p></li>
+<li><p> Self-Organizing</p></li>
+</ol>
+
+
+<p>This is only semantics, but when I talk to others about the different stages, people tend to understand the stages more inherently when I talk about the focal point of that stage.</p>
+
+<p>There are some critically important things that as a lead you need to understand about these stages.</p>
+
+<p>The most important thing a lead needs to understand is your role as a leader is completely different depending on what stage your team is in. We&rsquo;ll get into how your role changes based on each stage is later posts, but keep this in mind.</p>
+
+<p>Secondly, from my experience, a team can go in and out of these stages. It can be cyclic, or they can jump around. It tends to be more of the former rather than the latter, but I have seen it happen both ways. As a leader, you need to keep an eye on your team and be able to identify when this change happens so that you can change your role within the team to get them back on track.</p>
+
+<p>The goal is to grow mature, self-organizing teams. We&rsquo;ll cover more on this later, but if you can&rsquo;t wait you can always jump over to 5 whys. Roy has some great content that goes into great detail about each of these stages and how to manage them.</p>
+]]></content>
+  </entry>
+  
+</feed>

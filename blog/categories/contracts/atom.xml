@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Contracts | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/contracts/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-05T21:40:48-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Contract by Design Over the Wire and a Possible Solution]]></title>
+    <link href="http://josephbulger.github.io/blog/2010/04/29/using-contract-by-design-over-the-wire-and-a-possible-solution/"/>
+    <updated>2010-04-29T04:10:29-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2010/04/29/using-contract-by-design-over-the-wire-and-a-possible-solution</id>
+    <content type="html"><![CDATA[<p>I’ve been plagued with an issue that I have yet to find a solution for.</p>
+
+<p>This is really more for my benefit so I can research this later, but basically when I create classes I tend to decouple them by using interfaces, especially between layers.</p>
+
+<!-- more -->
+
+
+<p>The problem is when you use a service layer, such as WCF, that the class that is generated on the client side doesn’t carry the implementations that the server side class has.</p>
+
+<p>Then I found <a href="http://blogs.microsoft.co.il/blogs/gilf/archive/2010/04/28/add-service-reference-how-to-avoid-generating-already-existing-classes.aspx">this article</a> which might be my saving grace.  It lefts you actually reference the same class on the client side.  This might be solution I’m looking for.</p>
+
+<p>Once I get a chance to test this out I’ll post the results with some code.</p>
+]]></content>
+  </entry>
+  
+</feed>
