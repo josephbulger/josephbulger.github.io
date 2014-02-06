@@ -1,16 +1,11 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-9-13 18:00:10
 layout: post
 slug: team-maturity-chaos
 title: 'Team Maturity: Chaos'
-wordpress_id: 742
-categories:
-- Leading
-tags:
-- chaos
-- team-maturity
+categories: [leading, chaos, team maturity]
 ---
 
 So how do you know if your team is in choas? Actually, most teams are in the chaos stage. Learning to identify when a team has gotten into chaos isn't really that hard if you follow some simple guidelines, though.

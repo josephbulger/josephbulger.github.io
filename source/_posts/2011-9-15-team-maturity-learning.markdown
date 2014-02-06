@@ -1,16 +1,11 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-9-15 18:00:55
 layout: post
 slug: team-maturity-learning
 title: 'Team Maturity: Learning'
-wordpress_id: 749
-categories:
-- Leading
-tags:
-- learning
-- team-maturity
+categories: [learning, leading, team maturity]
 ---
 
 So you're team now has time to learn, and some of them (if not all), are taking advantage of that. How do you get them to be self-organizing? That's where you start pushing responsibilities onto your team.

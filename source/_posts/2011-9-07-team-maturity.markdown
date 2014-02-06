@@ -1,24 +1,17 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-9-07 12:00:06
 layout: post
 slug: team-maturity
 title: Team Maturity
 wordpress_id: 709
-categories:
-- Leading
-tags:
-- series
-- team-maturity
+categories: [series, team maturity, leading]
 ---
 
 This isn't an original idea of mine. It actually comes straight from [5whys.com](http://5whys.com/blog/the-3-maturity-stages-of-a-software-team-and-how-scrum-fails.html). I spend a lot of time as a leader researching how others lead their teams, and [@RoyOsherove](http://twitter.com/#!/RoyOsherove)'s writings are worth your time.
 
 <!-- more -->There are 3 maturity stages of a software team. This may be true for other industries as well, but for my purposes we'll be focusing on software. Roy defines these stages as:
-
-
-
 	
   1. Chaos
 
