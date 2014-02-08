@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Microsoft | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/microsoft/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:12:17-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trying Out Microsoft Hohm: Save Energy, Save Money]]></title>
+    <link href="http://josephbulger.github.io/blog/2009/07/06/trying-out-microsoft-hohm-save-energy-save-money/"/>
+    <updated>2009-07-06T16:06:05-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2009/07/06/trying-out-microsoft-hohm-save-energy-save-money</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m trying out a new product Microsoft is releasing on the web called <a href="http://www.microsoft-hohm.com">Hohm</a>.  It&rsquo;s a web site dedicated to tracking your energy expenditure and cost, so that you can reduce your energy consumption and also save you some cash along the way.</p>
+
+<!-- more -->
+
+
+<p>How does it accomplish this?  It profiles you and your house.  It asks you some basic (and some not so basic) information about your house and your energy habits.  The cool thing is you can choose to fill in as much, or as little, as you want.  No pressure.  However, the more information you can give it the more accurate the reports will be.</p>
+
+<p>Other cool things include the ability to track your energy bills through an automated feed.  This has to be set up with your utility company(ies), but if they offer it, then it&rsquo;s a quick way for Hohm to get a lot of information about your energy consumption.  I live in Homestead, FL, and as of today they haven&rsquo;t set up any of the providers here.  I&rsquo;m hoping they will in the future so I can submit them my data feed and get some real data to project.</p>
+
+<p>I&rsquo;m really using it as a way to try and save money primarily.  If it works out I&rsquo;ll be writing a success story on it at a later date.</p>
+]]></content>
+  </entry>
+  
+</feed>

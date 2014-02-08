@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Silverlight | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/silverlight/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:12:17-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Light Up the World in Silverlight!]]></title>
+    <link href="http://josephbulger.github.io/blog/2009/03/07/silverlight/"/>
+    <updated>2009-03-07T03:03:52-05:00</updated>
+    <id>http://josephbulger.github.io/blog/2009/03/07/silverlight</id>
+    <content type="html"><![CDATA[<p>I just finished watching a variety of videos from Mike Taulty about learning Silverlight.  These are exceptionally good videos and I would suggest anyone that is trying to learn Silverlight OR Windows Presentation Foundation (WPF) to take a look at them. </p>
+
+<!-- more -->
+
+
+<p>Here are links to all the videos.</p>
+
+<ol>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Hello-World/"><strong>Silverlight &ndash; Hello World</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Anatomy-of-an-Application/"><strong>Silverlight &ndash; Anatomy of an Application</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-The-VS-Environment/"><strong>Silverlight &ndash; The VS Environment</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Content-Controls/"><strong>Silverlight &ndash; Content Controls</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Built-In-Controls/"><strong>Silverlight &ndash; Built-In Controls</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Width-Height-Margins-Padding-Alignment/"><strong>Silverlight &ndash; Width, Height, Margins, Padding, Alignment</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Using-a-GridSplitter/"><strong>Silverlight &ndash; Using a GridSplitter</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Grid-Layout/"><strong>Silverlight &ndash; Grid Layout</strong></a></p></li>
+<li><p> <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-StackPanel-Layout/"><strong>Silverlight &ndash; StackPanel Layout</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Canvas-Layout/"><strong>Silverlight &ndash; Canvas Layout</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Databinding-UI-to-NET-Classes/"><strong>Silverlight &ndash; Databinding UI to .NET Classes</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Simple-Styles/"><strong>Silverlight &ndash; Simple Styles</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Custom-Types-in-XAML/"><strong>Silverlight &ndash; Custom Types in XAML</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Binding-with-Conversion/"><strong>Silverlight &ndash; Binding with Conversion</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-List-Based-Data-Binding/"><strong>Silverlight &ndash; List Based Data Binding</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Simple-User-Control/"><strong>Silverlight &ndash; Simple User Control</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Templating-a-Button/"><strong>Silverlight &ndash; Templating a Button</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Resources-from-XAPDLLSite-Of-Origin/"><strong>Silverlight &ndash; Resources from XAP/DLL/Site Of Origin</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Animations--Storyboards/"><strong>Silverlight &ndash; Animations &amp; Storyboards</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Uploads-with-WebClient/"><strong>Silverlight &ndash; Uploads with WebClient</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Downloads-with-WebClient/"><strong>Silverlight &ndash; Downloads with WebClient</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Calling-HTTPS-Web-Services/"><strong>Silverlight &ndash; Calling HTTPS Web Services</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Calling-Web-Services/"><strong>Silverlight &ndash; Calling Web Services</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Making-Cross-Domain-Requests/"><strong>Silverlight &ndash; Making Cross Domain Requests</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Using-HttpWebRequest/"><strong>Silverlight &ndash; Using HttpWebRequest</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-File-Dialogs-and-User-Files/"><strong>Silverlight &ndash; File Dialogs and User Files</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Using-Sockets/"><strong>Silverlight &ndash; Using Sockets</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Using-Isolated-Storage/"><strong>Silverlight &ndash; Using Isolated Storage</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-NET-Code-Modifying-HTML/"><strong>Silverlight &ndash; .NET Code Modifying HTML</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Using-Isolated-Storage-Quotas/"><strong>Silverlight &ndash; Using Isolated Storage Quotas</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Calling-JavaScript-from-NET/"><strong>Silverlight &ndash; Calling JavaScript from .NET</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Evaluating-JavaScript-from-NET-Code/"><strong>Silverlight &ndash; Evaluating JavaScript from .NET Code</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Handling-HTML-Events-in-NET-Code/"><strong>Silverlight &ndash; Handling HTML Events in .NET Code</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Handling-NET-Events-in-JavaScript/"><strong>Silverlight &ndash; Handling .NET Events in JavaScript</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Calling-NET-from-JavaScript/"><strong>Silverlight &ndash; Calling .NET from JavaScript</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Displaying-a-Custom-Splash-Screen/"><strong>Silverlight &ndash; Displaying a Custom Splash Screen</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Passing-Parameters-from-your-Web-Page/"><strong>Silverlight &ndash; Passing Parameters from your Web Page</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Loading-Media-at-Runtime/"><strong>Silverlight &ndash; Loading Media at Runtime</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Dynamically-Loading-AssembliesCode/"><strong>Silverlight &ndash; Dynamically Loading Assemblies/Code</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-ReadingWriting-XML/"><strong>Silverlight &ndash; Reading/Writing XML</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Using-Silverlight-Streaming/"><strong>Silverlight &ndash; Multiple Threads with BackgroundWorker</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-InsertUpdateDelete-with-the-DataGrid/"><strong>Silverlight &ndash; Insert/Update/Delete with the DataGrid</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Getting-Started-with-the-DataGrid/"><strong>Silverlight &ndash; Getting Started with the DataGrid</strong></a></p></li>
+<li><p>. <a href="http://channel9.msdn.com/posts/mtaulty/Silverlight-Embedding-Custom-Fonts/"><strong>Silverlight &ndash; Embedding Custom Fonts</strong></a></p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

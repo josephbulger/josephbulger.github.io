@@ -1,0 +1,192 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>The SRP Swiss Army Knife - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="The SRP Swiss Army Knife I read this blog a few weeks back, and while the principles that the author was trying to convey I don’t disagree with, I &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2009/03/07/srp-swiss-army-knife/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">The SRP Swiss Army Knife</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I read this <a href="http://www.lostechies.com/blogs/gabrielschenker/archive/2009/01/21/real-swiss-don-t-need-srp-do-they.aspx">blog</a> a few weeks back, and while the principles that the author was trying to convey I don’t disagree with, I did have a hard time stomaching the idea that Swiss army knives made for bad OOP design.<!-- more -->  Why?  Because I really like Swiss army knives!  I mean come on, what other device lets you have 100+ different kinds of knives, a compass, a light, a magnifying glass, and a USB drive all in one “disappears in your pocket” size container???</p>
+
+<p>Ok so I know what most of you are thinking… I’m just PROVING that they violate SRP right?  Not actually.  In case you’re not familiar with the principle of SRP, check out this <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">wiki</a>.  The reason why I believe the Swiss army knife does NOT violate SRP is because my general rule of them is, if I can state the responsibility of the object in question in one single statement, then I have identified it’s SINGLE responsibility.  So I have to ask myself, what is the SINGLE thing that a Swiss army knife does?</p>
+
+<p><em>Responsibility statement</em>: <strong><em>A Swiss army knife is responsible for allowing it’s user to be able to use any tool that has been installed into it</em></strong>.</p>
+
+<p>Short, simple, and to the point.  Now, that sounds all fine and dandy, but if I don’t implement the code the way I’ve dictated in my statement, then I will violate SRP, so how is it that I build a Swiss army knife while preserving my responsibility statement?  Enter code.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'>   <span class="k">public</span> <span class="k">interface</span> <span class="n">SwissArmyKnife</span>
+</span><span class='line'>   <span class="p">{</span>
+</span><span class='line'>       <span class="n">ITool</span> <span class="nf">PullOutTool</span><span class="p">(</span><span class="n">ITool</span> <span class="n">tool</span><span class="p">);</span>
+</span><span class='line'>       <span class="k">void</span> <span class="nf">PutAwayTool</span><span class="p">(</span><span class="n">ITool</span> <span class="n">tool</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>       <span class="n">IList</span> <span class="n">Tools</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>       <span class="n">ITool</span> <span class="n">ToolBeingUsed</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>   <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>My interface defines any type of Swiss army knife I ever wish to make.  It’s only responsibility is to be able to use a tool that it has.  So then how do you use the Tool?  Well here’s how an ITool might look like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">interface</span> <span class="n">ITool</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">void</span> <span class="nf">Use</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you can get any tool from the Swiss army knife and then use it.  Notice that it’s NOT the responsibility of the Swiss army knife to know HOW to USE the tool, only to get it out or put it away.</p>
+
+<p>So what would violate SRP then?  Why did the author choose this particular product to harp on?  I think it was a matter of perspective really.  The article I read had numerous pictures of knives all decked out such as this one. Here is where I believe the real trickery is.  The author shows the pictures of all the swiss army knives with all the tools exposed.  If you really tried to use the knife like this, you would probably really screw up your hand!  That’s my point.  The knife is not of any use to anyone unless you’re using ONE tool at a time.  This is why SRP is not being violated.</p>
+
+<p>You might take this a step further and say that you have a Swiss army Factory that would actually build the Swiss army knives, but that would be a discussion for another day.</p>
+
+<p>Anyway, I hope everyone has found this interesting, till next time!</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

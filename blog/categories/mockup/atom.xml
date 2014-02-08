@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mockup | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/mockup/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:12:17-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Mock That Rocks]]></title>
+    <link href="http://josephbulger.github.io/blog/2009/07/02/the-mock-that-rocks/"/>
+    <updated>2009-07-02T06:19:07-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2009/07/02/the-mock-that-rocks</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve discovered a product that I really enjoy using and thought I would share it.<!-- more -->  It&rsquo;s called <a href="http://www.balsamiq.com/products/mockups">Balsamiq Mockups</a> and it&rsquo;s a tool that you can use online or on your computer for drawing up quick ideas on software systems.  They use a sketchy kind of font to give you that &ldquo;drawing out a spec&rdquo; feel.  What really makes the product so appealing is how fast you can build up a simple mock to show to your team.  I&rsquo;m literally able to sit down at my computer and within 5 minutes have a meaningful mockup of some kind of feature I want to convey.  Really powerful stuff.</p>
+
+<p>Here&rsquo;s an example of the kind of thing you can build with it.</p>
+
+<p><a href="http://www.balsamiq.com/products/mockups"><img src="/img/posts/2009/07/balsamiqdemo.png" alt="Balsamiq Demo" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

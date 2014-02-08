@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Blog | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:12:17-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The New Blog]]></title>
+    <link href="http://josephbulger.github.io/blog/2012/10/08/the-new-blog/"/>
+    <updated>2012-10-08T11:22:40-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2012/10/08/the-new-blog</id>
+    <content type="html"><![CDATA[<p>So I&rsquo;ve created a new blog. It&rsquo;s built using <a href="http://nodejs.org">nodejs</a> and so far I&rsquo;m really liking it.</p>
+
+<!-- more -->
+
+
+<p>The part that I&rsquo;m really digging is that I build my articles now using markdown files, so I can write up a markdown file from basically anywhere, then upload it and voila, instantly on my blog.</p>
+
+<p>It&rsquo;s also really nice to be able to modify my blog as I see fit right down to the metal.</p>
+
+<p>And on top of all that, it&rsquo;s also a <strong>lot</strong> faster than my other blog, which was on PHP using wordpress.</p>
+]]></content>
+  </entry>
+  
+</feed>
