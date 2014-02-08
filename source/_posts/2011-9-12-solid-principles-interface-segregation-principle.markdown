@@ -1,17 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-9-12 12:00:26
 layout: post
 slug: solid-principles-interface-segregation-principle
 title: 'SOLID Principles: Interface segregation principle'
 wordpress_id: 722
-categories:
-- Programming
-tags:
-- interface-segragation-principle
-- SOLID
-- solid-series
+categories: [interface segragation principle, solid, solid series]
 ---
 
 Interface Segregation Principle (ISP), focuses on the idea that it's better to have many small specific interfaces that define one concept, then to have one big contract that encompasses many concepts in one.

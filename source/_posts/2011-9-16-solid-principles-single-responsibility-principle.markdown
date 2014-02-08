@@ -1,20 +1,15 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-9-16 18:00:33
 layout: post
 slug: solid-principles-single-responsibility-principle
 title: 'SOLID Principles: Single responsibility principle'
 wordpress_id: 738
-categories:
-- Programming
-tags:
-- single-responsiblity-principle
-- SOLID
-- solid-series
+categories: [single responsibility principle, solid, solid series]
 ---
 
-I saved [Single Responsibility Principle ](http://en.wikipedia.org/wiki/Single_responsibility_principle)(SRP) for last. I think it's the most important principle to unhttp://josephbulger.com/wp-admin/post.php?post=738&action=edit&message=10derstand and to utilize correctly. I would even go so far as to say it's the most important principle to follow.
+I saved [Single Responsibility Principle ](http://en.wikipedia.org/wiki/Single_responsibility_principle)(SRP) for last. I think it's the most important principle to understand and to utilize correctly. I would even go so far as to say it's the most important principle to follow.
 
 <!-- more -->
 
@@ -22,17 +17,17 @@ So why is SRP so important? I guess it's all in it's definition. A class or file
 
 As a simple example, let's say you have a Car that needs to be able to start it's Engine
 
-[gist id=1208417 file=BadCar.cs]
+{% gist 1208417 BadCar.cs %}
 
 This Car knows _**way**_ too much about it's Engine. If the Engine's starting sequence ever needs to be changed, you have to actually go into the Car class to change it! That just doesn't make any sense. What we should be doing instead is abstracting away that functionality inside the Engine class and allowing the Car to simply start the Engine when it needs to.
 
-[gist id=1208417 file=Engine.cs]
+{% gist 1208417 Engine.cs %}
 
 This Engine prevents other classes from using it improperly. Part of learning how to effectively use SRP is to identify when you're exposing too much of a class. In the previous Engine the Car was calling each function inside the Engine. This better designed Engine hides this functionality from outsiders, so the Car now has no choice but to use only the start method.
 
 The Car now has to look something like this
 
-[gist id=1208417 file=GoodCar.cs]
+{% gist 1208417 GoodCar.cs %}
 
 This is a class structure that utilizes SRP.
 
