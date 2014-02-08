@@ -1,20 +1,17 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2009-7-06 20:06:05
 layout: post
 slug: trying-out-microsoft-hohm-save-energy-save-money
 title: 'Trying out Microsoft Hohm: Save Energy, Save Money'
 wordpress_id: 144
-categories:
-- Technology
-tags:
-- energy
-- hohm
-- microsoft
+categories: [energy, hohm, microsoft]
 ---
 
 I'm trying out a new product Microsoft is releasing on the web called [Hohm](http://www.microsoft-hohm.com).  It's a web site dedicated to tracking your energy expenditure and cost, so that you can reduce your energy consumption and also save you some cash along the way.
+
+<!-- more -->
 
 How does it accomplish this?  It profiles you and your house.  It asks you some basic (and some not so basic) information about your house and your energy habits.  The cool thing is you can choose to fill in as much, or as little, as you want.  No pressure.  However, the more information you can give it the more accurate the reports will be.
 

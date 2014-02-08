@@ -1,26 +1,19 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2009-3-07 08:03:52
 layout: post
 slug: light-up-the-world-in-silverlight
 title: Light up the world in Silverlight!
 wordpress_id: 14
-categories:
-- Programming
-tags:
-- linkedIn
-- Silverlight
+categories: [silverlight]
 ---
-
-
 
 I just finished watching a variety of videos from Mike Taulty about learning Silverlight.  These are exceptionally good videos and I would suggest anyone that is trying to learn Silverlight OR Windows Presentation Foundation (WPF) to take a look at them. 
 
+<!-- more -->
+
 Here are links to all the videos.
-
-
-
 	
   1. [**Silverlight - Hello World**](http://channel9.msdn.com/posts/mtaulty/Silverlight-Hello-World/)
 
