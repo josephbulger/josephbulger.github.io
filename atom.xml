@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-08T14:12:17-05:00</updated>
+  <updated>2014-02-08T14:56:12-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -121,6 +121,70 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[SOLID Principles: Single responsibility principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
+    <updated>2011-09-16T14:00:33-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
+    <content type="html"><![CDATA[<p>I saved <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle </a>(SRP) for last. I think it&rsquo;s the most important principle to understand and to utilize correctly. I would even go so far as to say it&rsquo;s the most important principle to follow.</p>
+
+<!-- more -->
+
+
+<p>So why is SRP so important? I guess it&rsquo;s all in it&rsquo;s definition. A class or file should only have one reason to change. If it has more than one reason to change, then your code will become brittle and difficult to maintain. The problem with SRP is how difficult it is to follow. SRP feels a lot more like an art than a science at times. You get into situations where you&rsquo;re not sure whether or not a class is only doing one thing, and if you need to further abstract away code into separate classes.</p>
+
+<p>As a simple example, let&rsquo;s say you have a Car that needs to be able to start it&rsquo;s Engine</p>
+
+<div><script src='https://gist.github.com/1208417.js?file=BadCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+  public void Start()
+  {
+    Engine.StartPistons();
+    Engine.InjectOxygen();
+    Engine.InjectFuel();
+  }
+}</code></pre></noscript></div>
+
+
+<p>This Car knows <em><strong>way</strong></em> too much about it&rsquo;s Engine. If the Engine&rsquo;s starting sequence ever needs to be changed, you have to actually go into the Car class to change it! That just doesn&rsquo;t make any sense. What we should be doing instead is abstracting away that functionality inside the Engine class and allowing the Car to simply start the Engine when it needs to.</p>
+
+<div><script src='https://gist.github.com/1208417.js?file=Engine.cs'></script>
+<noscript><pre><code>public class Engine
+{
+  public void Start()
+  {
+    StartPistons();
+    InjectOxygen();
+    InjectFuel();
+  }
+ 
+  private void StartPistons() { ... }
+  private void InjectOxygen() { ... }
+  private void InjectFuel() { ... }
+}</code></pre></noscript></div>
+
+
+<p>This Engine prevents other classes from using it improperly. Part of learning how to effectively use SRP is to identify when you&rsquo;re exposing too much of a class. In the previous Engine the Car was calling each function inside the Engine. This better designed Engine hides this functionality from outsiders, so the Car now has no choice but to use only the start method.</p>
+
+<p>The Car now has to look something like this</p>
+
+<div><script src='https://gist.github.com/1208417.js?file=GoodCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+  public void Start()
+  {
+    Engine.Start();
+  }
+}</code></pre></noscript></div>
+
+
+<p>This is a class structure that utilizes SRP.</p>
+
+<p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/88">Check out this dime cast</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Team Maturity: Learning]]></title>
     <link href="http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning/"/>
     <updated>2011-09-15T14:00:55-04:00</updated>
@@ -141,6 +205,80 @@
 <p>When your in the chaos stage, you spend a lot of time putting up barriers between your team and the outside world. This is to protect them so you can give them room to learn and grow. You&rsquo;re not in chaos anymore, though, and it&rsquo;s time to start taking down some of those barriers. Your team needs to grow in the areas that are <em><strong>outside</strong></em> of the barriers you put up. Lower your barriers, and let your team learn to handle what&rsquo;s in the outside world. Clients, business analysts, project managers, etc. They need to learn how to deal with different actors, people besides QA and their team lead.</p>
 
 <p>Eventually they&rsquo;ll grow to the final stage, Self-Organizing.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Dependency inversion principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
+    <updated>2011-09-14T14:00:18-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion Principle</a> has a dramatic effect on your code base. It has the potential to decouple your code in ways that you never would have thought possible before. Using a good IoC container can make all the difference as well.</p>
+
+<!-- more -->
+
+
+<p>The best way to explain this principle would probably be an example.
+Let&rsquo;s say you have a car like this</p>
+
+<div><script src='https://gist.github.com/1208366.js?file=CoupledCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+    public Car()
+    {
+        Engine = new FourCylinderEngine();
+    }    
+    
+    private FourCylinderEngine Engine { get; set; }
+    
+    public void Start()
+    {
+        Engine.Start();        
+    }
+}</code></pre></noscript></div>
+
+
+<p>Notice the engine that belongs to the car. First of all, the car is actually creating the engine. This means that the car is tightly coupled to the engine it&rsquo;s creating. Secondly, this creates a concrete coupling on the car to a specific kind of engine, the FourCylinderEngine.</p>
+
+<p>A better solution would be to use Dependency Inversion. You should depend on an interface instead of a concrete class. Back in our example, our FoudCyclinderEngine looks like this</p>
+
+<div><script src='https://gist.github.com/1208366.js?file=FourCylinderEngine.cs'></script>
+<noscript><pre><code>public class FourCylinderEngine : Engine
+{
+    public void Start()
+    {
+        StartRotatingPistonsOneAndThreeAtPhase(0.Degrees);
+        StartRotatingPistonsTwoAndFourAtPhase(90.Degrees);
+    }
+}</code></pre></noscript></div>
+
+
+<p>Notice how it implements Engine. That&rsquo;s the interface our Car should be using. There&rsquo;s one additional problem, though. Right now the Car is creating it&rsquo;s Engine, but you can&rsquo;t instantiate an interface, so what do you do? That&rsquo;s the key to Dependency Inversion. You&rsquo;re saying,</p>
+
+<blockquote><p>a Car does not depend on knowing about how to create an Engine</p></blockquote>
+
+<p>It just <em>uses</em> it. So the new Car class looks like this</p>
+
+<div><script src='https://gist.github.com/1208366.js?file=DecoupledCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+    public Car(Engine engine)
+    {
+        Engine = engine;
+    }    
+
+    private Engine Engine { get; set; }
+
+    public void Start()
+    {
+        Engine.Start();        
+    }
+}</code></pre></noscript></div>
+
+
+<p>So how does the engine get created? Obviously something is passing in the engine to the Car, but what? You need a new class. Maybe a CarManufacturer or something, which is responsible for manufacturing cars. Part of that responsibility would be putting an engine in a car.</p>
+
+<p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/96">Check out this dime cast</a>.</p>
 ]]></content>
   </entry>
   
@@ -181,6 +319,24 @@
 <p>There are a lot of things that can hinder your team&rsquo;s productivity. Most of them have been solved by other teams already using automation. You&rsquo;re team probably isn&rsquo;t special, and their problems have probably been solved by other (bigger and more productive) teams. See what they&rsquo;ve done. Copy them, mimic them, learn from them.</p>
 
 <p>Get your team out of chaos, so they can learn, and make your job easier.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Interface segregation principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
+    <updated>2011-09-12T08:00:26-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
+    <content type="html"><![CDATA[<p>Interface Segregation Principle (ISP), focuses on the idea that it&rsquo;s better to have many small specific interfaces that define one concept, then to have one big contract that encompasses many concepts in one.</p>
+
+<!-- more -->
+
+
+<p>I think a prime example of an interface that violates this principle would be <a href="http://msdn.microsoft.com/en-us/library/f1kyba5e.aspx">MembershipProvider </a>class which is commonly used in ASP.NET applications. Granted, this isn&rsquo;t technically an interface (it&rsquo;s actually an abstract class), but it demonstrates the principle perfectly. If you&rsquo;ve ever tried to make your own custom membership provider, and you&rsquo;ve had to implement this beast, you already know the pain involved. There are a ridiculous number of methods involved with this class. There are so many, actually, that the best practice inside many .NET circles has been to simply throw a NotImplementedException for any methods you don&rsquo;t want to spend the time implementing.</p>
+
+<p>The solution would be to actually break up this abstract class into many smaller classes, so the developer could extend the parts that needs to be customized, and leave the rest alone.</p>
+
+<p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/94">Check out this dime cast</a>.</p>
 ]]></content>
   </entry>
   
@@ -288,6 +444,198 @@
 <p>Secondly, from my experience, a team can go in and out of these stages. It can be cyclic, or they can jump around. It tends to be more of the former rather than the latter, but I have seen it happen both ways. As a leader, you need to keep an eye on your team and be able to identify when this change happens so that you can change your role within the team to get them back on track.</p>
 
 <p>The goal is to grow mature, self-organizing teams. We&rsquo;ll cover more on this later, but if you can&rsquo;t wait you can always jump over to 5 whys. Roy has some great content that goes into great detail about each of these stages and how to manage them.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Liskov Substitution Principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle/"/>
+    <updated>2011-09-06T08:00:10-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle</id>
+    <content type="html"><![CDATA[<p>Liskov Substitution Principle, or LSP, is actually a very simple concept to understand in a strongly typed language. In languages like C#, or VB.NET, LSP often gets taken for granted, but I&rsquo;ve seen cases where even in strongly typed languages you can violate LSP.</p>
+
+<!-- more -->
+
+
+<p>Simply put, LSP means that for a given base class, you should be able to substitute derived classes in it&rsquo;s place, and the behavior or the expectation of that behavior should not change. Take for example a Shape:</p>
+
+<div><script src='https://gist.github.com/1188522.js?file=Shape.cs'></script>
+<noscript><pre><code>public abstract class Shape
+{
+    abstract double GetArea();
+}</code></pre></noscript></div>
+
+
+<p>The point of this class is to define something which has the ability to give us it&rsquo;s area back. Something like a Square</p>
+
+<div><script src='https://gist.github.com/1188522.js?file=Square.cs'></script>
+<noscript><pre><code>public class Square : Shape
+{
+    public Square(int side)
+    {
+        Side = side;
+    }
+    
+    private int Side { get; set; }
+    
+    public override double GetArea()
+    {
+        return Side * Side;
+    }
+}
+</code></pre></noscript></div>
+
+
+<p>or a Circle</p>
+
+<div><script src='https://gist.github.com/1188522.js?file=Circle.cs'></script>
+<noscript><pre><code>public class Circle : Shape
+{
+    public Circle(int radius)
+    {
+        Radius = radius;
+    }
+    
+    private int Radius { get; set; }
+    
+    public override double GetArea()
+    {
+        var area = 4 * Math.Pi * Radius * Radius;
+        return ;
+    }
+}</code></pre></noscript></div>
+
+
+<p>would have the means to give us this information.</p>
+
+<p>However, something like a Line</p>
+
+<div><script src='https://gist.github.com/1188522.js?file=Line.cs'></script>
+<noscript><pre><code>public class Line : Shape
+{
+    public Line(int length)
+    {
+        Length = length;
+    }
+    
+    private int Length { get; set; }
+    
+    public override double GetArea()
+    {
+        throw new NotSupportedException(
+            @&quot;I&#39;m not really a shape!&quot;);
+    }
+}</code></pre></noscript></div>
+
+
+<p>would not be able to give us it&rsquo;s area, because it doesn&rsquo;t have an area. In fact, it&rsquo;s not even a Shape to begin with. It seems odd that I would use this as an example, but the simplicity of the example shows exactly how LSP gets violated in practice. All too often I&rsquo;ll see code where a class is deriving from another class, even though it&rsquo;s shouldn&rsquo;t be. At the core of the issue is usually that it was never meant to <em><strong>be</strong></em> the thing it was deriving from in the first place.</p>
+
+<p>A full running example of utilizing LSP can be found on this <a href="http://dimecasts.net/Content/WatchEpisode/92">video from dime casts</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Open Closed Principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/"/>
+    <updated>2011-09-02T08:00:41-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle</id>
+    <content type="html"><![CDATA[<p>This has been done to death I think, but I wanted to take a shot at it. In fact, this is really more for my benefit than for anyone else. If I can manage to explain these concepts clearly enough then I think I have a firm understanding of what they actually stand for, and how I should apply them when I build things. The first thing we&rsquo;re going to get into is the <a href="http://en.wikipedia.org/wiki/Open/closed_principle">Open Closed Principle</a>.</p>
+
+<!-- more -->
+
+
+<p>Why did I choose this one first? To be honest, this one was the last one that I found a use for. I understood the concept early on in my career, but I had issues figuring out when it was best to use it, and therefore I wouldn&rsquo;t really ever use it at all.</p>
+
+<p>This made for some bad code. Some really bad code. But, such is the life of a developer. You basically go through 4 stages. First, you have no concept of some <em>thing</em>. Then you learn about this <em>thing</em>, which you then spend some time just understanding. Third comes the obsession stage, where you apply said <em>thing</em> to everything you do. And lastly, comes I guess what you would call the Maturing stage, which is when you learn the appropriateness of this <em>thing</em>.</p>
+
+<p>In our case today, we&rsquo;re talking about the <a href="http://en.wikipedia.org/wiki/Solid_(object-oriented_design">SOLID</a>) principles, and specifically looking at OCP.</p>
+
+<p>As I said before, this one took me some time to finally understand the usefulness of it. In fact, it was when I was reading <a href="http://artofunittesting.com/">The Art of Unit Testing</a> that this light bulb went off in my head. Actually, it wasn&rsquo;t a light bulb, it was more like a giant flood light or something. By the way, if you&rsquo;re new to TDD or unit testing, you have to read this book by <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>. The part that really opened my eyes was when Roy started talking about building seams into your unit tests.</p>
+
+<p>Up until that point, I had very heavily relied on interfaces for my mocking techniques. He goes over that more in the book, but the problem I was facing was that I needed interfaces for <strong>everything</strong>. A lot of times, though, it was a huge over kill for what I was trying to do. A seam was <strong><em>perfect</em></strong>. A seam was also the huge flood light going off in my brain. Why? Because a seam is literally applying OCP to a method with the purpose of later faking that method.</p>
+
+<p>Instead of describing what I&rsquo;m saying I think so code might serve us better, so let&rsquo;s say you have some service class like this.</p>
+
+<div><script src='https://gist.github.com/1187529.js?file=SimpleServiceWithoutOCP.cs'></script>
+<noscript><pre><code>public class SimpleServiceWithoutOCP
+{
+    public void DoSomeWork()
+    {
+        var stuff = CallTheRepositoryForSomeStuff();
+        
+        foreach(var thing in stuff)
+            DoSomething(thing);
+    }
+    
+    private IList&lt;Stuff&gt; CallTheRepositoryForSomeStuff()
+    {
+        return Repository.GetStuff();
+    }   
+    
+    private void DoSomething(Stuff stuff)
+    {
+        //doesn&#39;t matter what&#39;s here
+    }
+}
+</code></pre></noscript></div>
+
+
+<p>Now when you&rsquo;re writing tests to make sure this guy works, you&rsquo;ll probably want to make sure that DoSomeWork actually does what it says it does, so you&rsquo;d write a test that might look something like this.</p>
+
+<div><script src='https://gist.github.com/1187529.js?file=SimpleServiceTest.cs'></script>
+<noscript><pre><code>[TestFixture]
+public class SimpleServiceTest
+{
+    [Test]
+    public void DoSomeWork_WhenGivenStuff_CallsDoSomethingOnStuff()
+    {
+        var service = MockRepository
+                    .GenerateMock&lt;SimpleServiceWithOCP&gt;();
+
+                var expectedStuff = new Stuff();
+
+        service.Expect(x =&gt; x.CallTheRepositoryForSomeStuff())
+                       .Return(new List&lt;Stuff&gt; { expectedStuff });
+        
+        service.DoSomeWork();
+    
+        service.AssertWasCalled(
+                        x =&gt; x.DoSomething(expectedStuff), 
+                        &quot;this should be called when doing work&quot;);
+    }
+}</code></pre></noscript></div>
+
+
+<p>So this test will create a mock (a type of fake) of your service, and then what we want to verify in this test is that when DoSomeWork is called, that it in turn will call DoWork on all the items that come from the Repository.</p>
+
+<p>There&rsquo;s a problem, though. The problem is two fold. First, <em><strong>we don&rsquo;t want to use the real repository</strong></em>. If you don&rsquo;t understand why, read the book, trust me. Second, this code won&rsquo;t execute. You&rsquo;ll get a run time exception because there&rsquo;s no seam on CallTheRepositoryForSomeStuff. How do you make a seam? Well, you mark the method <em>virtual</em>, which allows sub-classes to change it&rsquo;s behavior.</p>
+
+<div><script src='https://gist.github.com/1187529.js?file=SimpleServiceWithOCP.cs'></script>
+<noscript><pre><code>public class SimpleServiceWithOCP
+{
+    public void DoSomeWork()
+    {
+        var stuff = CallTheRepositoryForSomeStuff();
+        
+        foreach(var thing in stuff)
+            DoSomething(thing);
+    }
+    
+    protected virtual IList&lt;Stuff&gt; CallTheRepositoryForSomeStuff()
+    {
+        return Repository.GetStuff();
+    }   
+    
+    protected virtual void DoSomething(Stuff stuff)
+    {
+        //doesn&#39;t matter what&#39;s here
+    }
+}</code></pre></noscript></div>
+
+
+<p>And <em><strong>that</strong></em> is OCP in a nut shell. It&rsquo;s OCP because our mocking framework doesn&rsquo;t have to actually open the file and change the existing class. In fact, what it does under the hood is create another class that is a sub-class of SimpleService, and then change the new class to have it do something besides go the real repository. In our case, we&rsquo;re just returned a new list with one item in it.</p>
+
+<p>Want more info on the Open/Closed Principle? <a href="http://dimecasts.net/Casts/CastDetails/90">Check out this dime cast</a>.</p>
 ]]></content>
   </entry>
   
@@ -721,83 +1069,6 @@
 <p>The ToPagedList performs the functionality that is included with the PagedList classes which you can find <a href="http://pagedlist.codeplex.com/">here</a>.</p>
 
 <p>Let me know what you think, and if you’d like some demo source to see this in action I can happily provide, just let me know.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Are you a Nerd, Geek, or Dork?]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/03/30/are-you-a-nerd-geek-or-dork/"/>
-    <updated>2010-03-30T03:23:27-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/03/30/are-you-a-nerd-geek-or-dork</id>
-    <content type="html"><![CDATA[<p>I just got an email from a friend of mine with this and I couldn’t pass up throwing this on my blog.</p>
-
-<!-- more -->
-
-
-<p><img src="http://josephbulger.github.io/images/posts/2010/03/Nerd_Dork_Geek_Venn_Diagram_thumb.jpg"></p>
-
-<p>Enjoy!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First Impressions of Droid Eris]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/02/22/first-impressions-of-droid-eris/"/>
-    <updated>2010-02-22T16:28:08-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/02/22/first-impressions-of-droid-eris</id>
-    <content type="html"><![CDATA[<p>I just recently got a new phone, a Droid Eris. So far I&rsquo;m liking it a lot. The keyboard is surprisingly easy to use. I haven&rsquo;t gotten around to tethereing the phone yet, but thats my next step. Then I&rsquo;ll be able to use my computer from the road, something the iPhone didn&rsquo;t offer me, which is why I went with an Android phone. So here&rsquo;s hoping!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A Story of a Family Becoming Agile]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/12/16/story-of-a-family-becoming-agile/"/>
-    <updated>2009-12-16T05:54:18-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/12/16/story-of-a-family-becoming-agile</id>
-    <content type="html"><![CDATA[<p>I’m going to be making my family “agile” in the upcoming weeks. What does that mean exactly? Well, I’ll be posting more about it, but essentially we’re going to organize our family activities around agile principles. These are software management principles that I have been studying (and trying to apply) for a number of years now. They have proven to be very effective at my work, and I can see how they would be equally effective at home, as well.</p>
-
-<!-- more -->
-
-
-<p></p>
-
-<p>So what exactly am I talking about? Let’s take a look. I’m going to start out by making a cork board for our family. It should look something like this:</p>
-
-<p><a href="http://josephbulger.github.io/images/posts/2009/12/agileFamily2.png"><img src="http://josephbulger.github.io/images/posts/2009/12/agileFamily_thumb.png" alt="agileFamily" /></a></p>
-
-<p>Colored cards are “shared” cards. That means any parent can do them. Children also have a daily card. These are things they have to do every day, and they check them off when they’re done.</p>
-
-<p>When we actually get the board I’ll post up some pics and explanation.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[I finally got an invite to Google Voice]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/09/05/i-finally-got-an-invite-to-google-voice/"/>
-    <updated>2009-09-05T02:31:17-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/09/05/i-finally-got-an-invite-to-google-voice</id>
-    <content type="html"><![CDATA[<p><a href="https://www.google.com/voice">Google Voice</a> is a message management system that was originally called  Grand Central, but got bought out by Google.  I was a real fan even before Google got it, but all the lines had been bought out so I couldn&rsquo;t get into it.  I recently received an email that they had opened up some more lines, so I jumped.</p>
-
-<!-- more -->
-
-
-<p>Now I have google voice, and there are some things that I think are <strong>really</strong> cool about it.  When someone leaves you a voicemail, it transcribes the recording for you so you can read it online.  Also, all texts that are sent to you are viewable online as well.  One other awesome feature is that you can add a call widget to your web site (I have one on the right hand side) that allows people to call you without giving out your phone number.  It&rsquo;s great if you have a portfolio online, and want people to contact you about freelance jobs or something, but you don&rsquo;t want to give out your number.</p>
-
-<p>Check it out!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Should 16 year olds be allowed to vote?]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/09/05/should-16-year-olds-be-allowed-to-vote/"/>
-    <updated>2009-09-05T02:26:45-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/09/05/should-16-year-olds-be-allowed-to-vote</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m throwing this out there because I heard something a while ago that caught my attention.  I don&rsquo;t honestly care all too much about 16 year olds being able to vote, but there is one very interesting caveat to all of this.</p>
-
-<!-- more -->
-
-
-<p>There is a deep seeded understanding in America that it is unconstitutional for there to be <a href="http://en.wikipedia.org/wiki/No_taxation_without_representation"><strong>no taxation without representation</strong></a>. So having said that, which one should it be?  Should 16 year olds be allowed to vote?  Or should 16 year olds be exempt from all taxation?  You decide&hellip;</p>
 ]]></content>
   </entry>
   

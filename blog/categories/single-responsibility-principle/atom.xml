@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Single Responsibility Principle | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/single-responsibility-principle/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:56:12-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Single Responsibility Principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
+    <updated>2011-09-16T14:00:33-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
+    <content type="html"><![CDATA[<p>I saved <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle </a>(SRP) for last. I think it&rsquo;s the most important principle to understand and to utilize correctly. I would even go so far as to say it&rsquo;s the most important principle to follow.</p>
+
+<!-- more -->
+
+
+<p>So why is SRP so important? I guess it&rsquo;s all in it&rsquo;s definition. A class or file should only have one reason to change. If it has more than one reason to change, then your code will become brittle and difficult to maintain. The problem with SRP is how difficult it is to follow. SRP feels a lot more like an art than a science at times. You get into situations where you&rsquo;re not sure whether or not a class is only doing one thing, and if you need to further abstract away code into separate classes.</p>
+
+<p>As a simple example, let&rsquo;s say you have a Car that needs to be able to start it&rsquo;s Engine</p>
+
+<p><div><script src='https://gist.github.com/1208417.js?file=BadCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+  public void Start()
+  {
+    Engine.StartPistons();
+    Engine.InjectOxygen();
+    Engine.InjectFuel();
+  }
+}</code></pre></noscript></div>
+</p>
+
+<p>This Car knows <em><strong>way</strong></em> too much about it&rsquo;s Engine. If the Engine&rsquo;s starting sequence ever needs to be changed, you have to actually go into the Car class to change it! That just doesn&rsquo;t make any sense. What we should be doing instead is abstracting away that functionality inside the Engine class and allowing the Car to simply start the Engine when it needs to.</p>
+
+<p><div><script src='https://gist.github.com/1208417.js?file=Engine.cs'></script>
+<noscript><pre><code>public class Engine
+{
+  public void Start()
+  {
+    StartPistons();
+    InjectOxygen();
+    InjectFuel();
+  }
+ 
+  private void StartPistons() { ... }
+  private void InjectOxygen() { ... }
+  private void InjectFuel() { ... }
+}</code></pre></noscript></div>
+</p>
+
+<p>This Engine prevents other classes from using it improperly. Part of learning how to effectively use SRP is to identify when you&rsquo;re exposing too much of a class. In the previous Engine the Car was calling each function inside the Engine. This better designed Engine hides this functionality from outsiders, so the Car now has no choice but to use only the start method.</p>
+
+<p>The Car now has to look something like this</p>
+
+<p><div><script src='https://gist.github.com/1208417.js?file=GoodCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+  public void Start()
+  {
+    Engine.Start();
+  }
+}</code></pre></noscript></div>
+</p>
+
+<p>This is a class structure that utilizes SRP.</p>
+
+<p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/88">Check out this dime cast</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Interface Segragation Principle | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/interface-segragation-principle/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:56:12-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Interface Segregation Principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
+    <updated>2011-09-12T08:00:26-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
+    <content type="html"><![CDATA[<p>Interface Segregation Principle (ISP), focuses on the idea that it&rsquo;s better to have many small specific interfaces that define one concept, then to have one big contract that encompasses many concepts in one.</p>
+
+<!-- more -->
+
+
+<p>I think a prime example of an interface that violates this principle would be <a href="http://msdn.microsoft.com/en-us/library/f1kyba5e.aspx">MembershipProvider </a>class which is commonly used in ASP.NET applications. Granted, this isn&rsquo;t technically an interface (it&rsquo;s actually an abstract class), but it demonstrates the principle perfectly. If you&rsquo;ve ever tried to make your own custom membership provider, and you&rsquo;ve had to implement this beast, you already know the pain involved. There are a ridiculous number of methods involved with this class. There are so many, actually, that the best practice inside many .NET circles has been to simply throw a NotImplementedException for any methods you don&rsquo;t want to spend the time implementing.</p>
+
+<p>The solution would be to actually break up this abstract class into many smaller classes, so the developer could extend the parts that needs to be customized, and leave the rest alone.</p>
+
+<p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/94">Check out this dime cast</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

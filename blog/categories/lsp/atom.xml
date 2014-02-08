@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Lsp | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/lsp/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:56:12-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Liskov Substitution Principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle/"/>
+    <updated>2011-09-06T08:00:10-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle</id>
+    <content type="html"><![CDATA[<p>Liskov Substitution Principle, or LSP, is actually a very simple concept to understand in a strongly typed language. In languages like C#, or VB.NET, LSP often gets taken for granted, but I&rsquo;ve seen cases where even in strongly typed languages you can violate LSP.</p>
+
+<!-- more -->
+
+
+<p>Simply put, LSP means that for a given base class, you should be able to substitute derived classes in it&rsquo;s place, and the behavior or the expectation of that behavior should not change. Take for example a Shape:</p>
+
+<p><div><script src='https://gist.github.com/1188522.js?file=Shape.cs'></script>
+<noscript><pre><code>public abstract class Shape
+{
+	abstract double GetArea();
+}</code></pre></noscript></div>
+</p>
+
+<p>The point of this class is to define something which has the ability to give us it&rsquo;s area back. Something like a Square</p>
+
+<p><div><script src='https://gist.github.com/1188522.js?file=Square.cs'></script>
+<noscript><pre><code>public class Square : Shape
+{
+	public Square(int side)
+	{
+		Side = side;
+	}
+	
+	private int Side { get; set; }
+	
+	public override double GetArea()
+	{
+		return Side * Side;
+	}
+}
+</code></pre></noscript></div>
+</p>
+
+<p>or a Circle</p>
+
+<p><div><script src='https://gist.github.com/1188522.js?file=Circle.cs'></script>
+<noscript><pre><code>public class Circle : Shape
+{
+	public Circle(int radius)
+	{
+		Radius = radius;
+	}
+	
+	private int Radius { get; set; }
+	
+	public override double GetArea()
+	{
+		var area = 4 * Math.Pi * Radius * Radius;
+		return ;
+	}
+}</code></pre></noscript></div>
+</p>
+
+<p>would have the means to give us this information.</p>
+
+<p>However, something like a Line</p>
+
+<p><div><script src='https://gist.github.com/1188522.js?file=Line.cs'></script>
+<noscript><pre><code>public class Line : Shape
+{
+	public Line(int length)
+	{
+		Length = length;
+	}
+	
+	private int Length { get; set; }
+	
+	public override double GetArea()
+	{
+		throw new NotSupportedException(
+			@&quot;I&#39;m not really a shape!&quot;);
+	}
+}</code></pre></noscript></div>
+</p>
+
+<p>would not be able to give us it&rsquo;s area, because it doesn&rsquo;t have an area. In fact, it&rsquo;s not even a Shape to begin with. It seems odd that I would use this as an example, but the simplicity of the example shows exactly how LSP gets violated in practice. All too often I&rsquo;ll see code where a class is deriving from another class, even though it&rsquo;s shouldn&rsquo;t be. At the core of the issue is usually that it was never meant to <em><strong>be</strong></em> the thing it was deriving from in the first place.</p>
+
+<p>A full running example of utilizing LSP can be found on this <a href="http://dimecasts.net/Content/WatchEpisode/92">video from dime casts</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Open Closed Principle | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/open-closed-principle/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-08T14:56:12-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SOLID Principles: Open Closed Principle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/"/>
+    <updated>2011-09-02T08:00:41-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle</id>
+    <content type="html"><![CDATA[<p>This has been done to death I think, but I wanted to take a shot at it. In fact, this is really more for my benefit than for anyone else. If I can manage to explain these concepts clearly enough then I think I have a firm understanding of what they actually stand for, and how I should apply them when I build things. The first thing we&rsquo;re going to get into is the <a href="http://en.wikipedia.org/wiki/Open/closed_principle">Open Closed Principle</a>.</p>
+
+<!-- more -->
+
+
+<p>Why did I choose this one first? To be honest, this one was the last one that I found a use for. I understood the concept early on in my career, but I had issues figuring out when it was best to use it, and therefore I wouldn&rsquo;t really ever use it at all.</p>
+
+<p>This made for some bad code. Some really bad code. But, such is the life of a developer. You basically go through 4 stages. First, you have no concept of some <em>thing</em>. Then you learn about this <em>thing</em>, which you then spend some time just understanding. Third comes the obsession stage, where you apply said <em>thing</em> to everything you do. And lastly, comes I guess what you would call the Maturing stage, which is when you learn the appropriateness of this <em>thing</em>.</p>
+
+<p>In our case today, we&rsquo;re talking about the <a href="http://en.wikipedia.org/wiki/Solid_(object-oriented_design">SOLID</a>) principles, and specifically looking at OCP.</p>
+
+<p>As I said before, this one took me some time to finally understand the usefulness of it. In fact, it was when I was reading <a href="http://artofunittesting.com/">The Art of Unit Testing</a> that this light bulb went off in my head. Actually, it wasn&rsquo;t a light bulb, it was more like a giant flood light or something. By the way, if you&rsquo;re new to TDD or unit testing, you have to read this book by <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>. The part that really opened my eyes was when Roy started talking about building seams into your unit tests.</p>
+
+<p>Up until that point, I had very heavily relied on interfaces for my mocking techniques. He goes over that more in the book, but the problem I was facing was that I needed interfaces for <strong>everything</strong>. A lot of times, though, it was a huge over kill for what I was trying to do. A seam was <strong><em>perfect</em></strong>. A seam was also the huge flood light going off in my brain. Why? Because a seam is literally applying OCP to a method with the purpose of later faking that method.</p>
+
+<p>Instead of describing what I&rsquo;m saying I think so code might serve us better, so let&rsquo;s say you have some service class like this.</p>
+
+<p><div><script src='https://gist.github.com/1187529.js?file=SimpleServiceWithoutOCP.cs'></script>
+<noscript><pre><code>public class SimpleServiceWithoutOCP
+{
+	public void DoSomeWork()
+	{
+		var stuff = CallTheRepositoryForSomeStuff();
+		
+		foreach(var thing in stuff)
+			DoSomething(thing);
+	}
+	
+	private IList&lt;Stuff&gt; CallTheRepositoryForSomeStuff()
+	{
+		return Repository.GetStuff();
+	}	
+	
+	private void DoSomething(Stuff stuff)
+	{
+		//doesn&#39;t matter what&#39;s here
+	}
+}
+</code></pre></noscript></div>
+</p>
+
+<p>Now when you&rsquo;re writing tests to make sure this guy works, you&rsquo;ll probably want to make sure that DoSomeWork actually does what it says it does, so you&rsquo;d write a test that might look something like this.</p>
+
+<p><div><script src='https://gist.github.com/1187529.js?file=SimpleServiceTest.cs'></script>
+<noscript><pre><code>[TestFixture]
+public class SimpleServiceTest
+{
+	[Test]
+	public void DoSomeWork_WhenGivenStuff_CallsDoSomethingOnStuff()
+	{
+		var service = MockRepository
+                    .GenerateMock&lt;SimpleServiceWithOCP&gt;();
+
+                var expectedStuff = new Stuff();
+
+		service.Expect(x =&gt; x.CallTheRepositoryForSomeStuff())
+                       .Return(new List&lt;Stuff&gt; { expectedStuff });
+		
+		service.DoSomeWork();
+	
+		service.AssertWasCalled(
+                        x =&gt; x.DoSomething(expectedStuff), 
+                        &quot;this should be called when doing work&quot;);
+	}
+}</code></pre></noscript></div>
+</p>
+
+<p>So this test will create a mock (a type of fake) of your service, and then what we want to verify in this test is that when DoSomeWork is called, that it in turn will call DoWork on all the items that come from the Repository.</p>
+
+<p>There&rsquo;s a problem, though. The problem is two fold. First, <em><strong>we don&rsquo;t want to use the real repository</strong></em>. If you don&rsquo;t understand why, read the book, trust me. Second, this code won&rsquo;t execute. You&rsquo;ll get a run time exception because there&rsquo;s no seam on CallTheRepositoryForSomeStuff. How do you make a seam? Well, you mark the method <em>virtual</em>, which allows sub-classes to change it&rsquo;s behavior.</p>
+
+<p><div><script src='https://gist.github.com/1187529.js?file=SimpleServiceWithOCP.cs'></script>
+<noscript><pre><code>public class SimpleServiceWithOCP
+{
+	public void DoSomeWork()
+	{
+		var stuff = CallTheRepositoryForSomeStuff();
+		
+		foreach(var thing in stuff)
+			DoSomething(thing);
+	}
+	
+	protected virtual IList&lt;Stuff&gt; CallTheRepositoryForSomeStuff()
+	{
+		return Repository.GetStuff();
+	}	
+	
+	protected virtual void DoSomething(Stuff stuff)
+	{
+		//doesn&#39;t matter what&#39;s here
+	}
+}</code></pre></noscript></div>
+</p>
+
+<p>And <em><strong>that</strong></em> is OCP in a nut shell. It&rsquo;s OCP because our mocking framework doesn&rsquo;t have to actually open the file and change the existing class. In fact, what it does under the hood is create another class that is a sub-class of SimpleService, and then change the new class to have it do something besides go the real repository. In our case, we&rsquo;re just returned a new list with one item in it.</p>
+
+<p>Want more info on the Open/Closed Principle? <a href="http://dimecasts.net/Casts/CastDetails/90">Check out this dime cast</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
