@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-08T14:56:12-05:00</updated>
+  <updated>2014-02-09T18:27:41-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -92,6 +92,250 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Practicing the Basics]]></title>
+    <link href="http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics/"/>
+    <updated>2012-08-30T14:18:16-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics</id>
+    <content type="html"><![CDATA[<p>It can&rsquo;t be over stated how important it is for your teams to practice the basics.</p>
+
+<p>With my teams, I spend a good bit of time showing them how to do what are known as &ldquo;katas&rdquo;. What is the point behind these short excercises? Let me tell you a story.</p>
+
+<p>When I was fifteen, I joined my high school chess team. Yeah, I was a chess nerd. There was one particular tournament I went to with a couple of my friends and my coach that I&rsquo;ll never forget.</p>
+
+<!-- more -->
+
+
+<p>I think it was actually my first real tournament. I was still very new to the idea of being on a chess team, but I had been playing chess or a while at that point. At the tournament I was doing fairly well. I was definitely exceeding the expectations that I had for myself. Towards the end of the day, I was matched up with another kid around my age, and again, I was doing well. However, I had reached a point where I was decidedly winning when something really bad happened. My opponent had nothing left except for his king, and I was down to my rook and king.</p>
+
+<p>Under normal circumstances this would have spelled the end for my opponent, but that day something happened. I forgot how to mate with a rook. It wasn&rsquo;t that I didn&rsquo;t know how to do it. I knew very well how to do it. My mind simply blanked. It left my mental space entirely and I was left with an utterly blank stare on my face. I scrounged around trying to reign it back in and get my head around what I was doing. I was nervous, because if my opponent knew what he was doing he could force a draw simply by staying away from check long enough. Luckily, he didn&rsquo;t know how to do that, and put himself into a position that I was able to mate him. Crisis averted.</p>
+
+<p>That&rsquo;s when people started coming to me. One person congratulated me, but then started showing me how to mate with a rook. Based on the way I was playing, it was obvious to everyone that I didn&rsquo;t know how to mate with a rook. The problem was, I did. So why didn&rsquo;t I do it.</p>
+
+<p>Practice.</p>
+
+<p>I was young. I didn&rsquo;t practice a lot on my mechanics. I certainly didn&rsquo;t practice enough on end game scenarios. However, the type of practice I&rsquo;m talking about here is a specific kind. I played chess a lot, so I&rsquo;m not talking about general practice, and just getting games under my belt. That wasn&rsquo;t the problem. I&rsquo;m talking about short, focused practice to reenforce specific disciplines on my game.</p>
+
+<p>In this case, end game mating with various pieces. Any good chess player practices these mechanics until they become muscle memory. They don&rsquo;t even have to think how to perform those mates, because it&rsquo;s just part of their being. It becomes part of who they are. I can mate with a rook now without even thinking about it, even though I probably haven&rsquo;t played chess in over 5 years. It&rsquo;s that ingrained in me.</p>
+
+<p>The same thing happens coding katas. The exercises are simple and focused, and designed to teach you a couple disciplines. Usually these disciplines focus around naming things properly, proper code size, refactoring techniques, etc. Notice how none of those things are language specific. They are disciplines that should be taught across any language you write in.</p>
+
+<p>So what are some of these katas that we go through?</p>
+
+<p>I&rsquo;ll have to cover that another day. I&rsquo;m getting a huge urge to play chess all of the sudden.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: Days for a Week]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week/"/>
+    <updated>2011-10-20T04:00:50-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week</id>
+    <content type="html"><![CDATA[<p>So as I build the week up, I&rsquo;m adding Days onto it, but what do they look like?</p>
+
+<!-- more -->
+
+
+<p>A Day is pretty simple. It has the DateTime that says what actual day it belongs to. It also has a list of Events that belong to it. A Day can also indicate whether or not it&rsquo;s available for reading, or if it has events. This is important because if a day is available, then the UI needs to let the user select that Day, and if it has events, then the day should show those events in the UI.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">Day</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">public</span> <span class="n">DateTime</span> <span class="n">Date</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">private</span> <span class="n">IList</span><span class="p">&lt;</span><span class="n">Event</span><span class="p">&gt;</span> <span class="n">Events</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="nf">Day</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">Events</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Event</span><span class="p">&gt;();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">HasEvents</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">Events</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="k">void</span> <span class="nf">AddEvent</span><span class="p">(</span><span class="n">Event</span> <span class="n">eventForDay</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">Events</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">eventForDay</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="n">IList</span><span class="p">&lt;</span><span class="n">Event</span><span class="p">&gt;</span> <span class="n">GetEvents</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">Events</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetReadingAvailability</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nf">IsAvailable</span><span class="p">()</span> <span class="p">?</span> <span class="s">&quot;date_is_available&quot;</span> <span class="p">:</span>
+</span><span class='line'>          <span class="n">HasEvents</span><span class="p">()</span> <span class="p">?</span> <span class="s">&quot;date_has_event&quot;</span> <span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">private</span> <span class="kt">bool</span> <span class="nf">IsAvailable</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">!</span><span class="n">HasEvents</span><span class="p">()</span> <span class="p">&amp;&amp;</span> <span class="n">IsDayAvailableForReading</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">private</span> <span class="kt">bool</span> <span class="nf">IsDayAvailableForReading</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nf">IsDayAvailableForReading</span><span class="p">(</span><span class="n">Date</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">IsDayAvailableForReading</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">dateTime</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="k">new</span> <span class="nf">AvailabilityChecker</span><span class="p">()</span>
+</span><span class='line'>          <span class="p">.</span><span class="n">IsDayAvailableForReading</span><span class="p">(</span><span class="n">dateTime</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetReadableValue</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">Date</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">&quot;MMMM dd, yyyy&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This concludes the implementation of all the pieces necessary to build the ViewModel. The View itself could be built on any technology stack to show UI appropriate to the rules we outlined so far, which is the ultimate goal of having our ViewModel separated from the View itself.</p>
+
+<p>This does <strong>not</strong>, however, tell us what our business rules are, or how their implemented, which is the next part of the series: the Model.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: Weeks on the Calendar]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar/"/>
+    <updated>2011-10-19T04:00:48-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar</id>
+    <content type="html"><![CDATA[<p>Now we&rsquo;ve gone through how the <a href="http://josephbulger.github.io/?p=817">month is modeled</a>, we need to see how weeks are being built.</p>
+
+<!-- more -->
+
+
+<p>When you first look at the month implementation, you might think that adding days to weeks is a simple matter of adding DateTime&rsquo;s, but what&rsquo;s happening behind the scenes is just a little bit more complicated. Why? Well, we need to track what events belong to what days, so in order to do that we can&rsquo;t just use a simple DateTime, we need something just a little bit more complicated.</p>
+
+<p>My Week looks like this:</p>
+
+<div><script src='https://gist.github.com/1291245.js?file=Week.cs'></script>
+<noscript><pre><code>﻿public class Week
+{
+    public Week()
+    {
+        Days = new List&lt;Day&gt;();
+    }
+
+    protected IList&lt;Day&gt; Days { get; set; }
+
+    public IEnumerable&lt;Day&gt; GetDays()
+    {
+        return Days;
+    }
+
+    public void Add(DateTime day)
+    {
+        if (!Days.Where(x =&gt; x.Date == day.Date).Any())
+            Days.Add(new Day { Date = day });
+    }
+
+    public bool IsMissingDays()
+    {
+        return Days.OrderBy(x =&gt; x.Date)
+          .First().Date.DayOfWeek != Calendar.GetStartDay();
+    }
+
+    public bool IsMissingTrailingDays()
+    {
+        return Days.OrderBy(x =&gt; x.Date)
+          .First().Date.DayOfWeek != Calendar.GetLastDay();
+    }
+
+    public int GetMissingNumberOfDays()
+    {
+        var missingDays = 0;
+
+        var day = Days.OrderBy(x =&gt; x.Date).First().Date;
+        
+        do
+        {
+            day = day.AddDays(-1);
+            missingDays++;
+        } while (day.DayOfWeek != Calendar.GetStartDay());
+
+        return missingDays;
+    }
+
+    public int GetMissingNumberOfTrailingDays()
+    {
+        var missingDays = 0;
+
+        var day = Days.OrderBy(x =&gt; x.Date).Last().Date;
+
+        do
+        {
+            day = day.AddDays(1);
+            missingDays++;
+        } while (day.DayOfWeek != Calendar.GetLastDay());
+
+        return missingDays;
+    }
+}</code></pre></noscript></div>
+
+
+<p>When adding days to the week, I accept a DateTime and then build a list of Days into the Week. Later on, the calendar will add Events to these Days.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Gist @ GitHub and why it's awesome]]></title>
     <link href="http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome/"/>
     <updated>2011-10-18T04:00:08-04:00</updated>
@@ -108,6 +352,260 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Mental Floss: The Month on the Calendar]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar/"/>
+    <updated>2011-10-17T04:00:02-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar</id>
+    <content type="html"><![CDATA[<p>So we&rsquo;ve seen what the Calendar looks like, and how it&rsquo;s building it&rsquo;s Months, but what goes into building a Month?</p>
+
+<!-- more -->
+
+
+<p>So building a Month is all about one thing: building it&rsquo;s weeks. The only other thing I need from a month is the ability to get it&rsquo;s name (i.e. January, February, etc.). My implementation of this looks something like this:</p>
+
+<div><script src='https://gist.github.com/1291245.js?file=Month.cs'></script>
+<noscript><pre><code>﻿public class Month
+{
+  private DateTime FirstDayOfMonth { get; set; }
+  
+  private IList&lt;Week&gt; Weeks { get; set; }
+
+  public Month(int monthValue)
+  {
+      FirstDayOfMonth = new DateTime(DateTime.Now.Year, monthValue, 1);
+      
+      Weeks = new List&lt;Week&gt;();
+
+      BuildMonth();
+  }
+
+  private void BuildMonth()
+  {
+      var startDay = Calendar.GetStartDay();
+
+      var week = new Week();
+
+      var day = FirstDayOfMonth;
+      
+      do
+      {
+          if (WeekHasEnded(day, startDay) &amp;&amp; WeekIsNotEmpty(week))
+          {
+              Weeks.Add(week);
+              week = new Week();
+          }
+
+          week.Add(day);
+          
+          day = GetNextDay(day);
+
+      } while (day.Month == FirstDayOfMonth.Month);
+
+      Weeks.Add(week);
+  }
+
+  private bool WeekIsNotEmpty(Week week)
+  {
+      return week.GetDays().Count() &gt; 0;
+  }
+
+  private bool WeekHasEnded(DateTime day, DayOfWeek startDay)
+  {
+      return day.DayOfWeek == startDay;
+  }
+
+  private DateTime GetNextDay(DateTime day)
+  {
+      return day.AddDays(1);
+  }
+
+  public DayOfWeek GetFirstDayOfMonth()
+  {
+      return FirstDayOfMonth.DayOfWeek;
+  }
+
+  public IList&lt;Week&gt; GetWeeks()
+  {
+      return Weeks;
+  }
+  
+  public string GetMonthName()
+  {
+      return string.Format(&quot;{0:MMMM}&quot;, FirstDayOfMonth);
+  }
+}</code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: The Calendar ViewModel]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel/"/>
+    <updated>2011-10-16T12:46:08-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel</id>
+    <content type="html"><![CDATA[<p>So my ViewModel basically starts with the idea of a Calendar and it&rsquo;s Events. So what did I end up making that look like? Let&rsquo;s disregard the markup for now, because how it looks isn&rsquo;t really what we&rsquo;re talking about here. What we&rsquo;re talking about is how the Calendar and it&rsquo;s Events are <em><strong>modeled</strong></em>.</p>
+
+<!-- more -->
+
+
+<p>So my Calendar looks like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">Calendar</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">public</span> <span class="nf">Calendar</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="n">Months</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">Month</span><span class="p">&gt;</span>
+</span><span class='line'>        <span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">protected</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">Month</span><span class="p">&gt;</span> <span class="n">Months</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetCurrentMonth</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Today</span><span class="p">.</span><span class="n">Month</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetNextMonth</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Today</span><span class="p">.</span><span class="n">Month</span> <span class="p">+</span> <span class="m">1</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="kt">string</span> <span class="n">month</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nf">GetMonth</span><span class="p">(</span>
+</span><span class='line'>        <span class="n">DateTime</span><span class="p">.</span><span class="n">ParseExact</span><span class="p">(</span>
+</span><span class='line'>          <span class="n">month</span><span class="p">,</span> <span class="s">&quot;MMMM&quot;</span><span class="p">,</span> <span class="n">CultureInfo</span><span class="p">.</span><span class="n">CurrentCulture</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">.</span><span class="n">Month</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="kt">int</span> <span class="n">monthValue</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(!</span><span class="n">Months</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="n">monthValue</span><span class="p">))</span>
+</span><span class='line'>          <span class="n">Months</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">monthValue</span><span class="p">,</span> <span class="k">new</span> <span class="n">Month</span><span class="p">(</span><span class="n">monthValue</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">return</span> <span class="n">Months</span><span class="p">[</span><span class="n">monthValue</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="k">static</span> <span class="n">DayOfWeek</span> <span class="nf">GetStartDay</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">DayOfWeek</span><span class="p">.</span><span class="n">Monday</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="k">static</span> <span class="n">DayOfWeek</span> <span class="nf">GetLastDay</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">DayOfWeek</span><span class="p">.</span><span class="n">Sunday</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="k">void</span> <span class="nf">IncludeEvents</span><span class="p">(</span><span class="n">IList</span><span class="p">&lt;</span><span class="n">Event</span><span class="p">&gt;</span> <span class="n">events</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">@event</span> <span class="k">in</span> <span class="n">events</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>          <span class="n">IncludeEvent</span><span class="p">(</span><span class="n">@event</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">private</span> <span class="k">void</span> <span class="nf">IncludeEvent</span><span class="p">(</span><span class="n">Event</span> <span class="n">eventToInclude</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">allDaysQuery</span> <span class="p">=</span> <span class="k">from</span> <span class="n">week</span> <span class="k">in</span> <span class="n">GetMonth</span><span class="p">(</span>
+</span><span class='line'>          <span class="n">eventToInclude</span><span class="p">.</span><span class="n">Day</span><span class="p">.</span><span class="n">Month</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="n">GetWeeks</span><span class="p">()</span>
+</span><span class='line'>        <span class="k">from</span> <span class="n">day</span> <span class="k">in</span> <span class="n">week</span><span class="p">.</span><span class="n">GetDays</span><span class="p">()</span>
+</span><span class='line'>        <span class="k">select</span> <span class="n">day</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">filteredDays</span> <span class="p">=</span> <span class="k">from</span> <span class="n">day</span> <span class="k">in</span> <span class="n">allDaysQuery</span>
+</span><span class='line'>                         <span class="k">where</span> <span class="n">day</span><span class="p">.</span><span class="n">Date</span> <span class="p">==</span> <span class="n">eventToInclude</span><span class="p">.</span><span class="n">Day</span><span class="p">.</span><span class="n">Date</span>
+</span><span class='line'>                         <span class="k">select</span> <span class="n">day</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">dayToAddEventTo</span> <span class="p">=</span> <span class="n">filteredDays</span><span class="p">.</span><span class="n">First</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">dayToAddEventTo</span><span class="p">.</span><span class="n">AddEvent</span><span class="p">(</span><span class="n">eventToInclude</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The Calendar is really only concerned with one thing: showing events that belong to it. In order to accomplish this goal, the Calendar must be able to include events into the months on the Calendar.</p>
+
+<p>In order to do this, the Calendar has to be able to build months, and then include the events into the days of those months. All of this logic takes place in the IncludeEvent method, which utilizes quite a few other classes to accomplish this.</p>
+
+<p>In the next post, we&rsquo;ll take a look at the other classes we used in the ViewModel to accommodate our Calendar</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Team Maturity: Self-Organizing]]></title>
     <link href="http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing/"/>
     <updated>2011-10-14T04:00:24-04:00</updated>
@@ -117,6 +615,179 @@
 <p>Not to worry. In the Self-Organizing stage your role turns to more of a Coach. You need to <em>grow</em> your team into learning new things, technologies or tools to help them in what they do. Inspire them to be passionate about their job. This is also the perfect stage to take those team members that you identified earlier as your potential leaders and really coach them into<em><strong> becoming</strong></em> leaders. If you do your job well enough, then they can do your job <em>for</em> you. <strong>This is not a bad thing. </strong>If they can do your job for you, that frees you up to help with other projects, or start new ones.</p>
 
 <p>In reality, a team will never be able to sustain being in the Self-Organizing stage, though. Teams will cycle through stages. Usually it&rsquo;s a circular pattern. It almost always happens because the scope of the project changes in some way. Maybe they need to learn a whole new technology stack. Maybe the project has taken a whole new direction and you need to develop completely new projects. If this happens don&rsquo;t think it&rsquo;s a sign that you or your team has done something wrong. It&rsquo;s just a natural part of the team cycle. It should be <em><strong>easier</strong></em> for subsequent cycles. The more your team has experience going through the cycles, and gain experience with how they work inside each cycle, the easier it will be to ramp back up to Self-Organizing.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: The problem with my Circle is...]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is/"/>
+    <updated>2011-10-13T04:00:32-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is</id>
+    <content type="html"><![CDATA[<p>that I&rsquo;m exposing too many details to the user of my code. The developer has to know intimate details about how to set up both the Ellipse and the Circle in order to calculate their areas effectively. In one case, the Ellipse, the runner has to know to set the major and minor axes, while for the Circle, they have know to set the Radius.</p>
+
+<!-- more -->
+
+
+<p>The underlying problem here is simple, actually. The real issue stems from the fact that the Ellipse (and by proxy the Circle) was designed as a Hybrid object. As I&rsquo;ve said before, and <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">others before me</a>, Hybrid objects are evil. To fix this, we need to either make these classes Data Structures, or make them Objects. Since the whole point of the code is to calculate the area, I say we have to make them Objects.</p>
+
+<p>To do that, I made the following changes to Ellipse:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=GoodEllipse.cs'></script>
+<noscript><pre><code>public class Ellipse
+{
+  protected virtual int MajorAxis { get; set; }
+  protected virtual int MinorAxis { get; set; }
+    
+  public Ellipse(int majorAxis, int minorAxis)
+  {
+    MajorAxis = majorAxis;
+    MinorAxis = minorAxis;
+  }
+  
+  public virtual double CalculateArea()
+  {
+    return Math.Pi * MajorAxis * MinorAxis;
+  }
+}</code></pre></noscript></div>
+
+
+<p>Notice how MajorAxis and MinorAxis can still be extended via a subclass if need be, but they are <strong>only</strong> accessible from sub classes now, not from the outside world. This removes the class&rsquo;s Data Structure flavor and make it&rsquo;s a pure Object. It also has a great side benefit. Now a user can only create an Ellipse by supplying the major and minor values when the Ellipse is created. This logically makes sense because an Ellipse can&rsquo;t exist without it&rsquo;s major and minor axes.</p>
+
+<p>So how does this effect the Circle now? This is how I changed the Circle:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=GoodCircle.cs'></script>
+<noscript><pre><code>public class Circle: Ellipse
+{
+  public Circle(int radius)
+  {
+    MajorAxis = radius;
+    MinorAxis = radius;
+  }  
+}</code></pre></noscript></div>
+
+
+<p>A lot of code has been removed. It almost seems like I&rsquo;ve cheated somewhere, doesn&rsquo;t it? Well, now that Ellipse is acting as a pure Object, the only thing Circle needs to do is to explain why it&rsquo;s &ldquo;special&rdquo;. As we noted before, a Circle is special because it has a Radius. In other words, it&rsquo;s major and minor axes have the same length. So the Circle class simply explains that relationship, and you&rsquo;re done. The area calculation doesn&rsquo;t need to be modified because the real difference was showing how the radius is related to the major and minor axes.</p>
+
+<p>Now the runner is forced to use the classes in a way that prevents them from being used in inappropriate ways:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=GoodRunner.cs'></script>
+<noscript><pre><code>public class Runner
+{
+  public void UsingEllipsesAndCircles()
+  {
+    var ellipse = new Ellipse(10, 5);    
+    
+    var areaOfEllipse = ellipse.CalculateArea();
+    
+    var circle = new Circle(4);
+        
+    var areaForCircle = circle.CalculateArea();    
+  }
+}</code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: What's the problem with my Circle]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle/"/>
+    <updated>2011-10-12T04:00:01-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle</id>
+    <content type="html"><![CDATA[<p>I got into an interesting discussion about <a href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/">SOLID </a>principles with a fellow developer today, and it got me to thinking about a common problem I&rsquo;ve seen come up and I wanted to try and touch on it.<!-- more --></p>
+
+<p>So first things first, let&rsquo;s go over some math and set up the problem space.</p>
+
+<p>You have an <a href="http://en.wikipedia.org/wiki/Ellipse">Ellipse</a>. You have a <a href="http://en.wikipedia.org/wiki/Circle">Circle</a>. A Circle is a special kind of Ellipse. Specifically, an Ellipse has a major axis and a minor axis, and a Circle is special because it&rsquo;s major and minor axis are equivalent in their length.</p>
+
+<p>So when a developer initially goes to model these objects, you typically would see something like this:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=BadEllipse.cs'></script>
+<noscript><pre><code>public class Ellipse
+{
+  public virtual int MajorAxis { get; set; }
+  public virtual int MinorAxis { get; set; }
+    
+  public virtual double CalculateArea()
+  {
+    return Math.Pi * MajorAxis * MinorAxis;
+  }
+}</code></pre></noscript></div>
+
+
+<p>I see this implementation a lot. When asked how this supports SOLID principles, I get the following a lot of the time:</p>
+
+<p>It supports <a href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/">OCP </a>because I can override any of the properties or the methods. Ok good.</p>
+
+<p>It supports <a href="http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle/">SRP </a>because the class is only responsible for knowing things about Ellipse. Ok good.</p>
+
+<p>And there are some other ones, but then we veer into trying to extend this model with the special Circle, and that&rsquo;s where things really start to break down. I&rsquo;ve seen a lot of variations about how this goes down, but I&rsquo;m going to summarize all of them with this definition:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=BadCircle.cs'></script>
+<noscript><pre><code>public class Circle: Ellipse
+{
+  public int Radius { get; set; }
+  
+  public override double CalculateArea()
+  {
+    return Math.Pi * Radius * Radius
+  }
+}</code></pre></noscript></div>
+
+
+<p>What happens here is a new property is introduced so that the users know that Circles are special because they have a Radius. Then when we calculate the Area, we override the function that calculates the area and we use the radius instead.</p>
+
+<p>So someone would use it like this:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=BadRunner.cs'></script>
+<noscript><pre><code>public class Runner
+{
+  public void UsingEllipsesAndCircles()
+  {
+    var ellipse = new Ellipse();
+    ellipse.MajorAxis = 10;
+    ellipse.MinorAxis = 5;
+    
+    var areaOfEllipse = ellipse.CalculateArea();
+    
+    var circle = new Circle();
+    circle.Radius = 4;
+    
+    var areaForCircle = circle.CalculateArea();    
+  }
+}</code></pre></noscript></div>
+
+
+<p>So what&rsquo;s the problem with this? Think about it an tomorrow I&rsquo;ll post my proposed solution.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: Models and ViewModels, and yes they're different]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different/"/>
+    <updated>2011-10-11T13:20:34-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different</id>
+    <content type="html"><![CDATA[<p>My wife recently asked me to work on a site for our son&rsquo;s class and while working on it I realized that what I was building was a pretty great example of my thoughts on how I feel that Models and ViewModels relate to each other.</p>
+
+<!-- more -->
+
+
+<p>So before we get to any code I&rsquo;d first like to explain how I see the Model and ViewModel shaping conceptually. The domain is basically as follows:</p>
+
+<p>The system needs to be able to allow users to sign up as Readers for a particular day. The time that they are going to read is always the same, it&rsquo;s 10 AM for an hour. The days that a user can sign up to be a Reader are specific. For the most part, the days are Monday, Tuesday, Thursday and Friday, but there are also some other rules like the week of Thanksgiving there won&rsquo;t be any readings. Currently, this is being done by the teacher where she prints out a Reading Calendar that has the days for reading highlighted. What needs to be done is basically the same thing. We need to make a calendar that shows everyone all the days that are eligible for signing up, and let them sign up for those days. It also needs to show them the days that have already been signed up, and show the Reader for that day.</p>
+
+<p>Ok, so that&rsquo;s the basics. Now, the question here is how is the Model and ViewModel broken down?</p>
+
+<p>To illustrate this it would probably be better to start with the user experience, and hence the ViewModel. So the user will be presented with a Calendar, and they should be able to see Events that show up on the calendar, like they&rsquo;re most likely already used to. These Events will show who&rsquo;s signed up. Now, the user also needs to be able to Sign Up. That&rsquo;s the extent of the first version of the ViewModel I came up with. We have a Calendar, Events, and a SignUp.</p>
+
+<p>Now, onto the Model. When the user signs up, they&rsquo;re telling the system that they want to be a Reader for a particular day. Once they become a Reader then the system shouldn&rsquo;t allow anyone else sign up on that day. So that&rsquo;s really the Model. We have a bunch of Readers and some logic that keeps you from signing up multiple Readers on the same day.</p>
+
+<p>So how does the Model and ViewModel relate? Well, there are two key relationships here. First, when a user signs up, we&rsquo;ll have to map the SignUp over to a Reader. Second, when we show the user a calendar, we need to get all the Readers for those days, and map the Readers over to Events which the Calendar knows how to show.</p>
+
+<p>Notice the last thing I said there. The <strong>Calendar</strong> knows how to <em>show</em> <strong>Events</strong>, but it doesn&rsquo;t know<em><strong> anything</strong></em> about Readers. The implications here allow your system to be truly decoupled and makes it much more maintainable.</p>
+
+<p>So how did I implement this? I&rsquo;ll show you on my next post.</p>
 ]]></content>
   </entry>
   
@@ -408,667 +1079,26 @@ Let&rsquo;s say you have a car like this</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Team Maturity]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/07/team-maturity/"/>
-    <updated>2011-09-07T08:00:06-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/07/team-maturity</id>
-    <content type="html"><![CDATA[<p>This isn&rsquo;t an original idea of mine. It actually comes straight from <a href="http://5whys.com/blog/the-3-maturity-stages-of-a-software-team-and-how-scrum-fails.html">5whys.com</a>. I spend a lot of time as a leader researching how others lead their teams, and <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>&rsquo;s writings are worth your time.</p>
+    <title type="html"><![CDATA[Recruiters, if you're doing this you've already lost]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/09/08/recruiters-if-youre-doing-this-youve-already-lost/"/>
+    <updated>2011-09-08T08:00:39-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/09/08/recruiters-if-youre-doing-this-youve-already-lost</id>
+    <content type="html"><![CDATA[<p>I received an email this morning regarding an &ldquo;urgent&rdquo; position that needed to be filled. I get these all the time, but what really struck a cord with me was the last part of the email where the recruiter actually wanted me to fill out all my information in an HTML form that he put into the email.</p>
 
 <!-- more -->
 
 
-<p>There are 3 maturity stages of a software team. This may be true for other industries as well, but for my purposes we&rsquo;ll be focusing on software. Roy defines these stages as:</p>
+<p>So I decided it was time about time to do this. Notice to recruiters, if you are soliciting information from potential candidates in the hope that you&rsquo;ll grab a bite, you&rsquo;re fighting an uphill battle. The reality is, you&rsquo;ve already lost, and you need to go back to the drawing board.</p>
 
-<ol>
-<li><p> Chaos</p></li>
-<li><p> Mid-Life</p></li>
-<li><p> Mature</p></li>
-</ol>
+<p>I know you&rsquo;re job is to find candidates, and I&rsquo;m not saying you should stop doing that. What I&rsquo;m saying is, you should be doing a <em><strong>better job</strong></em>. Let&rsquo;s assume for a second that your opportunity is legitimate, and let&rsquo;s take it a step further and say it&rsquo;s a good opp. You should be doing your due diligence to find the <em>right</em> candidate, not just spamming a bunch of people&rsquo;s emails that happen to fit the search criteria you used.</p>
 
+<p>All those fields you want people to fill in for you? You should have figured them out already. At the very least, the ones that actually matter. For example, if you&rsquo;re looking for &ldquo;local only&rdquo; candidates, then guess what, you should only be soliciting <em><strong>local people</strong></em>. Another example, and this one is really ridiculous, if you&rsquo;re looking for a job with certain technology requirements (i.e. &ldquo;X years experience with Technology ABC&rdquo;), and then you proceed to <em><strong>ask</strong></em> what technologies the person you&rsquo;re soliciting knows and how much experience they have in each. I don&rsquo;t think there are words to describe how much of an oxymoron that is.</p>
 
-<p>but I actually like to describe them as</p>
+<p>You should know what skills your candidate has before you contact them. That&rsquo;s the whole reason why sites like monster, dice, careerbuilder, and careers @ stackoverflow really exist in the first place. Use them.</p>
 
-<ol>
-<li><p> Chaos</p></li>
-<li><p> Learning</p></li>
-<li><p> Self-Organizing</p></li>
-</ol>
+<p>Also, this one goes out to recruitment firms: stop making people fill in <em><strong>another</strong></em> application form just because your recruitment firm is somehow <em>special</em>. Guess what, it&rsquo;s not special at all. In fact, that pretty much means your firm is on my list, the list of firms not to get involved with.</p>
 
-
-<p>This is only semantics, but when I talk to others about the different stages, people tend to understand the stages more inherently when I talk about the focal point of that stage.</p>
-
-<p>There are some critically important things that as a lead you need to understand about these stages.</p>
-
-<p>The most important thing a lead needs to understand is your role as a leader is completely different depending on what stage your team is in. We&rsquo;ll get into how your role changes based on each stage is later posts, but keep this in mind.</p>
-
-<p>Secondly, from my experience, a team can go in and out of these stages. It can be cyclic, or they can jump around. It tends to be more of the former rather than the latter, but I have seen it happen both ways. As a leader, you need to keep an eye on your team and be able to identify when this change happens so that you can change your role within the team to get them back on track.</p>
-
-<p>The goal is to grow mature, self-organizing teams. We&rsquo;ll cover more on this later, but if you can&rsquo;t wait you can always jump over to 5 whys. Roy has some great content that goes into great detail about each of these stages and how to manage them.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SOLID Principles: Liskov Substitution Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle/"/>
-    <updated>2011-09-06T08:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle</id>
-    <content type="html"><![CDATA[<p>Liskov Substitution Principle, or LSP, is actually a very simple concept to understand in a strongly typed language. In languages like C#, or VB.NET, LSP often gets taken for granted, but I&rsquo;ve seen cases where even in strongly typed languages you can violate LSP.</p>
-
-<!-- more -->
-
-
-<p>Simply put, LSP means that for a given base class, you should be able to substitute derived classes in it&rsquo;s place, and the behavior or the expectation of that behavior should not change. Take for example a Shape:</p>
-
-<div><script src='https://gist.github.com/1188522.js?file=Shape.cs'></script>
-<noscript><pre><code>public abstract class Shape
-{
-    abstract double GetArea();
-}</code></pre></noscript></div>
-
-
-<p>The point of this class is to define something which has the ability to give us it&rsquo;s area back. Something like a Square</p>
-
-<div><script src='https://gist.github.com/1188522.js?file=Square.cs'></script>
-<noscript><pre><code>public class Square : Shape
-{
-    public Square(int side)
-    {
-        Side = side;
-    }
-    
-    private int Side { get; set; }
-    
-    public override double GetArea()
-    {
-        return Side * Side;
-    }
-}
-</code></pre></noscript></div>
-
-
-<p>or a Circle</p>
-
-<div><script src='https://gist.github.com/1188522.js?file=Circle.cs'></script>
-<noscript><pre><code>public class Circle : Shape
-{
-    public Circle(int radius)
-    {
-        Radius = radius;
-    }
-    
-    private int Radius { get; set; }
-    
-    public override double GetArea()
-    {
-        var area = 4 * Math.Pi * Radius * Radius;
-        return ;
-    }
-}</code></pre></noscript></div>
-
-
-<p>would have the means to give us this information.</p>
-
-<p>However, something like a Line</p>
-
-<div><script src='https://gist.github.com/1188522.js?file=Line.cs'></script>
-<noscript><pre><code>public class Line : Shape
-{
-    public Line(int length)
-    {
-        Length = length;
-    }
-    
-    private int Length { get; set; }
-    
-    public override double GetArea()
-    {
-        throw new NotSupportedException(
-            @&quot;I&#39;m not really a shape!&quot;);
-    }
-}</code></pre></noscript></div>
-
-
-<p>would not be able to give us it&rsquo;s area, because it doesn&rsquo;t have an area. In fact, it&rsquo;s not even a Shape to begin with. It seems odd that I would use this as an example, but the simplicity of the example shows exactly how LSP gets violated in practice. All too often I&rsquo;ll see code where a class is deriving from another class, even though it&rsquo;s shouldn&rsquo;t be. At the core of the issue is usually that it was never meant to <em><strong>be</strong></em> the thing it was deriving from in the first place.</p>
-
-<p>A full running example of utilizing LSP can be found on this <a href="http://dimecasts.net/Content/WatchEpisode/92">video from dime casts</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SOLID Principles: Open Closed Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/"/>
-    <updated>2011-09-02T08:00:41-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle</id>
-    <content type="html"><![CDATA[<p>This has been done to death I think, but I wanted to take a shot at it. In fact, this is really more for my benefit than for anyone else. If I can manage to explain these concepts clearly enough then I think I have a firm understanding of what they actually stand for, and how I should apply them when I build things. The first thing we&rsquo;re going to get into is the <a href="http://en.wikipedia.org/wiki/Open/closed_principle">Open Closed Principle</a>.</p>
-
-<!-- more -->
-
-
-<p>Why did I choose this one first? To be honest, this one was the last one that I found a use for. I understood the concept early on in my career, but I had issues figuring out when it was best to use it, and therefore I wouldn&rsquo;t really ever use it at all.</p>
-
-<p>This made for some bad code. Some really bad code. But, such is the life of a developer. You basically go through 4 stages. First, you have no concept of some <em>thing</em>. Then you learn about this <em>thing</em>, which you then spend some time just understanding. Third comes the obsession stage, where you apply said <em>thing</em> to everything you do. And lastly, comes I guess what you would call the Maturing stage, which is when you learn the appropriateness of this <em>thing</em>.</p>
-
-<p>In our case today, we&rsquo;re talking about the <a href="http://en.wikipedia.org/wiki/Solid_(object-oriented_design">SOLID</a>) principles, and specifically looking at OCP.</p>
-
-<p>As I said before, this one took me some time to finally understand the usefulness of it. In fact, it was when I was reading <a href="http://artofunittesting.com/">The Art of Unit Testing</a> that this light bulb went off in my head. Actually, it wasn&rsquo;t a light bulb, it was more like a giant flood light or something. By the way, if you&rsquo;re new to TDD or unit testing, you have to read this book by <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>. The part that really opened my eyes was when Roy started talking about building seams into your unit tests.</p>
-
-<p>Up until that point, I had very heavily relied on interfaces for my mocking techniques. He goes over that more in the book, but the problem I was facing was that I needed interfaces for <strong>everything</strong>. A lot of times, though, it was a huge over kill for what I was trying to do. A seam was <strong><em>perfect</em></strong>. A seam was also the huge flood light going off in my brain. Why? Because a seam is literally applying OCP to a method with the purpose of later faking that method.</p>
-
-<p>Instead of describing what I&rsquo;m saying I think so code might serve us better, so let&rsquo;s say you have some service class like this.</p>
-
-<div><script src='https://gist.github.com/1187529.js?file=SimpleServiceWithoutOCP.cs'></script>
-<noscript><pre><code>public class SimpleServiceWithoutOCP
-{
-    public void DoSomeWork()
-    {
-        var stuff = CallTheRepositoryForSomeStuff();
-        
-        foreach(var thing in stuff)
-            DoSomething(thing);
-    }
-    
-    private IList&lt;Stuff&gt; CallTheRepositoryForSomeStuff()
-    {
-        return Repository.GetStuff();
-    }   
-    
-    private void DoSomething(Stuff stuff)
-    {
-        //doesn&#39;t matter what&#39;s here
-    }
-}
-</code></pre></noscript></div>
-
-
-<p>Now when you&rsquo;re writing tests to make sure this guy works, you&rsquo;ll probably want to make sure that DoSomeWork actually does what it says it does, so you&rsquo;d write a test that might look something like this.</p>
-
-<div><script src='https://gist.github.com/1187529.js?file=SimpleServiceTest.cs'></script>
-<noscript><pre><code>[TestFixture]
-public class SimpleServiceTest
-{
-    [Test]
-    public void DoSomeWork_WhenGivenStuff_CallsDoSomethingOnStuff()
-    {
-        var service = MockRepository
-                    .GenerateMock&lt;SimpleServiceWithOCP&gt;();
-
-                var expectedStuff = new Stuff();
-
-        service.Expect(x =&gt; x.CallTheRepositoryForSomeStuff())
-                       .Return(new List&lt;Stuff&gt; { expectedStuff });
-        
-        service.DoSomeWork();
-    
-        service.AssertWasCalled(
-                        x =&gt; x.DoSomething(expectedStuff), 
-                        &quot;this should be called when doing work&quot;);
-    }
-}</code></pre></noscript></div>
-
-
-<p>So this test will create a mock (a type of fake) of your service, and then what we want to verify in this test is that when DoSomeWork is called, that it in turn will call DoWork on all the items that come from the Repository.</p>
-
-<p>There&rsquo;s a problem, though. The problem is two fold. First, <em><strong>we don&rsquo;t want to use the real repository</strong></em>. If you don&rsquo;t understand why, read the book, trust me. Second, this code won&rsquo;t execute. You&rsquo;ll get a run time exception because there&rsquo;s no seam on CallTheRepositoryForSomeStuff. How do you make a seam? Well, you mark the method <em>virtual</em>, which allows sub-classes to change it&rsquo;s behavior.</p>
-
-<div><script src='https://gist.github.com/1187529.js?file=SimpleServiceWithOCP.cs'></script>
-<noscript><pre><code>public class SimpleServiceWithOCP
-{
-    public void DoSomeWork()
-    {
-        var stuff = CallTheRepositoryForSomeStuff();
-        
-        foreach(var thing in stuff)
-            DoSomething(thing);
-    }
-    
-    protected virtual IList&lt;Stuff&gt; CallTheRepositoryForSomeStuff()
-    {
-        return Repository.GetStuff();
-    }   
-    
-    protected virtual void DoSomething(Stuff stuff)
-    {
-        //doesn&#39;t matter what&#39;s here
-    }
-}</code></pre></noscript></div>
-
-
-<p>And <em><strong>that</strong></em> is OCP in a nut shell. It&rsquo;s OCP because our mocking framework doesn&rsquo;t have to actually open the file and change the existing class. In fact, what it does under the hood is create another class that is a sub-class of SimpleService, and then change the new class to have it do something besides go the real repository. In our case, we&rsquo;re just returned a new list with one item in it.</p>
-
-<p>Want more info on the Open/Closed Principle? <a href="http://dimecasts.net/Casts/CastDetails/90">Check out this dime cast</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Wireless Adapter Traps]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/08/wireless-adapter-traps/"/>
-    <updated>2011-08-08T04:00:39-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/08/wireless-adapter-traps</id>
-    <content type="html"><![CDATA[<p>Ok so you go to the store and you&rsquo;re looking around for an awesome deal on a Wireless-N adapter, and you find one for only $14!  &#8221;How can this be!?&ldquo; you might ask yourself?  Well, let me explain something to you before you end up with the same situation I find myself in right now.</p>
-
-<!-- more -->
-
-
-<p>Ok so my story goes a little differently than that, but it&rsquo;s basically the same thing.  My wife needed a new wireless adapter for her computer because the one she had was pathetically bad.</p>
-
-<p>So, me being the tech nerd that I am, decided</p>
-
-<blockquote><p>why not buy a Wireless-N adapter so when I upgrade my router in the next year or so she&rsquo;ll already be ready for it?</p></blockquote>
-
-<p>So I went and got her a <a href="http://www.dlink.com/products/?pid=722">DLink DWA-125</a>.  Not only that but the price tag on the sucker was only like $14, which I thought was amazing.  Not until I <a href="http://josephbulger.github.io/blog/2011/08/07/linksys-e4200-retrospective/">upgraded my router</a> did I realize the error of my ways.  It&rsquo;s in the bands people, the bands will get you every time.</p>
-
-<p>So I bought the adapter because it&rsquo;s Wireless-N.  And it is, don&rsquo;t get me wrong.  However, the bands it operates on are&hellip; well.. I should say&hellip; the <strong>band</strong> it operates on, is 2.4 GHz.  You might be thinking, &ldquo;what&rsquo;s the big deal Joe? Just connect to your router and go with it man.&rdquo;  Here&rsquo;s the problem. When you connect a device that runs G to a network that already has a device running on N, a couple things could happen.</p>
-
-<p>You could be dropped to Wireless-G, and both adapters would run there.  Which kind of defeats the purpose of buying the N adapter, don&rsquo;t you think?</p>
-
-<p>Or&hellip; Your network could go crazy and let the adapters battle it out, which is what happened to me.  Who won you might ask?  No one, because every time one of the adapters would lose connection, it would just try to get it back, which would essentially kick the other one off, etc. etc.</p>
-
-<p>So be aware when purchasing N adapters.  If you&rsquo;re like me and you have G devices that you<strong> still need to use</strong>, then you better get an N adapter that runs on a 5GHz band. How do you know if your router can handle this set up?  Well&hellip; <a href="http://josephbulger.github.io/blog/2011/08/07/linksys-e4200-retrospective/">that&rsquo;s a different story</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Linksys E4200: Retrospective]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/07/linksys-e4200-retrospective/"/>
-    <updated>2011-08-07T12:25:13-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/07/linksys-e4200-retrospective</id>
-    <content type="html"><![CDATA[<p>I just recently retired my <a href="http://en.wikipedia.org/wiki/Linksys_WRT54G_series">WRT54G</a> in favor or a Wireless N Router.  I ended up going with the <a href="http://homestore.cisco.com/en-us/Routers/Linksys-E4200-MaximumPerformance-Wirelessn-router_stcVVproductId122703236VVcatId551966VVviewprod.htm">Linksys E4200</a> for a number of reasons.<!-- more --></p>
-
-<p>First of all, it&rsquo;s a high performance router, and so far it&rsquo;s lived up to that expectation.  What do I mean by a high performance router?</p>
-
-<blockquote><p>It&rsquo;s capable of handling 450 Mbps on the 5GHz band.</p></blockquote>
-
-<p>We&rsquo;ll get to the band in a second.  This is going to be extremely useful for me later on when I start setting up a NAS in my house to stream content.</p>
-
-<p>Secondly, it&rsquo;s a dual band router.  What exactly is a dual band router? It&rsquo;s pretty simple actually.</p>
-
-<blockquote><p>The router has the ability to host two networks (3 if you include the guest network): one on a 5GHz band, and another on a 2.4 GHz band.</p></blockquote>
-
-<p>Now, there are a couple catches here.  First, this router is a <strong>true</strong> dual band router.  What I mean by that is that it can run both bands <strong>simulataneously</strong>.  If you&rsquo;re in the market for a new router, you have to keep this in mind because you could be looking at a router that says it&rsquo;s dual band, but when you bring it home, it can&rsquo;t run them both at the same time, you have to choose which one to roll with.</p>
-
-<p>For me, I have to have both bands up at the same time, which brings me to the second catch.  If you have devices (PCs, IPods, IPhones, Androids, etc.)  then it&rsquo;s likely that some are going to run on Wireless-G and some have Wireless-N.  In my household, most of the devices run on Wireless-G, and I have a couple that can run Wireless-N.</p>
-
-<p>Here&rsquo;s the catch.  If you have a Wireless-N capable router and you have devices that are connecting to it via Wireless-G and Wireless-N <strong>on the same band</strong>, then the router has to choose the lesser of the two, which means everyone on that band is stuck on Wireless-G.  This goes for all routers, by the way.  This is where the two bands come into play.  If you have two bands, you can set one band up to run Wireless-N (5 GHz), and you can set up the other to be Wireless-G (2 GHz).</p>
-
-<p>This brings me to the first complaint that I have about the E4200.  When I originally set up the router, I <strong>assumed</strong> that the router would be configured out of the box to handle the exact scenario that I described previously.  However, what I came to find out was that my router, out of the box, was configured in some kind of Mixed Mode setting for <strong>both bands</strong>.  This wreaked havoc on my network for a day or two because I didn&rsquo;t realize what was going on, and chalked it up to Comcast screwing with my internet again (they have a tendency to do this).  However, after sitting down for a second and thinking about it, I decided to go digging around in the settings and that&rsquo;s when I discovered the mixed mode issue.</p>
-
-<p>This wouldn&rsquo;t have normally been a problem, except for one thing:</p>
-
-<blockquote><p>I have a couple of devices at home that are Wireless-N but they only operate on the 2.4 GHz band.</p></blockquote>
-
-<p>This caused a war to ensue on the router between my G devices and my N devices, the winner being no one. Long story short, I ended up doing a manual set up on my router, where the 5GHz band was configured to run only Wireless-N and the 2.4 GHz band was configured Wireless-G only.  Why did I do it that way?  Because Wireless-G devices can only operate on 2.4 GHz band, and the devices that I have that only handle Wireless-N on the 2.4 band automatically negotiate down to Wireless-G when connecting to the router on 2.4 now, which is what would happen to them anyway.</p>
-
-<p>Once I did that the war ended and now everything is playing nicely together.  There has been one other snag along the way, but I&rsquo;ll save that for another post.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A simple way to see if someone is spam scamming you]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you/"/>
-    <updated>2011-01-21T03:19:14-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you</id>
-    <content type="html"><![CDATA[<p>I hate having to sign up for anything on the internet. If I can avoid it I will, but nevertheless at some point you’re going to have to sign up for something.</p>
-
-<!-- more -->
-
-
-<p>Now, with signing up comes the distinct possibility that the site you’re signing up on will give your email away to someone, either intentionally or not.  Well, I use gmail as my email server, and one of the really cool features that they recognize is Address Tags.</p>
-
-<p>What are Address Tags?  I’ll show you.  Let’s say you sign up for some site, but you want to know if they pass your email on to someone else.  When they ask for you email address, you can tag your email with something specific to that site.  Say, for example, that my email is <a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a>.  When I sign up on a site and give my email, I could instead give them <a href="mailto:john.doe+youreascumbag@gmail.com">john.doe+youreascumbag@gmail.com</a> and it would still go to <strong>my </strong>email.  This is pretty cool, because now whenever they send you an email, you’ll have that tag in your address, so you’ll know it was definitely from them, but also, if they give out that email to anyone else and <strong>they contact you</strong> it will be the same email, so you’ll at least <strong>know </strong>who’s spam scamming you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[When Windows tells you that it's not geniune...]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/09/07/when-windows-tells-you-that-its-not-geniune/"/>
-    <updated>2010-09-07T07:16:52-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/09/07/when-windows-tells-you-that-its-not-geniune</id>
-    <content type="html"><![CDATA[<p>I recently had to go through this because my windows installation started telling me it was not genuine and I needed to activate it.  This was completely false, being that the key I was using to activate the product was completely legit.</p>
-
-<p>So if you find yourself in the same boat as me, and you are wondering what you should do, follow these steps.<!-- more --></p>
-
-<p>Once you have a valid Key it remains valid and it is that way that MS designed it. However, corrupted licensing files may occur once there is an infection or it could be more reasons around there. Nonetheless try this entering these command on an &ldquo;elevated DOS prompt&rdquo; (click start> type CMD> right click CMD icon and run as admin)</p>
-
-<ol>
-<li><p>type slmgr /upk and press enter ( a notification should pop up that the PK has been uninstalled)</p></li>
-<li><p>type slmgr /cpky and press enter (this clears out the PK from registry)</p></li>
-<li><p>type slmgr /rilc and press enter ( this will reinstall licensing files)</p></li>
-<li><p>restart your computer twice, (if it would ask you to enter the product key on the 1st restart click ask me later and restart once more)</p></li>
-<li><p>After the 2nd restart, it will ask you to enter the PK, Yes enter it. It will automatically validate but maybe if you&rsquo;re lucky it would take it. If not,.. step 6.</p></li>
-<li><p>click start  and type &ldquo;slui 4&rdquo; (without the quotes) and press enter. This will open the phone activation option. Choose your country correctly and phone in the activation server. At this point, the installation ID should be valid (unless you are using pirated copy or product key) and the phone activation server will give you the confirmation ID. It will ask you how many times you have installed your copy&mdash; of course just say once.</p></li>
-</ol>
-
-
-<p><a href="http://social.technet.microsoft.com/Forums/en-US/w7itproinstall/thread/f0ec949f-4865-4a63-849c-af386de1b1fa">The original article I found this from was here.</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Contract By Design over the wire and a possible solution]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/04/29/using-contract-by-design-over-the-wire-and-a-possible-solution/"/>
-    <updated>2010-04-29T04:10:29-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/04/29/using-contract-by-design-over-the-wire-and-a-possible-solution</id>
-    <content type="html"><![CDATA[<p>I’ve been plagued with an issue that I have yet to find a solution for.</p>
-
-<p>This is really more for my benefit so I can research this later, but basically when I create classes I tend to decouple them by using interfaces, especially between layers.</p>
-
-<!-- more -->
-
-
-<p>The problem is when you use a service layer, such as WCF, that the class that is generated on the client side doesn’t carry the implementations that the server side class has.</p>
-
-<p>Then I found <a href="http://blogs.microsoft.co.il/blogs/gilf/archive/2010/04/28/add-service-reference-how-to-avoid-generating-already-existing-classes.aspx">this article</a> which might be my saving grace.  It lefts you actually reference the same class on the client side.  This might be solution I’m looking for.</p>
-
-<p>Once I get a chance to test this out I’ll post the results with some code.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Creating an PagedList<T> that uses AJAX]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax/"/>
-    <updated>2010-04-14T05:05:58-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax</id>
-    <content type="html"><![CDATA[<p>I’ve been using this PagedList functionality that i found from a <a href="http://blog.wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/">blog article Rob Conery</a> put up, and <a href="http://code-inside.de/blog-in/2008/04/08/aspnet-mvc-pagination-view-user-control/">a control I found by Robert Muehsig</a> which I’ve really enjoyed using so far.</p>
-
-<p>One of the things that was missing from the functional set that I ended up needing was the ability to page the list, but through issuing AJAX requests instead of the typical post back.</p>
-
-<p>So I went off and extended the existing model to support AJAX requests, and thought I would share it in case anyone else needed to do the same thing.<!-- more --></p>
-
-<p>I guess the best place to start would be the use case.  So to start I created a control that encapsulates the Paging UI layout and calls I need.  The use of the original control looks like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="n">Html</span><span class="p">.</span><span class="n">RenderPartial</span><span class="p">(</span><span class="s">&quot;AjaxPagination&quot;</span><span class="p">,</span>
-</span><span class='line'>    <span class="k">new</span> <span class="n">AjaxPaginationViewData</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>            <span class="n">PageIndex</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageIndex</span><span class="p">,</span>
-</span><span class='line'>            <span class="n">Action</span> <span class="p">=</span> <span class="s">&quot;CondoPage&quot;</span><span class="p">,</span>
-</span><span class='line'>            <span class="n">Controller</span> <span class="p">=</span> <span class="s">&quot;Home&quot;</span><span class="p">,</span>
-</span><span class='line'>            <span class="n">AjaxOptions</span> <span class="p">=</span>
-</span><span class='line'>                <span class="k">new</span> <span class="n">AjaxOptions</span> <span class="p">{</span>
-</span><span class='line'>                    <span class="n">UpdateTargetId</span> <span class="p">=</span> <span class="s">&quot;updatedContent&quot;</span> <span class="p">},</span>
-</span><span class='line'>            <span class="n">TotalCount</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">TotalCount</span><span class="p">,</span>
-</span><span class='line'>            <span class="n">PageSize</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageSize</span><span class="p">,</span>
-</span><span class='line'>            <span class="n">NumberOfPagesToEachSide</span> <span class="p">=</span> <span class="m">2</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The new AJAX functionality is called similarly:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="p">&lt;%</span> <span class="k">using</span> <span class="p">(</span><span class="n">Ajax</span><span class="p">.</span><span class="n">BeginForm</span><span class="p">(</span><span class="s">&quot;SomePage&quot;</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&quot;SomeController&quot;</span><span class="p">,</span>
-</span><span class='line'>        <span class="k">new</span> <span class="n">AjaxOptions</span> <span class="p">{</span> <span class="n">UpdateTargetId</span> <span class="p">=</span> <span class="s">&quot;updatedContent&quot;</span> <span class="p">}))</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="p">&lt;%</span> <span class="n">Html</span><span class="p">.</span><span class="n">RenderPartial</span><span class="p">(</span><span class="s">&quot;AjaxPagination&quot;</span><span class="p">,</span>
-</span><span class='line'>            <span class="k">new</span> <span class="n">AjaxPaginationViewData</span> <span class="p">{</span>
-</span><span class='line'>                    <span class="n">PageIndex</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageIndex</span><span class="p">,</span>
-</span><span class='line'>                    <span class="n">Action</span> <span class="p">=</span> <span class="s">&quot;SomeAction&quot;</span><span class="p">,</span>
-</span><span class='line'>                    <span class="n">Controller</span> <span class="p">=</span> <span class="s">&quot;SomeController&quot;</span><span class="p">,</span>
-</span><span class='line'>                    <span class="n">AjaxOptions</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AjaxOptions</span>
-</span><span class='line'>                        <span class="p">{</span> <span class="n">UpdateTargetId</span> <span class="p">=</span> <span class="s">&quot;updatedContent&quot;</span> <span class="p">},</span>
-</span><span class='line'>                    <span class="n">TotalCount</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">TotalCount</span><span class="p">,</span>
-</span><span class='line'>                    <span class="n">PageSize</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageSize</span><span class="p">,</span>
-</span><span class='line'>                    <span class="n">NumberOfPagesToEachSide</span> <span class="p">=</span> <span class="m">2</span>
-</span><span class='line'>        <span class="p">});%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>A couple things to note. You’ll notice that the AJAX control is rendered inside a Ajax.BeginForm. This is because I’m using the Microsoft.Ajax way of making AJAX calls.  This could also be done using jQuery or something else that can process AJAX calls. I just went this way because the scripts are already included in asp.net mvc app when you first create the project.  The result of the AJAX call will be a partial view, and we’ll need to put that somewhere.  That’s where the UpdatedTargetId comes into play. Other things we include in the AJAX control that are not in the original are the Action and the Controller, and some AjaxOptions. PageActionLink doesn’t work with the AJAX control, because we’ll be using Ajax.ActionLink to build the link, which is why I broke it up into Action, and Controller. For the AjaxOptions, we need those to specify the target of the call.</p>
-
-<p>So now that’s been explained, let’s look at the controls themselves.  Here’s a comparison of the original control and the ajax control.</p>
-
-<p>The original is one this way:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">HasPreviousPage</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>    <span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s">&quot;&lt;%=Model.PageActionLink.Replace(&quot;</span><span class="p">%</span><span class="m">7</span><span class="n">Bpage</span><span class="p">%</span><span class="m">7D</span><span class="s">&quot;, (Model.PageIndex - 1).ToString())%&gt;&quot;</span><span class="p">&gt;</span><span class="n">Previous</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;</span>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">GetFirstPageToLink</span><span class="p">()</span> <span class="p">!=</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;...&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span><span class="k">for</span> <span class="p">(</span><span class="kt">var</span> <span class="n">page</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">GetFirstPageToLink</span><span class="p">();</span> <span class="n">page</span> <span class="p">&lt;=</span> <span class="n">Model</span><span class="p">.</span><span class="n">GetLastPageToLink</span><span class="p">();</span> <span class="n">page</span><span class="p">++)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">page</span> <span class="p">==</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageIndex</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>        <span class="p">&lt;%=</span><span class="n">page</span><span class="p">.</span><span class="n">ToString</span><span class="p">()%&gt;</span>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>    <span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s">&quot;&lt;%=Model.PageActionLink.Replace(&quot;</span><span class="p">%</span><span class="m">7</span><span class="n">Bpage</span><span class="p">%</span><span class="m">7D</span><span class="s">&quot;, page.ToString())%&gt;&quot;</span><span class="p">&gt;&lt;%=</span><span class="n">page</span><span class="p">.</span><span class="n">ToString</span><span class="p">()%&gt;&lt;/</span><span class="n">a</span><span class="p">&gt;</span>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">page</span> <span class="p">!=</span> <span class="n">Model</span><span class="p">.</span><span class="n">GetLastPageToLink</span><span class="p">())</span> <span class="p">{</span> <span class="p">%&gt;|&lt;%</span> <span class="p">}</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">GetLastPageToLink</span><span class="p">()</span> <span class="p">!=</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageCount</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;...&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">HasNextPage</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>    <span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s">&quot;&lt;%=Model.PageActionLink.Replace(&quot;</span><span class="p">%</span><span class="m">7</span><span class="n">Bpage</span><span class="p">%</span><span class="m">7D</span><span class="s">&quot;, (Model.PageIndex + 1).ToString())%&gt;&quot;</span><span class="p">&gt;</span><span class="n">Next</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;</span>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And the AJAX control is done this way:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">HasPreviousPage</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%=</span> <span class="n">Ajax</span><span class="p">.</span><span class="n">ActionLink</span><span class="p">(</span><span class="s">&quot;Previous&quot;</span><span class="p">,</span> <span class="n">Model</span><span class="p">.</span><span class="n">Action</span><span class="p">,</span> <span class="n">Model</span><span class="p">.</span><span class="n">Controller</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">page</span> <span class="p">=</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">PageIndex</span> <span class="p">-</span> <span class="m">1</span><span class="p">).</span><span class="n">ToString</span><span class="p">()</span> <span class="p">},</span> <span class="n">Model</span><span class="p">.</span><span class="n">AjaxOptions</span><span class="p">)%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">GetFirstPageToLink</span><span class="p">()</span> <span class="p">!=</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;...&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span><span class="k">for</span> <span class="p">(</span><span class="kt">var</span> <span class="n">page</span> <span class="p">=</span> <span class="n">Model</span><span class="p">.</span><span class="n">GetFirstPageToLink</span><span class="p">();</span> <span class="n">page</span> <span class="p">&lt;=</span> <span class="n">Model</span><span class="p">.</span><span class="n">GetLastPageToLink</span><span class="p">();</span> <span class="n">page</span><span class="p">++)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">page</span> <span class="p">==</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageIndex</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>        <span class="p">&lt;%=</span><span class="n">page</span><span class="p">.</span><span class="n">ToString</span><span class="p">()%&gt;</span>
-</span><span class='line'>    <span class="p">&lt;%</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%=</span> <span class="n">Ajax</span><span class="p">.</span><span class="n">ActionLink</span><span class="p">(</span><span class="n">page</span><span class="p">.</span><span class="n">ToString</span><span class="p">(),</span> <span class="n">Model</span><span class="p">.</span><span class="n">Action</span><span class="p">,</span> <span class="n">Model</span><span class="p">.</span><span class="n">Controller</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">page</span> <span class="p">=</span> <span class="n">page</span><span class="p">.</span><span class="n">ToString</span><span class="p">()</span> <span class="p">},</span> <span class="n">Model</span><span class="p">.</span><span class="n">AjaxOptions</span><span class="p">)%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span> <span class="k">if</span> <span class="p">(</span><span class="n">page</span> <span class="p">!=</span> <span class="n">Model</span><span class="p">.</span><span class="n">GetLastPageToLink</span><span class="p">())</span> <span class="p">{</span> <span class="p">%&gt;</span> <span class="p">|</span> <span class="p">&lt;%</span> <span class="p">}</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">GetLastPageToLink</span><span class="p">()</span> <span class="p">!=</span> <span class="n">Model</span><span class="p">.</span><span class="n">PageCount</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;...&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="k">if</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">HasNextPage</span><span class="p">)</span> <span class="p">{</span> <span class="p">%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%=</span> <span class="n">Ajax</span><span class="p">.</span><span class="n">ActionLink</span><span class="p">(</span><span class="s">&quot;Next&quot;</span><span class="p">,</span> <span class="n">Model</span><span class="p">.</span><span class="n">Action</span><span class="p">,</span> <span class="n">Model</span><span class="p">.</span><span class="n">Controller</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">page</span> <span class="p">=</span> <span class="p">(</span><span class="n">Model</span><span class="p">.</span><span class="n">PageIndex</span> <span class="p">+</span> <span class="m">1</span><span class="p">).</span><span class="n">ToString</span><span class="p">()</span> <span class="p">},</span> <span class="n">Model</span><span class="p">.</span><span class="n">AjaxOptions</span><span class="p">)%&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;%</span> <span class="p">}</span> <span class="p">%&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The big difference here is the way that the links are generated. The original control simply creates an anchor tag and passes in the url generated by the Model. The AJAX control uses AJAX.ActionLink() instead, so we can have the link support AJAX.</p>
-
-<p>So knowing how the control looks, this is the Model for the AJAX control itself:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">AjaxPaginationViewData</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">int</span> <span class="n">NumberOfPagesToEachSide</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">int</span> <span class="n">PageIndex</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">int</span> <span class="n">PageSize</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">int</span> <span class="n">TotalCount</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">string</span> <span class="n">Action</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">string</span> <span class="n">Controller</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="n">AjaxOptions</span> <span class="n">AjaxOptions</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">int</span> <span class="n">PageCount</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">get</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>            <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Ceiling</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">TotalCount</span> <span class="p">/</span> <span class="n">PageSize</span><span class="p">);</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">bool</span> <span class="n">HasPreviousPage</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">get</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>            <span class="k">return</span> <span class="p">(</span><span class="n">PageIndex</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">);</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">bool</span> <span class="n">HasNextPage</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">get</span>
-</span><span class='line'>        <span class="p">{</span>
-</span><span class='line'>            <span class="k">return</span> <span class="p">(</span><span class="n">PageIndex</span> <span class="p">*</span> <span class="n">PageSize</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="n">TotalCount</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetFirstPageToLink</span><span class="p">()</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="p">(</span><span class="n">PageIndex</span> <span class="p">-</span> <span class="n">NumberOfPagesToEachSide</span> <span class="p">&gt;</span> <span class="m">1</span> <span class="p">?</span> <span class="n">PageIndex</span> <span class="p">-</span> <span class="n">NumberOfPagesToEachSide</span> <span class="p">:</span> <span class="m">1</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">public</span> <span class="kt">int</span> <span class="nf">GetLastPageToLink</span><span class="p">()</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="p">(</span><span class="n">PageIndex</span> <span class="p">+</span> <span class="n">NumberOfPagesToEachSide</span> <span class="p">&lt;</span> <span class="n">PageCount</span> <span class="p">?</span> <span class="n">PageIndex</span> <span class="p">+</span> <span class="n">NumberOfPagesToEachSide</span> <span class="p">:</span> <span class="n">PageCount</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That pretty much explains how the control is built.</p>
-
-<p>The only thing left is how the interaction with PagedList happens.  For that we look at the action that the control calls.  In this example, we’re calling SomeAction in SomeController, and it would look something like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="n">ActionResult</span> <span class="nf">SomeAction</span><span class="p">(</span><span class="kt">int</span> <span class="n">page</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">CachedPage</span> <span class="p">=</span> <span class="n">page</span><span class="p">;</span>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="n">GetSearchQuery</span><span class="p">(</span><span class="n">CachedSearchParameters</span><span class="p">);</span>
-</span><span class='line'>    <span class="kt">var</span> <span class="n">model</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">ToPagedList</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">DefaultPageSize</span><span class="p">);</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nf">PartialView</span><span class="p">(</span><span class="s">&quot;AjaxResults&quot;</span><span class="p">,</span> <span class="n">model</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The ToPagedList performs the functionality that is included with the PagedList classes which you can find <a href="http://pagedlist.codeplex.com/">here</a>.</p>
-
-<p>Let me know what you think, and if you’d like some demo source to see this in action I can happily provide, just let me know.</p>
+<p>I guess that&rsquo;s about all I have to say. If this post only changes one person&rsquo;s mind about recruiting, then I think it&rsquo;s time well spent.</p>
 ]]></content>
   </entry>
   

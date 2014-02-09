@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Viewmodel Series | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/viewmodel-series/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:27:41-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: Days for a Week]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week/"/>
+    <updated>2011-10-20T04:00:50-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week</id>
+    <content type="html"><![CDATA[<p>So as I build the week up, I&rsquo;m adding Days onto it, but what do they look like?</p>
+
+<!-- more -->
+
+
+<p>A Day is pretty simple. It has the DateTime that says what actual day it belongs to. It also has a list of Events that belong to it. A Day can also indicate whether or not it&rsquo;s available for reading, or if it has events. This is important because if a day is available, then the UI needs to let the user select that Day, and if it has events, then the day should show those events in the UI.</p>
+
+<p>``` c#</p>
+
+<pre><code>public class Day
+{
+    public DateTime Date { get; set; }
+
+    private IList&lt;Event&gt; Events { get; set; }
+
+    public Day()
+    {
+        Events = new List&lt;Event&gt;();
+    }
+
+    public bool HasEvents()
+    {
+        return Events.Count &gt; 0;
+    }
+
+    public void AddEvent(Event eventForDay)
+    {
+        Events.Add(eventForDay);
+    }
+
+    public IList&lt;Event&gt; GetEvents()
+    {
+        return Events;
+    }
+
+    public string GetReadingAvailability()
+    {
+        return IsAvailable() ? "date_is_available" : 
+          HasEvents() ? "date_has_event" : "");
+    }
+
+    private bool IsAvailable()
+    {
+        return !HasEvents() &amp;&amp; IsDayAvailableForReading();
+    }
+
+    private bool IsDayAvailableForReading()
+    {
+        return IsDayAvailableForReading(Date);
+    }
+
+    public static bool IsDayAvailableForReading(DateTime dateTime)
+    {
+        return new AvailabilityChecker()
+          .IsDayAvailableForReading(dateTime);
+    }
+
+    public string GetReadableValue()
+    {
+        return Date.ToString("MMMM dd, yyyy");
+    }
+}
+</code></pre>
+
+<p>```</p>
+
+<p>This concludes the implementation of all the pieces necessary to build the ViewModel. The View itself could be built on any technology stack to show UI appropriate to the rules we outlined so far, which is the ultimate goal of having our ViewModel separated from the View itself.</p>
+
+<p>This does <strong>not</strong>, however, tell us what our business rules are, or how their implemented, which is the next part of the series: the Model.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: Weeks on the Calendar]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar/"/>
+    <updated>2011-10-19T04:00:48-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar</id>
+    <content type="html"><![CDATA[<p>Now we&rsquo;ve gone through how the <a href="/?p=817">month is modeled</a>, we need to see how weeks are being built.</p>
+
+<!-- more -->
+
+
+<p>When you first look at the month implementation, you might think that adding days to weeks is a simple matter of adding DateTime&rsquo;s, but what&rsquo;s happening behind the scenes is just a little bit more complicated. Why? Well, we need to track what events belong to what days, so in order to do that we can&rsquo;t just use a simple DateTime, we need something just a little bit more complicated.</p>
+
+<p>My Week looks like this:</p>
+
+<p><div><script src='https://gist.github.com/1291245.js?file=Week.cs'></script>
+<noscript><pre><code>﻿public class Week
+{
+    public Week()
+    {
+        Days = new List&lt;Day&gt;();
+    }
+
+    protected IList&lt;Day&gt; Days { get; set; }
+
+    public IEnumerable&lt;Day&gt; GetDays()
+    {
+        return Days;
+    }
+
+    public void Add(DateTime day)
+    {
+        if (!Days.Where(x =&gt; x.Date == day.Date).Any())
+            Days.Add(new Day { Date = day });
+    }
+
+    public bool IsMissingDays()
+    {
+        return Days.OrderBy(x =&gt; x.Date)
+          .First().Date.DayOfWeek != Calendar.GetStartDay();
+    }
+
+    public bool IsMissingTrailingDays()
+    {
+        return Days.OrderBy(x =&gt; x.Date)
+          .First().Date.DayOfWeek != Calendar.GetLastDay();
+    }
+
+    public int GetMissingNumberOfDays()
+    {
+        var missingDays = 0;
+
+        var day = Days.OrderBy(x =&gt; x.Date).First().Date;
+        
+        do
+        {
+            day = day.AddDays(-1);
+            missingDays++;
+        } while (day.DayOfWeek != Calendar.GetStartDay());
+
+        return missingDays;
+    }
+
+    public int GetMissingNumberOfTrailingDays()
+    {
+        var missingDays = 0;
+
+        var day = Days.OrderBy(x =&gt; x.Date).Last().Date;
+
+        do
+        {
+            day = day.AddDays(1);
+            missingDays++;
+        } while (day.DayOfWeek != Calendar.GetLastDay());
+
+        return missingDays;
+    }
+}</code></pre></noscript></div>
+</p>
+
+<p>When adding days to the week, I accept a DateTime and then build a list of Days into the Week. Later on, the calendar will add Events to these Days.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: The Month on the Calendar]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar/"/>
+    <updated>2011-10-17T04:00:02-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar</id>
+    <content type="html"><![CDATA[<p>So we&rsquo;ve seen what the Calendar looks like, and how it&rsquo;s building it&rsquo;s Months, but what goes into building a Month?</p>
+
+<!-- more -->
+
+
+<p>So building a Month is all about one thing: building it&rsquo;s weeks. The only other thing I need from a month is the ability to get it&rsquo;s name (i.e. January, February, etc.). My implementation of this looks something like this:</p>
+
+<p><div><script src='https://gist.github.com/1291245.js?file=Month.cs'></script>
+<noscript><pre><code>﻿public class Month
+{
+  private DateTime FirstDayOfMonth { get; set; }
+  
+  private IList&lt;Week&gt; Weeks { get; set; }
+
+  public Month(int monthValue)
+  {
+      FirstDayOfMonth = new DateTime(DateTime.Now.Year, monthValue, 1);
+      
+      Weeks = new List&lt;Week&gt;();
+
+      BuildMonth();
+  }
+
+  private void BuildMonth()
+  {
+      var startDay = Calendar.GetStartDay();
+
+      var week = new Week();
+
+      var day = FirstDayOfMonth;
+      
+      do
+      {
+          if (WeekHasEnded(day, startDay) &amp;&amp; WeekIsNotEmpty(week))
+          {
+              Weeks.Add(week);
+              week = new Week();
+          }
+
+          week.Add(day);
+          
+          day = GetNextDay(day);
+
+      } while (day.Month == FirstDayOfMonth.Month);
+
+      Weeks.Add(week);
+  }
+
+  private bool WeekIsNotEmpty(Week week)
+  {
+      return week.GetDays().Count() &gt; 0;
+  }
+
+  private bool WeekHasEnded(DateTime day, DayOfWeek startDay)
+  {
+      return day.DayOfWeek == startDay;
+  }
+
+  private DateTime GetNextDay(DateTime day)
+  {
+      return day.AddDays(1);
+  }
+
+  public DayOfWeek GetFirstDayOfMonth()
+  {
+      return FirstDayOfMonth.DayOfWeek;
+  }
+
+  public IList&lt;Week&gt; GetWeeks()
+  {
+      return Weeks;
+  }
+  
+  public string GetMonthName()
+  {
+      return string.Format(&quot;{0:MMMM}&quot;, FirstDayOfMonth);
+  }
+}</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: The Calendar ViewModel]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel/"/>
+    <updated>2011-10-16T12:46:08-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel</id>
+    <content type="html"><![CDATA[<p>So my ViewModel basically starts with the idea of a Calendar and it&rsquo;s Events. So what did I end up making that look like? Let&rsquo;s disregard the markup for now, because how it looks isn&rsquo;t really what we&rsquo;re talking about here. What we&rsquo;re talking about is how the Calendar and it&rsquo;s Events are <em><strong>modeled</strong></em>.</p>
+
+<!-- more -->
+
+
+<p>So my Calendar looks like this:</p>
+
+<p>``` c#</p>
+
+<pre><code>public class Calendar
+{
+  public Calendar()
+  {
+      Months = new Dictionary&lt;int, Month&gt; 
+        ;
+  }
+
+  protected IDictionary&lt;int, Month&gt; Months { get; set; }
+
+  public Month GetCurrentMonth()
+  {
+      return GetMonth(DateTime.Today.Month);
+  }
+
+  public Month GetNextMonth()
+  {
+      return GetMonth(DateTime.Today.Month + 1);
+  }
+
+  public Month GetMonth(string month)
+  {
+      return GetMonth(
+        DateTime.ParseExact(
+          month, "MMMM", CultureInfo.CurrentCulture)
+        .Month);
+  }
+
+  public Month GetMonth(int monthValue)
+  {
+      if (!Months.ContainsKey(monthValue))
+          Months.Add(monthValue, new Month(monthValue));
+
+      return Months[monthValue];
+  }
+
+  public static DayOfWeek GetStartDay()
+  {
+      return DayOfWeek.Monday;
+  }
+
+  public static DayOfWeek GetLastDay()
+  {
+      return DayOfWeek.Sunday;
+  }
+
+  public void IncludeEvents(IList&lt;Event&gt; events)
+  {
+      foreach (var @event in events)
+      {
+          IncludeEvent(@event);
+      }
+  }
+
+  private void IncludeEvent(Event eventToInclude)
+  {
+      var allDaysQuery = from week in GetMonth(
+          eventToInclude.Day.Month)
+            .GetWeeks()
+        from day in week.GetDays()
+        select day;
+
+      var filteredDays = from day in allDaysQuery
+                         where day.Date == eventToInclude.Day.Date
+                         select day;
+
+      var dayToAddEventTo = filteredDays.First();
+
+      dayToAddEventTo.AddEvent(eventToInclude);
+  }
+}
+</code></pre>
+
+<p>```</p>
+
+<p>The Calendar is really only concerned with one thing: showing events that belong to it. In order to accomplish this goal, the Calendar must be able to include events into the months on the Calendar.</p>
+
+<p>In order to do this, the Calendar has to be able to build months, and then include the events into the days of those months. All of this logic takes place in the IncludeEvent method, which utilizes quite a few other classes to accomplish this.</p>
+
+<p>In the next post, we&rsquo;ll take a look at the other classes we used in the ViewModel to accommodate our Calendar</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mental Floss: Models and ViewModels, and Yes They're Different]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different/"/>
+    <updated>2011-10-11T13:20:34-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different</id>
+    <content type="html"><![CDATA[<p>My wife recently asked me to work on a site for our son&rsquo;s class and while working on it I realized that what I was building was a pretty great example of my thoughts on how I feel that Models and ViewModels relate to each other.</p>
+
+<!-- more -->
+
+
+<p>So before we get to any code I&rsquo;d first like to explain how I see the Model and ViewModel shaping conceptually. The domain is basically as follows:</p>
+
+<p>The system needs to be able to allow users to sign up as Readers for a particular day. The time that they are going to read is always the same, it&rsquo;s 10 AM for an hour. The days that a user can sign up to be a Reader are specific. For the most part, the days are Monday, Tuesday, Thursday and Friday, but there are also some other rules like the week of Thanksgiving there won&rsquo;t be any readings. Currently, this is being done by the teacher where she prints out a Reading Calendar that has the days for reading highlighted. What needs to be done is basically the same thing. We need to make a calendar that shows everyone all the days that are eligible for signing up, and let them sign up for those days. It also needs to show them the days that have already been signed up, and show the Reader for that day.</p>
+
+<p>Ok, so that&rsquo;s the basics. Now, the question here is how is the Model and ViewModel broken down?</p>
+
+<p>To illustrate this it would probably be better to start with the user experience, and hence the ViewModel. So the user will be presented with a Calendar, and they should be able to see Events that show up on the calendar, like they&rsquo;re most likely already used to. These Events will show who&rsquo;s signed up. Now, the user also needs to be able to Sign Up. That&rsquo;s the extent of the first version of the ViewModel I came up with. We have a Calendar, Events, and a SignUp.</p>
+
+<p>Now, onto the Model. When the user signs up, they&rsquo;re telling the system that they want to be a Reader for a particular day. Once they become a Reader then the system shouldn&rsquo;t allow anyone else sign up on that day. So that&rsquo;s really the Model. We have a bunch of Readers and some logic that keeps you from signing up multiple Readers on the same day.</p>
+
+<p>So how does the Model and ViewModel relate? Well, there are two key relationships here. First, when a user signs up, we&rsquo;ll have to map the SignUp over to a Reader. Second, when we show the user a calendar, we need to get all the Readers for those days, and map the Readers over to Events which the Calendar knows how to show.</p>
+
+<p>Notice the last thing I said there. The <strong>Calendar</strong> knows how to <em>show</em> <strong>Events</strong>, but it doesn&rsquo;t know<em><strong> anything</strong></em> about Readers. The implications here allow your system to be truly decoupled and makes it much more maintainable.</p>
+
+<p>So how did I implement this? I&rsquo;ll show you on my next post.</p>
+]]></content>
+  </entry>
+  
+</feed>

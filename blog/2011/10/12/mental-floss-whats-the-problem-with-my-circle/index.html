@@ -1,0 +1,208 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Mental Floss: What's the problem with my Circle - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="Mental Floss: What's the Problem With My Circle I got into an interesting discussion about SOLID principles with a fellow developer today, and it &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Mental Floss: What's the Problem With My Circle</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I got into an interesting discussion about <a href="/blog/2011/09/02/solid-principles-open-closed-principle/">SOLID </a>principles with a fellow developer today, and it got me to thinking about a common problem I&rsquo;ve seen come up and I wanted to try and touch on it.<!-- more --></p>
+
+<p>So first things first, let&rsquo;s go over some math and set up the problem space.</p>
+
+<p>You have an <a href="http://en.wikipedia.org/wiki/Ellipse">Ellipse</a>. You have a <a href="http://en.wikipedia.org/wiki/Circle">Circle</a>. A Circle is a special kind of Ellipse. Specifically, an Ellipse has a major axis and a minor axis, and a Circle is special because it&rsquo;s major and minor axis are equivalent in their length.</p>
+
+<p>So when a developer initially goes to model these objects, you typically would see something like this:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=BadEllipse.cs'></script>
+<noscript><pre><code>public class Ellipse
+{
+  public virtual int MajorAxis { get; set; }
+  public virtual int MinorAxis { get; set; }
+    
+  public virtual double CalculateArea()
+  {
+    return Math.Pi * MajorAxis * MinorAxis;
+  }
+}</code></pre></noscript></div>
+
+
+<p>I see this implementation a lot. When asked how this supports SOLID principles, I get the following a lot of the time:</p>
+
+<p>It supports <a href="/blog/2011/09/02/solid-principles-open-closed-principle/">OCP </a>because I can override any of the properties or the methods. Ok good.</p>
+
+<p>It supports <a href="/blog/2011/09/16/solid-principles-single-responsibility-principle/">SRP </a>because the class is only responsible for knowing things about Ellipse. Ok good.</p>
+
+<p>And there are some other ones, but then we veer into trying to extend this model with the special Circle, and that&rsquo;s where things really start to break down. I&rsquo;ve seen a lot of variations about how this goes down, but I&rsquo;m going to summarize all of them with this definition:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=BadCircle.cs'></script>
+<noscript><pre><code>public class Circle: Ellipse
+{
+  public int Radius { get; set; }
+  
+  public override double CalculateArea()
+  {
+    return Math.Pi * Radius * Radius
+  }
+}</code></pre></noscript></div>
+
+
+<p>What happens here is a new property is introduced so that the users know that Circles are special because they have a Radius. Then when we calculate the Area, we override the function that calculates the area and we use the radius instead.</p>
+
+<p>So someone would use it like this:</p>
+
+<div><script src='https://gist.github.com/1279017.js?file=BadRunner.cs'></script>
+<noscript><pre><code>public class Runner
+{
+  public void UsingEllipsesAndCircles()
+  {
+    var ellipse = new Ellipse();
+    ellipse.MajorAxis = 10;
+    ellipse.MinorAxis = 5;
+    
+    var areaOfEllipse = ellipse.CalculateArea();
+    
+    var circle = new Circle();
+    circle.Radius = 4;
+    
+    var areaForCircle = circle.CalculateArea();    
+  }
+}</code></pre></noscript></div>
+
+
+<p>So what&rsquo;s the problem with this? Think about it an tomorrow I&rsquo;ll post my proposed solution.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

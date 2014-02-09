@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Programming | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:27:41-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Practicing the Basics]]></title>
+    <link href="http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics/"/>
+    <updated>2012-08-30T14:18:16-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics</id>
+    <content type="html"><![CDATA[<p>It can&rsquo;t be over stated how important it is for your teams to practice the basics.</p>
+
+<p>With my teams, I spend a good bit of time showing them how to do what are known as &ldquo;katas&rdquo;. What is the point behind these short excercises? Let me tell you a story.</p>
+
+<p>When I was fifteen, I joined my high school chess team. Yeah, I was a chess nerd. There was one particular tournament I went to with a couple of my friends and my coach that I&rsquo;ll never forget.</p>
+
+<!-- more -->
+
+
+<p>I think it was actually my first real tournament. I was still very new to the idea of being on a chess team, but I had been playing chess or a while at that point. At the tournament I was doing fairly well. I was definitely exceeding the expectations that I had for myself. Towards the end of the day, I was matched up with another kid around my age, and again, I was doing well. However, I had reached a point where I was decidedly winning when something really bad happened. My opponent had nothing left except for his king, and I was down to my rook and king.</p>
+
+<p>Under normal circumstances this would have spelled the end for my opponent, but that day something happened. I forgot how to mate with a rook. It wasn&rsquo;t that I didn&rsquo;t know how to do it. I knew very well how to do it. My mind simply blanked. It left my mental space entirely and I was left with an utterly blank stare on my face. I scrounged around trying to reign it back in and get my head around what I was doing. I was nervous, because if my opponent knew what he was doing he could force a draw simply by staying away from check long enough. Luckily, he didn&rsquo;t know how to do that, and put himself into a position that I was able to mate him. Crisis averted.</p>
+
+<p>That&rsquo;s when people started coming to me. One person congratulated me, but then started showing me how to mate with a rook. Based on the way I was playing, it was obvious to everyone that I didn&rsquo;t know how to mate with a rook. The problem was, I did. So why didn&rsquo;t I do it.</p>
+
+<p>Practice.</p>
+
+<p>I was young. I didn&rsquo;t practice a lot on my mechanics. I certainly didn&rsquo;t practice enough on end game scenarios. However, the type of practice I&rsquo;m talking about here is a specific kind. I played chess a lot, so I&rsquo;m not talking about general practice, and just getting games under my belt. That wasn&rsquo;t the problem. I&rsquo;m talking about short, focused practice to reenforce specific disciplines on my game.</p>
+
+<p>In this case, end game mating with various pieces. Any good chess player practices these mechanics until they become muscle memory. They don&rsquo;t even have to think how to perform those mates, because it&rsquo;s just part of their being. It becomes part of who they are. I can mate with a rook now without even thinking about it, even though I probably haven&rsquo;t played chess in over 5 years. It&rsquo;s that ingrained in me.</p>
+
+<p>The same thing happens coding katas. The exercises are simple and focused, and designed to teach you a couple disciplines. Usually these disciplines focus around naming things properly, proper code size, refactoring techniques, etc. Notice how none of those things are language specific. They are disciplines that should be taught across any language you write in.</p>
+
+<p>So what are some of these katas that we go through?</p>
+
+<p>I&rsquo;ll have to cover that another day. I&rsquo;m getting a huge urge to play chess all of the sudden.</p>
+]]></content>
+  </entry>
+  
+</feed>

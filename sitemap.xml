@@ -67,6 +67,14 @@
         <lastmod>2014-02-04T20:29:07-05:00</lastmod>
     </url>
     <url>
+        <loc>http://josephbulger.github.io/blog/2009/09/07/rethinking-the-reputation-system/</loc>
+        <lastmod>2014-02-09T17:58:05-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://josephbulger.github.io/blog/2009/12/15/my-kid-is-already-a-ladys-man/</loc>
+        <lastmod>2014-02-09T18:03:46-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://josephbulger.github.io/blog/2009/12/16/story-of-a-family-becoming-agile/</loc>
         <lastmod>2014-02-08T14:08:14-05:00</lastmod>
     </url>
@@ -128,6 +136,12 @@
     </url>
     <url>
         <loc>
+            http://josephbulger.github.io/blog/2011/09/08/recruiters-if-youre-doing-this-youve-already-lost/
+        </loc>
+        <lastmod>2014-02-09T18:00:15-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/
         </loc>
         <lastmod>2014-01-25T22:53:34-05:00</lastmod>
@@ -159,12 +173,56 @@
         <lastmod>2014-02-08T14:35:27-05:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://josephbulger.github.io/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different/
+        </loc>
+        <lastmod>2014-02-09T18:22:46-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://josephbulger.github.io/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle/
+        </loc>
+        <lastmod>2014-02-09T18:13:56-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://josephbulger.github.io/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is/
+        </loc>
+        <lastmod>2014-02-09T18:27:11-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing/</loc>
         <lastmod>2014-02-05T21:40:23-05:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel/
+        </loc>
+        <lastmod>2014-02-09T18:23:58-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar/
+        </loc>
+        <lastmod>2014-02-09T18:24:54-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome/</loc>
         <lastmod>2014-02-04T20:23:19-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar/
+        </loc>
+        <lastmod>2014-02-09T18:05:14-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week/</loc>
+        <lastmod>2014-02-09T18:21:44-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics/</loc>
+        <lastmod>2014-02-09T18:01:13-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/blog/2012/10/08/installing-kit-on-a-mbp/</loc>
@@ -180,7 +238,7 @@
     </url>
     <url>
         <loc>http://josephbulger.github.io/blog/archives/</loc>
-        <lastmod>2014-02-08T14:55:55-05:00</lastmod>
+        <lastmod>2014-02-09T18:27:11-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/blog/categories/</loc>
@@ -188,7 +246,7 @@
     </url>
     <url>
         <loc>http://josephbulger.github.io/</loc>
-        <lastmod>2014-02-08T14:55:55-05:00</lastmod>
+        <lastmod>2014-02-09T18:27:11-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/robots.txt</loc>

@@ -1,0 +1,300 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Mental Floss: The Calendar ViewModel - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="Mental Floss: The Calendar ViewModel So my ViewModel basically starts with the idea of a Calendar and it&rsquo;s Events. So what did I end up making &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Mental Floss: The Calendar ViewModel</h1>
+	<div class="entry-content" itemprop="articleBody"><p>So my ViewModel basically starts with the idea of a Calendar and it&rsquo;s Events. So what did I end up making that look like? Let&rsquo;s disregard the markup for now, because how it looks isn&rsquo;t really what we&rsquo;re talking about here. What we&rsquo;re talking about is how the Calendar and it&rsquo;s Events are <em><strong>modeled</strong></em>.</p>
+
+<!-- more -->
+
+
+<p>So my Calendar looks like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">Calendar</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">public</span> <span class="nf">Calendar</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="n">Months</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">Month</span><span class="p">&gt;</span>
+</span><span class='line'>        <span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">protected</span> <span class="n">IDictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">Month</span><span class="p">&gt;</span> <span class="n">Months</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetCurrentMonth</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Today</span><span class="p">.</span><span class="n">Month</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetNextMonth</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Today</span><span class="p">.</span><span class="n">Month</span> <span class="p">+</span> <span class="m">1</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="kt">string</span> <span class="n">month</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nf">GetMonth</span><span class="p">(</span>
+</span><span class='line'>        <span class="n">DateTime</span><span class="p">.</span><span class="n">ParseExact</span><span class="p">(</span>
+</span><span class='line'>          <span class="n">month</span><span class="p">,</span> <span class="s">&quot;MMMM&quot;</span><span class="p">,</span> <span class="n">CultureInfo</span><span class="p">.</span><span class="n">CurrentCulture</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">.</span><span class="n">Month</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="n">Month</span> <span class="nf">GetMonth</span><span class="p">(</span><span class="kt">int</span> <span class="n">monthValue</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(!</span><span class="n">Months</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="n">monthValue</span><span class="p">))</span>
+</span><span class='line'>          <span class="n">Months</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">monthValue</span><span class="p">,</span> <span class="k">new</span> <span class="n">Month</span><span class="p">(</span><span class="n">monthValue</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">return</span> <span class="n">Months</span><span class="p">[</span><span class="n">monthValue</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="k">static</span> <span class="n">DayOfWeek</span> <span class="nf">GetStartDay</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">DayOfWeek</span><span class="p">.</span><span class="n">Monday</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="k">static</span> <span class="n">DayOfWeek</span> <span class="nf">GetLastDay</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">DayOfWeek</span><span class="p">.</span><span class="n">Sunday</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">public</span> <span class="k">void</span> <span class="nf">IncludeEvents</span><span class="p">(</span><span class="n">IList</span><span class="p">&lt;</span><span class="n">Event</span><span class="p">&gt;</span> <span class="n">events</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">@event</span> <span class="k">in</span> <span class="n">events</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>          <span class="n">IncludeEvent</span><span class="p">(</span><span class="n">@event</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">private</span> <span class="k">void</span> <span class="nf">IncludeEvent</span><span class="p">(</span><span class="n">Event</span> <span class="n">eventToInclude</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">allDaysQuery</span> <span class="p">=</span> <span class="k">from</span> <span class="n">week</span> <span class="k">in</span> <span class="n">GetMonth</span><span class="p">(</span>
+</span><span class='line'>          <span class="n">eventToInclude</span><span class="p">.</span><span class="n">Day</span><span class="p">.</span><span class="n">Month</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">.</span><span class="n">GetWeeks</span><span class="p">()</span>
+</span><span class='line'>        <span class="k">from</span> <span class="n">day</span> <span class="k">in</span> <span class="n">week</span><span class="p">.</span><span class="n">GetDays</span><span class="p">()</span>
+</span><span class='line'>        <span class="k">select</span> <span class="n">day</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">filteredDays</span> <span class="p">=</span> <span class="k">from</span> <span class="n">day</span> <span class="k">in</span> <span class="n">allDaysQuery</span>
+</span><span class='line'>                         <span class="k">where</span> <span class="n">day</span><span class="p">.</span><span class="n">Date</span> <span class="p">==</span> <span class="n">eventToInclude</span><span class="p">.</span><span class="n">Day</span><span class="p">.</span><span class="n">Date</span>
+</span><span class='line'>                         <span class="k">select</span> <span class="n">day</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kt">var</span> <span class="n">dayToAddEventTo</span> <span class="p">=</span> <span class="n">filteredDays</span><span class="p">.</span><span class="n">First</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">dayToAddEventTo</span><span class="p">.</span><span class="n">AddEvent</span><span class="p">(</span><span class="n">eventToInclude</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The Calendar is really only concerned with one thing: showing events that belong to it. In order to accomplish this goal, the Calendar must be able to include events into the months on the Calendar.</p>
+
+<p>In order to do this, the Calendar has to be able to build months, and then include the events into the days of those months. All of this logic takes place in the IncludeEvent method, which utilizes quite a few other classes to accomplish this.</p>
+
+<p>In the next post, we&rsquo;ll take a look at the other classes we used in the ViewModel to accommodate our Calendar</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

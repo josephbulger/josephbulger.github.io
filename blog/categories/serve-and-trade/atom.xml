@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Serve and Trade | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/serve-and-trade/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:27:41-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rethinking the Reputation System]]></title>
+    <link href="http://josephbulger.github.io/blog/2009/09/07/rethinking-the-reputation-system/"/>
+    <updated>2009-09-07T04:51:06-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2009/09/07/rethinking-the-reputation-system</id>
+    <content type="html"><![CDATA[<p>Just FYI, my wife is very wise.  I had her look over the design I came up for the reputation system.  She thought it would be easier if the user could just check off the things they wanted.</p>
+
+<!-- more -->
+
+
+<p>Sometimes its just better to get a second opinion!</p>
+
+<p>This is the new concept.  Not much has changed visually, but the behavior will definitely be different.</p>
+
+<p><a href="/images/posts/2009/09/newsearchconcept2.png"><img src="/images/posts/2009/09/newsearchconcept2_thumb.png" alt="newsearchconcept2" /></a></p>
+
+<p>So the behavior will be by checking off one of the items from the search you’ll be informing the owner that you’re interested in that item.  What happens after that point I’m still working out, but that basically wraps up the behavior for this side.  What we have left to do is get the behavior done for the owner’s side.</p>
+
+<p>Now my problem is I need to design a checkbox that will go on the side so people can just to click on.</p>
+
+<p>So far I’ve come up with this, but I’m not 100% satisfied with it.  The coloring won’t really get nailed down until we put it up on the site and tweak it to make the color scheme, but you get the idea.</p>
+
+<p><a href="/images/posts/2009/09/CheckBoxRegular.png"><img src="/images/posts/2009/09/CheckBoxRegular_thumb.png" alt="CheckBox-Regular" /></a></p>
+
+<p>Any suggestions?</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Chuchi | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/chuchi/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:27:41-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My Kid Is Already a Lady’s Man]]></title>
+    <link href="http://josephbulger.github.io/blog/2009/12/15/my-kid-is-already-a-ladys-man/"/>
+    <updated>2009-12-15T14:49:43-05:00</updated>
+    <id>http://josephbulger.github.io/blog/2009/12/15/my-kid-is-already-a-ladys-man</id>
+    <content type="html"><![CDATA[<p>This is really sad, but it’s true. I have evidence!</p>
+
+<!-- more -->
+
+
+<p><a href="/images/posts/2009/12/theystartearly.jpg"><img src="/images/posts/2009/12/theystartearly_thumb.jpg" alt="they start early" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>
