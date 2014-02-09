@@ -1,18 +1,15 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-12 08:00:50
 layout: post
 slug: vacationeer%e2%80%99s-guide-estimation
 title: 'Vacationeer’s Guide: Estimation'
 wordpress_id: 535
-categories:
-- Leading
-tags:
-- vacationeer-guide
+categories: [leading, vacationeer guide]
 ---
 
-In order to [calculate velocity](http://josephbulger.com/technology/vacationeer’s-guide-velocity/ ‎), we need to know how to figure out the amount of effort involved for each feature that a team works on. Before we can get to that, though, we need to determine something else which is crucial. _**Who**_, exactly, should be estimating the effort?
+In order to calculate velocity, we need to know how to figure out the amount of effort involved for each feature that a team works on. Before we can get to that, though, we need to determine something else which is crucial. _**Who**_, exactly, should be estimating the effort?
 
 <!-- more -->
 

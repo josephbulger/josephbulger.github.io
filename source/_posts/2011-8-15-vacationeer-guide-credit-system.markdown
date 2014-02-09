@@ -1,18 +1,15 @@
 ---
-author: jbulger
+author: joseph
 comments: true
 date: 2011-8-15 12:00:51
 layout: post
 slug: vacationeer%e2%80%99s-guide-credit-system
 title: 'Vacationeer’s Guide: Credit System'
 wordpress_id: 550
-categories:
-- Leading
-tags:
-- vacationeer-guide
+categories: [vacationeer guide, leading]
 ---
 
-Now that we understand the [concept of estimation](http://josephbulger.com/technology/vacationeer’s-guide-estimation/), we need to talk about how this "credit system" applies to our velocity.
+Now that we understand the concept of estimation, we need to talk about how this "credit system" applies to our velocity.
 
 <!-- more -->
 

@@ -1,18 +1,15 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: fals
 date: 2011-8-11 08:00:05
 layout: post
 slug: vacationeer%e2%80%99s-guide-velocity
 title: 'Vacationeer’s Guide: Velocity'
 wordpress_id: 519
-categories:
-- Leading
-tags:
-- vacationeer-guide
+categories: [leading, vacationeer guide]
 ---
 
-[Velocity is the key to any project's success](http://josephbulger.com/technology/vacationeers-guide-the-golden-formula-for-projects/). Plain and simple. I think that just about every project in some way or another tries to figure out this metric. It's _**how**_ this metric is obtained that is so important.
+Velocity is the key to any project's success. Plain and simple. I think that just about every project in some way or another tries to figure out this metric. It's _**how**_ this metric is obtained that is so important.
 
 <!-- more -->Let's say hypothetically that you're leading a team. How would you_** want**_ to measure this metric?
 

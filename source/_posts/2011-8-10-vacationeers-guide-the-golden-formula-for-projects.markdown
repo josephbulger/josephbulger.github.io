@@ -1,24 +1,19 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-10 08:00:47
 layout: post
 slug: vacationeers-guide-the-golden-formula-for-projects
 title: 'Vacationeer''s Guide: The Golden Formula for Projects'
 wordpress_id: 506
-categories:
-- Leading
-tags:
-- vacationeer-guide
+categories: [leading, vacationeer guide]
 ---
 
 When you get on google maps to plan out your vacation and it tells you how long your trip will take you to get there, how does google figure that out? Pretty easily actually. It takes the speed limits of all the roads it finds, and measures the distance of those road segments, and with those two pieces of information it can calculate the amount of time it will take you to get there.<!-- more -->
 
 Or, more simply put in mathematical terms:
 
-
 > distance = rate * time
-
 
 Projects work the same way. The only difference is that people call these things different names. For example, the "rate" of your project is how fast your team works.  For my teams, we call that **_velocity_**, which we'll get into more later. Distance is where you'll be when your done.  You could look at that in a lot of different ways. For a lot of projects, that is simply "how many features have been completed?" And time is, well, time.  It's how long your team works on your project.
 

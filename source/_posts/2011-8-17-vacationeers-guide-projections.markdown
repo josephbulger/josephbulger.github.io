@@ -1,29 +1,22 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-17 12:00:10
 layout: post
 slug: vacationeers-guide-projections
 title: 'Vacationeer''s Guide: Projections'
 wordpress_id: 579
-categories:
-- Leading
-tags:
-- vacationeer-guide
+categories: [leading, vacationeer guide]
 ---
 
 When you plan a road trip, you're really only concerned about figuring out one thing: how long will it take me to get there? But for projects, this isn't always the case. The same formula applies, though.<!-- more -->
 
-Now that we know how to [measure out velocity](http://josephbulger.com/technology/vacationeer’s-guide-determining-your-teams-velocity), we can use that metric to figure out one of two fundamental things:
-
-
-
+Now that we know how to measure out velocity, we can use that metric to figure out one of two fundamental things:
 	
   1. How long will it take us to get there?
 
 	
   2. How far will we get?
-
 
 Velocity can't answer both questions for us, but if we're willing to concede and control one of the two variables, either the distance or the time, then we can project what the other thing will be.
 

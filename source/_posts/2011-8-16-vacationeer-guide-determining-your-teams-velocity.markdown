@@ -1,15 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-16 12:00:54
 layout: post
 slug: vacationeer%e2%80%99s-guide-determining-your-teams-velocity
 title: 'Vacationeer’s Guide: Determining Your Team''s Velocity'
 wordpress_id: 570
-categories:
-- Leading
-tags:
-- vacationeer-guide
+categories: [leading, vacationeer guide]
 ---
 
 Once your team has estimated a set of features, and assigned each feature their "point value", it's time to start measuring your team's velocity!
@@ -20,7 +17,7 @@ The other thing to note here is that you can break down your release cycles into
 
 The point of the cycle here is to do one thing: allow your team a consistent amount of time to work on an attainable goal. That attainable goal is a certain number of features. How many features you ask? It completely depends on your team's velocity! But when you first start, you don't have a velocity, so you have to do a couple cycles just to figure out what the team can do.
 
-So say you have 30 features to work on. You decide to have your team work in 3 week cycles. At the end of their first cycle, they complete 3 features. One of the features was valued at 5 points ([from the estimation sessions](http://josephbulger.com/technology/vacationeer%e2%80%99s-guide-estimation/), remember), and the other 2 were valued at 3 points. That means the first cycle your team finished with a velocity of 11. That's all there is to it! Now you repeat the same process over again. Do another cycle. Maybe the team got 15 points completed. Now average the two cycles together. The team's velocity becomes 13. Rinse. Repeat. That's how velocity is measured.
+So say you have 30 features to work on. You decide to have your team work in 3 week cycles. At the end of their first cycle, they complete 3 features. One of the features was valued at 5 points (from the estimation sessions, remember), and the other 2 were valued at 3 points. That means the first cycle your team finished with a velocity of 11. That's all there is to it! Now you repeat the same process over again. Do another cycle. Maybe the team got 15 points completed. Now average the two cycles together. The team's velocity becomes 13. Rinse. Repeat. That's how velocity is measured.
 
 This is why your cycles have to be consistent, because you're taking an average of the points your team completes. If you change the cycle length, then it messes up your velocity values. Now, having said that, there are points where it's appropriate to change the cycle. I've done it many times before, but you have to account the change in your velocity calculations when you do it.
 
