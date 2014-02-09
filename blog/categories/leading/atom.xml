@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Leading | Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/blog/categories/leading/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T18:46:13-05:00</updated>
+  <updated>2014-02-09T18:57:42-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -127,6 +127,35 @@
 <p>Secondly, from my experience, a team can go in and out of these stages. It can be cyclic, or they can jump around. It tends to be more of the former rather than the latter, but I have seen it happen both ways. As a leader, you need to keep an eye on your team and be able to identify when this change happens so that you can change your role within the team to get them back on track.</p>
 
 <p>The goal is to grow mature, self-organizing teams. We&rsquo;ll cover more on this later, but if you can&rsquo;t wait you can always jump over to 5 whys. Roy has some great content that goes into great detail about each of these stages and how to manage them.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vacationeer's Guide: Projections]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/08/17/vacationeers-guide-projections/"/>
+    <updated>2011-08-17T08:00:10-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/08/17/vacationeers-guide-projections</id>
+    <content type="html"><![CDATA[<p>When you plan a road trip, you&rsquo;re really only concerned about figuring out one thing: how long will it take me to get there? But for projects, this isn&rsquo;t always the case. The same formula applies, though.<!-- more --></p>
+
+<p>Now that we know how to measure out velocity, we can use that metric to figure out one of two fundamental things:</p>
+
+<ol>
+<li><p> How long will it take us to get there?</p></li>
+<li><p> How far will we get?</p></li>
+</ol>
+
+
+<p>Velocity can&rsquo;t answer both questions for us, but if we&rsquo;re willing to concede and control one of the two variables, either the distance or the time, then we can project what the other thing will be.</p>
+
+<p>For example, if the team is getting pressure to release by a certain date (sound familiar?), then with your velocity you can project how many features you&rsquo;ll actually have done by that time frame. If, however, the team is under pressure to get Awesome Feature X done and released, then you can use the same formula to project when that feature will be done.</p>
+
+<p>With road trips my family almost always chooses to control the distance and project the time. My wife wants to go to Disney World, for example. That&rsquo;s choosing the distance factor. Now if I know my velocity I can project how long it will take us to get there. On the other hand, some times we want to do a quick weekend trip to somewhere just to get out for a few days. In those cases, we&rsquo;re bound more by time, because we don&rsquo;t want to be on the road the whole weekend. In that case, we constrain our time window, and see how far that will take us.</p>
+
+<p>This is where the real power of knowing velocity comes from. Your implementation team is the engine of you car. Understanding velocity and how it works and what it means to your team is like having a speedometer. Until you know about velocity, you&rsquo;re like driving a car with a broken speedometer.</p>
+
+<p>A lot of common questions of project management start being fundamentally changed when you introduce velocity. For example, a question like, &ldquo;How do I make my team work faster?&rdquo; changes to something like &ldquo;How do I increase my team&rsquo;s velocity?&rdquo; I&rsquo;ve seen this happen almost any time that a team embraces these concepts, and it&rsquo;s not only a change in the wording of the question that is profound, but in the meaning of what is behind it. Velocity is a historical metric for your team&rsquo;s progress, so asking a question like how to make that number go higher because a much more scientific question completely. The answer is can be varied, but it all comes back to where it started, with the velocity. Try something out on your team, then wait and see how your velocity changes. You&rsquo;re doing an experiment now. Not only that, but you know how to <em><strong>measure the results</strong></em>.</p>
+
+<p>Enjoy your new found technique. If you have any questions or comments feel free to contact me.</p>
 ]]></content>
   </entry>
   
