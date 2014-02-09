@@ -1,20 +1,17 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2010-9-02 06:37:28
 layout: post
 slug: great-example-of-building-your-own-idatacontext
 title: Great example of building your own IDataContext
 wordpress_id: 293
-categories:
-- Programming
-tags:
-- linq2sql
-- nhibernate
-- unit of work
+categories: [linq2sql, nhibernate, unit of work]
 ---
 
 This one is just for me, so I don't forget where I read this article:
+
+<!-- more -->
 
 This is a really great read on building your own IDataContext.
 

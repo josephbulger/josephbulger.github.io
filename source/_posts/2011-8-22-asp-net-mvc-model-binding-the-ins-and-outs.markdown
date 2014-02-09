@@ -1,16 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-22 12:00:18
 layout: post
 slug: asp-net-mvc-model-binding-the-ins-and-outs
 title: 'ASP.NET MVC Model Binding: The Ins and Outs'
 wordpress_id: 629
-categories:
-- Programming
-tags:
-- asp.net mvc
-- model-binding
+categories: [asp.net mvc, model binding]
 ---
 
 Model Binding can be a tricky thing to get right with MVC. Dealing with flat POCOs works fine, but when you start getting into more complex, truly object oriented domain objects, things get out of hand pretty quickly.
@@ -19,15 +15,15 @@ Model Binding can be a tricky thing to get right with MVC. Dealing with flat POC
 
 Let's say you have a package class like this:
 
-[gist id=1154718 file=Model.cs]
+{% gist 1154718 Model.cs %}
 
 The Package is basically flat at this point. Wiring this up with Model Binding in MVC is trivial. Just create your controller to handle the class when an action get's posted like:
 
-[gist id=1154718 file=Controller.cs]
+{% gist 1154718 Controller.cs %}
 
 and make a view that uses the class as it's model:
 
-[gist id=1154718 file=View]
+{% gist 1154718 View %}
 
 This code works fine. The problem is I don't like the code! My package class is all wrong. All those properties should be inside an Address Class, which is **used by **the Package.
 

@@ -1,24 +1,21 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-5-17 12:11:12
 layout: post
 slug: learning-ruby-on-rails-a-c-programmers-perspective
 title: 'Learning Ruby on Rails: A C# programmer''s perspective'
 wordpress_id: 398
-categories:
-- Programming
-tags:
-- learning ruby
-- rails
-- ruby
+categories: [learning ruby, rails, ruby]
 ---
 
 I've been doing C# programming for some time now.  I've been investigating Ruby and talking to coworkers about it, but have yet to really dive in and start learning the language and it's web counterpart, Rails.
 
+<!-- more -->
+
 I recently came up with a fun concept that I wanted to try on the web and see how people liked it, and I thought it would be a great opportunity to try learning Ruby on Rails.  This will be a series of blog posts on my trials as a primarily Windows C# developer working with this new language and new stack.
 
-<!-- more -->Before I begin, I'm going to outline at a high level what I'm planning on doing.
+Before I begin, I'm going to outline at a high level what I'm planning on doing.
 
 I'm going to install a virtual machine with [Ubuntu ](http://www.ubuntu.com/)and run my ruby environment on that.  I know I could do this on Windows, but I recently had an experience with loading up [TeamCity ](http://www.jetbrains.com/teamcity/)on a derivation of CentOS and it was delightfully easy.  It's made me realize that if I'm going to be developing a Ruby on Rails app that more than likely when I go to deploy this app it will probably end up being easier if my local environment is close to what host environment I will be having.  And I will definitely be pushing my app out to a Linux distro, so therefore Ubuntu is my choice for my local OS.
 
