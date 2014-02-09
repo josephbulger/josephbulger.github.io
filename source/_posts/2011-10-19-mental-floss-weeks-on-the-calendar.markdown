@@ -1,17 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-10-19 08:00:48
 layout: post
 slug: mental-floss-weeks-on-the-calendar
 title: 'Mental Floss: Weeks on the Calendar'
 wordpress_id: 823
-categories:
-- Programming
-tags:
-- mental-floss
-- SOLID
-- viewmodel-series
+categories: [mental floss, solid, viewmodel series]
 ---
 
 Now we've gone through how the [month is modeled](/?p=817), we need to see how weeks are being built.
@@ -20,6 +15,6 @@ Now we've gone through how the [month is modeled](/?p=817), we need to see how w
 
 My Week looks like this:
 
-[gist id=1291245 file=Week.cs bump=2]
+{% gist 1291245 Week.cs %}
 
 When adding days to the week, I accept a DateTime and then build a list of Days into the Week. Later on, the calendar will add Events to these Days.

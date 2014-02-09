@@ -1,17 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-10-11 17:20:34
 layout: post
 slug: mental-floss-models-and-viewmodels-and-yes-theyre-different
 title: 'Mental Floss: Models and ViewModels, and yes they''re different'
 wordpress_id: 796
-categories:
-- Programming
-tags:
-- mental-floss
-- SOLID
-- viewmodel-series
+categories: [mental floss, solid, viewmodel series]
 ---
 
 My wife recently asked me to work on a site for our son's class and while working on it I realized that what I was building was a pretty great example of my thoughts on how I feel that Models and ViewModels relate to each other.

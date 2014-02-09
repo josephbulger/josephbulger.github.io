@@ -1,15 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2012-8-30 18:18:16
 layout: post
 slug: practicing-the-basics
 title: Practicing the Basics
 wordpress_id: 855
-categories:
-- Programming
-tags:
-- kata
+categories: [kata, programming]
 ---
 
 It can't be over stated how important it is for your teams to practice the basics.

@@ -1,26 +1,21 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-10-20 08:00:50
 layout: post
 slug: mental-floss-days-for-a-week
 title: 'Mental Floss: Days for a Week'
 wordpress_id: 834
-categories:
-- Programming
-tags:
-- mental-floss
-- SOLID
-- viewmodel-series
+categories: [mental floss, solid, viewmodel series]
 ---
 
-So as I [build the week up](/?p=823), I'm adding Days onto it, but what do they look like?
+So as I build the week up, I'm adding Days onto it, but what do they look like?
 
 <!-- more -->
 
 A Day is pretty simple. It has the DateTime that says what actual day it belongs to. It also has a list of Events that belong to it. A Day can also indicate whether or not it's available for reading, or if it has events. This is important because if a day is available, then the UI needs to let the user select that Day, and if it has events, then the day should show those events in the UI.
 
-<pre>
+``` c#
     public class Day
     {
         public DateTime Date { get; set; }
@@ -74,7 +69,7 @@ A Day is pretty simple. It has the DateTime that says what actual day it belongs
             return Date.ToString("MMMM dd, yyyy");
         }
     }
-</pre>
+```
 
 This concludes the implementation of all the pieces necessary to build the ViewModel. The View itself could be built on any technology stack to show UI appropriate to the rules we outlined so far, which is the ultimate goal of having our ViewModel separated from the View itself.
 

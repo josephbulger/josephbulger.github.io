@@ -1,15 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-9-08 12:00:39
 layout: post
 slug: recruiters-if-youre-doing-this-youve-already-lost
 title: Recruiters, if you're doing this you've already lost
 wordpress_id: 714
-categories:
-- Technology
-tags:
-- recruiting
+categories: [recruiting]
 ---
 
 I received an email this morning regarding an "urgent" position that needed to be filled. I get these all the time, but what really struck a cord with me was the last part of the email where the recruiter actually wanted me to fill out all my information in an HTML form that he put into the email.

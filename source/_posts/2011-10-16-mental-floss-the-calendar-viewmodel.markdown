@@ -1,17 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-10-16 16:46:08
 layout: post
 slug: mental-floss-the-calendar-viewmodel
 title: 'Mental Floss: The Calendar ViewModel'
 wordpress_id: 806
-categories:
-- Programming
-tags:
-- mental-floss
-- SOLID
-- viewmodel-series
+categories: [mental floss, solid, viewmodel series]
 ---
 
 So my ViewModel basically starts with the idea of a Calendar and it's Events. So what did I end up making that look like? Let's disregard the markup for now, because how it looks isn't really what we're talking about here. What we're talking about is how the Calendar and it's Events are _**modeled**_.
@@ -20,7 +15,7 @@ So my ViewModel basically starts with the idea of a Calendar and it's Events. So
 
 So my Calendar looks like this:
 
-<pre>
+``` c#
     public class Calendar
     {
       public Calendar()
@@ -92,7 +87,7 @@ So my Calendar looks like this:
           dayToAddEventTo.AddEvent(eventToInclude);
       }
     }
-</pre>
+```
 
 The Calendar is really only concerned with one thing: showing events that belong to it. In order to accomplish this goal, the Calendar must be able to include events into the months on the Calendar.
 
