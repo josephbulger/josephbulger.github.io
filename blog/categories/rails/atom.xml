@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:46:13-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ruby on Rails]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ruby/"/>
+    <updated>2011-05-17T14:18:16-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ruby</id>
+    <content type="html"><![CDATA[<p>Next up on the list is installing Ruby on our Ubuntu instance.</p>
+
+<!-- more -->
+
+
+<p>First thing we need to do is to run an update on Ubuntu to make sure we have all our tools up to date.</p>
+
+<blockquote><p>sudo apt-get update</p></blockquote>
+
+<p>Then install aptitude and do an update on it. Aptitude is a new package management system for ubuntu.</p>
+
+<blockquote><p>sudo apt-get aptitude
+sudo aptitude update</p></blockquote>
+
+<p>After that we&rsquo;re going to need to install Git and curl which we can do by running</p>
+
+<blockquote><p>sudo aptitude install build-essential git-core curl</p></blockquote>
+
+<p>We need Git and curl because we&rsquo;re going to be using them in order to bring down the RVM (Ruby Version Manager), which will be what we&rsquo;re using to install Ruby.</p>
+
+<p>To install the RVM you need to run this command</p>
+
+<blockquote><p>bash &lt; &lt;(curl -s <a href="https://rvm.beginrescueend.com/install/rvm">https://rvm.beginrescueend.com/install/rvm</a>)</p></blockquote>
+
+<p>And then you will need to edit a file to have Ubuntu point scripts in the right place with these two commands</p>
+
+<blockquote><p>echo &lsquo;[[ -s &ldquo;$HOME/.rvm/scripts/rvm&rdquo; ]] &amp;&amp; source &ldquo;$HOME/.rvm/scripts/rvm&rdquo;&rsquo; >> ~/.bashrc</p></blockquote>
+
+<p>Then you will need to close your terminal and open up a new one</p>
+
+<p>The next thing we&rsquo;ll need to do is to install a handful of other packages that we&rsquo;ll need for ruby to work (all in one line on the terminal!)</p>
+
+<blockquote><p>sudo aptitude install build-essential bison openssl libreadline6 libreadline6-dev
+curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0
+libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf</p></blockquote>
+
+<p>And at this point we&rsquo;re ready to actually install Ruby</p>
+
+<blockquote><p>rvm install 1.9.2</p></blockquote>
+
+<p>After its installed we can tell RVM to use this version as the default ruby implementation from now on by saying</p>
+
+<blockquote><p>rvm &mdash;default use 1.9.2</p></blockquote>
+
+<p>And you can verify that by executing</p>
+
+<blockquote><p>ruby -v</p></blockquote>
+
+<p>Next thing to do is install Rails</p>
+
+<blockquote><p>gem install rails</p></blockquote>
+
+<p>At this point you now have rails running on your box.</p>
+
+<p>It&rsquo;s very easy to get a sample rails server up and running. Go to your terminal and run the following</p>
+
+<blockquote><p>rails new myapp
+cd myapp
+bundle install</p></blockquote>
+
+<p>And once all the gems get installed for your app you can start your server up by</p>
+
+<blockquote><p>rails server</p></blockquote>
+
+<p>You&rsquo;ll need to right click on the url link and open it up in your browser to see.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby on Rails: A C# Programmer's Perspective]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective/"/>
+    <updated>2011-05-17T08:11:12-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been doing C# programming for some time now.  I&rsquo;ve been investigating Ruby and talking to coworkers about it, but have yet to really dive in and start learning the language and it&rsquo;s web counterpart, Rails.</p>
+
+<!-- more -->
+
+
+<p>I recently came up with a fun concept that I wanted to try on the web and see how people liked it, and I thought it would be a great opportunity to try learning Ruby on Rails.  This will be a series of blog posts on my trials as a primarily Windows C# developer working with this new language and new stack.</p>
+
+<p>Before I begin, I&rsquo;m going to outline at a high level what I&rsquo;m planning on doing.</p>
+
+<p>I&rsquo;m going to install a virtual machine with <a href="http://www.ubuntu.com/">Ubuntu </a>and run my ruby environment on that.  I know I could do this on Windows, but I recently had an experience with loading up <a href="http://www.jetbrains.com/teamcity/">TeamCity </a>on a derivation of CentOS and it was delightfully easy.  It&rsquo;s made me realize that if I&rsquo;m going to be developing a Ruby on Rails app that more than likely when I go to deploy this app it will probably end up being easier if my local environment is close to what host environment I will be having.  And I will definitely be pushing my app out to a Linux distro, so therefore Ubuntu is my choice for my local OS.</p>
+
+<p>Next, I&rsquo;ll be using <a href="http://www.jetbrains.com/ruby/">RubyMine </a>as my IDE. I know there&rsquo;s a lot of ruby devs out there using <a href="http://en.wikipedia.org/wiki/Vim_%28text_editor%29">VIM</a>, but I haven&rsquo;t ventured into that family of text editors yet, and although I&rsquo;m aware it has features that are very compelling, it&rsquo;s probably too much for me to take on at this point.  After a while, when I start feeling comfortable in Ubuntu and RubyMine I might venture into the VIM space and see how that goes.</p>
+
+<p>I plan to deploy the app using <a href="http://www.heroku.com/">Heroku</a>.  I don&rsquo;t have the desire to setup up a production stack.  I do it enough with my windows applications, and I&rsquo;m growing more and more tired of doing this.  In retrospect, at this point it feels as if it&rsquo;s a solved problem, and for me Heroku does the job of being a service that solves it quite nicely for me to not worry about anything.</p>
+
+<p>Up next in this series will be a step by step of how I set up my VM with Ubuntu.</p>
+]]></content>
+  </entry>
+  
+</feed>

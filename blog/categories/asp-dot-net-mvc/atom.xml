@@ -4,7 +4,7 @@
   <title><![CDATA[Category: asp.net Mvc | Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/blog/categories/asp-dot-net-mvc/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T18:34:43-05:00</updated>
+  <updated>2014-02-09T18:46:13-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ASP.NET MVC Model Binding: The Ins and Outs]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs/"/>
+    <updated>2011-08-22T08:00:18-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs</id>
+    <content type="html"><![CDATA[<p>Model Binding can be a tricky thing to get right with MVC. Dealing with flat POCOs works fine, but when you start getting into more complex, truly object oriented domain objects, things get out of hand pretty quickly.</p>
+
+<!-- more -->
+
+
+<p>Let&rsquo;s say you have a package class like this:</p>
+
+<p><div><script src='https://gist.github.com/1154718.js?file=Model.cs'></script>
+<noscript><pre><code>namespace ModelBinding.Models
+{
+    public class Package
+    {
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public int Zip { get; set; }
+    }
+}</code></pre></noscript></div>
+</p>
+
+<p>The Package is basically flat at this point. Wiring this up with Model Binding in MVC is trivial. Just create your controller to handle the class when an action get&rsquo;s posted like:</p>
+
+<p><div><script src='https://gist.github.com/1154718.js?file=Controller.cs'></script>
+<noscript><pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using ModelBinding.Models;
+
+namespace ModelBinding.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            ViewBag.Message = &quot;Welcome to ASP.NET MVC!&quot;;
+
+            return View(new Package());
+        }
+
+        [HttpPost]
+        public ActionResult Index(Package model)
+        {
+            return Json(model);
+        }
+    }
+}</code></pre></noscript></div>
+</p>
+
+<p>and make a view that uses the class as it&rsquo;s model:</p>
+
+<p><div><script src='https://gist.github.com/1154718.js?file=View'></script>
+<noscript><pre><code>@model ModelBinding.Models.Package
+           
+@{
+    ViewBag.Title = &quot;Home Page&quot;;
+}
+
+&lt;h2&gt;@ViewBag.Message&lt;/h2&gt;
+
+@using (Html.BeginForm(&quot;Index&quot;, &quot;Home&quot;))
+{
+    @Html.EditorForModel()
+    
+    &lt;input type=&quot;submit&quot; value=&quot;lets do this&quot; /&gt;
+}</code></pre></noscript></div>
+</p>
+
+<p>This code works fine. The problem is I don&rsquo;t like the code! My package class is all wrong. All those properties should be inside an Address Class, which is <strong>used by </strong>the Package.</p>
+
+<p>Once you make a more complicated model than a flat one, everything starts breaking. The problem is that so many things break you have to go through and fix all the pieces one at a time, so we&rsquo;ll have to go through each of these issues in a post by themselves.</p>
+
+<p>The first thing we&rsquo;re going to address is this: when you change the Package to have an Address, the View shows <strong>nothing</strong> on a GET. What happened to the View? We&rsquo;ll cover that next.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Creating an PagedList<T> That Uses AJAX]]></title>

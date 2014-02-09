@@ -1,0 +1,217 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>ASP.NET MVC Model Binding: The Ins and Outs - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="ASP.NET MVC Model Binding: The Ins and Outs Model Binding can be a tricky thing to get right with MVC. Dealing with flat POCOs works fine, but when &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">ASP.NET MVC Model Binding: The Ins and Outs</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Model Binding can be a tricky thing to get right with MVC. Dealing with flat POCOs works fine, but when you start getting into more complex, truly object oriented domain objects, things get out of hand pretty quickly.</p>
+
+<!-- more -->
+
+
+<p>Let&rsquo;s say you have a package class like this:</p>
+
+<div><script src='https://gist.github.com/1154718.js?file=Model.cs'></script>
+<noscript><pre><code>namespace ModelBinding.Models
+{
+    public class Package
+    {
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public int Zip { get; set; }
+    }
+}</code></pre></noscript></div>
+
+
+<p>The Package is basically flat at this point. Wiring this up with Model Binding in MVC is trivial. Just create your controller to handle the class when an action get&rsquo;s posted like:</p>
+
+<div><script src='https://gist.github.com/1154718.js?file=Controller.cs'></script>
+<noscript><pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using ModelBinding.Models;
+
+namespace ModelBinding.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            ViewBag.Message = &quot;Welcome to ASP.NET MVC!&quot;;
+
+            return View(new Package());
+        }
+
+        [HttpPost]
+        public ActionResult Index(Package model)
+        {
+            return Json(model);
+        }
+    }
+}</code></pre></noscript></div>
+
+
+<p>and make a view that uses the class as it&rsquo;s model:</p>
+
+<div><script src='https://gist.github.com/1154718.js?file=View'></script>
+<noscript><pre><code>@model ModelBinding.Models.Package
+           
+@{
+    ViewBag.Title = &quot;Home Page&quot;;
+}
+
+&lt;h2&gt;@ViewBag.Message&lt;/h2&gt;
+
+@using (Html.BeginForm(&quot;Index&quot;, &quot;Home&quot;))
+{
+    @Html.EditorForModel()
+    
+    &lt;input type=&quot;submit&quot; value=&quot;lets do this&quot; /&gt;
+}</code></pre></noscript></div>
+
+
+<p>This code works fine. The problem is I don&rsquo;t like the code! My package class is all wrong. All those properties should be inside an Address Class, which is <strong>used by </strong>the Package.</p>
+
+<p>Once you make a more complicated model than a flat one, everything starts breaking. The problem is that so many things break you have to go through and fix all the pieces one at a time, so we&rsquo;ll have to go through each of these issues in a post by themselves.</p>
+
+<p>The first thing we&rsquo;re going to address is this: when you change the Package to have an Address, the View shows <strong>nothing</strong> on a GET. What happened to the View? We&rsquo;ll cover that next.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

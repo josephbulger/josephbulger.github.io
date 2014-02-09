@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Install | Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/blog/categories/install/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T18:34:43-05:00</updated>
+  <updated>2014-02-09T18:46:13-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ruby on Rails]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ruby/"/>
+    <updated>2011-05-17T14:18:16-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ruby</id>
+    <content type="html"><![CDATA[<p>Next up on the list is installing Ruby on our Ubuntu instance.</p>
+
+<!-- more -->
+
+
+<p>First thing we need to do is to run an update on Ubuntu to make sure we have all our tools up to date.</p>
+
+<blockquote><p>sudo apt-get update</p></blockquote>
+
+<p>Then install aptitude and do an update on it. Aptitude is a new package management system for ubuntu.</p>
+
+<blockquote><p>sudo apt-get aptitude
+sudo aptitude update</p></blockquote>
+
+<p>After that we&rsquo;re going to need to install Git and curl which we can do by running</p>
+
+<blockquote><p>sudo aptitude install build-essential git-core curl</p></blockquote>
+
+<p>We need Git and curl because we&rsquo;re going to be using them in order to bring down the RVM (Ruby Version Manager), which will be what we&rsquo;re using to install Ruby.</p>
+
+<p>To install the RVM you need to run this command</p>
+
+<blockquote><p>bash &lt; &lt;(curl -s <a href="https://rvm.beginrescueend.com/install/rvm">https://rvm.beginrescueend.com/install/rvm</a>)</p></blockquote>
+
+<p>And then you will need to edit a file to have Ubuntu point scripts in the right place with these two commands</p>
+
+<blockquote><p>echo &lsquo;[[ -s &ldquo;$HOME/.rvm/scripts/rvm&rdquo; ]] &amp;&amp; source &ldquo;$HOME/.rvm/scripts/rvm&rdquo;&rsquo; >> ~/.bashrc</p></blockquote>
+
+<p>Then you will need to close your terminal and open up a new one</p>
+
+<p>The next thing we&rsquo;ll need to do is to install a handful of other packages that we&rsquo;ll need for ruby to work (all in one line on the terminal!)</p>
+
+<blockquote><p>sudo aptitude install build-essential bison openssl libreadline6 libreadline6-dev
+curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0
+libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf</p></blockquote>
+
+<p>And at this point we&rsquo;re ready to actually install Ruby</p>
+
+<blockquote><p>rvm install 1.9.2</p></blockquote>
+
+<p>After its installed we can tell RVM to use this version as the default ruby implementation from now on by saying</p>
+
+<blockquote><p>rvm &mdash;default use 1.9.2</p></blockquote>
+
+<p>And you can verify that by executing</p>
+
+<blockquote><p>ruby -v</p></blockquote>
+
+<p>Next thing to do is install Rails</p>
+
+<blockquote><p>gem install rails</p></blockquote>
+
+<p>At this point you now have rails running on your box.</p>
+
+<p>It&rsquo;s very easy to get a sample rails server up and running. Go to your terminal and run the following</p>
+
+<blockquote><p>rails new myapp
+cd myapp
+bundle install</p></blockquote>
+
+<p>And once all the gems get installed for your app you can start your server up by</p>
+
+<blockquote><p>rails server</p></blockquote>
+
+<p>You&rsquo;ll need to right click on the url link and open it up in your browser to see.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ubuntu as a VM]]></title>

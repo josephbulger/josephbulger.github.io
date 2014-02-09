@@ -1,0 +1,208 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Learning Ruby on Rails: Installing Ruby on Rails - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="Learning Ruby on Rails: Installing Ruby on Rails Next up on the list is installing Ruby on our Ubuntu instance. First thing we need to do is to run &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ruby/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Learning Ruby on Rails: Installing Ruby on Rails</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Next up on the list is installing Ruby on our Ubuntu instance.</p>
+
+<!-- more -->
+
+
+<p>First thing we need to do is to run an update on Ubuntu to make sure we have all our tools up to date.</p>
+
+<blockquote><p>sudo apt-get update</p></blockquote>
+
+<p>Then install aptitude and do an update on it. Aptitude is a new package management system for ubuntu.</p>
+
+<blockquote><p>sudo apt-get aptitude
+sudo aptitude update</p></blockquote>
+
+<p>After that we&rsquo;re going to need to install Git and curl which we can do by running</p>
+
+<blockquote><p>sudo aptitude install build-essential git-core curl</p></blockquote>
+
+<p>We need Git and curl because we&rsquo;re going to be using them in order to bring down the RVM (Ruby Version Manager), which will be what we&rsquo;re using to install Ruby.</p>
+
+<p>To install the RVM you need to run this command</p>
+
+<blockquote><p>bash &lt; &lt;(curl -s <a href="https://rvm.beginrescueend.com/install/rvm">https://rvm.beginrescueend.com/install/rvm</a>)</p></blockquote>
+
+<p>And then you will need to edit a file to have Ubuntu point scripts in the right place with these two commands</p>
+
+<blockquote><p>echo &lsquo;[[ -s &ldquo;$HOME/.rvm/scripts/rvm&rdquo; ]] &amp;&amp; source &ldquo;$HOME/.rvm/scripts/rvm&rdquo;&rsquo; >> ~/.bashrc</p></blockquote>
+
+<p>Then you will need to close your terminal and open up a new one</p>
+
+<p>The next thing we&rsquo;ll need to do is to install a handful of other packages that we&rsquo;ll need for ruby to work (all in one line on the terminal!)</p>
+
+<blockquote><p>sudo aptitude install build-essential bison openssl libreadline6 libreadline6-dev
+curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0
+libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf</p></blockquote>
+
+<p>And at this point we&rsquo;re ready to actually install Ruby</p>
+
+<blockquote><p>rvm install 1.9.2</p></blockquote>
+
+<p>After its installed we can tell RVM to use this version as the default ruby implementation from now on by saying</p>
+
+<blockquote><p>rvm &mdash;default use 1.9.2</p></blockquote>
+
+<p>And you can verify that by executing</p>
+
+<blockquote><p>ruby -v</p></blockquote>
+
+<p>Next thing to do is install Rails</p>
+
+<blockquote><p>gem install rails</p></blockquote>
+
+<p>At this point you now have rails running on your box.</p>
+
+<p>It&rsquo;s very easy to get a sample rails server up and running. Go to your terminal and run the following</p>
+
+<blockquote><p>rails new myapp
+cd myapp
+bundle install</p></blockquote>
+
+<p>And once all the gems get installed for your app you can start your server up by</p>
+
+<blockquote><p>rails server</p></blockquote>
+
+<p>You&rsquo;ll need to right click on the url link and open it up in your browser to see.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

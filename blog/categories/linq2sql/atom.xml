@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linq2sql | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/linq2sql/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:46:13-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Great Example of Building Your Own IDataContext]]></title>
+    <link href="http://josephbulger.github.io/blog/2010/09/02/great-example-of-building-your-own-idatacontext/"/>
+    <updated>2010-09-02T02:37:28-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2010/09/02/great-example-of-building-your-own-idatacontext</id>
+    <content type="html"><![CDATA[<p>This one is just for me, so I don&rsquo;t forget where I read this article:</p>
+
+<!-- more -->
+
+
+<p>This is a really great read on building your own IDataContext.</p>
+
+<p>I&rsquo;m toying around with the idea of changing it to just saying IUnitOfWork instead, so I can use the idea as a way to wrap LINQ2SQL contexts, as well as NHibernate sessions, etc.</p>
+
+<p><a href="http://iridescence.no/post/Linq-to-Sql-Programming-Against-an-Interface-and-the-Repository-Pattern.aspx">Linq to Sql, Programming Against an Interface and the Repository Pattern</a></p>
+]]></content>
+  </entry>
+  
+</feed>
