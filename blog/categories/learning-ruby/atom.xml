@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Learning Ruby | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/learning-ruby/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:34:43-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby on Rails: Installing RubyMine]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine/"/>
+    <updated>2011-05-21T14:28:29-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine</id>
+    <content type="html"><![CDATA[<p>RubyMine is a Jetbrains product for developing ruby applications.  I use a lot of Jetbrains products, which is why I&rsquo;m giving RubyMine a run through.  I&rsquo;m hoping it will be as good as their other products. Since I&rsquo;m a .NET developer, I&rsquo;m thinking it will help me bridge the gap between the typical environment I&rsquo;m used to using (Visual Studio 2010) and RoR.<!-- more --></p>
+
+<p>Now, before we get to install RubyMine, there is one caveat that we have to take care of.  You have to have a java runtime on your linux distro in order to run RubyMine, but it can <strong>not </strong>be OpenJDK, so if you have that installed (I did), then you have to uninstall it first, and install another one.</p>
+
+<p>For example:</p>
+
+<blockquote><p>$ sudo apt-get install sun-java6-jre sun-java6-jdk</p></blockquote>
+
+<p>My screencast will <strong>not </strong>include this step, because I actually need java installed on my linux distro to <strong>make </strong>the screencast.</p>
+
+<p>Once you have java installed go to <a href="http://www.jetbrains.com/ruby/download/index.html">http://www.jetbrains.com/ruby/download/index.html</a> and download RubyMine.</p>
+
+<p>I downloaded it into my home directory.</p>
+
+<p>After you&rsquo;ve downloaded it, then you need to extract it</p>
+
+<blockquote><p>$ tar -xvzf rubymine-2.0.2.tar.gz</p></blockquote>
+
+<p>And move it to the opt folder</p>
+
+<blockquote><p>$ sudo mv rubymine93.202 /opt/rubymine</p></blockquote>
+
+<p>Now we need to add an link to our java runtime so RubyMine will be able to see it</p>
+
+<blockquote><p>$ sudo ln -s /usr/bin/java /bin/java</p></blockquote>
+
+<p>I also went ahead and added a shortcut to my panel so I can open it easily.</p>
+
+<p><img src="http://media.tumblr.com/tumblr_l6f7y4c2T61qbyy0y.png" alt="Adding a shotcut" /></p>
+
+<p><img src="http://media.tumblr.com/tumblr_l6f87jErnk1qbyy0y.png" alt="There’s an icon at /opt/rubymine/bin/RMlogo.svg" /></p>
+
+<p><img src="http://media.tumblr.com/tumblr_l6f8efWaJW1qbyy0y.png" alt="Setting RubyMine Starting Point" /></p>
+
+<p>And here&rsquo;s a video of the whole thing:</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ubuntu as a VM]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm/"/>
+    <updated>2011-05-17T09:58:02-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm</id>
+    <content type="html"><![CDATA[<p>Installing Ubuntu as a VM is vastly simpler (and faster) than installing any Windows distro.</p>
+
+<p>As an aside, I&rsquo;m using VMWare&rsquo;s Workstation product, in case you&rsquo;re wondering what VM software I use, but you could do this just as easily with other products.</p>
+
+<!-- more -->
+
+
+<ol>
+<li> Go to Ubuntu and grab the <a href="http://www.ubuntu.com/download">latest version</a></li>
+<li> Kick up a new VM
+
+<ol>
+<li>Choose a Typical Install</li>
+<li>Choose to Install from disk (iso) file</li>
+<li>Pick the iso you just downloaded</li>
+</ol>
+</li>
+<li> Run through the installation process on your VM</li>
+</ol>
+
+
+<p>Once you have Ubuntu up and running it&rsquo;s probably going to ask you to apply some updates, but aside from that you&rsquo;re done!</p>
+
+<p>I made a video of this whole process.</p>
+]]></content>
+  </entry>
+  
+</feed>

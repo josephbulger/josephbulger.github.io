@@ -1,0 +1,178 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Learning Ruby on Rails: Installing RubyMine - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="Learning Ruby on Rails: Installing RubyMine RubyMine is a Jetbrains product for developing ruby applications. I use a lot of Jetbrains products, &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Learning Ruby on Rails: Installing RubyMine</h1>
+	<div class="entry-content" itemprop="articleBody"><p>RubyMine is a Jetbrains product for developing ruby applications.  I use a lot of Jetbrains products, which is why I&rsquo;m giving RubyMine a run through.  I&rsquo;m hoping it will be as good as their other products. Since I&rsquo;m a .NET developer, I&rsquo;m thinking it will help me bridge the gap between the typical environment I&rsquo;m used to using (Visual Studio 2010) and RoR.<!-- more --></p>
+
+<p>Now, before we get to install RubyMine, there is one caveat that we have to take care of.  You have to have a java runtime on your linux distro in order to run RubyMine, but it can <strong>not </strong>be OpenJDK, so if you have that installed (I did), then you have to uninstall it first, and install another one.</p>
+
+<p>For example:</p>
+
+<blockquote><p>$ sudo apt-get install sun-java6-jre sun-java6-jdk</p></blockquote>
+
+<p>My screencast will <strong>not </strong>include this step, because I actually need java installed on my linux distro to <strong>make </strong>the screencast.</p>
+
+<p>Once you have java installed go to <a href="http://www.jetbrains.com/ruby/download/index.html">http://www.jetbrains.com/ruby/download/index.html</a> and download RubyMine.</p>
+
+<p>I downloaded it into my home directory.</p>
+
+<p>After you&rsquo;ve downloaded it, then you need to extract it</p>
+
+<blockquote><p>$ tar -xvzf rubymine-2.0.2.tar.gz</p></blockquote>
+
+<p>And move it to the opt folder</p>
+
+<blockquote><p>$ sudo mv rubymine93.202 /opt/rubymine</p></blockquote>
+
+<p>Now we need to add an link to our java runtime so RubyMine will be able to see it</p>
+
+<blockquote><p>$ sudo ln -s /usr/bin/java /bin/java</p></blockquote>
+
+<p>I also went ahead and added a shortcut to my panel so I can open it easily.</p>
+
+<p><img src="http://media.tumblr.com/tumblr_l6f7y4c2T61qbyy0y.png" alt="Adding a shotcut" /></p>
+
+<p><img src="http://media.tumblr.com/tumblr_l6f87jErnk1qbyy0y.png" alt="There’s an icon at /opt/rubymine/bin/RMlogo.svg" /></p>
+
+<p><img src="http://media.tumblr.com/tumblr_l6f8efWaJW1qbyy0y.png" alt="Setting RubyMine Starting Point" /></p>
+
+<p>And here&rsquo;s a video of the whole thing:</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Install | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/install/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T18:34:43-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ubuntu as a VM]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm/"/>
+    <updated>2011-05-17T09:58:02-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm</id>
+    <content type="html"><![CDATA[<p>Installing Ubuntu as a VM is vastly simpler (and faster) than installing any Windows distro.</p>
+
+<p>As an aside, I&rsquo;m using VMWare&rsquo;s Workstation product, in case you&rsquo;re wondering what VM software I use, but you could do this just as easily with other products.</p>
+
+<!-- more -->
+
+
+<ol>
+<li> Go to Ubuntu and grab the <a href="http://www.ubuntu.com/download">latest version</a></li>
+<li> Kick up a new VM
+
+<ol>
+<li>Choose a Typical Install</li>
+<li>Choose to Install from disk (iso) file</li>
+<li>Pick the iso you just downloaded</li>
+</ol>
+</li>
+<li> Run through the installation process on your VM</li>
+</ol>
+
+
+<p>Once you have Ubuntu up and running it&rsquo;s probably going to ask you to apply some updates, but aside from that you&rsquo;re done!</p>
+
+<p>I made a video of this whole process.</p>
+]]></content>
+  </entry>
+  
+</feed>
