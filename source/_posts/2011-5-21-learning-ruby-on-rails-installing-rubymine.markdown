@@ -1,16 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-5-21 18:28:29
 layout: post
 slug: learning-ruby-on-rails-installing-rubymine
 title: 'Learning Ruby on Rails: Installing RubyMine'
 wordpress_id: 440
-categories:
-- Programming
-tags:
-- learning ruby
-- rubymine
+categories: [learning ruby, rubymine]
 ---
 
 RubyMine is a Jetbrains product for developing ruby applications.  I use a lot of Jetbrains products, which is why I'm giving RubyMine a run through.  I'm hoping it will be as good as their other products. Since I'm a .NET developer, I'm thinking it will help me bridge the gap between the typical environment I'm used to using (Visual Studio 2010) and RoR.<!-- more -->
@@ -19,7 +15,7 @@ Now, before we get to install RubyMine, there is one caveat that we have to take
 
 For example:
     
-<pre>$ sudo apt-get install sun-java6-jre sun-java6-jdk</pre>
+> $ sudo apt-get install sun-java6-jre sun-java6-jdk
 
 
 My screencast will **not **include this step, because I actually need java installed on my linux distro to **make **the screencast.
@@ -30,16 +26,16 @@ I downloaded it into my home directory.
 
 After you've downloaded it, then you need to extract it
     
-<pre>$ tar -xvzf rubymine-2.0.2.tar.gz</pre>
+> $ tar -xvzf rubymine-2.0.2.tar.gz
 
 And move it to the opt folder
     
-<pre>$ sudo mv rubymine93.202 /opt/rubymine</pre>
+> $ sudo mv rubymine93.202 /opt/rubymine
 
 
 Now we need to add an link to our java runtime so RubyMine will be able to see it
     
-<pre>$ sudo ln -s /usr/bin/java /bin/java</pre>
+> $ sudo ln -s /usr/bin/java /bin/java
 
 I also went ahead and added a shortcut to my panel so I can open it easily.
 
