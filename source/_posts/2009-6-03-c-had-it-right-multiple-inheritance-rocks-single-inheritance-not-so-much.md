@@ -1,23 +1,16 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2009-6-03 09:31:21
 layout: post
 slug: c-had-it-right-multiple-inheritance-rocks-single-inheritance-not-so-much
 title: C++ had it right, Multiple Inheritance Rocks, Single Inheritance... not so
   much.
 wordpress_id: 60
-categories:
-- Technology
-tags:
-- c#
-- contracts
-- inheritance
-- java
-- linkedIn
+categories: [c#, contracts, inheritance, java]
 ---
 
-I've been having a lot of problems with my coding lately. I primarily program in C#, but I originally came from a C++ world. When I first learned Java, and was introduced to the idea of Single Inheritance, the sales pitch made a lot of sense to me. How can any class really derive from multiple classes? I drank the kool-aid, and I’ve been living in a Single Inheritance world ever since.
+I've been having a lot of problems with my coding lately. I primarily program in C#, but I originally came from a C++ world. When I first learned Java, and was introduced to the idea of Single Inheritance, the sales pitch made a lot of sense to me. How can any class really derive from multiple classes? I drank the kool-aid, and I’ve been living in a Single Inheritance world ever since. <!-- more -->
 
 Now, the caveat to all of this was that you had this thing called an interface that actually allowed you to define declarations of behavior that could later be implemented. This could be done any number of times. This also made a lot of sense, and they would do some simplistic model that illustrates the concept. I imagine for purposes of this article we should probably illustrate something as well just to drive home the point. Let’s say you have a Coin. A Coin is a kind of Currency. So the simple inheritance chain would dictate that Coin inherits from Currency, and everything is fine. Of course, in order for this to matter at all, there needs to be some benefit to having Coin inherit from Currency. So let’s say that Currency has some behavior called CalculateBuyingPower that actually figures out what kind of buying power that particular Currency has. Ok, so now we have an inheritance chain, and we have a direct benefit, figuring out the buying power of the Coin.
 

@@ -1,15 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-09 08:00:43
 layout: post
 slug: a-vacationeers-guide-to-project-management
 title: A Vacationeer's Guide to Project Management
 wordpress_id: 397
-categories:
-- Leading
-tags:
-- vacationeer-guide
+categories: [leading, vacationeer guide]
 ---
 
 My wife loves to go on vacations. Actually that's more of an understatement than anything else. The last vacation we went on we went to Orlando, FL and rented a house there while going to Disney World. It was a **lot ** of fun. So what does vacationing have anything to do with project management? Well, I'll tell you.  I call myself a technical team lead.  My day usually consists of guiding my team on their current project and coaching them on how to improve themselves. As a lead, one of the things I really care about is knowing how the project we're working on is coming along. There are a lot of methodologies out there about how to do this, but I want to take a really high level, common sense, approach to this issue and then figure out how the approaches I use work.<!-- more -->
