@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Authorization | Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/blog/categories/authorization/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T19:07:19-05:00</updated>
+  <updated>2014-02-09T19:13:03-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Resolve a Complex Type as a String Implicitly]]></title>
+    <link href="http://josephbulger.github.io/blog/2010/09/30/how-to-resolve-a-complex-type-as-a-string-implicitly/"/>
+    <updated>2010-09-30T13:00:00-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2010/09/30/how-to-resolve-a-complex-type-as-a-string-implicitly</id>
+    <content type="html"><![CDATA[<p>Along the same lines as resolving a complex type in a conditional, I also want to be able to take the same Authorization Result, and use it to broadcast a message to the system (or user), and tell them why couldn’t they be authorized.<!-- more --></p>
+
+<p>An example of the behavior I’m looking for is something like this:</p>
+
+<p>``` c#
+var authorizationResult = Is.CurrentUser.AuthorizedTo.DoSomething();
+if (!authorizationResult)</p>
+
+<pre><code>throw new AuthorizationException(authorizationResult);
+</code></pre>
+
+<p>```</p>
+
+<p>The Authorization Exception takes a String in it&rsquo;s constructor, just like a typical Exception. It does not take an AuthorizationResult. So how am I able to just pass in an authorizationResult like that? Again, the implicit operator is all we need:</p>
+
+<p>``` c#
+public class AuthorizationResult
+{</p>
+
+<pre><code>public bool IList&lt;reason&gt; Reasons { get; set; }
+public static implicit operator string(AuthorizationResult authorizationResult)
+{
+    if (authorizationResult.With(x =&amp;gt; x.Reasons) == null)
+        return false;
+    var result = new StringBuilder();
+    foreach (var reason in authorizationResult.Reasons)
+    {
+        result.AppendLine(reason.Message);
+    }
+    return result.ToString();
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now I can use AuthorizationResult implicitly as both a bool and a string.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Use a Complex Type in a Conditional]]></title>

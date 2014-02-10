@@ -1,0 +1,154 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>C++ had it right, Multiple Inheritance Rocks, Single Inheritance... not so much. - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="C++ Had It Right, Multiple Inheritance Rocks, Single Inheritance... Not So Much. I&rsquo;ve been having a lot of problems with my coding lately. I &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2009/06/03/c-had-it-right-multiple-inheritance-rocks-single-inheritance-not-so-much/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">C++ Had It Right, Multiple Inheritance Rocks, Single Inheritance... Not So Much.</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I&rsquo;ve been having a lot of problems with my coding lately. I primarily program in C#, but I originally came from a C++ world. When I first learned Java, and was introduced to the idea of Single Inheritance, the sales pitch made a lot of sense to me. How can any class really derive from multiple classes? I drank the kool-aid, and I’ve been living in a Single Inheritance world ever since. <!-- more --></p>
+
+<p>Now, the caveat to all of this was that you had this thing called an interface that actually allowed you to define declarations of behavior that could later be implemented. This could be done any number of times. This also made a lot of sense, and they would do some simplistic model that illustrates the concept. I imagine for purposes of this article we should probably illustrate something as well just to drive home the point. Let’s say you have a Coin. A Coin is a kind of Currency. So the simple inheritance chain would dictate that Coin inherits from Currency, and everything is fine. Of course, in order for this to matter at all, there needs to be some benefit to having Coin inherit from Currency. So let’s say that Currency has some behavior called CalculateBuyingPower that actually figures out what kind of buying power that particular Currency has. Ok, so now we have an inheritance chain, and we have a direct benefit, figuring out the buying power of the Coin.</p>
+
+<p>If that’s as far as you take it, then everything’s all fine and dandy, and Single Inheritance is great. The problem is, that in the Real World, what we call Objects can legitimately “be” multiple things. This is equally true in the Software World. So, going back to the Coin, not only is the Coin a Currency, but the Coin is also a MetalConstruct. A MetalConstruct is just my way of saying something that is made of metal. Why do I care? Simple. At some point during the life of a Coin, it is entirely possible that the buying power of the Coin will reach a point that it would actually be better to melt down the Coin because the value of the Metal in the coin is much higher (look at what a penny is made of nowadays and you’ll see what I mean). Now, a lot of you are going to say, “That’s fine, just define a MetalConstruct interface and you should be good to go.” In a lot of cases that might be true, but in this example we fine a very big problem. The point of the MetalConstruct is to normalize the behavior of melting down the Coin. No matter what kind of MetalConstruct you have, the melting process for it is always going to be the same. Sure there are variations in melting temperature and what not, but the overall process is the same. The point being, that an interface can only declare that behavior MeltDown should exist, but not define the implementation of it. This is the problem with Single Inheritance. I now need a way for the Coin to be both a Currency and MetalConstruct, which provides the Coin with behaviors CalculateBuyingPower and MeltDown. Coin shouldn’t have to define how to do either of those behaviors, because that’s not it’s <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">responsibility</a>.</p>
+
+<p>During software development, when you’re working on defining your domain, this can come up quite often, actually. With the advent of extension methods in .NET, you’re able to ease the pain a bit in C#, but the fundamental problem is really still there. What I would like to see would be one of two things. It would be nice if you could inherit from multiple abstract classes, which would allow you to define Contracts at the abstract class level. Another idea would be to bring forward the construct of a contract as a <a href="http://en.wikipedia.org/wiki/First-class_citizen">first-class citizen</a>, it would be similar to an abstract class and an interface in the sense that you could not create one directly, but would allow for definition of behavior while still being able to have a class implement numerous contracts. It would be a totally new way of defining an object, apart from class, struct, or interface entirely perhaps.</p>
+
+<p>So now I’m looking back at C++ and I’m thinking it would be really nice if I had Multiple Inheritance so I can just get past this ridiculous wall I’m having to climb. Possibly with .NET 4.0, Microsoft is bringing forth the idea of Code Contracts , which might help when you’re trying to get around Single Inheritance issues when dealing with <a href="http://en.wikipedia.org/wiki/Design_by_Contract">Design by Contract</a>, but for real domain model issues, I think the problem still remains.</p>
+
+<p>Food for thought.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>
