@@ -1,20 +1,17 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-31 12:00:57
 layout: post
 slug: interviewing-done-easy
 title: 'Interviewing: Done Easy'
 wordpress_id: 626
-categories:
-- Leading
-tags:
-- interviewing
+categories: [leading, interview]
 ---
 
 When I develop applications, any time I can forgo repeating myself I usually take the opportunity to save myself the time. The same applies to a lot of my daily routine at work. If there's a way I can do things better, I'm all about it. So when I started conducting interviews, the first thing I started thinking about was how I can make this as stream lined as possible.
 
-<!-- more -->If my [previous post](http://josephbulger.com/technology/interviewing-done-right/) about how to do interviews correctly, I talked about 2 questions I ask my interviewees. The second question is about letting the interviewee show me if they can explain basic development principles, in layman's terms. There's not a lot of streamlining that can be done there, to be honest. Ask the question, let them talk. However, the first question is a programming question, and getting the user set up to handle the question can be tricky depending on how they want to answer it.
+<!-- more -->I've talked about 2 questions I ask my interviewees. The second question is about letting the interviewee show me if they can explain basic development principles, in layman's terms. There's not a lot of streamlining that can be done there, to be honest. Ask the question, let them talk. However, the first question is a programming question, and getting the user set up to handle the question can be tricky depending on how they want to answer it.
 
 How do I know that the interviewee answered the question correctly? Usually, I can just eye ball it, and I'm right about 95% of the time, but I wanted something better. I wanted to present the interviewee with something that removed the possibility of me screwing up, but also of them misunderstanding the problem.
 
@@ -30,4 +27,4 @@ Either way, there's no excuse, and it's _**fast**_.
 
 How fast is it? Check out this video of me setting it up on a new project:
 
-<iframe src="http://player.vimeo.com/video/28377656" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/28377656">FizzBuzz: Interviewing was never this easy</a> from <a href="http://vimeo.com/josephbulger">josephbulger</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+{% video http://vimeo.com/28377656 500 375 %}

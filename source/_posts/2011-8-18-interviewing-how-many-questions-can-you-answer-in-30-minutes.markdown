@@ -1,15 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-18 12:00:22
 layout: post
 slug: interviewing-how-many-questions-can-you-answer-in-30-minutes
 title: 'Interviewing: How many questions can you answer in 30 minutes?'
 wordpress_id: 595
-categories:
-- Leading
-tags:
-- interviewing
+categories: [leading, interviewing]
 ---
 
 I'm not the kind of person that really get's turned off by interviews. I actually enjoy them sometimes. It can be a good test of my skills and knowledge. A lot of the time it shows me whether or not I'm good at explaining what I know. Communication is very important to me in my career. Lately, however, I've taken a different role in the interviewing process. I've become the one giving them instead of taking them. I thought today would be a good day to talk about interviews I've had, and what kind of interviews I think make up "good" interviews, and which one's I think are "bad".

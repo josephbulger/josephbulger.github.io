@@ -1,15 +1,12 @@
 ---
-author: jbulger
-comments: true
+author: joseph
+comments: false
 date: 2011-8-19 12:00:59
 layout: post
 slug: interviewing-done-right
 title: 'Interviewing: Done Right'
 wordpress_id: 612
-categories:
-- Leading
-tags:
-- interviewing
+categories: [leading, interviewing]
 ---
 
 When I conduct interviews, I want to see you code. I don't want to see _**your code**_, I want to see you type something from scratch. That means, brand new, as in not something you've already done (or copied from somewhere else).
@@ -19,24 +16,16 @@ When I conduct interviews, I want to see you code. I don't want to see _**your c
 I also record the interview. I record it so I can refer to it later when anyone has any questions about the interview. The recordings are also a really great way to _**coach other people**_ how to do the interview.
 
 The algorithm/problem I give my interviewees is really simple. I mean, it's _**drop dead simple**_. Why make it so simple? For a couple reasons, actually.
-
-
-
 	
   * I don't want to be there forever.
 
-
 Totally selfish reason, I know, but if I hated long interviews when I was taking them, you bet I'm going to hate them when I'm giving them. I want it to be short. I shoot for 30 minutes, but if I'm going over an hour there's a problem. This portion of the interview should only take 15 minutes. Any more than that and a flag goes off in my head.
-
 	
   * Simple problems can show you a lot about a person.
 
-
 Does the person take time to do it right, even if the problem is simple? Do they use TDD when they say they're an avid TDDer? Do they stick to principles like SRP and DIP when they say they know and use all of the SOLID principles? These things come through on simple problems, and are a lot easier to spot.
-
 	
   * Benchmarking
-
 
 Simple means there's no excuse. If I give a simple problem, no one can come back to me and say, "how can you expect me to answer this kind of thing on the fly?" It also lets me take how one person did and compare them to another person. Here I'm not so much concerned about time as I am about technique.
 
