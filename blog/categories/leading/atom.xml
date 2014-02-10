@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Leading | Joseph Bulger]]></title>
   <link href="http://josephbulger.github.io/blog/categories/leading/atom.xml" rel="self"/>
   <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T18:57:42-05:00</updated>
+  <updated>2014-02-09T19:07:19-05:00</updated>
   <id>http://josephbulger.github.io/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -131,31 +131,32 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Vacationeer's Guide: Projections]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/17/vacationeers-guide-projections/"/>
-    <updated>2011-08-17T08:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/17/vacationeers-guide-projections</id>
-    <content type="html"><![CDATA[<p>When you plan a road trip, you&rsquo;re really only concerned about figuring out one thing: how long will it take me to get there? But for projects, this isn&rsquo;t always the case. The same formula applies, though.<!-- more --></p>
+    <title type="html"><![CDATA[Interviewing: Done Easy]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/08/31/interviewing-done-easy/"/>
+    <updated>2011-08-31T08:00:57-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/08/31/interviewing-done-easy</id>
+    <content type="html"><![CDATA[<p>When I develop applications, any time I can forgo repeating myself I usually take the opportunity to save myself the time. The same applies to a lot of my daily routine at work. If there&rsquo;s a way I can do things better, I&rsquo;m all about it. So when I started conducting interviews, the first thing I started thinking about was how I can make this as stream lined as possible.</p>
 
-<p>Now that we know how to measure out velocity, we can use that metric to figure out one of two fundamental things:</p>
-
-<ol>
-<li><p> How long will it take us to get there?</p></li>
-<li><p> How far will we get?</p></li>
-</ol>
+<!-- more -->
 
 
-<p>Velocity can&rsquo;t answer both questions for us, but if we&rsquo;re willing to concede and control one of the two variables, either the distance or the time, then we can project what the other thing will be.</p>
+<p>I&rsquo;ve talked about 2 questions I ask my interviewees. The second question is about letting the interviewee show me if they can explain basic development principles, in layman&rsquo;s terms. There&rsquo;s not a lot of streamlining that can be done there, to be honest. Ask the question, let them talk. However, the first question is a programming question, and getting the user set up to handle the question can be tricky depending on how they want to answer it.</p>
 
-<p>For example, if the team is getting pressure to release by a certain date (sound familiar?), then with your velocity you can project how many features you&rsquo;ll actually have done by that time frame. If, however, the team is under pressure to get Awesome Feature X done and released, then you can use the same formula to project when that feature will be done.</p>
+<p>How do I know that the interviewee answered the question correctly? Usually, I can just eye ball it, and I&rsquo;m right about 95% of the time, but I wanted something better. I wanted to present the interviewee with something that removed the possibility of me screwing up, but also of them misunderstanding the problem.</p>
 
-<p>With road trips my family almost always chooses to control the distance and project the time. My wife wants to go to Disney World, for example. That&rsquo;s choosing the distance factor. Now if I know my velocity I can project how long it will take us to get there. On the other hand, some times we want to do a quick weekend trip to somewhere just to get out for a few days. In those cases, we&rsquo;re bound more by time, because we don&rsquo;t want to be on the road the whole weekend. In that case, we constrain our time window, and see how far that will take us.</p>
+<p>So what I did was create a <a href="https://github.com/josephbulger/Interviewing">project on github</a> that has different versions of the question. So far I have one in javascript, and one in C#.</p>
 
-<p>This is where the real power of knowing velocity comes from. Your implementation team is the engine of you car. Understanding velocity and how it works and what it means to your team is like having a speedometer. Until you know about velocity, you&rsquo;re like driving a car with a broken speedometer.</p>
+<p>The javascript version runs using jQuery and uses QUnit to verify the user has coded the problem successfully. I have a runner html file that the interviewee can fire up in their browser of choice and it will automatically validate if what they did is correct. The great thing is, if it works, everything &ldquo;green lights&rdquo;, whereas if they&rsquo;re wrong, it &ldquo;red lights&rdquo;. I mean that literally, so I can visually see within a split second if the code is good or not.</p>
 
-<p>A lot of common questions of project management start being fundamentally changed when you introduce velocity. For example, a question like, &ldquo;How do I make my team work faster?&rdquo; changes to something like &ldquo;How do I increase my team&rsquo;s velocity?&rdquo; I&rsquo;ve seen this happen almost any time that a team embraces these concepts, and it&rsquo;s not only a change in the wording of the question that is profound, but in the meaning of what is behind it. Velocity is a historical metric for your team&rsquo;s progress, so asking a question like how to make that number go higher because a much more scientific question completely. The answer is can be varied, but it all comes back to where it started, with the velocity. Try something out on your team, then wait and see how your velocity changes. You&rsquo;re doing an experiment now. Not only that, but you know how to <em><strong>measure the results</strong></em>.</p>
+<p>The C# version is similar, but it presented itself with some different dilemmas. For example, with C# usually people are going to want to showcase their talents using Visual Studio. The problem is, how do I get my test framework to the interviewee? The traditional approach would be to send it to them in an email or something, but I want to rule out the possibility of the interviewee trying to pull one over on me, or coming up with excuses like &ldquo;I couldn&rsquo;t load what you sent me&rdquo;, or something to that extend. Instead, I built a nuget package, and I&rsquo;ve pushed it up to the <a href="http://nuget.org/">nuget gallery</a>.</p>
 
-<p>Enjoy your new found technique. If you have any questions or comments feel free to contact me.</p>
+<p>This has a few benefits. The first being that anyone running VS 2010 with the nuget extension installed can find and install my interview questions. Below I&rsquo;m going to include a video of myself doing it just to show how simple it actually is. The second benefit is that there&rsquo;s no guess work involved, so the interviewee can&rsquo;t give excuses. All they need is VS 2010 and internet, which if they&rsquo;re being interviewed by me, they already have internet. If the interviewee doesn&rsquo;t have VS, they can just use notepad and I can copy paste what they&rsquo;ve done on my side and run it.</p>
+
+<p>Either way, there&rsquo;s no excuse, and it&rsquo;s <em><strong>fast</strong></em>.</p>
+
+<p>How fast is it? Check out this video of me setting it up on a new project:</p>
+
+<p><video width='500' height='375' preload='none' controls poster=''><source src='http://vimeo.com/28377656">http://vimeo.com/28377656</a>' ></video></p>
 ]]></content>
   </entry>
   

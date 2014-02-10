@@ -1,0 +1,203 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>How to use a complex type in a conditional - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="How to Use a Complex Type in a Conditional I am building a basic authorization framework, and I have really liked the use of it so far. It basically &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.github.io/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>... stuff I care about</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">How to Use a Complex Type in a Conditional</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I am building a basic authorization framework, and I have really liked the use of it so far.</p>
+
+<p>It basically looks something like this<!-- more --></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">Is</span><span class="p">.</span><span class="n">CurrentUser</span><span class="p">.</span><span class="n">AuthorizedTo</span><span class="p">.</span><span class="n">DoSomething</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The result that I get back is not actually a boolean, as you might thing.  It&rsquo;s a complex type that I built so I could not only determine if authorization was successful or not, but also <strong>why not</strong>.</p>
+
+<p>So you can do this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="n">result</span><span class="p">.</span><span class="n">IsAuthorized</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and you can also do this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="n">result</span><span class="p">.</span><span class="n">WhyNot</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>WhyNot will actually give you back a list of Reasons, which you can then use to inform the system (or user) why they can&rsquo;t do something.</p>
+
+<p>So what&rsquo;s the problem? Sometimes I just don&rsquo;t care why not, I just want to do the check quickly and be done with it, which makes me want to do something like this instead:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">Is</span><span class="p">.</span><span class="n">CurrentUser</span><span class="p">.</span><span class="n">AuthorizedTo</span><span class="p">.</span><span class="n">DoSomething</span><span class="p">())</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This won&rsquo;t compile, because my complex type can&rsquo;t resolve to a bool.  Not to worry, though, implicit operator to the rescue:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'><span class="k">public</span> <span class="k">class</span> <span class="nc">AuthorizationResult</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>        <span class="k">public</span> <span class="kt">bool</span> <span class="n">IsAuthorized</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>        <span class="k">public</span> <span class="k">static</span> <span class="k">implicit</span> <span class="k">operator</span> <span class="nf">bool</span><span class="p">(</span><span class="n">AuthorizationResult</span> <span class="n">authorizationResult</span><span class="p">)</span>
+</span><span class='line'>        <span class="p">{</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="n">authorizationResult</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+</span><span class='line'>                <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">authorizationResult</span><span class="p">.</span><span class="n">IsAuthorized</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next post I&rsquo;ll talk about how I do the same thing for outputting the reasons implicitly.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

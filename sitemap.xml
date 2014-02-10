@@ -128,6 +128,12 @@
     </url>
     <url>
         <loc>
+            http://josephbulger.github.io/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional/
+        </loc>
+        <lastmod>2014-02-09T19:03:05-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://josephbulger.github.io/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you/
         </loc>
         <lastmod>2014-02-04T20:23:25-05:00</lastmod>
@@ -194,9 +200,23 @@
     </url>
     <url>
         <loc>
+            http://josephbulger.github.io/blog/2011/08/18/interviewing-how-many-questions-can-you-answer-in-30-minutes/
+        </loc>
+        <lastmod>2014-02-09T19:06:25-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://josephbulger.github.io/blog/2011/08/19/interviewing-done-right/</loc>
+        <lastmod>2014-02-09T19:07:15-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs/
         </loc>
         <lastmod>2014-02-09T18:38:56-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://josephbulger.github.io/blog/2011/08/31/interviewing-done-easy/</loc>
+        <lastmod>2014-02-09T19:05:02-05:00</lastmod>
     </url>
     <url>
         <loc>
@@ -322,7 +342,7 @@
     </url>
     <url>
         <loc>http://josephbulger.github.io/blog/archives/</loc>
-        <lastmod>2014-02-09T18:57:13-05:00</lastmod>
+        <lastmod>2014-02-09T19:07:15-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/blog/categories/</loc>
@@ -330,7 +350,7 @@
     </url>
     <url>
         <loc>http://josephbulger.github.io/</loc>
-        <lastmod>2014-02-09T18:57:13-05:00</lastmod>
+        <lastmod>2014-02-09T19:07:15-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.github.io/robots.txt</loc>

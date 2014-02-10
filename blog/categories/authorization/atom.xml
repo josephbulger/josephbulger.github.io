@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Authorization | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/authorization/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T19:07:19-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use a Complex Type in a Conditional]]></title>
+    <link href="http://josephbulger.github.io/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional/"/>
+    <updated>2010-09-30T03:38:57-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional</id>
+    <content type="html"><![CDATA[<p>I am building a basic authorization framework, and I have really liked the use of it so far.</p>
+
+<p>It basically looks something like this<!-- more --></p>
+
+<p><code>c#
+var result = Is.CurrentUser.AuthorizedTo.DoSomething();
+</code></p>
+
+<p>The result that I get back is not actually a boolean, as you might thing.  It&rsquo;s a complex type that I built so I could not only determine if authorization was successful or not, but also <strong>why not</strong>.</p>
+
+<p>So you can do this:</p>
+
+<p><code>c#
+result.IsAuthorized
+</code></p>
+
+<p>and you can also do this:</p>
+
+<p><code>c#
+result.WhyNot
+</code></p>
+
+<p>WhyNot will actually give you back a list of Reasons, which you can then use to inform the system (or user) why they can&rsquo;t do something.</p>
+
+<p>So what&rsquo;s the problem? Sometimes I just don&rsquo;t care why not, I just want to do the check quickly and be done with it, which makes me want to do something like this instead:</p>
+
+<p><code>c#
+if (Is.CurrentUser.AuthorizedTo.DoSomething())
+</code></p>
+
+<p>This won&rsquo;t compile, because my complex type can&rsquo;t resolve to a bool.  Not to worry, though, implicit operator to the rescue:</p>
+
+<p>``` c#
+public class AuthorizationResult
+{</p>
+
+<pre><code>    public bool IsAuthorized { get; set; }
+    public static implicit operator bool(AuthorizationResult authorizationResult)
+    {
+        if (authorizationResult == null)
+            return false;
+        return authorizationResult.IsAuthorized;
+    }
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Next post I&rsquo;ll talk about how I do the same thing for outputting the reasons implicitly.</p>
+]]></content>
+  </entry>
+  
+</feed>

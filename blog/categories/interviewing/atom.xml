@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Interviewing | Joseph Bulger]]></title>
+  <link href="http://josephbulger.github.io/blog/categories/interviewing/atom.xml" rel="self"/>
+  <link href="http://josephbulger.github.io/"/>
+  <updated>2014-02-09T19:07:19-05:00</updated>
+  <id>http://josephbulger.github.io/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Interviewing: Done Right]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/08/19/interviewing-done-right/"/>
+    <updated>2011-08-19T08:00:59-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/08/19/interviewing-done-right</id>
+    <content type="html"><![CDATA[<p>When I conduct interviews, I want to see you code. I don&rsquo;t want to see <em><strong>your code</strong></em>, I want to see you type something from scratch. That means, brand new, as in not something you&rsquo;ve already done (or copied from somewhere else).</p>
+
+<!-- more -->
+
+
+<p>I give the same problem to all the people I interview. It helps me form a baseline and I can easily compare how one person did to another. After all, they solved <em><strong>the same problem</strong></em>. The problem I give has nothing to do with technology stacks. In fact, I usually let the user choose what language they want to do it in, and also how they want to deploy it. My preference is to watch them use some kind of testing framework, but I don&rsquo;t expect it, nor require it.</p>
+
+<p>I also record the interview. I record it so I can refer to it later when anyone has any questions about the interview. The recordings are also a really great way to <em><strong>coach other people</strong></em> how to do the interview.</p>
+
+<p>The algorithm/problem I give my interviewees is really simple. I mean, it&rsquo;s <em><strong>drop dead simple</strong></em>. Why make it so simple? For a couple reasons, actually.</p>
+
+<ul>
+<li>I don&rsquo;t want to be there forever.</li>
+</ul>
+
+
+<p>Totally selfish reason, I know, but if I hated long interviews when I was taking them, you bet I&rsquo;m going to hate them when I&rsquo;m giving them. I want it to be short. I shoot for 30 minutes, but if I&rsquo;m going over an hour there&rsquo;s a problem. This portion of the interview should only take 15 minutes. Any more than that and a flag goes off in my head.</p>
+
+<ul>
+<li>Simple problems can show you a lot about a person.</li>
+</ul>
+
+
+<p>Does the person take time to do it right, even if the problem is simple? Do they use TDD when they say they&rsquo;re an avid TDDer? Do they stick to principles like SRP and DIP when they say they know and use all of the SOLID principles? These things come through on simple problems, and are a lot easier to spot.</p>
+
+<ul>
+<li>Benchmarking</li>
+</ul>
+
+
+<p>Simple means there&rsquo;s no excuse. If I give a simple problem, no one can come back to me and say, &ldquo;how can you expect me to answer this kind of thing on the fly?&rdquo; It also lets me take how one person did and compare them to another person. Here I&rsquo;m not so much concerned about time as I am about technique.</p>
+
+<p>When they finish with the problem I gave them they move onto the second item for the interview, which is a question or set of questions about Object Oriented Principles. I&rsquo;m not looking for the dictionary definition, either. I want a real life, come up with an example for me on the fly, kind of answer. It let&rsquo;s me watch the interviewee think. They have a chance to show me that not only can they tell me what the principles <em>are</em>, but do they <em><strong>understand them</strong></em> and can they explain them to me.</p>
+
+<p>Again, the questions are simple for the same reasons that the problem was simple. It should be easy in concept, and thoughtful in reply. I&rsquo;ve already seen them code, so I should have seen some of these concepts in action, but I need to make sure they <em><strong>know what they&rsquo;re typing</strong></em>. If you can&rsquo;t tell someone else what you&rsquo;re doing, then when you work on a team you won&rsquo;t be able to explain to your team mates what you&rsquo;ve implemented, even if it&rsquo;s good code. Contrary to what most people might think, <em><strong>communication is more important than your coding skills</strong></em>.</p>
+
+<p>However, doing an interview right only get&rsquo;s us part of the way there. We also need to know how to do is easy.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Interviewing: How Many Questions Can You Answer in 30 Minutes?]]></title>
+    <link href="http://josephbulger.github.io/blog/2011/08/18/interviewing-how-many-questions-can-you-answer-in-30-minutes/"/>
+    <updated>2011-08-18T08:00:22-04:00</updated>
+    <id>http://josephbulger.github.io/blog/2011/08/18/interviewing-how-many-questions-can-you-answer-in-30-minutes</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m not the kind of person that really get&rsquo;s turned off by interviews. I actually enjoy them sometimes. It can be a good test of my skills and knowledge. A lot of the time it shows me whether or not I&rsquo;m good at explaining what I know. Communication is very important to me in my career. Lately, however, I&rsquo;ve taken a different role in the interviewing process. I&rsquo;ve become the one giving them instead of taking them. I thought today would be a good day to talk about interviews I&rsquo;ve had, and what kind of interviews I think make up &ldquo;good&rdquo; interviews, and which one&rsquo;s I think are &ldquo;bad&rdquo;.</p>
+
+<!-- more -->
+
+
+<p>Let&rsquo;s start of with the title of this post. I work in a technical field. All of the &ldquo;first time&rdquo; interviews I&rsquo;ve had almost always end up the same way. I spend about 30 minutes (probably more) talking with some person about my skill set and whether or not I&rsquo;d be a good fit for the job they&rsquo;re asking me about. I&rsquo;ll put these people into two buckets, the good ones and the bad ones.</p>
+
+<p>The good people that I talk to always do it the same way. They don&rsquo;t really ask me any questions at all. They tell me exactly what the position is, where it&rsquo;s located, any skills that are absolutely required, the salary range (usually), etc. The key here is that they&rsquo;re the ones talking. They aren&rsquo;t asking me any technical questions. This is vitally important. The &ldquo;first time&rdquo; call should only be about 2 things: do I exist? and how interested am I in this position? A really good recruiter, or whatever you want to call them, will keep this call <em><strong>very</strong></em> short. Some times I&rsquo;ve had them be only 10 minutes. I would love for them to be only 5, but that&rsquo;s not usually feasible because recruiters really like to go into details about the positions they&rsquo;re filling.</p>
+
+<p>The bad people grill you. And a lot of times they grill you for a <em><strong>really really long time</strong></em>. I think I&rsquo;ve had first time calls last me over an hour with someone asking me all sorts of questions about &ldquo;do I know this&rdquo; and &ldquo;do I know that&rdquo;. The problem with first time calls asking you a lot of questions is really quite simple. How would they know if I&rsquo;m lying? They <em><strong>wouldn&rsquo;t</strong></em>. They wouldn&rsquo;t know because they&rsquo;re <em><strong>not technical people</strong></em>. The problem is usually with these bad first time calls is that they <em><strong>don&rsquo;t have a second call</strong></em>. Once they talk to you and get the obligatory &ldquo;this guy said yes to all my questions, he must be totally awesome!&rdquo; run through, for all intensive purposes <em><strong>they&rsquo;re done</strong></em>.</p>
+
+<p>This can really be a nightmare from a positioning standpoint. Companies get ridiculous turn over on resources because they don&rsquo;t take the time to find the right person for the right job. It seems like common sense that you would want to evaluate someone on what they do before they are hired. The stance on this this in the tech industry has been varied, though. A lot of people think that asking questions is sufficient. That someone being asked complicated enough questions who doesn&rsquo;t know what&rsquo;s being asked will just buckle under the pressure. Unfortunately that has caused our industry to become full of professional BSers. Other people think that you&rsquo;ll never really know if someone is worth their grain of salt until you try them out. This is somewhat true, but doing <em><strong>nothing</strong></em> about it will only land you with the same group, the BSers.</p>
+
+<p>I&rsquo;m joining the side that will be responsible for ridding our industry of these people. My position on this is simple. If you want a job as a professional developer, <em><strong>show me teh codez</strong></em>. Talk is cheap, I want to see you code.</p>
+
+<p>And that&rsquo;s how I interview. Get ready to see some code.</p>
+]]></content>
+  </entry>
+  
+</feed>
