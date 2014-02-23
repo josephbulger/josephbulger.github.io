@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gotchya Series | Joseph Bulger]]></title>
+  <link href="http://josephbulger.com/blog/categories/gotchya-series/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T18:22:36-05:00</updated>
+  <id>http://josephbulger.com/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Gotchya: Enumerable Side Effect I Didn't See Coming]]></title>
+    <link href="http://josephbulger.com/blog/2014/02/23/gotchya-enumerable-side-effect-i-didnt-see-coming/"/>
+    <updated>2014-02-23T18:00:24-05:00</updated>
+    <id>http://josephbulger.com/blog/2014/02/23/gotchya-enumerable-side-effect-i-didnt-see-coming</id>
+    <content type="html"><![CDATA[<p>I was working on a feature recently when I came across a behavior that I wanted to highlight.</p>
+
+<!-- more -->
+
+
+<p>I was doing something like this</p>
+
+<p>``` c#</p>
+
+<pre><code>var newOrder = 0;
+
+foreach(var thing in someListImOrdering)
+{
+    var theOldThing = someOtherListToLookAt
+        .First(x =&gt; x.OrderNumber == newOrder++);
+}
+</code></pre>
+
+<p>```</p>
+
+<p>I was expecting this to basically look through an enumeration and pull out the old thing that used to have the old order number that I am about to assign to the new thing that I&rsquo;m ordering, and then afterwards bump up my <code>newOrder</code> counter.</p>
+
+<p>So let&rsquo;s say that I&rsquo;m looping through <code>someListImOrdering</code> and it has around 20 items, then I expected <code>newOrder</code> to go from 0 to 19.</p>
+
+<p>However, if you look closely enough you can probably guess what will actually happen.</p>
+
+<p>What it will actually do is bump up <code>newOrder</code> not only for every item in <code>someListImOrdering</code>, but during that iteration it will then bump it up subsequently while doing the <code>First</code> until it finds the thing it was looking for.</p>
+
+<p>In my run, instead of getting <code>newOrder</code> to 19, it ended up at around 400 or so, because that&rsquo;s how many iterations I ended up going through by processing this foreach loop.</p>
+
+<p>Lesson of the day, watch what you do when you iterate through your enumerables.</p>
+]]></content>
+  </entry>
+  
+</feed>
