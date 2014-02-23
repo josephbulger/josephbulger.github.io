@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Single Responsibility Principle | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/single-responsibility-principle/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/single-responsibility-principle/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Single Responsibility Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
     <updated>2011-09-16T14:00:33-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
     <content type="html"><![CDATA[<p>I saved <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle </a>(SRP) for last. I think it&rsquo;s the most important principle to understand and to utilize correctly. I would even go so far as to say it&rsquo;s the most important principle to follow.</p>
 
 <!-- more -->

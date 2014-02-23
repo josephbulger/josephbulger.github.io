@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Blog | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/blog/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The New Blog]]></title>
-    <link href="http://josephbulger.github.io/blog/2012/10/08/the-new-blog/"/>
+    <link href="http://josephbulger.com/blog/2012/10/08/the-new-blog/"/>
     <updated>2012-10-08T11:22:40-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2012/10/08/the-new-blog</id>
+    <id>http://josephbulger.com/blog/2012/10/08/the-new-blog</id>
     <content type="html"><![CDATA[<p>So I&rsquo;ve created a new blog. It&rsquo;s built using <a href="http://nodejs.org">nodejs</a> and so far I&rsquo;m really liking it.</p>
 
 <!-- more -->

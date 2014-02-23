@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Series | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/series/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/series/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/07/team-maturity/"/>
+    <link href="http://josephbulger.com/blog/2011/09/07/team-maturity/"/>
     <updated>2011-09-07T08:00:06-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/07/team-maturity</id>
+    <id>http://josephbulger.com/blog/2011/09/07/team-maturity</id>
     <content type="html"><![CDATA[<p>This isn&rsquo;t an original idea of mine. It actually comes straight from <a href="http://5whys.com/blog/the-3-maturity-stages-of-a-software-team-and-how-scrum-fails.html">5whys.com</a>. I spend a lot of time as a leader researching how others lead their teams, and <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>&rsquo;s writings are worth your time.</p>
 
 <!-- more -->

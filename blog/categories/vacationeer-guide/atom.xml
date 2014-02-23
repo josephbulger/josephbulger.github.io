@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Vacationeer Guide | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/vacationeer-guide/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/vacationeer-guide/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vacationeer's Guide: Projections]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/17/vacationeers-guide-projections/"/>
+    <link href="http://josephbulger.com/blog/2011/08/17/vacationeers-guide-projections/"/>
     <updated>2011-08-17T08:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/17/vacationeers-guide-projections</id>
+    <id>http://josephbulger.com/blog/2011/08/17/vacationeers-guide-projections</id>
     <content type="html"><![CDATA[<p>When you plan a road trip, you&rsquo;re really only concerned about figuring out one thing: how long will it take me to get there? But for projects, this isn&rsquo;t always the case. The same formula applies, though.<!-- more --></p>
 
 <p>Now that we know how to measure out velocity, we can use that metric to figure out one of two fundamental things:</p>
@@ -44,9 +44,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vacationeer’s Guide: Determining Your Team's Velocity]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/16/vacationeer-guide-determining-your-teams-velocity/"/>
+    <link href="http://josephbulger.com/blog/2011/08/16/vacationeer-guide-determining-your-teams-velocity/"/>
     <updated>2011-08-16T08:00:54-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/16/vacationeer-guide-determining-your-teams-velocity</id>
+    <id>http://josephbulger.com/blog/2011/08/16/vacationeer-guide-determining-your-teams-velocity</id>
     <content type="html"><![CDATA[<p>Once your team has estimated a set of features, and assigned each feature their &ldquo;point value&rdquo;, it&rsquo;s time to start measuring your team&rsquo;s velocity!</p>
 
 <!-- more -->
@@ -70,9 +70,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vacationeer’s Guide: Credit System]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/15/vacationeer-guide-credit-system/"/>
+    <link href="http://josephbulger.com/blog/2011/08/15/vacationeer-guide-credit-system/"/>
     <updated>2011-08-15T08:00:51-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/15/vacationeer-guide-credit-system</id>
+    <id>http://josephbulger.com/blog/2011/08/15/vacationeer-guide-credit-system</id>
     <content type="html"><![CDATA[<p>Now that we understand the concept of estimation, we need to talk about how this &ldquo;credit system&rdquo; applies to our velocity.</p>
 
 <!-- more -->
@@ -94,9 +94,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vacationeer’s Guide: Estimation]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/12/vacationeer-guide-estimation/"/>
+    <link href="http://josephbulger.com/blog/2011/08/12/vacationeer-guide-estimation/"/>
     <updated>2011-08-12T04:00:50-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/12/vacationeer-guide-estimation</id>
+    <id>http://josephbulger.com/blog/2011/08/12/vacationeer-guide-estimation</id>
     <content type="html"><![CDATA[<p>In order to calculate velocity, we need to know how to figure out the amount of effort involved for each feature that a team works on. Before we can get to that, though, we need to determine something else which is crucial. <em><strong>Who</strong></em>, exactly, should be estimating the effort?</p>
 
 <!-- more -->
@@ -118,9 +118,9 @@
   
   <entry>
     <title type="html"><![CDATA[Vacationeer’s Guide: Velocity]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/11/vacationeer-guide-velocity/"/>
+    <link href="http://josephbulger.com/blog/2011/08/11/vacationeer-guide-velocity/"/>
     <updated>2011-08-11T04:00:05-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/11/vacationeer-guide-velocity</id>
+    <id>http://josephbulger.com/blog/2011/08/11/vacationeer-guide-velocity</id>
     <content type="html"><![CDATA[<p>Velocity is the key to any project&rsquo;s success. Plain and simple. I think that just about every project in some way or another tries to figure out this metric. It&rsquo;s <em><strong>how</strong></em> this metric is obtained that is so important.</p>
 
 <!-- more -->

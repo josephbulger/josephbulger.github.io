@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Nerd Humor | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/nerd-humor/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/nerd-humor/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Are You a Nerd, Geek, or Dork?]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/03/30/are-you-a-nerd-geek-or-dork/"/>
+    <link href="http://josephbulger.com/blog/2010/03/30/are-you-a-nerd-geek-or-dork/"/>
     <updated>2010-03-30T03:23:27-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/03/30/are-you-a-nerd-geek-or-dork</id>
+    <id>http://josephbulger.com/blog/2010/03/30/are-you-a-nerd-geek-or-dork</id>
     <content type="html"><![CDATA[<p>I just got an email from a friend of mine with this and I couldn’t pass up throwing this on my blog.</p>
 
 <!-- more -->

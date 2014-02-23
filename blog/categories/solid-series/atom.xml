@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Solid Series | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/solid-series/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/solid-series/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Single Responsibility Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
     <updated>2011-09-16T14:00:33-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
     <content type="html"><![CDATA[<p>I saved <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle </a>(SRP) for last. I think it&rsquo;s the most important principle to understand and to utilize correctly. I would even go so far as to say it&rsquo;s the most important principle to follow.</p>
 
 <!-- more -->
@@ -79,9 +79,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Dependency Inversion Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
     <updated>2011-09-14T14:00:18-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion Principle</a> has a dramatic effect on your code base. It has the potential to decouple your code in ways that you never would have thought possible before. Using a good IoC container can make all the difference as well.</p>
 
 <!-- more -->
@@ -153,9 +153,9 @@ Let&rsquo;s say you have a car like this</p>
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Interface Segregation Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
     <updated>2011-09-12T08:00:26-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
     <content type="html"><![CDATA[<p>Interface Segregation Principle (ISP), focuses on the idea that it&rsquo;s better to have many small specific interfaces that define one concept, then to have one big contract that encompasses many concepts in one.</p>
 
 <!-- more -->
@@ -171,9 +171,9 @@ Let&rsquo;s say you have a car like this</p>
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Liskov Substitution Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/06/solid-principles-liskov-substitution-principle/"/>
     <updated>2011-09-06T08:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/06/solid-principles-liskov-substitution-principle</id>
     <content type="html"><![CDATA[<p>Liskov Substitution Principle, or LSP, is actually a very simple concept to understand in a strongly typed language. In languages like C#, or VB.NET, LSP often gets taken for granted, but I&rsquo;ve seen cases where even in strongly typed languages you can violate LSP.</p>
 
 <!-- more -->
@@ -258,9 +258,9 @@ Let&rsquo;s say you have a car like this</p>
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Open Closed Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/02/solid-principles-open-closed-principle/"/>
     <updated>2011-09-02T08:00:41-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/02/solid-principles-open-closed-principle</id>
     <content type="html"><![CDATA[<p>This has been done to death I think, but I wanted to take a shot at it. In fact, this is really more for my benefit than for anyone else. If I can manage to explain these concepts clearly enough then I think I have a firm understanding of what they actually stand for, and how I should apply them when I build things. The first thing we&rsquo;re going to get into is the <a href="http://en.wikipedia.org/wiki/Open/closed_principle">Open Closed Principle</a>.</p>
 
 <!-- more -->

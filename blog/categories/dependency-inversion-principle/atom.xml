@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Dependency Inversion Principle | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/dependency-inversion-principle/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/dependency-inversion-principle/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Dependency Inversion Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
     <updated>2011-09-14T14:00:18-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion Principle</a> has a dramatic effect on your code base. It has the potential to decouple your code in ways that you never would have thought possible before. Using a good IoC container can make all the difference as well.</p>
 
 <!-- more -->

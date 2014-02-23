@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The New Build]]></title>
-    <link href="http://josephbulger.github.io/blog/2013/05/27/the-new-build/"/>
+    <link href="http://josephbulger.com/blog/2013/05/27/the-new-build/"/>
     <updated>2013-05-27T06:20:00-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2013/05/27/the-new-build</id>
+    <id>http://josephbulger.com/blog/2013/05/27/the-new-build</id>
     <content type="html"><![CDATA[<p>I just recently built a new computer. I decided to go middle of the road on this one, and build something that I anticipate will last me around 2 to 3 years. So far I am completely <strong>loving</strong> this build.</p>
 
 <p>Let&rsquo;s get into the nuts and bolts. <!-- more --></p>
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[Keeping your code small]]></title>
-    <link href="http://josephbulger.github.io/blog/2013/04/27/keep-methods-small/"/>
+    <link href="http://josephbulger.com/blog/2013/04/27/keep-methods-small/"/>
     <updated>2013-04-27T09:25:50-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2013/04/27/keep-methods-small</id>
+    <id>http://josephbulger.com/blog/2013/04/27/keep-methods-small</id>
     <content type="html"><![CDATA[<p>I&rsquo;m starting to put together a video series on code quality. This is aimed at helping my teams produce code more effectively by utilizing good programming principles.</p>
 
 <!-- more -->
@@ -68,9 +68,9 @@
   
   <entry>
     <title type="html"><![CDATA[The New Blog]]></title>
-    <link href="http://josephbulger.github.io/blog/2012/10/08/the-new-blog/"/>
+    <link href="http://josephbulger.com/blog/2012/10/08/the-new-blog/"/>
     <updated>2012-10-08T11:22:40-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2012/10/08/the-new-blog</id>
+    <id>http://josephbulger.com/blog/2012/10/08/the-new-blog</id>
     <content type="html"><![CDATA[<p>So I&rsquo;ve created a new blog. It&rsquo;s built using <a href="http://nodejs.org">nodejs</a> and so far I&rsquo;m really liking it.</p>
 
 <!-- more -->
@@ -86,9 +86,9 @@
   
   <entry>
     <title type="html"><![CDATA[Installing Kit on a MBP]]></title>
-    <link href="http://josephbulger.github.io/blog/2012/10/08/installing-kit-on-a-mbp/"/>
+    <link href="http://josephbulger.com/blog/2012/10/08/installing-kit-on-a-mbp/"/>
     <updated>2012-10-08T11:22:40-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2012/10/08/installing-kit-on-a-mbp</id>
+    <id>http://josephbulger.com/blog/2012/10/08/installing-kit-on-a-mbp</id>
     <content type="html"><![CDATA[<p><a href="http://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/">This article</a> was invaluable to me when I was confronted with the task of installing a slew of development tools on my new MacBook Pro.</p>
 
 <!-- more -->
@@ -109,9 +109,9 @@
   
   <entry>
     <title type="html"><![CDATA[Practicing the Basics]]></title>
-    <link href="http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics/"/>
+    <link href="http://josephbulger.com/blog/2012/08/30/practicing-the-basics/"/>
     <updated>2012-08-30T14:18:16-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics</id>
+    <id>http://josephbulger.com/blog/2012/08/30/practicing-the-basics</id>
     <content type="html"><![CDATA[<p>It can&rsquo;t be over stated how important it is for your teams to practice the basics.</p>
 
 <p>With my teams, I spend a good bit of time showing them how to do what are known as &ldquo;katas&rdquo;. What is the point behind these short excercises? Let me tell you a story.</p>
@@ -143,9 +143,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: Days for a Week]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week/"/>
+    <link href="http://josephbulger.com/blog/2011/10/20/mental-floss-days-for-a-week/"/>
     <updated>2011-10-20T04:00:50-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week</id>
+    <id>http://josephbulger.com/blog/2011/10/20/mental-floss-days-for-a-week</id>
     <content type="html"><![CDATA[<p>So as I build the week up, I&rsquo;m adding Days onto it, but what do they look like?</p>
 
 <!-- more -->
@@ -270,10 +270,10 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: Weeks on the Calendar]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar/"/>
+    <link href="http://josephbulger.com/blog/2011/10/19/mental-floss-weeks-on-the-calendar/"/>
     <updated>2011-10-19T04:00:48-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar</id>
-    <content type="html"><![CDATA[<p>Now we&rsquo;ve gone through how the <a href="http://josephbulger.github.io/?p=817">month is modeled</a>, we need to see how weeks are being built.</p>
+    <id>http://josephbulger.com/blog/2011/10/19/mental-floss-weeks-on-the-calendar</id>
+    <content type="html"><![CDATA[<p>Now we&rsquo;ve gone through how the <a href="http://josephbulger.com/?p=817">month is modeled</a>, we need to see how weeks are being built.</p>
 
 <!-- more -->
 
@@ -353,9 +353,9 @@
   
   <entry>
     <title type="html"><![CDATA[Gist @ GitHub and why it's awesome]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome/"/>
+    <link href="http://josephbulger.com/blog/2011/10/18/gist-github-and-why-its-awesome/"/>
     <updated>2011-10-18T04:00:08-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome</id>
+    <id>http://josephbulger.com/blog/2011/10/18/gist-github-and-why-its-awesome</id>
     <content type="html"><![CDATA[<p>In case you haven&rsquo;t noticed, a lot of my posts recently have been using <a href="https://gist.github.com/">gist</a>. It&rsquo;s an awesome tool that&rsquo;s freely available which allows you to write snippets of code in a variety of languages.</p>
 
 <!-- more -->
@@ -369,9 +369,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: The Month on the Calendar]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar/"/>
+    <link href="http://josephbulger.com/blog/2011/10/17/mental-floss-the-month-on-the-calendar/"/>
     <updated>2011-10-17T04:00:02-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar</id>
+    <id>http://josephbulger.com/blog/2011/10/17/mental-floss-the-month-on-the-calendar</id>
     <content type="html"><![CDATA[<p>So we&rsquo;ve seen what the Calendar looks like, and how it&rsquo;s building it&rsquo;s Months, but what goes into building a Month?</p>
 
 <!-- more -->
@@ -458,9 +458,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: The Calendar ViewModel]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel/"/>
+    <link href="http://josephbulger.com/blog/2011/10/16/mental-floss-the-calendar-viewmodel/"/>
     <updated>2011-10-16T12:46:08-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel</id>
+    <id>http://josephbulger.com/blog/2011/10/16/mental-floss-the-calendar-viewmodel</id>
     <content type="html"><![CDATA[<p>So my ViewModel basically starts with the idea of a Calendar and it&rsquo;s Events. So what did I end up making that look like? Let&rsquo;s disregard the markup for now, because how it looks isn&rsquo;t really what we&rsquo;re talking about here. What we&rsquo;re talking about is how the Calendar and it&rsquo;s Events are <em><strong>modeled</strong></em>.</p>
 
 <!-- more -->
@@ -623,10 +623,10 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity: Self-Organizing]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing/"/>
+    <link href="http://josephbulger.com/blog/2011/10/14/team-maturity-self-organizing/"/>
     <updated>2011-10-14T04:00:24-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing</id>
-    <content type="html"><![CDATA[<p>Your team has been in the <a href="http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning/">Learning stage</a> and it&rsquo;s heading into the Self-Organizing stage. Team members have learned the skills necessary to become self-organizing now, and everything gets done whether you&rsquo;re there or not. This is where a lot of people get scared. What good am I as a lead if I&rsquo;m not needed anymore? Couldn&rsquo;t my higher ups just fire me and let the team do it&rsquo;s thing?<!-- more --></p>
+    <id>http://josephbulger.com/blog/2011/10/14/team-maturity-self-organizing</id>
+    <content type="html"><![CDATA[<p>Your team has been in the <a href="http://josephbulger.com/blog/2011/09/15/team-maturity-learning/">Learning stage</a> and it&rsquo;s heading into the Self-Organizing stage. Team members have learned the skills necessary to become self-organizing now, and everything gets done whether you&rsquo;re there or not. This is where a lot of people get scared. What good am I as a lead if I&rsquo;m not needed anymore? Couldn&rsquo;t my higher ups just fire me and let the team do it&rsquo;s thing?<!-- more --></p>
 
 <p>Not to worry. In the Self-Organizing stage your role turns to more of a Coach. You need to <em>grow</em> your team into learning new things, technologies or tools to help them in what they do. Inspire them to be passionate about their job. This is also the perfect stage to take those team members that you identified earlier as your potential leaders and really coach them into<em><strong> becoming</strong></em> leaders. If you do your job well enough, then they can do your job <em>for</em> you. <strong>This is not a bad thing. </strong>If they can do your job for you, that frees you up to help with other projects, or start new ones.</p>
 
@@ -636,9 +636,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: The problem with my Circle is...]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is/"/>
+    <link href="http://josephbulger.com/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is/"/>
     <updated>2011-10-13T04:00:32-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is</id>
+    <id>http://josephbulger.com/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is</id>
     <content type="html"><![CDATA[<p>that I&rsquo;m exposing too many details to the user of my code. The developer has to know intimate details about how to set up both the Ellipse and the Circle in order to calculate their areas effectively. In one case, the Ellipse, the runner has to know to set the major and minor axes, while for the Circle, they have know to set the Radius.</p>
 
 <!-- more -->
@@ -708,10 +708,10 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: What's the problem with my Circle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle/"/>
+    <link href="http://josephbulger.com/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle/"/>
     <updated>2011-10-12T04:00:01-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle</id>
-    <content type="html"><![CDATA[<p>I got into an interesting discussion about <a href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/">SOLID </a>principles with a fellow developer today, and it got me to thinking about a common problem I&rsquo;ve seen come up and I wanted to try and touch on it.<!-- more --></p>
+    <id>http://josephbulger.com/blog/2011/10/12/mental-floss-whats-the-problem-with-my-circle</id>
+    <content type="html"><![CDATA[<p>I got into an interesting discussion about <a href="http://josephbulger.com/blog/2011/09/02/solid-principles-open-closed-principle/">SOLID </a>principles with a fellow developer today, and it got me to thinking about a common problem I&rsquo;ve seen come up and I wanted to try and touch on it.<!-- more --></p>
 
 <p>So first things first, let&rsquo;s go over some math and set up the problem space.</p>
 
@@ -734,9 +734,9 @@
 
 <p>I see this implementation a lot. When asked how this supports SOLID principles, I get the following a lot of the time:</p>
 
-<p>It supports <a href="http://josephbulger.github.io/blog/2011/09/02/solid-principles-open-closed-principle/">OCP </a>because I can override any of the properties or the methods. Ok good.</p>
+<p>It supports <a href="http://josephbulger.com/blog/2011/09/02/solid-principles-open-closed-principle/">OCP </a>because I can override any of the properties or the methods. Ok good.</p>
 
-<p>It supports <a href="http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle/">SRP </a>because the class is only responsible for knowing things about Ellipse. Ok good.</p>
+<p>It supports <a href="http://josephbulger.com/blog/2011/09/16/solid-principles-single-responsibility-principle/">SRP </a>because the class is only responsible for knowing things about Ellipse. Ok good.</p>
 
 <p>And there are some other ones, but then we veer into trying to extend this model with the special Circle, and that&rsquo;s where things really start to break down. I&rsquo;ve seen a lot of variations about how this goes down, but I&rsquo;m going to summarize all of them with this definition:</p>
 
@@ -781,9 +781,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: Models and ViewModels, and yes they're different]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different/"/>
+    <link href="http://josephbulger.com/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different/"/>
     <updated>2011-10-11T13:20:34-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different</id>
+    <id>http://josephbulger.com/blog/2011/10/11/mental-floss-models-and-viewmodels-and-yes-theyre-different</id>
     <content type="html"><![CDATA[<p>My wife recently asked me to work on a site for our son&rsquo;s class and while working on it I realized that what I was building was a pretty great example of my thoughts on how I feel that Models and ViewModels relate to each other.</p>
 
 <!-- more -->
@@ -809,9 +809,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Single responsibility principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/16/solid-principles-single-responsibility-principle/"/>
     <updated>2011-09-16T14:00:33-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/16/solid-principles-single-responsibility-principle</id>
     <content type="html"><![CDATA[<p>I saved <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle </a>(SRP) for last. I think it&rsquo;s the most important principle to understand and to utilize correctly. I would even go so far as to say it&rsquo;s the most important principle to follow.</p>
 
 <!-- more -->
@@ -873,9 +873,9 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity: Learning]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning/"/>
+    <link href="http://josephbulger.com/blog/2011/09/15/team-maturity-learning/"/>
     <updated>2011-09-15T14:00:55-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning</id>
+    <id>http://josephbulger.com/blog/2011/09/15/team-maturity-learning</id>
     <content type="html"><![CDATA[<p>So you&rsquo;re team now has time to learn, and some of them (if not all), are taking advantage of that. How do you get them to be self-organizing? That&rsquo;s where you start pushing responsibilities onto your team.</p>
 
 <!-- more -->
@@ -897,9 +897,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Dependency inversion principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
     <updated>2011-09-14T14:00:18-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion Principle</a> has a dramatic effect on your code base. It has the potential to decouple your code in ways that you never would have thought possible before. Using a good IoC container can make all the difference as well.</p>
 
 <!-- more -->
@@ -971,9 +971,9 @@ Let&rsquo;s say you have a car like this</p>
   
   <entry>
     <title type="html"><![CDATA[Team Maturity: Chaos]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos/"/>
+    <link href="http://josephbulger.com/blog/2011/09/13/team-maturity-chaos/"/>
     <updated>2011-09-13T14:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos</id>
+    <id>http://josephbulger.com/blog/2011/09/13/team-maturity-chaos</id>
     <content type="html"><![CDATA[<p>So how do you know if your team is in choas? Actually, most teams are in the chaos stage. Learning to identify when a team has gotten into chaos isn&rsquo;t really that hard if you follow some simple guidelines, though.</p>
 
 <!-- more -->
@@ -1011,9 +1011,9 @@ Let&rsquo;s say you have a car like this</p>
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Interface segregation principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
     <updated>2011-09-12T08:00:26-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
     <content type="html"><![CDATA[<p>Interface Segregation Principle (ISP), focuses on the idea that it&rsquo;s better to have many small specific interfaces that define one concept, then to have one big contract that encompasses many concepts in one.</p>
 
 <!-- more -->
@@ -1029,9 +1029,9 @@ Let&rsquo;s say you have a car like this</p>
   
   <entry>
     <title type="html"><![CDATA[Datastructures, Objects, and why Hybrids are evil]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/"/>
+    <link href="http://josephbulger.com/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/"/>
     <updated>2011-09-10T08:31:50-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil</id>
+    <id>http://josephbulger.com/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil</id>
     <content type="html"><![CDATA[<p>I was writing this code that let&rsquo;s interviewees code problems for me, and it verifies that the interviewee actually writes something that works. I got to a point in my printer classes that I wasn&rsquo;t liking, and I thought I&rsquo;d share it.</p>
 
 <!-- more -->

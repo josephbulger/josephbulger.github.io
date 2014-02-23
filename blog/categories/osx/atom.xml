@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Osx | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/osx/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Installing Kit on a MBP]]></title>
-    <link href="http://josephbulger.github.io/blog/2012/10/08/installing-kit-on-a-mbp/"/>
+    <link href="http://josephbulger.com/blog/2012/10/08/installing-kit-on-a-mbp/"/>
     <updated>2012-10-08T11:22:40-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2012/10/08/installing-kit-on-a-mbp</id>
+    <id>http://josephbulger.com/blog/2012/10/08/installing-kit-on-a-mbp</id>
     <content type="html"><![CDATA[<p><a href="http://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/">This article</a> was invaluable to me when I was confronted with the task of installing a slew of development tools on my new MacBook Pro.</p>
 
 <!-- more -->

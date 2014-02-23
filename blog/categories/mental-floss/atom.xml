@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Mental Floss | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/mental-floss/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/mental-floss/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: Days for a Week]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week/"/>
+    <link href="http://josephbulger.com/blog/2011/10/20/mental-floss-days-for-a-week/"/>
     <updated>2011-10-20T04:00:50-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/20/mental-floss-days-for-a-week</id>
+    <id>http://josephbulger.com/blog/2011/10/20/mental-floss-days-for-a-week</id>
     <content type="html"><![CDATA[<p>So as I build the week up, I&rsquo;m adding Days onto it, but what do they look like?</p>
 
 <!-- more -->
@@ -92,9 +92,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: Weeks on the Calendar]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar/"/>
+    <link href="http://josephbulger.com/blog/2011/10/19/mental-floss-weeks-on-the-calendar/"/>
     <updated>2011-10-19T04:00:48-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/19/mental-floss-weeks-on-the-calendar</id>
+    <id>http://josephbulger.com/blog/2011/10/19/mental-floss-weeks-on-the-calendar</id>
     <content type="html"><![CDATA[<p>Now we&rsquo;ve gone through how the <a href="/?p=817">month is modeled</a>, we need to see how weeks are being built.</p>
 
 <!-- more -->
@@ -175,9 +175,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: The Month on the Calendar]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar/"/>
+    <link href="http://josephbulger.com/blog/2011/10/17/mental-floss-the-month-on-the-calendar/"/>
     <updated>2011-10-17T04:00:02-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/17/mental-floss-the-month-on-the-calendar</id>
+    <id>http://josephbulger.com/blog/2011/10/17/mental-floss-the-month-on-the-calendar</id>
     <content type="html"><![CDATA[<p>So we&rsquo;ve seen what the Calendar looks like, and how it&rsquo;s building it&rsquo;s Months, but what goes into building a Month?</p>
 
 <!-- more -->
@@ -262,9 +262,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: The Calendar ViewModel]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel/"/>
+    <link href="http://josephbulger.com/blog/2011/10/16/mental-floss-the-calendar-viewmodel/"/>
     <updated>2011-10-16T12:46:08-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/16/mental-floss-the-calendar-viewmodel</id>
+    <id>http://josephbulger.com/blog/2011/10/16/mental-floss-the-calendar-viewmodel</id>
     <content type="html"><![CDATA[<p>So my ViewModel basically starts with the idea of a Calendar and it&rsquo;s Events. So what did I end up making that look like? Let&rsquo;s disregard the markup for now, because how it looks isn&rsquo;t really what we&rsquo;re talking about here. What we&rsquo;re talking about is how the Calendar and it&rsquo;s Events are <em><strong>modeled</strong></em>.</p>
 
 <!-- more -->
@@ -359,9 +359,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: The Problem With My Circle Is...]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is/"/>
+    <link href="http://josephbulger.com/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is/"/>
     <updated>2011-10-13T04:00:32-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is</id>
+    <id>http://josephbulger.com/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is</id>
     <content type="html"><![CDATA[<p>that I&rsquo;m exposing too many details to the user of my code. The developer has to know intimate details about how to set up both the Ellipse and the Circle in order to calculate their areas effectively. In one case, the Ellipse, the runner has to know to set the major and minor axes, while for the Circle, they have know to set the Radius.</p>
 
 <!-- more -->

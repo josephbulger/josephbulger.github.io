@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Saturn Project | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/saturn-project/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/saturn-project/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Saturn Project – Buy Music. Do Good.]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/04/01/the-saturn-project-buy-music-do-good/"/>
+    <link href="http://josephbulger.com/blog/2009/04/01/the-saturn-project-buy-music-do-good/"/>
     <updated>2009-04-01T10:41:04-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/04/01/the-saturn-project-buy-music-do-good</id>
+    <id>http://josephbulger.com/blog/2009/04/01/the-saturn-project-buy-music-do-good</id>
     <content type="html"><![CDATA[<p>My church’s band has done this AMAZING thing by producing an album that people can buy and ALL proceeds go to helping people in Cambodia.</p>
 
 <!-- more -->

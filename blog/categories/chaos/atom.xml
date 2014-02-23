@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Chaos | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/chaos/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/chaos/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity: Chaos]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos/"/>
+    <link href="http://josephbulger.com/blog/2011/09/13/team-maturity-chaos/"/>
     <updated>2011-09-13T14:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos</id>
+    <id>http://josephbulger.com/blog/2011/09/13/team-maturity-chaos</id>
     <content type="html"><![CDATA[<p>So how do you know if your team is in choas? Actually, most teams are in the chaos stage. Learning to identify when a team has gotten into chaos isn&rsquo;t really that hard if you follow some simple guidelines, though.</p>
 
 <!-- more -->

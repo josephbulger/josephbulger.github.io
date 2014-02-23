@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ajax | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/ajax/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/ajax/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Creating an PagedList<T> That Uses AJAX]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax/"/>
+    <link href="http://josephbulger.com/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax/"/>
     <updated>2010-04-14T05:05:58-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax</id>
+    <id>http://josephbulger.com/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax</id>
     <content type="html"><![CDATA[<p>I’ve been using this PagedList functionality that i found from a <a href="http://blog.wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/">blog article Rob Conery</a> put up, and <a href="http://code-inside.de/blog-in/2008/04/08/aspnet-mvc-pagination-view-user-control/">a control I found by Robert Muehsig</a> which I’ve really enjoyed using so far.</p>
 
 <p>One of the things that was missing from the functional set that I ended up needing was the ability to page the list, but through issuing AJAX requests instead of the typical post back.</p>

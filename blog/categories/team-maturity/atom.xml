@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Team Maturity | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/team-maturity/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/team-maturity/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity: Self-Organizing]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing/"/>
+    <link href="http://josephbulger.com/blog/2011/10/14/team-maturity-self-organizing/"/>
     <updated>2011-10-14T04:00:24-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/14/team-maturity-self-organizing</id>
+    <id>http://josephbulger.com/blog/2011/10/14/team-maturity-self-organizing</id>
     <content type="html"><![CDATA[<p>Your team has been in the <a href="/blog/2011/09/15/team-maturity-learning/">Learning stage</a> and it&rsquo;s heading into the Self-Organizing stage. Team members have learned the skills necessary to become self-organizing now, and everything gets done whether you&rsquo;re there or not. This is where a lot of people get scared. What good am I as a lead if I&rsquo;m not needed anymore? Couldn&rsquo;t my higher ups just fire me and let the team do it&rsquo;s thing?<!-- more --></p>
 
 <p>Not to worry. In the Self-Organizing stage your role turns to more of a Coach. You need to <em>grow</em> your team into learning new things, technologies or tools to help them in what they do. Inspire them to be passionate about their job. This is also the perfect stage to take those team members that you identified earlier as your potential leaders and really coach them into<em><strong> becoming</strong></em> leaders. If you do your job well enough, then they can do your job <em>for</em> you. <strong>This is not a bad thing. </strong>If they can do your job for you, that frees you up to help with other projects, or start new ones.</p>
@@ -28,9 +28,9 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity: Learning]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning/"/>
+    <link href="http://josephbulger.com/blog/2011/09/15/team-maturity-learning/"/>
     <updated>2011-09-15T14:00:55-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/15/team-maturity-learning</id>
+    <id>http://josephbulger.com/blog/2011/09/15/team-maturity-learning</id>
     <content type="html"><![CDATA[<p>So you&rsquo;re team now has time to learn, and some of them (if not all), are taking advantage of that. How do you get them to be self-organizing? That&rsquo;s where you start pushing responsibilities onto your team.</p>
 
 <!-- more -->
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity: Chaos]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos/"/>
+    <link href="http://josephbulger.com/blog/2011/09/13/team-maturity-chaos/"/>
     <updated>2011-09-13T14:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/13/team-maturity-chaos</id>
+    <id>http://josephbulger.com/blog/2011/09/13/team-maturity-chaos</id>
     <content type="html"><![CDATA[<p>So how do you know if your team is in choas? Actually, most teams are in the chaos stage. Learning to identify when a team has gotten into chaos isn&rsquo;t really that hard if you follow some simple guidelines, though.</p>
 
 <!-- more -->
@@ -92,9 +92,9 @@
   
   <entry>
     <title type="html"><![CDATA[Team Maturity]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/07/team-maturity/"/>
+    <link href="http://josephbulger.com/blog/2011/09/07/team-maturity/"/>
     <updated>2011-09-07T08:00:06-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/07/team-maturity</id>
+    <id>http://josephbulger.com/blog/2011/09/07/team-maturity</id>
     <content type="html"><![CDATA[<p>This isn&rsquo;t an original idea of mine. It actually comes straight from <a href="http://5whys.com/blog/the-3-maturity-stages-of-a-software-team-and-how-scrum-fails.html">5whys.com</a>. I spend a lot of time as a leader researching how others lead their teams, and <a href="http://twitter.com/#!/RoyOsherove">@RoyOsherove</a>&rsquo;s writings are worth your time.</p>
 
 <!-- more -->

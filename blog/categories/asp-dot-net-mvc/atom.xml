@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: asp.net Mvc | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/asp-dot-net-mvc/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/asp-dot-net-mvc/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ASP.NET MVC Model Binding: The Ins and Outs]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs/"/>
+    <link href="http://josephbulger.com/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs/"/>
     <updated>2011-08-22T08:00:18-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs</id>
+    <id>http://josephbulger.com/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs</id>
     <content type="html"><![CDATA[<p>Model Binding can be a tricky thing to get right with MVC. Dealing with flat POCOs works fine, but when you start getting into more complex, truly object oriented domain objects, things get out of hand pretty quickly.</p>
 
 <!-- more -->
@@ -97,9 +97,9 @@ namespace ModelBinding.Controllers
   
   <entry>
     <title type="html"><![CDATA[Creating an PagedList<T> That Uses AJAX]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax/"/>
+    <link href="http://josephbulger.com/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax/"/>
     <updated>2010-04-14T05:05:58-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax</id>
+    <id>http://josephbulger.com/blog/2010/04/14/creating-an-pagedlistt-that-uses-ajax</id>
     <content type="html"><![CDATA[<p>I’ve been using this PagedList functionality that i found from a <a href="http://blog.wekeroad.com/2007/12/10/aspnet-mvc-pagedlistt/">blog article Rob Conery</a> put up, and <a href="http://code-inside.de/blog-in/2008/04/08/aspnet-mvc-pagination-view-user-control/">a control I found by Robert Muehsig</a> which I’ve really enjoyed using so far.</p>
 
 <p>One of the things that was missing from the functional set that I ended up needing was the ability to page the list, but through issuing AJAX requests instead of the typical post back.</p>

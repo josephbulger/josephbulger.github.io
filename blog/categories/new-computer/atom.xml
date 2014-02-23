@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: New Computer | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/new-computer/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/new-computer/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The New Build]]></title>
-    <link href="http://josephbulger.github.io/blog/2013/05/27/the-new-build/"/>
+    <link href="http://josephbulger.com/blog/2013/05/27/the-new-build/"/>
     <updated>2013-05-27T06:20:00-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2013/05/27/the-new-build</id>
+    <id>http://josephbulger.com/blog/2013/05/27/the-new-build</id>
     <content type="html"><![CDATA[<p>I just recently built a new computer. I decided to go middle of the road on this one, and build something that I anticipate will last me around 2 to 3 years. So far I am completely <strong>loving</strong> this build.</p>
 
 <p>Let&rsquo;s get into the nuts and bolts. <!-- more --></p>

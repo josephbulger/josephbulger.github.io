@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Interview | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/interview/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/interview/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Interviewing: Done Easy]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/31/interviewing-done-easy/"/>
+    <link href="http://josephbulger.com/blog/2011/08/31/interviewing-done-easy/"/>
     <updated>2011-08-31T08:00:57-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/31/interviewing-done-easy</id>
+    <id>http://josephbulger.com/blog/2011/08/31/interviewing-done-easy</id>
     <content type="html"><![CDATA[<p>When I develop applications, any time I can forgo repeating myself I usually take the opportunity to save myself the time. The same applies to a lot of my daily routine at work. If there&rsquo;s a way I can do things better, I&rsquo;m all about it. So when I started conducting interviews, the first thing I started thinking about was how I can make this as stream lined as possible.</p>
 
 <!-- more -->

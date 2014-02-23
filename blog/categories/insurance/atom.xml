@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Insurance | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/insurance/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/insurance/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[An Example of Why Health Care in the US Has Gotten Out of Control]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/02/08/an-example-of-why-health-care-in-the-us-has-gotten-out-of-control/"/>
+    <link href="http://josephbulger.com/blog/2010/02/08/an-example-of-why-health-care-in-the-us-has-gotten-out-of-control/"/>
     <updated>2010-02-08T13:38:29-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/02/08/an-example-of-why-health-care-in-the-us-has-gotten-out-of-control</id>
+    <id>http://josephbulger.com/blog/2010/02/08/an-example-of-why-health-care-in-the-us-has-gotten-out-of-control</id>
     <content type="html"><![CDATA[<p>I was just watching a television show that’s a drama about the medical field. The particular episode I was watching perfectly illustrated the reason why Health Care in our country has completely gotten out of control.</p>
 
 <!-- more -->

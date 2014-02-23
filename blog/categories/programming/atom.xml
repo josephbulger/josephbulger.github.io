@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Programming | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Practicing the Basics]]></title>
-    <link href="http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics/"/>
+    <link href="http://josephbulger.com/blog/2012/08/30/practicing-the-basics/"/>
     <updated>2012-08-30T14:18:16-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2012/08/30/practicing-the-basics</id>
+    <id>http://josephbulger.com/blog/2012/08/30/practicing-the-basics</id>
     <content type="html"><![CDATA[<p>It can&rsquo;t be over stated how important it is for your teams to practice the basics.</p>
 
 <p>With my teams, I spend a good bit of time showing them how to do what are known as &ldquo;katas&rdquo;. What is the point behind these short excercises? Let me tell you a story.</p>

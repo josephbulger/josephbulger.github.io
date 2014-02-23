@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Recruiting | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/recruiting/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/recruiting/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Recruiters, if You're Doing This You've Already Lost]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/08/recruiters-if-youre-doing-this-youve-already-lost/"/>
+    <link href="http://josephbulger.com/blog/2011/09/08/recruiters-if-youre-doing-this-youve-already-lost/"/>
     <updated>2011-09-08T08:00:39-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/08/recruiters-if-youre-doing-this-youve-already-lost</id>
+    <id>http://josephbulger.com/blog/2011/09/08/recruiters-if-youre-doing-this-youve-already-lost</id>
     <content type="html"><![CDATA[<p>I received an email this morning regarding an &ldquo;urgent&rdquo; position that needed to be filled. I get these all the time, but what really struck a cord with me was the last part of the email where the recruiter actually wanted me to fill out all my information in an HTML form that he put into the email.</p>
 
 <!-- more -->

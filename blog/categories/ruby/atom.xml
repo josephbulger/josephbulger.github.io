@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ruby | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ruby on Rails]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ruby/"/>
+    <link href="http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-installing-ruby/"/>
     <updated>2011-05-17T14:18:16-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ruby</id>
+    <id>http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-installing-ruby</id>
     <content type="html"><![CDATA[<p>Next up on the list is installing Ruby on our Ubuntu instance.</p>
 
 <!-- more -->
@@ -88,9 +88,9 @@ bundle install</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[Learning Ruby on Rails: A C# Programmer's Perspective]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective/"/>
+    <link href="http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective/"/>
     <updated>2011-05-17T08:11:12-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective</id>
+    <id>http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve been doing C# programming for some time now.  I&rsquo;ve been investigating Ruby and talking to coworkers about it, but have yet to really dive in and start learning the language and it&rsquo;s web counterpart, Rails.</p>
 
 <!-- more -->

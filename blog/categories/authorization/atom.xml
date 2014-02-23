@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Authorization | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/authorization/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/authorization/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Resolve a Complex Type as a String Implicitly]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/09/30/how-to-resolve-a-complex-type-as-a-string-implicitly/"/>
+    <link href="http://josephbulger.com/blog/2010/09/30/how-to-resolve-a-complex-type-as-a-string-implicitly/"/>
     <updated>2010-09-30T13:00:00-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/09/30/how-to-resolve-a-complex-type-as-a-string-implicitly</id>
+    <id>http://josephbulger.com/blog/2010/09/30/how-to-resolve-a-complex-type-as-a-string-implicitly</id>
     <content type="html"><![CDATA[<p>Along the same lines as resolving a complex type in a conditional, I also want to be able to take the same Authorization Result, and use it to broadcast a message to the system (or user), and tell them why couldn’t they be authorized.<!-- more --></p>
 
 <p>An example of the behavior I’m looking for is something like this:</p>
@@ -60,9 +60,9 @@ public static implicit operator string(AuthorizationResult authorizationResult)
   
   <entry>
     <title type="html"><![CDATA[How to Use a Complex Type in a Conditional]]></title>
-    <link href="http://josephbulger.github.io/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional/"/>
+    <link href="http://josephbulger.com/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional/"/>
     <updated>2010-09-30T03:38:57-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional</id>
+    <id>http://josephbulger.com/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional</id>
     <content type="html"><![CDATA[<p>I am building a basic authorization framework, and I have really liked the use of it so far.</p>
 
 <p>It basically looks something like this<!-- more --></p>

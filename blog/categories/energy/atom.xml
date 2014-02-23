@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Energy | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/energy/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/energy/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Trying Out Microsoft Hohm: Save Energy, Save Money]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/07/06/trying-out-microsoft-hohm-save-energy-save-money/"/>
+    <link href="http://josephbulger.com/blog/2009/07/06/trying-out-microsoft-hohm-save-energy-save-money/"/>
     <updated>2009-07-06T16:06:05-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/07/06/trying-out-microsoft-hohm-save-energy-save-money</id>
+    <id>http://josephbulger.com/blog/2009/07/06/trying-out-microsoft-hohm-save-energy-save-money</id>
     <content type="html"><![CDATA[<p>I&rsquo;m trying out a new product Microsoft is releasing on the web called <a href="http://www.microsoft-hohm.com">Hohm</a>.  It&rsquo;s a web site dedicated to tracking your energy expenditure and cost, so that you can reduce your energy consumption and also save you some cash along the way.</p>
 
 <!-- more -->

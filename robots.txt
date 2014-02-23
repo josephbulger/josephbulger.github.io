@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://josephbulger.github.io/sitemap.xml 
+Sitemap: http://josephbulger.com/sitemap.xml 

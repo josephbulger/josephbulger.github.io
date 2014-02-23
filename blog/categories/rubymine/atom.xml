@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Rubymine | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/rubymine/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/rubymine/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learning Ruby on Rails: Installing RubyMine]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine/"/>
+    <link href="http://josephbulger.com/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine/"/>
     <updated>2011-05-21T14:28:29-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine</id>
+    <id>http://josephbulger.com/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine</id>
     <content type="html"><![CDATA[<p>RubyMine is a Jetbrains product for developing ruby applications.  I use a lot of Jetbrains products, which is why I&rsquo;m giving RubyMine a run through.  I&rsquo;m hoping it will be as good as their other products. Since I&rsquo;m a .NET developer, I&rsquo;m thinking it will help me bridge the gap between the typical environment I&rsquo;m used to using (Visual Studio 2010) and RoR.<!-- more --></p>
 
 <p>Now, before we get to install RubyMine, there is one caveat that we have to take care of.  You have to have a java runtime on your linux distro in order to run RubyMine, but it can <strong>not </strong>be OpenJDK, so if you have that installed (I did), then you have to uninstall it first, and install another one.</p>

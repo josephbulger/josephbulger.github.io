@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Model Binding | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/model-binding/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/model-binding/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ASP.NET MVC Model Binding: The Ins and Outs]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs/"/>
+    <link href="http://josephbulger.com/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs/"/>
     <updated>2011-08-22T08:00:18-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs</id>
+    <id>http://josephbulger.com/blog/2011/08/22/asp-net-mvc-model-binding-the-ins-and-outs</id>
     <content type="html"><![CDATA[<p>Model Binding can be a tricky thing to get right with MVC. Dealing with flat POCOs works fine, but when you start getting into more complex, truly object oriented domain objects, things get out of hand pretty quickly.</p>
 
 <!-- more -->

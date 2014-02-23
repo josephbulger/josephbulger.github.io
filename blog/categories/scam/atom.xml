@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Scam | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/scam/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/scam/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Simple Way to See if Someone Is Spam Scamming You]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you/"/>
+    <link href="http://josephbulger.com/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you/"/>
     <updated>2011-01-21T03:19:14-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you</id>
+    <id>http://josephbulger.com/blog/2011/01/21/a-simple-way-to-see-if-someone-is-spam-scamming-you</id>
     <content type="html"><![CDATA[<p>I hate having to sign up for anything on the internet. If I can avoid it I will, but nevertheless at some point you’re going to have to sign up for something.</p>
 
 <!-- more -->

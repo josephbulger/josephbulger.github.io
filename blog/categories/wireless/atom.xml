@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Wireless | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/wireless/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/wireless/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Wireless Adapter Traps]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/08/wireless-adapter-traps/"/>
+    <link href="http://josephbulger.com/blog/2011/08/08/wireless-adapter-traps/"/>
     <updated>2011-08-08T04:00:39-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/08/wireless-adapter-traps</id>
+    <id>http://josephbulger.com/blog/2011/08/08/wireless-adapter-traps</id>
     <content type="html"><![CDATA[<p>Ok so you go to the store and you&rsquo;re looking around for an awesome deal on a Wireless-N adapter, and you find one for only $14!  "How can this be!?&ldquo; you might ask yourself?  Well, let me explain something to you before you end up with the same situation I find myself in right now.</p>
 
 <!-- more -->
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[Linksys E4200: Retrospective]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/08/07/linksys-e4200-retrospective/"/>
+    <link href="http://josephbulger.com/blog/2011/08/07/linksys-e4200-retrospective/"/>
     <updated>2011-08-07T12:25:13-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/08/07/linksys-e4200-retrospective</id>
+    <id>http://josephbulger.com/blog/2011/08/07/linksys-e4200-retrospective</id>
     <content type="html"><![CDATA[<p>I just recently retired my <a href="http://en.wikipedia.org/wiki/Linksys_WRT54G_series">WRT54G</a> in favor or a Wireless N Router.  I ended up going with the <a href="http://homestore.cisco.com/en-us/Routers/Linksys-E4200-MaximumPerformance-Wirelessn-router_stcVVproductId122703236VVcatId551966VVviewprod.htm">Linksys E4200</a> for a number of reasons.<!-- more --></p>
 
 <p>First of all, it&rsquo;s a high performance router, and so far it&rsquo;s lived up to that expectation.  What do I mean by a high performance router?</p>

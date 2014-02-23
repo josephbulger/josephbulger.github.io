@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Interface Segragation Principle | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/interface-segragation-principle/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/interface-segragation-principle/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Interface Segregation Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
     <updated>2011-09-12T08:00:26-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
     <content type="html"><![CDATA[<p>Interface Segregation Principle (ISP), focuses on the idea that it&rsquo;s better to have many small specific interfaces that define one concept, then to have one big contract that encompasses many concepts in one.</p>
 
 <!-- more -->

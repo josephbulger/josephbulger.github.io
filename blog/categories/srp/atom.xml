@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Srp | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/srp/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/srp/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The SRP Swiss Army Knife]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/03/07/srp-swiss-army-knife/"/>
+    <link href="http://josephbulger.com/blog/2009/03/07/srp-swiss-army-knife/"/>
     <updated>2009-03-07T03:06:41-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/03/07/srp-swiss-army-knife</id>
+    <id>http://josephbulger.com/blog/2009/03/07/srp-swiss-army-knife</id>
     <content type="html"><![CDATA[<p>I read this <a href="http://www.lostechies.com/blogs/gabrielschenker/archive/2009/01/21/real-swiss-don-t-need-srp-do-they.aspx">blog</a> a few weeks back, and while the principles that the author was trying to convey I don’t disagree with, I did have a hard time stomaching the idea that Swiss army knives made for bad OOP design.<!-- more -->  Why?  Because I really like Swiss army knives!  I mean come on, what other device lets you have 100+ different kinds of knives, a compass, a light, a magnifying glass, and a USB drive all in one “disappears in your pocket” size container???</p>
 
 <p>Ok so I know what most of you are thinking… I’m just PROVING that they violate SRP right?  Not actually.  In case you’re not familiar with the principle of SRP, check out this <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">wiki</a>.  The reason why I believe the Swiss army knife does NOT violate SRP is because my general rule of them is, if I can state the responsibility of the object in question in one single statement, then I have identified it’s SINGLE responsibility.  So I have to ask myself, what is the SINGLE thing that a Swiss army knife does?</p>

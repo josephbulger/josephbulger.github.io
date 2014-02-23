@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Agile | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/agile/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/agile/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Story of a Family Becoming Agile]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/12/16/story-of-a-family-becoming-agile/"/>
+    <link href="http://josephbulger.com/blog/2009/12/16/story-of-a-family-becoming-agile/"/>
     <updated>2009-12-16T05:54:18-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/12/16/story-of-a-family-becoming-agile</id>
+    <id>http://josephbulger.com/blog/2009/12/16/story-of-a-family-becoming-agile</id>
     <content type="html"><![CDATA[<p>I’m going to be making my family “agile” in the upcoming weeks. What does that mean exactly? Well, I’ll be posting more about it, but essentially we’re going to organize our family activities around agile principles. These are software management principles that I have been studying (and trying to apply) for a number of years now. They have proven to be very effective at my work, and I can see how they would be equally effective at home, as well.</p>
 
 <!-- more -->

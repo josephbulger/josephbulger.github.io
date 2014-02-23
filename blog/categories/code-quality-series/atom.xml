@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Code Quality Series | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/code-quality-series/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/code-quality-series/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Keeping Your Code Small]]></title>
-    <link href="http://josephbulger.github.io/blog/2013/04/27/keep-methods-small/"/>
+    <link href="http://josephbulger.com/blog/2013/04/27/keep-methods-small/"/>
     <updated>2013-04-27T09:25:50-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2013/04/27/keep-methods-small</id>
+    <id>http://josephbulger.com/blog/2013/04/27/keep-methods-small</id>
     <content type="html"><![CDATA[<p>I&rsquo;m starting to put together a video series on code quality. This is aimed at helping my teams produce code more effectively by utilizing good programming principles.</p>
 
 <!-- more -->

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ubuntu | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ubuntu as a VM]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm/"/>
+    <link href="http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm/"/>
     <updated>2011-05-17T09:58:02-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm</id>
+    <id>http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-installing-ubuntu-as-a-vm</id>
     <content type="html"><![CDATA[<p>Installing Ubuntu as a VM is vastly simpler (and faster) than installing any Windows distro.</p>
 
 <p>As an aside, I&rsquo;m using VMWare&rsquo;s Workstation product, in case you&rsquo;re wondering what VM software I use, but you could do this just as easily with other products.</p>

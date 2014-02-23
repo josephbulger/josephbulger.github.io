@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Overview | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/overview/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/overview/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Five Common SEO Mistakes]]></title>
-    <link href="http://josephbulger.github.io/blog/2009/03/07/seo-mistakes/"/>
+    <link href="http://josephbulger.com/blog/2009/03/07/seo-mistakes/"/>
     <updated>2009-03-07T03:02:47-05:00</updated>
-    <id>http://josephbulger.github.io/blog/2009/03/07/seo-mistakes</id>
+    <id>http://josephbulger.com/blog/2009/03/07/seo-mistakes</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve come across this many times when building sites for clients.  ASP.NET is really great for building dynamic content pages, but not so great when you&rsquo;re trying to expose those dynamic pages to a crawler or bot used by search engines.  Usually I&rsquo;ve found myself having to index the crawler or bot to go find specific pages if I wanted something to show up explicitly.  For instance, you might have a product that you really want to showcase and have searchable.  The product&rsquo;s URL, however might be parameter based, something like <a href="http://www.yourstore.com/productdetails.aspx?productid=5.">http://www.yourstore.com/productdetails.aspx?productid=5.</a></p>
 
 <!-- more -->

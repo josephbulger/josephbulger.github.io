@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Data Structures | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/data-structures/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/data-structures/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Datastructures, Objects, and Why Hybrids Are Evil]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/"/>
+    <link href="http://josephbulger.com/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil/"/>
     <updated>2011-09-10T08:31:50-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil</id>
+    <id>http://josephbulger.com/blog/2011/09/10/datastructures-objects-and-why-hybrids-are-evil</id>
     <content type="html"><![CDATA[<p>I was writing this code that let&rsquo;s interviewees code problems for me, and it verifies that the interviewee actually writes something that works. I got to a point in my printer classes that I wasn&rsquo;t liking, and I thought I&rsquo;d share it.</p>
 
 <!-- more -->

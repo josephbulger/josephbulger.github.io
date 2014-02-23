@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Github | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/github/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Gist @ GitHub and Why It's Awesome]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome/"/>
+    <link href="http://josephbulger.com/blog/2011/10/18/gist-github-and-why-its-awesome/"/>
     <updated>2011-10-18T04:00:08-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/10/18/gist-github-and-why-its-awesome</id>
+    <id>http://josephbulger.com/blog/2011/10/18/gist-github-and-why-its-awesome</id>
     <content type="html"><![CDATA[<p>In case you haven&rsquo;t noticed, a lot of my posts recently have been using <a href="https://gist.github.com/">gist</a>. It&rsquo;s an awesome tool that&rsquo;s freely available which allows you to write snippets of code in a variety of languages.</p>
 
 <!-- more -->

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Lsp | Joseph Bulger]]></title>
-  <link href="http://josephbulger.github.io/blog/categories/lsp/atom.xml" rel="self"/>
-  <link href="http://josephbulger.github.io/"/>
-  <updated>2014-02-09T20:46:29-05:00</updated>
-  <id>http://josephbulger.github.io/</id>
+  <link href="http://josephbulger.com/blog/categories/lsp/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-02-23T14:56:17-05:00</updated>
+  <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SOLID Principles: Liskov Substitution Principle]]></title>
-    <link href="http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle/"/>
+    <link href="http://josephbulger.com/blog/2011/09/06/solid-principles-liskov-substitution-principle/"/>
     <updated>2011-09-06T08:00:10-04:00</updated>
-    <id>http://josephbulger.github.io/blog/2011/09/06/solid-principles-liskov-substitution-principle</id>
+    <id>http://josephbulger.com/blog/2011/09/06/solid-principles-liskov-substitution-principle</id>
     <content type="html"><![CDATA[<p>Liskov Substitution Principle, or LSP, is actually a very simple concept to understand in a strongly typed language. In languages like C#, or VB.NET, LSP often gets taken for granted, but I&rsquo;ve seen cases where even in strongly typed languages you can violate LSP.</p>
 
 <!-- more -->
