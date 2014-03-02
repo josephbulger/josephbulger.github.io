@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.com/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-02-23T18:22:36-05:00</updated>
+  <updated>2014-03-02T14:18:38-05:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,116 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up BitSync on my NAS]]></title>
+    <link href="http://josephbulger.com/blog/2014/03/02/setting-up-bitsync-on-my-nas/"/>
+    <updated>2014-03-02T13:36:53-05:00</updated>
+    <id>http://josephbulger.com/blog/2014/03/02/setting-up-bitsync-on-my-nas</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been playing around with <a href="http://www.bittorrent.com/sync">BitTorrent Sync</a> lately, and recently I discovered that they have an ARM variant. So that got me thinking, maybe I could put this on my NAS at home.</p>
+
+<!-- more -->
+
+
+<p>First things first, I grabbed the arm download <a href="http://www.bittorrent.com/sync/downloads">here</a>. Make sure you pick the ARM version.</p>
+
+<p>Next I extracted the files on my computer. The only file I actually care about in there was the bitsync program. I took that file and I uploaded it into one of my NAS&#8217; shares.</p>
+
+<p>Next thing I did was ssh into my NAS.</p>
+
+<p>In my ssh terminal I created a new directory just to hold the btsync program. I called it bitsync. Then I moved the file from the share I put bitsync in to this new folder.</p>
+
+<blockquote><p>$ mv /shares/Public/btsync /bitsync/btsync</p></blockquote>
+
+<p>Now it&rsquo;s in a place that isn&rsquo;t visible to other users of the NAS, which is nice because I don&rsquo;t have to worry about other users messing with it. Next step is to grant execute priviledges.</p>
+
+<blockquote><p>$ chmod +x /bitsync/btsync</p></blockquote>
+
+<p>Now run</p>
+
+<blockquote><p>$ /bitsync/./btsync</p></blockquote>
+
+<p>and that started it up. Now, that works great for a one time use, but if the NAS restarts then I have to manually ssh in and start it up again. Not very cool, so naturally I had to get it to start on boot.</p>
+
+<blockquote><p>$ sudo nano /etc/init.d/btsync</p></blockquote>
+
+<p>I&rsquo;m going to create a script to start up btsync on init.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#! /bin/sh
+</span><span class='line'># /etc/init.d/btsync
+</span><span class='line'>#
+</span><span class='line'> 
+</span><span class='line'># Carry out specific functions when asked to by the system
+</span><span class='line'>case "$1" in 
+</span><span class='line'>start)
+</span><span class='line'>    /bitsync/btsync
+</span><span class='line'>    ;;
+</span><span class='line'>stop)
+</span><span class='line'>    killall btsync
+</span><span class='line'>    ;;
+</span><span class='line'>*)
+</span><span class='line'>    echo "Usage: /etc/init.d/btsync {start|stop}"
+</span><span class='line'>    exit 1
+</span><span class='line'>    ;;
+</span><span class='line'>esac
+</span><span class='line'> 
+</span><span class='line'>exit 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This let&rsquo;s my start and stop the btsync program, and the NAS will know to toggle the starting or stopping depending on what the program is already doing.</p>
+
+<p>Hit Ctrl + X to save, and make sure to confirm the save with Y (and hit enter). Once you&rsquo;ve finished saving, you&rsquo;ll be back in the terminal.</p>
+
+<p>Next thing I had to do was set up priveledges on the file.</p>
+
+<blockquote><p>$ sudo chmod 755 /etc/init.d/btsync</p></blockquote>
+
+<p>So once you&rsquo;ve done that, you can now test it out by doing.</p>
+
+<blockquote><p>$ sudo /etc/init.d/btsync start</p></blockquote>
+
+<p>to start and</p>
+
+<blockquote><p>$ sudo /etc/init.d/btsync stop</p></blockquote>
+
+<p>to stop it. Finally we need to set up the service to start at boot up, so</p>
+
+<blockquote><p>$ sudo update-rc.d btsync defaults</p></blockquote>
+
+<p>At this point, I had everything set up and working great.</p>
+
+<p>I went to <a href="http://josephbulger.com/#">http://[NASIP]:8888/</a> and bam, hit my bittorrent sync url with no worries.</p>
+
+<p>One quick note: using the web server access point, when you add sync folder, you have to actually create the folders separately and then add an already existing folder through the web ui.</p>
+
+<p>On my setup, I have a shared folder that holds all the data that I&rsquo;m serving up.</p>
+
+<p>So I went in there through my NAS interface and created a new share and I called it &ldquo;sync&rdquo;. I gave a couple users access.</p>
+
+<p>Then I went back into my ssh terminal and I created a separate directory outside of the shares to hold the bitsync program. One hiccup I ran into was that I had some permission problems on the directories I created with my NAS user. The underlying issue was pretty simple. I had taken away rights on my NAS user, and then created the directories. I then added the rights to the user to the sync folder I talked about earlier. However, the NAS wasn&rsquo;t smart enough to actually go through all the sub folders and set up privs inside the sync folder. I was told that I could restart the NAS and it would fix itself, but since I was still setting this up, I opted to just delete the folders, and readd them with the users&#8217; privs the way I wanted them to be to begin with.</p>
+
+<p>Worked like a charm.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Gotchya: Enumerable side effect I didn't see coming]]></title>
@@ -1049,24 +1159,6 @@ Let&rsquo;s say you have a car like this</p>
 <p>There are a lot of things that can hinder your team&rsquo;s productivity. Most of them have been solved by other teams already using automation. You&rsquo;re team probably isn&rsquo;t special, and their problems have probably been solved by other (bigger and more productive) teams. See what they&rsquo;ve done. Copy them, mimic them, learn from them.</p>
 
 <p>Get your team out of chaos, so they can learn, and make your job easier.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SOLID Principles: Interface segregation principle]]></title>
-    <link href="http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle/"/>
-    <updated>2011-09-12T08:00:26-04:00</updated>
-    <id>http://josephbulger.com/blog/2011/09/12/solid-principles-interface-segregation-principle</id>
-    <content type="html"><![CDATA[<p>Interface Segregation Principle (ISP), focuses on the idea that it&rsquo;s better to have many small specific interfaces that define one concept, then to have one big contract that encompasses many concepts in one.</p>
-
-<!-- more -->
-
-
-<p>I think a prime example of an interface that violates this principle would be <a href="http://msdn.microsoft.com/en-us/library/f1kyba5e.aspx">MembershipProvider </a>class which is commonly used in ASP.NET applications. Granted, this isn&rsquo;t technically an interface (it&rsquo;s actually an abstract class), but it demonstrates the principle perfectly. If you&rsquo;ve ever tried to make your own custom membership provider, and you&rsquo;ve had to implement this beast, you already know the pain involved. There are a ridiculous number of methods involved with this class. There are so many, actually, that the best practice inside many .NET circles has been to simply throw a NotImplementedException for any methods you don&rsquo;t want to spend the time implementing.</p>
-
-<p>The solution would be to actually break up this abstract class into many smaller classes, so the developer could extend the parts that needs to be customized, and leave the rest alone.</p>
-
-<p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/94">Check out this dime cast</a>.</p>
 ]]></content>
   </entry>
   

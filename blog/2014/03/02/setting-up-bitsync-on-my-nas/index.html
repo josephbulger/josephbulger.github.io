@@ -1,0 +1,257 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Setting up BitSync on my NAS - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="What options are out there to setup a dropbox or sky drive 'like' infrastructure inside your very own home? Try using peer to peer syncing technology &hellip;">
+	<meta name="keywords" content="bittorrent sync, dropbox, skydrive, onedrive, nas, peer to peer">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.com/blog/2014/03/02/setting-up-bitsync-on-my-nas/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-47917400-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>a Dark Matter Developer</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Setting Up BitSync on My NAS</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I&rsquo;ve been playing around with <a href="http://www.bittorrent.com/sync">BitTorrent Sync</a> lately, and recently I discovered that they have an ARM variant. So that got me thinking, maybe I could put this on my NAS at home.</p>
+
+<!-- more -->
+
+
+<p>First things first, I grabbed the arm download <a href="http://www.bittorrent.com/sync/downloads">here</a>. Make sure you pick the ARM version.</p>
+
+<p>Next I extracted the files on my computer. The only file I actually care about in there was the bitsync program. I took that file and I uploaded it into one of my NAS&#8217; shares.</p>
+
+<p>Next thing I did was ssh into my NAS.</p>
+
+<p>In my ssh terminal I created a new directory just to hold the btsync program. I called it bitsync. Then I moved the file from the share I put bitsync in to this new folder.</p>
+
+<blockquote><p>$ mv /shares/Public/btsync /bitsync/btsync</p></blockquote>
+
+<p>Now it&rsquo;s in a place that isn&rsquo;t visible to other users of the NAS, which is nice because I don&rsquo;t have to worry about other users messing with it. Next step is to grant execute priviledges.</p>
+
+<blockquote><p>$ chmod +x /bitsync/btsync</p></blockquote>
+
+<p>Now run</p>
+
+<blockquote><p>$ /bitsync/./btsync</p></blockquote>
+
+<p>and that started it up. Now, that works great for a one time use, but if the NAS restarts then I have to manually ssh in and start it up again. Not very cool, so naturally I had to get it to start on boot.</p>
+
+<blockquote><p>$ sudo nano /etc/init.d/btsync</p></blockquote>
+
+<p>I&rsquo;m going to create a script to start up btsync on init.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#! /bin/sh
+</span><span class='line'># /etc/init.d/btsync
+</span><span class='line'>#
+</span><span class='line'> 
+</span><span class='line'># Carry out specific functions when asked to by the system
+</span><span class='line'>case "$1" in 
+</span><span class='line'>start)
+</span><span class='line'>    /bitsync/btsync
+</span><span class='line'>    ;;
+</span><span class='line'>stop)
+</span><span class='line'>    killall btsync
+</span><span class='line'>    ;;
+</span><span class='line'>*)
+</span><span class='line'>    echo "Usage: /etc/init.d/btsync {start|stop}"
+</span><span class='line'>    exit 1
+</span><span class='line'>    ;;
+</span><span class='line'>esac
+</span><span class='line'> 
+</span><span class='line'>exit 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This let&rsquo;s my start and stop the btsync program, and the NAS will know to toggle the starting or stopping depending on what the program is already doing.</p>
+
+<p>Hit Ctrl + X to save, and make sure to confirm the save with Y (and hit enter). Once you&rsquo;ve finished saving, you&rsquo;ll be back in the terminal.</p>
+
+<p>Next thing I had to do was set up priveledges on the file.</p>
+
+<blockquote><p>$ sudo chmod 755 /etc/init.d/btsync</p></blockquote>
+
+<p>So once you&rsquo;ve done that, you can now test it out by doing.</p>
+
+<blockquote><p>$ sudo /etc/init.d/btsync start</p></blockquote>
+
+<p>to start and</p>
+
+<blockquote><p>$ sudo /etc/init.d/btsync stop</p></blockquote>
+
+<p>to stop it. Finally we need to set up the service to start at boot up, so</p>
+
+<blockquote><p>$ sudo update-rc.d btsync defaults</p></blockquote>
+
+<p>At this point, I had everything set up and working great.</p>
+
+<p>I went to <a href="/#">http://[NASIP]:8888/</a> and bam, hit my bittorrent sync url with no worries.</p>
+
+<p>One quick note: using the web server access point, when you add sync folder, you have to actually create the folders separately and then add an already existing folder through the web ui.</p>
+
+<p>On my setup, I have a shared folder that holds all the data that I&rsquo;m serving up.</p>
+
+<p>So I went in there through my NAS interface and created a new share and I called it &ldquo;sync&rdquo;. I gave a couple users access.</p>
+
+<p>Then I went back into my ssh terminal and I created a separate directory outside of the shares to hold the bitsync program. One hiccup I ran into was that I had some permission problems on the directories I created with my NAS user. The underlying issue was pretty simple. I had taken away rights on my NAS user, and then created the directories. I then added the rights to the user to the sync folder I talked about earlier. However, the NAS wasn&rsquo;t smart enough to actually go through all the sub folders and set up privs inside the sync folder. I was told that I could restart the NAS and it would fix itself, but since I was still setting this up, I opted to just delete the folders, and readd them with the users&#8217; privs the way I wanted them to be to begin with.</p>
+
+<p>Worked like a charm.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

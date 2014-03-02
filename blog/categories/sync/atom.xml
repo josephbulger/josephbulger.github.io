@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sync | Joseph Bulger]]></title>
+  <link href="http://josephbulger.com/blog/categories/sync/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-03-02T14:18:38-05:00</updated>
+  <id>http://josephbulger.com/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up BitSync on My NAS]]></title>
+    <link href="http://josephbulger.com/blog/2014/03/02/setting-up-bitsync-on-my-nas/"/>
+    <updated>2014-03-02T13:36:53-05:00</updated>
+    <id>http://josephbulger.com/blog/2014/03/02/setting-up-bitsync-on-my-nas</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been playing around with <a href="http://www.bittorrent.com/sync">BitTorrent Sync</a> lately, and recently I discovered that they have an ARM variant. So that got me thinking, maybe I could put this on my NAS at home.</p>
+
+<!-- more -->
+
+
+<p>First things first, I grabbed the arm download <a href="http://www.bittorrent.com/sync/downloads">here</a>. Make sure you pick the ARM version.</p>
+
+<p>Next I extracted the files on my computer. The only file I actually care about in there was the bitsync program. I took that file and I uploaded it into one of my NAS' shares.</p>
+
+<p>Next thing I did was ssh into my NAS.</p>
+
+<p>In my ssh terminal I created a new directory just to hold the btsync program. I called it bitsync. Then I moved the file from the share I put bitsync in to this new folder.</p>
+
+<blockquote><p>$ mv /shares/Public/btsync /bitsync/btsync</p></blockquote>
+
+<p>Now it&rsquo;s in a place that isn&rsquo;t visible to other users of the NAS, which is nice because I don&rsquo;t have to worry about other users messing with it. Next step is to grant execute priviledges.</p>
+
+<blockquote><p>$ chmod +x /bitsync/btsync</p></blockquote>
+
+<p>Now run</p>
+
+<blockquote><p>$ /bitsync/./btsync</p></blockquote>
+
+<p>and that started it up. Now, that works great for a one time use, but if the NAS restarts then I have to manually ssh in and start it up again. Not very cool, so naturally I had to get it to start on boot.</p>
+
+<blockquote><p>$ sudo nano /etc/init.d/btsync</p></blockquote>
+
+<p>I&rsquo;m going to create a script to start up btsync on init.</p>
+
+<p>```</p>
+
+<pre><code>#! /bin/sh
+# /etc/init.d/btsync
+#
+
+# Carry out specific functions when asked to by the system
+case "$1" in 
+start)
+    /bitsync/btsync
+    ;;
+stop)
+    killall btsync
+    ;;
+*)
+    echo "Usage: /etc/init.d/btsync {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
+</code></pre>
+
+<p>```</p>
+
+<p>This let&rsquo;s my start and stop the btsync program, and the NAS will know to toggle the starting or stopping depending on what the program is already doing.</p>
+
+<p>Hit Ctrl + X to save, and make sure to confirm the save with Y (and hit enter). Once you&rsquo;ve finished saving, you&rsquo;ll be back in the terminal.</p>
+
+<p>Next thing I had to do was set up priveledges on the file.</p>
+
+<blockquote><p>$ sudo chmod 755 /etc/init.d/btsync</p></blockquote>
+
+<p>So once you&rsquo;ve done that, you can now test it out by doing.</p>
+
+<blockquote><p>$ sudo /etc/init.d/btsync start</p></blockquote>
+
+<p>to start and</p>
+
+<blockquote><p>$ sudo /etc/init.d/btsync stop</p></blockquote>
+
+<p>to stop it. Finally we need to set up the service to start at boot up, so</p>
+
+<blockquote><p>$ sudo update-rc.d btsync defaults</p></blockquote>
+
+<p>At this point, I had everything set up and working great.</p>
+
+<p>I went to <a href="/#">http://[NASIP]:8888/</a> and bam, hit my bittorrent sync url with no worries.</p>
+
+<p>One quick note: using the web server access point, when you add sync folder, you have to actually create the folders separately and then add an already existing folder through the web ui.</p>
+
+<p>On my setup, I have a shared folder that holds all the data that I&rsquo;m serving up.</p>
+
+<p>So I went in there through my NAS interface and created a new share and I called it &ldquo;sync&rdquo;. I gave a couple users access.</p>
+
+<p>Then I went back into my ssh terminal and I created a separate directory outside of the shares to hold the bitsync program. One hiccup I ran into was that I had some permission problems on the directories I created with my NAS user. The underlying issue was pretty simple. I had taken away rights on my NAS user, and then created the directories. I then added the rights to the user to the sync folder I talked about earlier. However, the NAS wasn&rsquo;t smart enough to actually go through all the sub folders and set up privs inside the sync folder. I was told that I could restart the NAS and it would fix itself, but since I was still setting this up, I opted to just delete the folders, and readd them with the users' privs the way I wanted them to be to begin with.</p>
+
+<p>Worked like a charm.</p>
+]]></content>
+  </entry>
+  
+</feed>
