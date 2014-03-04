@@ -1,0 +1,179 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>When is it ok to violate the D in SOLID? - Joseph Bulger</title>
+	<meta name="author" content="Joseph Bulger">
+
+	
+	<meta name="description" content="When Is It Ok to Violate the D in SOLID? I&rsquo;m about to begin my annual re-read of Clean Code, but before I start this year I thought it would &hellip;">
+	<meta name="keywords" content="dependency inversion principle, solid, uncle bob, software craftsmanship, violate">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Joseph Bulger" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://josephbulger.com/blog/2014/03/03/when-is-it-ok-to-violate-the-d-in-solid/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-47917400-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<img src="http://www.gravatar.com/avatar/5db37e04905df77ec0c90dc7faebadfc?s=160" alt="Profile Picture" style="width: 160px;" />
+	
+</div>
+<hgroup>
+  <h1><a href="/">Joseph Bulger</a></h1>
+  
+    <h2>a Dark Matter Developer</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/josephbulger" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/josephbulger" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">When Is It Ok to Violate the D in SOLID?</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I&rsquo;m about to begin my annual re-read of <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>, but before I start this year I thought it would be idea to touch on a subject that I haven&rsquo;t actually seen a lot of discussion on.</p>
+
+<p>That issue begins with a premise: we all violate SOLID principles in our code. We <em>have</em> to. You can&rsquo;t write any non-trivial project without violating at least one of the principles. Most of the time you&rsquo;ll find yourself choosing one over another, and that is where I thought an intersting topic of conversation could be had.</p>
+
+<p>When is it ok to violate SOLID principles? For this post, specifically the <a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">D</a></p>
+
+<!-- more -->
+
+
+<p>One other thing before we really start diving in. This topic is going to be highly subjective, by it&rsquo;s nature I presume. I&rsquo;m speaking of my current experience, which admittedly is not as extensive as a lot of software craftsman out there. I do, however, think I have enough experience to at least provide some insight into the discussion. If nothing else, I&rsquo;ll be able to read this in 6 months and laugh at myself for being so dumb.</p>
+
+<p>Let&rsquo;s get one thing clear right off the bat. It&rsquo;s not the Dependency <strong>Injection</strong> Principle, it&rsquo;s the Dependency <strong>Inversion</strong> Principle (DIP for short). Meaning, you are inverting the dependencies so that high level policy does not depend on low level details. I&rsquo;m going to assume you know what that entails.</p>
+
+<p>So when is ok to violate this principle?</p>
+
+<p>My experience so far has been this. When I am building software, I specifically pay very close attention to one thing in regards to DIP: my application boundaries. Across boundaries, I make it a point to never violate DIP. If you don&rsquo;t know what I&rsquo;m referring to when I talk about application boundaries, then you need to read up on Component Based Design. In general, though, I&rsquo;m talking about breaking up your application into Components that are specific to a type of user. It should be completely based on a business vertical. Once you have all your Components identified, then you can start drawing boundaries around them. This is where things get interesting. The general rule is very simple: do not have your dependencies go both ways across boundaries.</p>
+
+<p>For example, let&rsquo;s say you have a Component called Scheduling, and another component called Packaging. These two Components interact with each other, so there is a boundary there. The question is, what direction should the dependency go? The answer of course, using DIP, is to figure out which Component is the higher level policy, and which is a detail. In this example, Scheduling is the higher level policy, and Packaging is just a detail of that overall workflow (albeit for a different user base). This means that the dependency arrows goes across the Scheduling / Packaging boundary pointing from Packaging over to Scheduling.</p>
+
+<p>So on my projects, it is never ok to violate DIP when dealing with Component boundaries. However, inside a Component it&rsquo;s not as clear cut. For example, inside the Scheduling Component there may be a workflow that exists only there, and it doesn&rsquo;t venture outside of the component. No other Component ever sees this workflow, no one even knows it exists. On top of that, the code footprint for that workflow is small. In situations such as this, DIP can and will be violated in favor of adhering more strictly to other SOLID principles.</p>
+
+<p>I want to also be clear about one thing here. Notice how I said that DIP can be violated <em>in favor of other principles</em>. I do not advocate violating principles out of sheer laziness. That is not the point. The point is, as a craftsman, there will be times where you have to choose certain principles over others. And so, what I&rsquo;m really getting at here is, inside a Component boundary, it&rsquo;s ok to violate DIP in favor of say, for example, SRP. In that case SRP may take a higher precedent than DIP. That would not be the case if you were crossing Component boundaries, but since you&rsquo;re not, then other principles can take higher priority.</p>
+
+<p>This brings up an interesting question, though. Is there a SOLID principle that you should never, under any circumstances, violate? I&rsquo;ll leave that one for another time.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Joseph Bulger -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

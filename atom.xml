@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.com/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-03-02T14:18:38-05:00</updated>
+  <updated>2014-03-03T22:51:34-05:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When is it ok to violate the D in SOLID?]]></title>
+    <link href="http://josephbulger.com/blog/2014/03/03/when-is-it-ok-to-violate-the-d-in-solid/"/>
+    <updated>2014-03-03T21:37:04-05:00</updated>
+    <id>http://josephbulger.com/blog/2014/03/03/when-is-it-ok-to-violate-the-d-in-solid</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m about to begin my annual re-read of <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>, but before I start this year I thought it would be idea to touch on a subject that I haven&rsquo;t actually seen a lot of discussion on.</p>
+
+<p>That issue begins with a premise: we all violate SOLID principles in our code. We <em>have</em> to. You can&rsquo;t write any non-trivial project without violating at least one of the principles. Most of the time you&rsquo;ll find yourself choosing one over another, and that is where I thought an intersting topic of conversation could be had.</p>
+
+<p>When is it ok to violate SOLID principles? For this post, specifically the <a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">D</a></p>
+
+<!-- more -->
+
+
+<p>One other thing before we really start diving in. This topic is going to be highly subjective, by it&rsquo;s nature I presume. I&rsquo;m speaking of my current experience, which admittedly is not as extensive as a lot of software craftsman out there. I do, however, think I have enough experience to at least provide some insight into the discussion. If nothing else, I&rsquo;ll be able to read this in 6 months and laugh at myself for being so dumb.</p>
+
+<p>Let&rsquo;s get one thing clear right off the bat. It&rsquo;s not the Dependency <strong>Injection</strong> Principle, it&rsquo;s the Dependency <strong>Inversion</strong> Principle (DIP for short). Meaning, you are inverting the dependencies so that high level policy does not depend on low level details. I&rsquo;m going to assume you know what that entails.</p>
+
+<p>So when is ok to violate this principle?</p>
+
+<p>My experience so far has been this. When I am building software, I specifically pay very close attention to one thing in regards to DIP: my application boundaries. Across boundaries, I make it a point to never violate DIP. If you don&rsquo;t know what I&rsquo;m referring to when I talk about application boundaries, then you need to read up on Component Based Design. In general, though, I&rsquo;m talking about breaking up your application into Components that are specific to a type of user. It should be completely based on a business vertical. Once you have all your Components identified, then you can start drawing boundaries around them. This is where things get interesting. The general rule is very simple: do not have your dependencies go both ways across boundaries.</p>
+
+<p>For example, let&rsquo;s say you have a Component called Scheduling, and another component called Packaging. These two Components interact with each other, so there is a boundary there. The question is, what direction should the dependency go? The answer of course, using DIP, is to figure out which Component is the higher level policy, and which is a detail. In this example, Scheduling is the higher level policy, and Packaging is just a detail of that overall workflow (albeit for a different user base). This means that the dependency arrows goes across the Scheduling / Packaging boundary pointing from Packaging over to Scheduling.</p>
+
+<p>So on my projects, it is never ok to violate DIP when dealing with Component boundaries. However, inside a Component it&rsquo;s not as clear cut. For example, inside the Scheduling Component there may be a workflow that exists only there, and it doesn&rsquo;t venture outside of the component. No other Component ever sees this workflow, no one even knows it exists. On top of that, the code footprint for that workflow is small. In situations such as this, DIP can and will be violated in favor of adhering more strictly to other SOLID principles.</p>
+
+<p>I want to also be clear about one thing here. Notice how I said that DIP can be violated <em>in favor of other principles</em>. I do not advocate violating principles out of sheer laziness. That is not the point. The point is, as a craftsman, there will be times where you have to choose certain principles over others. And so, what I&rsquo;m really getting at here is, inside a Component boundary, it&rsquo;s ok to violate DIP in favor of say, for example, SRP. In that case SRP may take a higher precedent than DIP. That would not be the case if you were crossing Component boundaries, but since you&rsquo;re not, then other principles can take higher priority.</p>
+
+<p>This brings up an interesting question, though. Is there a SOLID principle that you should never, under any circumstances, violate? I&rsquo;ll leave that one for another time.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting up BitSync on my NAS]]></title>
@@ -1119,46 +1151,6 @@ Let&rsquo;s say you have a car like this</p>
 <p>So how does the engine get created? Obviously something is passing in the engine to the Car, but what? You need a new class. Maybe a CarManufacturer or something, which is responsible for manufacturing cars. Part of that responsibility would be putting an engine in a car.</p>
 
 <p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/96">Check out this dime cast</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Team Maturity: Chaos]]></title>
-    <link href="http://josephbulger.com/blog/2011/09/13/team-maturity-chaos/"/>
-    <updated>2011-09-13T14:00:10-04:00</updated>
-    <id>http://josephbulger.com/blog/2011/09/13/team-maturity-chaos</id>
-    <content type="html"><![CDATA[<p>So how do you know if your team is in choas? Actually, most teams are in the chaos stage. Learning to identify when a team has gotten into chaos isn&rsquo;t really that hard if you follow some simple guidelines, though.</p>
-
-<!-- more -->
-
-
-<p>Ask yourself a simple question.</p>
-
-<blockquote><p>Does my team have enough time to learn new things?</p></blockquote>
-
-<p>If the answer is no, then you&rsquo;re in chaos. I&rsquo;ll go one step further. If the answer was &ldquo;no, why does my team need to learn anything?&rdquo;, then you&rsquo;re in chaos, and if you want to fix it you need to look at yourself.</p>
-
-<p>All teams need time to learn. This is important so that they can become more productive, and to move towards being self-organizing. If they can&rsquo;t learn then they&rsquo;ll never get the self-organizing stage.</p>
-
-<p>If you&rsquo;re with me so far, then you&rsquo;re probably asking</p>
-
-<blockquote><p>How do I make time for my team to learn?</p></blockquote>
-
-<p>It starts by identifying why you&rsquo;re team doesn&rsquo;t have time. Sometimes it can be as simple as giving them some extra time in the week to learn something new. Tell your team they can have 4 hours on Friday to learn whatever they want. This will let you see which people on your team are self-motivated. This is vitally important. It identifies your <strong><em>leaders</em></strong>. For those who choose not to learn anything, make it a requirement. The best way to go about doing this is to just ask people how they&rsquo;re learning is going. Maybe every Monday you ask each team member individually what thing they learned on Friday. This is great because it sets up an expectation for them that they not only have the opportunity to learn, but that you&rsquo;re <em><strong>expecting</strong></em> them to learn.</p>
-
-<p>Not all teams will have time for this. Your release cycle swamps you with work, for various reasons, and prevents you from being able to give this critical time to your team. So what then? That&rsquo;s when you&rsquo;re role become a fire fighter of sorts. You have to put out the fires. The point here, though, is to extinguish the fire, permanently. If you&rsquo;re putting out one fire, and two fires pop up in it&rsquo;s place, then you have another issue which needs to be addressed. You&rsquo;re the team leader, and it&rsquo;s your job to control the fire. You have to shield your team, that&rsquo;s your job during this stage. That means putting out fires, but it also means <em><strong>not allowing other fires to start in the first place</strong></em>.</p>
-
-<p>This is usually a good indication that you&rsquo;re lacking tools that help your team be more productive. For example, maybe your &ldquo;fire&rdquo; is releases. They take too long to do, because they&rsquo;re manual. You release often, so it&rsquo;s something you spend a lot of time on. Why isn&rsquo;t your release process automated? Take a step back, is your build process automated? No? That&rsquo;s the beginning of your problem. You can&rsquo;t have an automated release process if you don&rsquo;t have an automated build process. Another example, is it hard for your team to share projects? Do you find yourself in situations where two people are working on the same thing and stepping on each other&rsquo;s toes a lot? Does this require you to put people on separate projects so you don&rsquo;t get into a tangled web of conflicts? Yes?</p>
-
-<p>Are you using source control?</p>
-
-<p>No? Get it.</p>
-
-<p>Yes? Are you using a <em><strong>good</strong></em> source control system? Your team needs to be able to work together, and if your source control doesn&rsquo;t accommodate that it&rsquo;s probably because it&rsquo;s not so great. Try a new one. Maybe Git, or Mercurial, or if you&rsquo;re not into <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">DVCS</a>, try SVN.</p>
-
-<p>There are a lot of things that can hinder your team&rsquo;s productivity. Most of them have been solved by other teams already using automation. You&rsquo;re team probably isn&rsquo;t special, and their problems have probably been solved by other (bigger and more productive) teams. See what they&rsquo;ve done. Copy them, mimic them, learn from them.</p>
-
-<p>Get your team out of chaos, so they can learn, and make your job easier.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Solid | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/solid/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-03-02T14:18:38-05:00</updated>
+  <updated>2014-03-03T22:51:34-05:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When Is It Ok to Violate the D in SOLID?]]></title>
+    <link href="http://josephbulger.com/blog/2014/03/03/when-is-it-ok-to-violate-the-d-in-solid/"/>
+    <updated>2014-03-03T21:37:04-05:00</updated>
+    <id>http://josephbulger.com/blog/2014/03/03/when-is-it-ok-to-violate-the-d-in-solid</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m about to begin my annual re-read of <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>, but before I start this year I thought it would be idea to touch on a subject that I haven&rsquo;t actually seen a lot of discussion on.</p>
+
+<p>That issue begins with a premise: we all violate SOLID principles in our code. We <em>have</em> to. You can&rsquo;t write any non-trivial project without violating at least one of the principles. Most of the time you&rsquo;ll find yourself choosing one over another, and that is where I thought an intersting topic of conversation could be had.</p>
+
+<p>When is it ok to violate SOLID principles? For this post, specifically the <a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">D</a></p>
+
+<!-- more -->
+
+
+<p>One other thing before we really start diving in. This topic is going to be highly subjective, by it&rsquo;s nature I presume. I&rsquo;m speaking of my current experience, which admittedly is not as extensive as a lot of software craftsman out there. I do, however, think I have enough experience to at least provide some insight into the discussion. If nothing else, I&rsquo;ll be able to read this in 6 months and laugh at myself for being so dumb.</p>
+
+<p>Let&rsquo;s get one thing clear right off the bat. It&rsquo;s not the Dependency <strong>Injection</strong> Principle, it&rsquo;s the Dependency <strong>Inversion</strong> Principle (DIP for short). Meaning, you are inverting the dependencies so that high level policy does not depend on low level details. I&rsquo;m going to assume you know what that entails.</p>
+
+<p>So when is ok to violate this principle?</p>
+
+<p>My experience so far has been this. When I am building software, I specifically pay very close attention to one thing in regards to DIP: my application boundaries. Across boundaries, I make it a point to never violate DIP. If you don&rsquo;t know what I&rsquo;m referring to when I talk about application boundaries, then you need to read up on Component Based Design. In general, though, I&rsquo;m talking about breaking up your application into Components that are specific to a type of user. It should be completely based on a business vertical. Once you have all your Components identified, then you can start drawing boundaries around them. This is where things get interesting. The general rule is very simple: do not have your dependencies go both ways across boundaries.</p>
+
+<p>For example, let&rsquo;s say you have a Component called Scheduling, and another component called Packaging. These two Components interact with each other, so there is a boundary there. The question is, what direction should the dependency go? The answer of course, using DIP, is to figure out which Component is the higher level policy, and which is a detail. In this example, Scheduling is the higher level policy, and Packaging is just a detail of that overall workflow (albeit for a different user base). This means that the dependency arrows goes across the Scheduling / Packaging boundary pointing from Packaging over to Scheduling.</p>
+
+<p>So on my projects, it is never ok to violate DIP when dealing with Component boundaries. However, inside a Component it&rsquo;s not as clear cut. For example, inside the Scheduling Component there may be a workflow that exists only there, and it doesn&rsquo;t venture outside of the component. No other Component ever sees this workflow, no one even knows it exists. On top of that, the code footprint for that workflow is small. In situations such as this, DIP can and will be violated in favor of adhering more strictly to other SOLID principles.</p>
+
+<p>I want to also be clear about one thing here. Notice how I said that DIP can be violated <em>in favor of other principles</em>. I do not advocate violating principles out of sheer laziness. That is not the point. The point is, as a craftsman, there will be times where you have to choose certain principles over others. And so, what I&rsquo;m really getting at here is, inside a Component boundary, it&rsquo;s ok to violate DIP in favor of say, for example, SRP. In that case SRP may take a higher precedent than DIP. That would not be the case if you were crossing Component boundaries, but since you&rsquo;re not, then other principles can take higher priority.</p>
+
+<p>This brings up an interesting question, though. Is there a SOLID principle that you should never, under any circumstances, violate? I&rsquo;ll leave that one for another time.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mental Floss: Days for a Week]]></title>
@@ -354,76 +386,6 @@
 <p>In order to do this, the Calendar has to be able to build months, and then include the events into the days of those months. All of this logic takes place in the IncludeEvent method, which utilizes quite a few other classes to accomplish this.</p>
 
 <p>In the next post, we&rsquo;ll take a look at the other classes we used in the ViewModel to accommodate our Calendar</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mental Floss: The Problem With My Circle Is...]]></title>
-    <link href="http://josephbulger.com/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is/"/>
-    <updated>2011-10-13T04:00:32-04:00</updated>
-    <id>http://josephbulger.com/blog/2011/10/13/mental-floss-the-problem-with-my-circle-is</id>
-    <content type="html"><![CDATA[<p>that I&rsquo;m exposing too many details to the user of my code. The developer has to know intimate details about how to set up both the Ellipse and the Circle in order to calculate their areas effectively. In one case, the Ellipse, the runner has to know to set the major and minor axes, while for the Circle, they have know to set the Radius.</p>
-
-<!-- more -->
-
-
-<p>The underlying problem here is simple, actually. The real issue stems from the fact that the Ellipse (and by proxy the Circle) was designed as a Hybrid object. As I&rsquo;ve said before, and <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">others before me</a>, Hybrid objects are evil. To fix this, we need to either make these classes Data Structures, or make them Objects. Since the whole point of the code is to calculate the area, I say we have to make them Objects.</p>
-
-<p>To do that, I made the following changes to Ellipse:</p>
-
-<p><div><script src='https://gist.github.com/1279017.js?file=GoodEllipse.cs'></script>
-<noscript><pre><code>public class Ellipse
-{
-  protected virtual int MajorAxis { get; set; }
-  protected virtual int MinorAxis { get; set; }
-	
-  public Ellipse(int majorAxis, int minorAxis)
-  {
-    MajorAxis = majorAxis;
-    MinorAxis = minorAxis;
-  }
-  
-  public virtual double CalculateArea()
-  {
-    return Math.Pi * MajorAxis * MinorAxis;
-  }
-}</code></pre></noscript></div>
-</p>
-
-<p>Notice how MajorAxis and MinorAxis can still be extended via a subclass if need be, but they are <strong>only</strong> accessible from sub classes now, not from the outside world. This removes the class&rsquo;s Data Structure flavor and make it&rsquo;s a pure Object. It also has a great side benefit. Now a user can only create an Ellipse by supplying the major and minor values when the Ellipse is created. This logically makes sense because an Ellipse can&rsquo;t exist without it&rsquo;s major and minor axes.</p>
-
-<p>So how does this effect the Circle now? This is how I changed the Circle:</p>
-
-<p><div><script src='https://gist.github.com/1279017.js?file=GoodCircle.cs'></script>
-<noscript><pre><code>public class Circle: Ellipse
-{
-  public Circle(int radius)
-  {
-    MajorAxis = radius;
-    MinorAxis = radius;
-  }  
-}</code></pre></noscript></div>
-</p>
-
-<p>A lot of code has been removed. It almost seems like I&rsquo;ve cheated somewhere, doesn&rsquo;t it? Well, now that Ellipse is acting as a pure Object, the only thing Circle needs to do is to explain why it&rsquo;s &ldquo;special&rdquo;. As we noted before, a Circle is special because it has a Radius. In other words, it&rsquo;s major and minor axes have the same length. So the Circle class simply explains that relationship, and you&rsquo;re done. The area calculation doesn&rsquo;t need to be modified because the real difference was showing how the radius is related to the major and minor axes.</p>
-
-<p>Now the runner is forced to use the classes in a way that prevents them from being used in inappropriate ways:</p>
-
-<p><div><script src='https://gist.github.com/1279017.js?file=GoodRunner.cs'></script>
-<noscript><pre><code>public class Runner
-{
-  public void UsingEllipsesAndCircles()
-  {
-    var ellipse = new Ellipse(10, 5);    
-    
-    var areaOfEllipse = ellipse.CalculateArea();
-    
-    var circle = new Circle(4);
-        
-    var areaForCircle = circle.CalculateArea();    
-  }
-}</code></pre></noscript></div>
-</p>
 ]]></content>
   </entry>
   
