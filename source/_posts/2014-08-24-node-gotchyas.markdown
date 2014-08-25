@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Node Gotchyas"
+title: "Node Gotchyas and the Atom Editor"
 date: 2014-08-24 20:21:33 -0400
 comments: false
 categories: [node, atom]
