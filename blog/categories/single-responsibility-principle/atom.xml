@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Single Responsibility Principle | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/single-responsibility-principle/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-08-24T20:46:43-04:00</updated>
+  <updated>2014-08-25T19:20:54-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -27,17 +27,49 @@
 
 <p>As a simple example, let&rsquo;s say you have a Car that needs to be able to start it&rsquo;s Engine</p>
 
-<p>{% gist 1208417 BadCar.cs %}</p>
+<p><div><script src='https://gist.github.com/1208417.js?file=BadCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+  public void Start()
+  {
+    Engine.StartPistons();
+    Engine.InjectOxygen();
+    Engine.InjectFuel();
+  }
+}</code></pre></noscript></div>
+</p>
 
 <p>This Car knows <em><strong>way</strong></em> too much about it&rsquo;s Engine. If the Engine&rsquo;s starting sequence ever needs to be changed, you have to actually go into the Car class to change it! That just doesn&rsquo;t make any sense. What we should be doing instead is abstracting away that functionality inside the Engine class and allowing the Car to simply start the Engine when it needs to.</p>
 
-<p>{% gist 1208417 Engine.cs %}</p>
+<p><div><script src='https://gist.github.com/1208417.js?file=Engine.cs'></script>
+<noscript><pre><code>public class Engine
+{
+  public void Start()
+  {
+    StartPistons();
+    InjectOxygen();
+    InjectFuel();
+  }
+ 
+  private void StartPistons() { ... }
+  private void InjectOxygen() { ... }
+  private void InjectFuel() { ... }
+}</code></pre></noscript></div>
+</p>
 
 <p>This Engine prevents other classes from using it improperly. Part of learning how to effectively use SRP is to identify when you&rsquo;re exposing too much of a class. In the previous Engine the Car was calling each function inside the Engine. This better designed Engine hides this functionality from outsiders, so the Car now has no choice but to use only the start method.</p>
 
 <p>The Car now has to look something like this</p>
 
-<p>{% gist 1208417 GoodCar.cs %}</p>
+<p><div><script src='https://gist.github.com/1208417.js?file=GoodCar.cs'></script>
+<noscript><pre><code>public class Car
+{
+  public void Start()
+  {
+    Engine.Start();
+  }
+}</code></pre></noscript></div>
+</p>
 
 <p>This is a class structure that utilizes SRP.</p>
 

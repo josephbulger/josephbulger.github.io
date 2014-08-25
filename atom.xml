@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.com/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-08-24T20:46:11-04:00</updated>
+  <updated>2014-08-25T19:20:54-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Date shifting and Timezones]]></title>
+    <link href="http://josephbulger.com/blog/2014/08/25/date-shifting-and-timezones/"/>
+    <updated>2014-08-25T19:11:55-04:00</updated>
+    <id>http://josephbulger.com/blog/2014/08/25/date-shifting-and-timezones</id>
+    <content type="html"><![CDATA[<p>On one of my projects, we recently ran into an issue with the browser displaying
+dates that were a day behind when the user was logged in on the Pacific time
+zone.</p>
+
+<!-- more -->
+
+
+<p>I began looking at the project&rsquo;s source and realized that the client side code
+had been compensating for the server&rsquo;s time zone by trying to time shift all
+dates back to the time zone it should be in.</p>
+
+<p>This solution ended up giving us a fairly complicated mess on our hands. The
+essential problem was pretty simple, though. The server was passing dates back
+to the client with the time zone specified. Our servers were in EST, so anyone
+in PST would see a date that was time shifted by 3 hours. If the server would
+just pass back dates with <strong>no time zone</strong> at all, then we&rsquo;d be in the clear.</p>
+
+<p>To do that, all we had to do was pass back dates by parsing them out with no
+time zones, like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='c#'><span class='line'>  <span class="kt">var</span> <span class="n">datePassingBack</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">SpecifyKind</span><span class="p">(</span><span class="n">dateTimeToParse</span><span class="p">,</span>
+</span><span class='line'>    <span class="n">DateTimeKind</span><span class="p">.</span><span class="n">Unspecified</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Node Gotchyas and the Atom Editor]]></title>
@@ -1088,30 +1122,6 @@ problem between my dev and prod environments!</p>
 <p>This is a class structure that utilizes SRP.</p>
 
 <p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/88">Check out this dime cast</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Team Maturity: Learning]]></title>
-    <link href="http://josephbulger.com/blog/2011/09/15/team-maturity-learning/"/>
-    <updated>2011-09-15T14:00:55-04:00</updated>
-    <id>http://josephbulger.com/blog/2011/09/15/team-maturity-learning</id>
-    <content type="html"><![CDATA[<p>So you&rsquo;re team now has time to learn, and some of them (if not all), are taking advantage of that. How do you get them to be self-organizing? That&rsquo;s where you start pushing responsibilities onto your team.</p>
-
-<!-- more -->
-
-
-<p>The problem with teams that are not self-organizing is that they don&rsquo;t have the skills <em><strong>to be</strong></em> self-organizing. Your job is to identify what skills are lacking, and give them the opportunities to grow those skills.</p>
-
-<p>This usually involves a couple of different areas. Your team won&rsquo;t need help in technical areas, mostly, because they focus on that themselves. There are exceptions, but to get them to self-organizing, you want them to focus on other areas too.</p>
-
-<p>When a team member comes to you with a problem, don&rsquo;t solve it for them. Give them the tools they need to solve it for themselves. Let them grow. They may hate you for it at first, but in the end it will be very rewarding for them, and the good ones will recognize and appreciate what you&rsquo;ve done for them.</p>
-
-<p>Find your leaders. They will be the ones who will lead when you get to self-organizing. Give them the tools they need to learn how to do your job. No, they&rsquo;re not going to replace you, and you won&rsquo;t lose your job. If you can grow one leader to do your job so well that they <em><strong>can</strong></em> replace you, and a team to be self-organizing, then you&rsquo;ve just shown that you have the ability to grow teams. Any company will see that and capitalize on your abilities to produce good teams.</p>
-
-<p>When your in the chaos stage, you spend a lot of time putting up barriers between your team and the outside world. This is to protect them so you can give them room to learn and grow. You&rsquo;re not in chaos anymore, though, and it&rsquo;s time to start taking down some of those barriers. Your team needs to grow in the areas that are <em><strong>outside</strong></em> of the barriers you put up. Lower your barriers, and let your team learn to handle what&rsquo;s in the outside world. Clients, business analysts, project managers, etc. They need to learn how to deal with different actors, people besides QA and their team lead.</p>
-
-<p>Eventually they&rsquo;ll grow to the final stage, Self-Organizing.</p>
 ]]></content>
   </entry>
   

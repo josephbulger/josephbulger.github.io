@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Objects | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/objects/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-08-24T20:46:43-04:00</updated>
+  <updated>2014-08-25T19:20:54-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -25,7 +25,19 @@
 
 <p>I have a printer that allows the candidate to print something, which actually verifies that they&rsquo;re code up to that point is correct. It looks something like this</p>
 
-<p>{% gist 1208486 Hybrid.cs %}</p>
+<p><div><script src='https://gist.github.com/1208486.js?file=Hybrid.cs'></script>
+<noscript><pre><code>public class Console
+{
+  public int Counter { get; set; }
+
+  public void Print(string message)
+  {
+    CheckThatMessageIsCorrectForInterviewQuestion();
+    Counter++;
+  }
+}
+    </code></pre></noscript></div>
+</p>
 
 <p>It works exactly as I expected it to, but there was something I didn&rsquo;t like about it. I didn&rsquo;t like the Counter. I didn&rsquo;t want the candidates messing with it. My first inclination was to change the setter to private, but it got me to thinking.</p>
 
@@ -33,7 +45,24 @@
 
 <p>Ultimately, I decided on this</p>
 
-<p>{% gist 1208486 Object.cs %}</p>
+<p><div><script src='https://gist.github.com/1208486.js?file=Object.cs'></script>
+<noscript><pre><code>public class Console
+{
+  private int Counter { get; set; }
+
+  public void Print(string message)
+  {
+    CheckThatMessageIsCorrectForInterviewQuestion();
+    Counter++;
+  }
+
+  public int GetCount()
+  {
+    return Counter;
+  }
+}
+    </code></pre></noscript></div>
+</p>
 
 <p>which I think looks a <em><strong>lot</strong></em> better from the outside, since you only have the ability to use the Console as an Object.</p>
 

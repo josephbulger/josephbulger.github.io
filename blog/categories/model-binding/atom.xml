@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Model Binding | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/model-binding/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-08-24T20:46:43-04:00</updated>
+  <updated>2014-08-25T19:20:54-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -25,15 +25,67 @@
 
 <p>Let&rsquo;s say you have a package class like this:</p>
 
-<p>{% gist 1154718 Model.cs %}</p>
+<p><div><script src='https://gist.github.com/1154718.js?file=Model.cs'></script>
+<noscript><pre><code>namespace ModelBinding.Models
+{
+    public class Package
+    {
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public int Zip { get; set; }
+    }
+}</code></pre></noscript></div>
+</p>
 
 <p>The Package is basically flat at this point. Wiring this up with Model Binding in MVC is trivial. Just create your controller to handle the class when an action get&rsquo;s posted like:</p>
 
-<p>{% gist 1154718 Controller.cs %}</p>
+<p><div><script src='https://gist.github.com/1154718.js?file=Controller.cs'></script>
+<noscript><pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using ModelBinding.Models;
+
+namespace ModelBinding.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            ViewBag.Message = &quot;Welcome to ASP.NET MVC!&quot;;
+
+            return View(new Package());
+        }
+
+        [HttpPost]
+        public ActionResult Index(Package model)
+        {
+            return Json(model);
+        }
+    }
+}</code></pre></noscript></div>
+</p>
 
 <p>and make a view that uses the class as it&rsquo;s model:</p>
 
-<p>{% gist 1154718 View %}</p>
+<p><div><script src='https://gist.github.com/1154718.js?file=View'></script>
+<noscript><pre><code>@model ModelBinding.Models.Package
+           
+@{
+    ViewBag.Title = &quot;Home Page&quot;;
+}
+
+&lt;h2&gt;@ViewBag.Message&lt;/h2&gt;
+
+@using (Html.BeginForm(&quot;Index&quot;, &quot;Home&quot;))
+{
+    @Html.EditorForModel()
+    
+    &lt;input type=&quot;submit&quot; value=&quot;lets do this&quot; /&gt;
+}</code></pre></noscript></div>
+</p>
 
 <p>This code works fine. The problem is I don&rsquo;t like the code! My package class is all wrong. All those properties should be inside an Address Class, which is <strong>used by </strong>the Package.</p>
 
