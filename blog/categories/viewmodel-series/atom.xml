@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Viewmodel Series | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/viewmodel-series/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-03-03T22:51:34-05:00</updated>
+  <updated>2014-08-24T20:46:43-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -104,70 +104,7 @@
 
 <p>My Week looks like this:</p>
 
-<p><div><script src='https://gist.github.com/1291245.js?file=Week.cs'></script>
-<noscript><pre><code>﻿public class Week
-{
-    public Week()
-    {
-        Days = new List&lt;Day&gt;();
-    }
-
-    protected IList&lt;Day&gt; Days { get; set; }
-
-    public IEnumerable&lt;Day&gt; GetDays()
-    {
-        return Days;
-    }
-
-    public void Add(DateTime day)
-    {
-        if (!Days.Where(x =&gt; x.Date == day.Date).Any())
-            Days.Add(new Day { Date = day });
-    }
-
-    public bool IsMissingDays()
-    {
-        return Days.OrderBy(x =&gt; x.Date)
-          .First().Date.DayOfWeek != Calendar.GetStartDay();
-    }
-
-    public bool IsMissingTrailingDays()
-    {
-        return Days.OrderBy(x =&gt; x.Date)
-          .First().Date.DayOfWeek != Calendar.GetLastDay();
-    }
-
-    public int GetMissingNumberOfDays()
-    {
-        var missingDays = 0;
-
-        var day = Days.OrderBy(x =&gt; x.Date).First().Date;
-        
-        do
-        {
-            day = day.AddDays(-1);
-            missingDays++;
-        } while (day.DayOfWeek != Calendar.GetStartDay());
-
-        return missingDays;
-    }
-
-    public int GetMissingNumberOfTrailingDays()
-    {
-        var missingDays = 0;
-
-        var day = Days.OrderBy(x =&gt; x.Date).Last().Date;
-
-        do
-        {
-            day = day.AddDays(1);
-            missingDays++;
-        } while (day.DayOfWeek != Calendar.GetLastDay());
-
-        return missingDays;
-    }
-}</code></pre></noscript></div>
-</p>
+<p>{% gist 1291245 Week.cs %}</p>
 
 <p>When adding days to the week, I accept a DateTime and then build a list of Days into the Week. Later on, the calendar will add Events to these Days.</p>
 ]]></content>
@@ -185,78 +122,7 @@
 
 <p>So building a Month is all about one thing: building it&rsquo;s weeks. The only other thing I need from a month is the ability to get it&rsquo;s name (i.e. January, February, etc.). My implementation of this looks something like this:</p>
 
-<p><div><script src='https://gist.github.com/1291245.js?file=Month.cs'></script>
-<noscript><pre><code>﻿public class Month
-{
-  private DateTime FirstDayOfMonth { get; set; }
-  
-  private IList&lt;Week&gt; Weeks { get; set; }
-
-  public Month(int monthValue)
-  {
-      FirstDayOfMonth = new DateTime(DateTime.Now.Year, monthValue, 1);
-      
-      Weeks = new List&lt;Week&gt;();
-
-      BuildMonth();
-  }
-
-  private void BuildMonth()
-  {
-      var startDay = Calendar.GetStartDay();
-
-      var week = new Week();
-
-      var day = FirstDayOfMonth;
-      
-      do
-      {
-          if (WeekHasEnded(day, startDay) &amp;&amp; WeekIsNotEmpty(week))
-          {
-              Weeks.Add(week);
-              week = new Week();
-          }
-
-          week.Add(day);
-          
-          day = GetNextDay(day);
-
-      } while (day.Month == FirstDayOfMonth.Month);
-
-      Weeks.Add(week);
-  }
-
-  private bool WeekIsNotEmpty(Week week)
-  {
-      return week.GetDays().Count() &gt; 0;
-  }
-
-  private bool WeekHasEnded(DateTime day, DayOfWeek startDay)
-  {
-      return day.DayOfWeek == startDay;
-  }
-
-  private DateTime GetNextDay(DateTime day)
-  {
-      return day.AddDays(1);
-  }
-
-  public DayOfWeek GetFirstDayOfMonth()
-  {
-      return FirstDayOfMonth.DayOfWeek;
-  }
-
-  public IList&lt;Week&gt; GetWeeks()
-  {
-      return Weeks;
-  }
-  
-  public string GetMonthName()
-  {
-      return string.Format(&quot;{0:MMMM}&quot;, FirstDayOfMonth);
-  }
-}</code></pre></noscript></div>
-</p>
+<p>{% gist 1291245 Month.cs %}</p>
 ]]></content>
   </entry>
   
@@ -279,7 +145,7 @@
   public Calendar()
   {
       Months = new Dictionary&lt;int, Month&gt; 
-        ;
+        {{DateTime.Today.Month, new Month(DateTime.Today.Month)}};
   }
 
   protected IDictionary&lt;int, Month&gt; Months { get; set; }

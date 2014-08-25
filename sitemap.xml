@@ -9,8 +9,8 @@
         <lastmod>2014-02-04T20:28:59-05:00</lastmod>
     </url>
     <url>
-        <loc>http://josephbulger.com/blog/2009/03/07/visual-studio-jump-tip/</loc>
-        <lastmod>2014-02-04T20:40:38-05:00</lastmod>
+        <loc>http://josephbulger.com/blog/2009/03/07/hurricanes/</loc>
+        <lastmod>2014-02-04T20:34:22-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.com/blog/2009/03/07/seo-mistakes/</loc>
@@ -21,12 +21,12 @@
         <lastmod>2014-02-08T14:12:01-05:00</lastmod>
     </url>
     <url>
-        <loc>http://josephbulger.com/blog/2009/03/07/hurricanes/</loc>
-        <lastmod>2014-02-04T20:34:22-05:00</lastmod>
-    </url>
-    <url>
         <loc>http://josephbulger.com/blog/2009/03/07/srp-swiss-army-knife/</loc>
         <lastmod>2014-02-08T14:10:45-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://josephbulger.com/blog/2009/03/07/visual-studio-jump-tip/</loc>
+        <lastmod>2014-02-04T20:40:38-05:00</lastmod>
     </url>
     <url>
         <loc>
@@ -69,14 +69,14 @@
         <lastmod>2014-02-09T18:40:04-05:00</lastmod>
     </url>
     <url>
-        <loc>http://josephbulger.com/blog/2009/09/05/should-16-year-olds-be-allowed-to-vote/</loc>
-        <lastmod>2014-02-04T20:57:14-05:00</lastmod>
-    </url>
-    <url>
         <loc>
             http://josephbulger.com/blog/2009/09/05/i-finally-got-an-invite-to-google-voice/
         </loc>
         <lastmod>2014-02-04T20:29:07-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://josephbulger.com/blog/2009/09/05/should-16-year-olds-be-allowed-to-vote/</loc>
+        <lastmod>2014-02-04T20:57:14-05:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.com/blog/2009/09/07/rethinking-the-reputation-system/</loc>
@@ -134,15 +134,15 @@
     </url>
     <url>
         <loc>
-            http://josephbulger.com/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional/
-        </loc>
-        <lastmod>2014-02-09T19:03:05-05:00</lastmod>
-    </url>
-    <url>
-        <loc>
             http://josephbulger.com/blog/2010/09/30/how-to-resolve-a-complex-type-as-a-string-implicitly/
         </loc>
         <lastmod>2014-02-09T19:12:36-05:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://josephbulger.com/blog/2010/09/30/how-to-use-a-complex-type-in-a-conditional/
+        </loc>
+        <lastmod>2014-02-09T19:03:05-05:00</lastmod>
     </url>
     <url>
         <loc>
@@ -330,7 +330,7 @@
     </url>
     <url>
         <loc>http://josephbulger.com/blog/2012/08/30/practicing-the-basics/</loc>
-        <lastmod>2014-02-09T18:01:13-05:00</lastmod>
+        <lastmod>2014-08-24T20:45:27-04:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.com/blog/2012/10/08/installing-kit-on-a-mbp/</loc>
@@ -365,8 +365,12 @@
         <lastmod>2014-03-03T22:09:14-05:00</lastmod>
     </url>
     <url>
+        <loc>http://josephbulger.com/blog/2014/08/24/node-gotchyas/</loc>
+        <lastmod>2014-08-24T20:42:01-04:00</lastmod>
+    </url>
+    <url>
         <loc>http://josephbulger.com/blog/archives/</loc>
-        <lastmod>2014-03-03T22:09:14-05:00</lastmod>
+        <lastmod>2014-08-24T20:45:27-04:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.com/blog/categories/</loc>
@@ -374,7 +378,7 @@
     </url>
     <url>
         <loc>http://josephbulger.com/</loc>
-        <lastmod>2014-03-03T22:09:14-05:00</lastmod>
+        <lastmod>2014-08-24T20:45:27-04:00</lastmod>
     </url>
     <url>
         <loc>http://josephbulger.com/robots.txt</loc>

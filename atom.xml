@@ -4,7 +4,7 @@
   <title><![CDATA[Joseph Bulger]]></title>
   <link href="http://josephbulger.com/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-03-03T22:51:34-05:00</updated>
+  <updated>2014-08-24T20:46:11-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Node Gotchyas and the Atom Editor]]></title>
+    <link href="http://josephbulger.com/blog/2014/08/24/node-gotchyas/"/>
+    <updated>2014-08-24T20:21:33-04:00</updated>
+    <id>http://josephbulger.com/blog/2014/08/24/node-gotchyas</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been building a system on my free time with node, and I thought I would
+give the new atom editor a whirl.</p>
+
+<p>It turns out, there was a little gotchya that I didn&rsquo;t expect.</p>
+
+<!-- more -->
+
+
+<p>When I ran my node server through my normal terminal, everything would work
+fine. However, when I ran it through a plugin on atom (term2), I would get an
+internal server error every time I ran it.</p>
+
+<p>I use gulp, so the command between each bash shell was very simple. I literally
+just ran &ldquo;gulp&rdquo; and it would run through all the tasks I had created.</p>
+
+<p>After tracing it down for around an hour, I finally discovered that when I
+ran it through terminal, it was running under development, but when I was
+running it in atom, it was running under production.</p>
+
+<p>I verified this in multiple ways, but the final mark was when I ran &ldquo;printenv&rdquo;
+in both shells. On my terminal, NODE_ENV wasn&rsquo;t defined at all, but in atom,
+NODE_ENV was set to production.</p>
+
+<p>I&rsquo;m going to have to trace this back to see if this is something that atom is
+doing explicitly or if this is happening for some other reason, but at least
+for now I understand what it was, and it actually showed me that I had a config
+problem between my dev and prod environments!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[When is it ok to violate the D in SOLID?]]></title>
@@ -1077,80 +1112,6 @@
 <p>When your in the chaos stage, you spend a lot of time putting up barriers between your team and the outside world. This is to protect them so you can give them room to learn and grow. You&rsquo;re not in chaos anymore, though, and it&rsquo;s time to start taking down some of those barriers. Your team needs to grow in the areas that are <em><strong>outside</strong></em> of the barriers you put up. Lower your barriers, and let your team learn to handle what&rsquo;s in the outside world. Clients, business analysts, project managers, etc. They need to learn how to deal with different actors, people besides QA and their team lead.</p>
 
 <p>Eventually they&rsquo;ll grow to the final stage, Self-Organizing.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SOLID Principles: Dependency inversion principle]]></title>
-    <link href="http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle/"/>
-    <updated>2011-09-14T14:00:18-04:00</updated>
-    <id>http://josephbulger.com/blog/2011/09/14/solid-principles-dependency-inversion-principle</id>
-    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion Principle</a> has a dramatic effect on your code base. It has the potential to decouple your code in ways that you never would have thought possible before. Using a good IoC container can make all the difference as well.</p>
-
-<!-- more -->
-
-
-<p>The best way to explain this principle would probably be an example.
-Let&rsquo;s say you have a car like this</p>
-
-<div><script src='https://gist.github.com/1208366.js?file=CoupledCar.cs'></script>
-<noscript><pre><code>public class Car
-{
-    public Car()
-    {
-        Engine = new FourCylinderEngine();
-    }    
-    
-    private FourCylinderEngine Engine { get; set; }
-    
-    public void Start()
-    {
-        Engine.Start();        
-    }
-}</code></pre></noscript></div>
-
-
-<p>Notice the engine that belongs to the car. First of all, the car is actually creating the engine. This means that the car is tightly coupled to the engine it&rsquo;s creating. Secondly, this creates a concrete coupling on the car to a specific kind of engine, the FourCylinderEngine.</p>
-
-<p>A better solution would be to use Dependency Inversion. You should depend on an interface instead of a concrete class. Back in our example, our FoudCyclinderEngine looks like this</p>
-
-<div><script src='https://gist.github.com/1208366.js?file=FourCylinderEngine.cs'></script>
-<noscript><pre><code>public class FourCylinderEngine : Engine
-{
-    public void Start()
-    {
-        StartRotatingPistonsOneAndThreeAtPhase(0.Degrees);
-        StartRotatingPistonsTwoAndFourAtPhase(90.Degrees);
-    }
-}</code></pre></noscript></div>
-
-
-<p>Notice how it implements Engine. That&rsquo;s the interface our Car should be using. There&rsquo;s one additional problem, though. Right now the Car is creating it&rsquo;s Engine, but you can&rsquo;t instantiate an interface, so what do you do? That&rsquo;s the key to Dependency Inversion. You&rsquo;re saying,</p>
-
-<blockquote><p>a Car does not depend on knowing about how to create an Engine</p></blockquote>
-
-<p>It just <em>uses</em> it. So the new Car class looks like this</p>
-
-<div><script src='https://gist.github.com/1208366.js?file=DecoupledCar.cs'></script>
-<noscript><pre><code>public class Car
-{
-    public Car(Engine engine)
-    {
-        Engine = engine;
-    }    
-
-    private Engine Engine { get; set; }
-
-    public void Start()
-    {
-        Engine.Start();        
-    }
-}</code></pre></noscript></div>
-
-
-<p>So how does the engine get created? Obviously something is passing in the engine to the Car, but what? You need a new class. Maybe a CarManufacturer or something, which is responsible for manufacturing cars. Part of that responsibility would be putting an engine in a car.</p>
-
-<p>Want more info? <a href="http://www.dimecasts.net/Content/WatchEpisode/96">Check out this dime cast</a>.</p>
 ]]></content>
   </entry>
   

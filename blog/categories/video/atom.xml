@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Video | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/video/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-03-03T22:51:34-05:00</updated>
+  <updated>2014-08-24T20:46:43-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -25,7 +25,7 @@
 
 <p>Here&rsquo;s the first video in the series. It&rsquo;s centered around keeping methods small.</p>
 
-<p><video width='720' height='403' preload='none' controls poster=''><source src='http://www.youtube.com/embed/l0tAXE3Xoso">http://www.youtube.com/embed/l0tAXE3Xoso</a>' ></video></p>
+<p>{% video <a href="http://www.youtube.com/embed/l0tAXE3Xoso">http://www.youtube.com/embed/l0tAXE3Xoso</a> 720 403 %}</p>
 ]]></content>
   </entry>
   

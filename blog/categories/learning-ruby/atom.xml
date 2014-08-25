@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Learning Ruby | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/learning-ruby/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-03-03T22:51:34-05:00</updated>
+  <updated>2014-08-24T20:46:43-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -12,49 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Ruby on Rails: Installing RubyMine]]></title>
-    <link href="http://josephbulger.com/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine/"/>
-    <updated>2011-05-21T14:28:29-04:00</updated>
-    <id>http://josephbulger.com/blog/2011/05/21/learning-ruby-on-rails-installing-rubymine</id>
-    <content type="html"><![CDATA[<p>RubyMine is a Jetbrains product for developing ruby applications.  I use a lot of Jetbrains products, which is why I&rsquo;m giving RubyMine a run through.  I&rsquo;m hoping it will be as good as their other products. Since I&rsquo;m a .NET developer, I&rsquo;m thinking it will help me bridge the gap between the typical environment I&rsquo;m used to using (Visual Studio 2010) and RoR.<!-- more --></p>
-
-<p>Now, before we get to install RubyMine, there is one caveat that we have to take care of.  You have to have a java runtime on your linux distro in order to run RubyMine, but it can <strong>not </strong>be OpenJDK, so if you have that installed (I did), then you have to uninstall it first, and install another one.</p>
-
-<p>For example:</p>
-
-<blockquote><p>$ sudo apt-get install sun-java6-jre sun-java6-jdk</p></blockquote>
-
-<p>My screencast will <strong>not </strong>include this step, because I actually need java installed on my linux distro to <strong>make </strong>the screencast.</p>
-
-<p>Once you have java installed go to <a href="http://www.jetbrains.com/ruby/download/index.html">http://www.jetbrains.com/ruby/download/index.html</a> and download RubyMine.</p>
-
-<p>I downloaded it into my home directory.</p>
-
-<p>After you&rsquo;ve downloaded it, then you need to extract it</p>
-
-<blockquote><p>$ tar -xvzf rubymine-2.0.2.tar.gz</p></blockquote>
-
-<p>And move it to the opt folder</p>
-
-<blockquote><p>$ sudo mv rubymine93.202 /opt/rubymine</p></blockquote>
-
-<p>Now we need to add an link to our java runtime so RubyMine will be able to see it</p>
-
-<blockquote><p>$ sudo ln -s /usr/bin/java /bin/java</p></blockquote>
-
-<p>I also went ahead and added a shortcut to my panel so I can open it easily.</p>
-
-<p><img src="http://media.tumblr.com/tumblr_l6f7y4c2T61qbyy0y.png" alt="Adding a shotcut" /></p>
-
-<p><img src="http://media.tumblr.com/tumblr_l6f87jErnk1qbyy0y.png" alt="There’s an icon at /opt/rubymine/bin/RMlogo.svg" /></p>
-
-<p><img src="http://media.tumblr.com/tumblr_l6f8efWaJW1qbyy0y.png" alt="Setting RubyMine Starting Point" /></p>
-
-<p>And here&rsquo;s a video of the whole thing:</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning Ruby on Rails: Installing Ruby on Rails]]></title>
@@ -158,30 +115,6 @@ bundle install</p></blockquote>
 <p>Once you have Ubuntu up and running it&rsquo;s probably going to ask you to apply some updates, but aside from that you&rsquo;re done!</p>
 
 <p>I made a video of this whole process.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Ruby on Rails: A C# Programmer's Perspective]]></title>
-    <link href="http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective/"/>
-    <updated>2011-05-17T08:11:12-04:00</updated>
-    <id>http://josephbulger.com/blog/2011/05/17/learning-ruby-on-rails-a-c-programmers-perspective</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve been doing C# programming for some time now.  I&rsquo;ve been investigating Ruby and talking to coworkers about it, but have yet to really dive in and start learning the language and it&rsquo;s web counterpart, Rails.</p>
-
-<!-- more -->
-
-
-<p>I recently came up with a fun concept that I wanted to try on the web and see how people liked it, and I thought it would be a great opportunity to try learning Ruby on Rails.  This will be a series of blog posts on my trials as a primarily Windows C# developer working with this new language and new stack.</p>
-
-<p>Before I begin, I&rsquo;m going to outline at a high level what I&rsquo;m planning on doing.</p>
-
-<p>I&rsquo;m going to install a virtual machine with <a href="http://www.ubuntu.com/">Ubuntu </a>and run my ruby environment on that.  I know I could do this on Windows, but I recently had an experience with loading up <a href="http://www.jetbrains.com/teamcity/">TeamCity </a>on a derivation of CentOS and it was delightfully easy.  It&rsquo;s made me realize that if I&rsquo;m going to be developing a Ruby on Rails app that more than likely when I go to deploy this app it will probably end up being easier if my local environment is close to what host environment I will be having.  And I will definitely be pushing my app out to a Linux distro, so therefore Ubuntu is my choice for my local OS.</p>
-
-<p>Next, I&rsquo;ll be using <a href="http://www.jetbrains.com/ruby/">RubyMine </a>as my IDE. I know there&rsquo;s a lot of ruby devs out there using <a href="http://en.wikipedia.org/wiki/Vim_%28text_editor%29">VIM</a>, but I haven&rsquo;t ventured into that family of text editors yet, and although I&rsquo;m aware it has features that are very compelling, it&rsquo;s probably too much for me to take on at this point.  After a while, when I start feeling comfortable in Ubuntu and RubyMine I might venture into the VIM space and see how that goes.</p>
-
-<p>I plan to deploy the app using <a href="http://www.heroku.com/">Heroku</a>.  I don&rsquo;t have the desire to setup up a production stack.  I do it enough with my windows applications, and I&rsquo;m growing more and more tired of doing this.  In retrospect, at this point it feels as if it&rsquo;s a solved problem, and for me Heroku does the job of being a service that solves it quite nicely for me to not worry about anything.</p>
-
-<p>Up next in this series will be a step by step of how I set up my VM with Ubuntu.</p>
 ]]></content>
   </entry>
   

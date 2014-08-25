@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dependency Inversion Principle | Joseph Bulger]]></title>
   <link href="http://josephbulger.com/blog/categories/dependency-inversion-principle/atom.xml" rel="self"/>
   <link href="http://josephbulger.com/"/>
-  <updated>2014-03-03T22:51:34-05:00</updated>
+  <updated>2014-08-24T20:46:43-04:00</updated>
   <id>http://josephbulger.com/</id>
   <author>
     <name><![CDATA[Joseph Bulger]]></name>
@@ -26,37 +26,13 @@
 <p>The best way to explain this principle would probably be an example.
 Let&rsquo;s say you have a car like this</p>
 
-<p><div><script src='https://gist.github.com/1208366.js?file=CoupledCar.cs'></script>
-<noscript><pre><code>public class Car
-{
-    public Car()
-    {
-        Engine = new FourCylinderEngine();
-    }    
-    
-    private FourCylinderEngine Engine { get; set; }
-    
-    public void Start()
-    {
-        Engine.Start();        
-    }
-}</code></pre></noscript></div>
-</p>
+<p>{% gist 1208366 CoupledCar.cs %}</p>
 
 <p>Notice the engine that belongs to the car. First of all, the car is actually creating the engine. This means that the car is tightly coupled to the engine it&rsquo;s creating. Secondly, this creates a concrete coupling on the car to a specific kind of engine, the FourCylinderEngine.</p>
 
 <p>A better solution would be to use Dependency Inversion. You should depend on an interface instead of a concrete class. Back in our example, our FoudCyclinderEngine looks like this</p>
 
-<p><div><script src='https://gist.github.com/1208366.js?file=FourCylinderEngine.cs'></script>
-<noscript><pre><code>public class FourCylinderEngine : Engine
-{
-    public void Start()
-    {
-        StartRotatingPistonsOneAndThreeAtPhase(0.Degrees);
-        StartRotatingPistonsTwoAndFourAtPhase(90.Degrees);
-    }
-}</code></pre></noscript></div>
-</p>
+<p>{% gist 1208366 FourCylinderEngine.cs %}</p>
 
 <p>Notice how it implements Engine. That&rsquo;s the interface our Car should be using. There&rsquo;s one additional problem, though. Right now the Car is creating it&rsquo;s Engine, but you can&rsquo;t instantiate an interface, so what do you do? That&rsquo;s the key to Dependency Inversion. You&rsquo;re saying,</p>
 
@@ -64,22 +40,7 @@ Let&rsquo;s say you have a car like this</p>
 
 <p>It just <em>uses</em> it. So the new Car class looks like this</p>
 
-<p><div><script src='https://gist.github.com/1208366.js?file=DecoupledCar.cs'></script>
-<noscript><pre><code>public class Car
-{
-    public Car(Engine engine)
-    {
-        Engine = engine;
-    }    
-
-    private Engine Engine { get; set; }
-
-    public void Start()
-    {
-        Engine.Start();        
-    }
-}</code></pre></noscript></div>
-</p>
+<p>{% gist 1208366 DecoupledCar.cs %}</p>
 
 <p>So how does the engine get created? Obviously something is passing in the engine to the Car, but what? You need a new class. Maybe a CarManufacturer or something, which is responsible for manufacturing cars. Part of that responsibility would be putting an engine in a car.</p>
 

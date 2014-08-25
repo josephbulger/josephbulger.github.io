@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Atom | Joseph Bulger]]></title>
+  <link href="http://josephbulger.com/blog/categories/atom/atom.xml" rel="self"/>
+  <link href="http://josephbulger.com/"/>
+  <updated>2014-08-24T20:46:43-04:00</updated>
+  <id>http://josephbulger.com/</id>
+  <author>
+    <name><![CDATA[Joseph Bulger]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Node Gotchyas and the Atom Editor]]></title>
+    <link href="http://josephbulger.com/blog/2014/08/24/node-gotchyas/"/>
+    <updated>2014-08-24T20:21:33-04:00</updated>
+    <id>http://josephbulger.com/blog/2014/08/24/node-gotchyas</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been building a system on my free time with node, and I thought I would
+give the new atom editor a whirl.</p>
+
+<p>It turns out, there was a little gotchya that I didn&rsquo;t expect.</p>
+
+<!-- more -->
+
+
+<p>When I ran my node server through my normal terminal, everything would work
+fine. However, when I ran it through a plugin on atom (term2), I would get an
+internal server error every time I ran it.</p>
+
+<p>I use gulp, so the command between each bash shell was very simple. I literally
+just ran &ldquo;gulp&rdquo; and it would run through all the tasks I had created.</p>
+
+<p>After tracing it down for around an hour, I finally discovered that when I
+ran it through terminal, it was running under development, but when I was
+running it in atom, it was running under production.</p>
+
+<p>I verified this in multiple ways, but the final mark was when I ran &ldquo;printenv&rdquo;
+in both shells. On my terminal, NODE_ENV wasn&rsquo;t defined at all, but in atom,
+NODE_ENV was set to production.</p>
+
+<p>I&rsquo;m going to have to trace this back to see if this is something that atom is
+doing explicitly or if this is happening for some other reason, but at least
+for now I understand what it was, and it actually showed me that I had a config
+problem between my dev and prod environments!</p>
+]]></content>
+  </entry>
+  
+</feed>
