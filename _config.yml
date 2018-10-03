@@ -27,7 +27,8 @@ github_username:  josephbulger
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman-blog
+#theme: jekyll-theme-cayman-blog
+theme: minima
 plugins:
   - jekyll-feed
 
