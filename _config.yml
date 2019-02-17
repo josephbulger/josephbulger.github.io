@@ -29,10 +29,14 @@ google_analytics: UA-47917400-1
 
 # Build settings
 markdown: kramdown
+#theme: jekyll-theme-cayman-blog
 #theme: jekyll-theme-cayman
-theme: minima
+#theme: minima
+theme:
 plugins:
   - jekyll-feed
+
+excerpt_separator: <!-- more -->
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
