@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Principcal Architect @ Turner
+Principal Architect @ Turner
 
 My handle over the web is usually @josephbulger
 
