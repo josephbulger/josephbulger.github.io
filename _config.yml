@@ -25,6 +25,8 @@ simple_search: http://google.com/search
 twitter_username: josephbulger
 github_username:  josephbulger
 
+google_analytics: UA-47917400-1
+
 # Build settings
 markdown: kramdown
 #theme: jekyll-theme-cayman-blog
