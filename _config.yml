@@ -19,7 +19,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: http://josephbulger.com
 title: Joseph Bulger
 email: blog@josephbulger.com
-subtitle: a Dark Matter Developer
+subtitle: Ramblings of an architect
 author: Joseph Bulger
 simple_search: http://google.com/search
 twitter_username: josephbulger
