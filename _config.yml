@@ -35,6 +35,7 @@ markdown: kramdown
 theme:
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 excerpt_separator: <!-- more -->
 
