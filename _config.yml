@@ -22,7 +22,8 @@ email: blog@josephbulger.com
 subtitle: Ramblings of an architect
 author: Joseph Bulger
 simple_search: http://google.com/search
-twitter_username: josephbulger
+twitter:
+  username: josephbulger
 github_username:  josephbulger
 
 google_analytics: UA-47917400-1
